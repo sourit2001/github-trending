@@ -1,0 +1,36 @@
+name: Daily GitHub Trending
+
+on:
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  send-trending:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Collect trending and send to Feishu
+        env:
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+          FEISHU_SECRET: ${{ secrets.FEISHU_SECRET }}
+          TRENDING_LANGUAGE: ""
+          TRENDING_SINCE: daily
+          TRENDING_LIMIT: "10"
+        run: PYTHONPATH=src python -m github_trending_feishu
+
+      - name: Commit daily report
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update daily GitHub Trending report"
+          file_pattern: data/snapshots/*.json data/reports/*.md
