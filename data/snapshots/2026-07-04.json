@@ -1,0 +1,117 @@
+{
+  "collected_at": "2026-07-04T13:59:17.900392+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "openai",
+      "name": "codex-plugin-cc",
+      "url": "https://github.com/openai/codex-plugin-cc",
+      "description": "Use Codex from Claude Code to review code or delegate tasks.",
+      "language": "JavaScript",
+      "stars": "23,747",
+      "forks": "1,448",
+      "stars_today": "716 stars today"
+    },
+    {
+      "rank": 2,
+      "owner": "alibaba",
+      "name": "page-agent",
+      "url": "https://github.com/alibaba/page-agent",
+      "description": "JavaScript in-page GUI agent. Control web interfaces with natural language.",
+      "language": "TypeScript",
+      "stars": "22,774",
+      "forks": "1,978",
+      "stars_today": "1,110 stars today"
+    },
+    {
+      "rank": 3,
+      "owner": "usestrix",
+      "name": "strix",
+      "url": "https://github.com/usestrix/strix",
+      "description": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
+      "language": "Python",
+      "stars": "35,560",
+      "forks": "3,627",
+      "stars_today": "1,910 stars today"
+    },
+    {
+      "rank": 4,
+      "owner": "ChromeDevTools",
+      "name": "chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "description": "Chrome DevTools for coding agents",
+      "language": "TypeScript",
+      "stars": "45,649",
+      "forks": "2,970",
+      "stars_today": "303 stars today"
+    },
+    {
+      "rank": 5,
+      "owner": "harvard-edge",
+      "name": "cs249r_book",
+      "url": "https://github.com/harvard-edge/cs249r_book",
+      "description": "Machine Learning Systems",
+      "language": "Python",
+      "stars": "26,419",
+      "forks": "3,154",
+      "stars_today": "446 stars today"
+    },
+    {
+      "rank": 6,
+      "owner": "rommapp",
+      "name": "romm",
+      "url": "https://github.com/rommapp/romm",
+      "description": "A beautiful, powerful, self-hosted rom manager and player.",
+      "language": "Python",
+      "stars": "9,993",
+      "forks": "484",
+      "stars_today": "400 stars today"
+    },
+    {
+      "rank": 7,
+      "owner": "dotnet",
+      "name": "skills",
+      "url": "https://github.com/dotnet/skills",
+      "description": "Repository for skills to assist AI coding agents with .NET and C#",
+      "language": "C#",
+      "stars": "3,695",
+      "forks": "281",
+      "stars_today": "57 stars today"
+    },
+    {
+      "rank": 8,
+      "owner": "agentskills",
+      "name": "agentskills",
+      "url": "https://github.com/agentskills/agentskills",
+      "description": "Specification and documentation for Agent Skills",
+      "language": "Python",
+      "stars": "22,189",
+      "forks": "1,403",
+      "stars_today": "351 stars today"
+    },
+    {
+      "rank": 9,
+      "owner": "immich-app",
+      "name": "immich",
+      "url": "https://github.com/immich-app/immich",
+      "description": "High performance self-hosted photo and video management solution.",
+      "language": "TypeScript",
+      "stars": "105,418",
+      "forks": "6,018",
+      "stars_today": "198 stars today"
+    },
+    {
+      "rank": 10,
+      "owner": "chthollyphile",
+      "name": "folia-major",
+      "url": "https://github.com/chthollyphile/folia-major",
+      "description": "专注于绚丽的歌词动画效果的本地音乐/navidrome/第三方网易云播放器",
+      "language": "TypeScript",
+      "stars": "934",
+      "forks": "59",
+      "stars_today": "319 stars today"
+    }
+  ]
+}
