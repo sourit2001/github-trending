@@ -2,7 +2,7 @@ name: Daily GitHub Trending
 
 on:
   schedule:
-    - cron: "0 1 * * *"
+    - cron: "12 18 * * *"
   workflow_dispatch:
 
 permissions:
