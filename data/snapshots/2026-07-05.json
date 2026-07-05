@@ -1,0 +1,117 @@
+{
+  "collected_at": "2026-07-05T19:41:36.828999+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "openai",
+      "name": "codex-plugin-cc",
+      "url": "https://github.com/openai/codex-plugin-cc",
+      "description": "Use Codex from Claude Code to review code or delegate tasks.",
+      "language": "JavaScript",
+      "stars": "25,336",
+      "forks": "1,533",
+      "stars_today": "1,519 stars today"
+    },
+    {
+      "rank": 2,
+      "owner": "alirezarezvani",
+      "name": "claude-skills",
+      "url": "https://github.com/alirezarezvani/claude-skills",
+      "description": "337 Claude Code skills & agent skills & plugins (30+ Agents, 70+ custom commands, 330+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents — engineering, marketing, product, compliance, C-level advisory, research, business operations, commercial & finance, and your daily productivity skills.",
+      "language": "Python",
+      "stars": "20,454",
+      "forks": "2,790",
+      "stars_today": "394 stars today"
+    },
+    {
+      "rank": 3,
+      "owner": "rommapp",
+      "name": "romm",
+      "url": "https://github.com/rommapp/romm",
+      "description": "A beautiful, powerful, self-hosted rom manager and player.",
+      "language": "Python",
+      "stars": "10,468",
+      "forks": "501",
+      "stars_today": "411 stars today"
+    },
+    {
+      "rank": 4,
+      "owner": "alibaba",
+      "name": "page-agent",
+      "url": "https://github.com/alibaba/page-agent",
+      "description": "JavaScript in-page GUI agent. Control web interfaces with natural language.",
+      "language": "TypeScript",
+      "stars": "23,727",
+      "forks": "2,053",
+      "stars_today": "801 stars today"
+    },
+    {
+      "rank": 5,
+      "owner": "harvard-edge",
+      "name": "cs249r_book",
+      "url": "https://github.com/harvard-edge/cs249r_book",
+      "description": "Machine Learning Systems",
+      "language": "Python",
+      "stars": "26,794",
+      "forks": "3,185",
+      "stars_today": "333 stars today"
+    },
+    {
+      "rank": 6,
+      "owner": "usestrix",
+      "name": "strix",
+      "url": "https://github.com/usestrix/strix",
+      "description": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
+      "language": "Python",
+      "stars": "36,941",
+      "forks": "3,744",
+      "stars_today": "1,121 stars today"
+    },
+    {
+      "rank": 7,
+      "owner": "facebook",
+      "name": "astryx",
+      "url": "https://github.com/facebook/astryx",
+      "description": "An open source design system that's fully customizable and agent ready",
+      "language": "TypeScript",
+      "stars": "5,803",
+      "forks": "368",
+      "stars_today": "540 stars today"
+    },
+    {
+      "rank": 8,
+      "owner": "immich-app",
+      "name": "immich",
+      "url": "https://github.com/immich-app/immich",
+      "description": "High performance self-hosted photo and video management solution.",
+      "language": "TypeScript",
+      "stars": "106,011",
+      "forks": "6,052",
+      "stars_today": "475 stars today"
+    },
+    {
+      "rank": 9,
+      "owner": "ruvnet",
+      "name": "RuView",
+      "url": "https://github.com/ruvnet/RuView",
+      "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+      "language": "Rust",
+      "stars": "76,643",
+      "forks": "10,279",
+      "stars_today": "198 stars today"
+    },
+    {
+      "rank": 10,
+      "owner": "gastownhall",
+      "name": "gastown",
+      "url": "https://github.com/gastownhall/gastown",
+      "description": "Gas Town - multi-agent workspace manager",
+      "language": "Go",
+      "stars": "16,327",
+      "forks": "1,519",
+      "stars_today": "48 stars today"
+    }
+  ]
+}
