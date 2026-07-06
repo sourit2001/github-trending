@@ -1,0 +1,117 @@
+{
+  "collected_at": "2026-07-06T20:14:05.236026+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "language": "Shell",
+      "stars": "70,650",
+      "forks": "7,654",
+      "stars_today": "1,114 stars today"
+    },
+    {
+      "rank": 2,
+      "owner": "ruvnet",
+      "name": "RuView",
+      "url": "https://github.com/ruvnet/RuView",
+      "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+      "language": "Rust",
+      "stars": "77,403",
+      "forks": "10,393",
+      "stars_today": "471 stars today"
+    },
+    {
+      "rank": 3,
+      "owner": "alirezarezvani",
+      "name": "claude-skills",
+      "url": "https://github.com/alirezarezvani/claude-skills",
+      "description": "345 Claude Code skills & agent skills & plugins (30+ Agents, 70+ custom commands, 330+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents — engineering, marketing, product, compliance, C-level advisory, research, business operations, commercial & finance, and your daily productivity skills.",
+      "language": "Python",
+      "stars": "21,081",
+      "forks": "2,835",
+      "stars_today": "611 stars today"
+    },
+    {
+      "rank": 4,
+      "owner": "openai",
+      "name": "codex-plugin-cc",
+      "url": "https://github.com/openai/codex-plugin-cc",
+      "description": "Use Codex from Claude Code to review code or delegate tasks.",
+      "language": "JavaScript",
+      "stars": "26,206",
+      "forks": "1,571",
+      "stars_today": "910 stars today"
+    },
+    {
+      "rank": 5,
+      "owner": "mvanhorn",
+      "name": "last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "language": "Python",
+      "stars": "49,662",
+      "forks": "4,138",
+      "stars_today": "511 stars today"
+    },
+    {
+      "rank": 6,
+      "owner": "bradautomates",
+      "name": "claude-video",
+      "url": "https://github.com/bradautomates/claude-video",
+      "description": "Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.",
+      "language": "Python",
+      "stars": "4,107",
+      "forks": "592",
+      "stars_today": "539 stars today"
+    },
+    {
+      "rank": 7,
+      "owner": "karakeep-app",
+      "name": "karakeep",
+      "url": "https://github.com/karakeep-app/karakeep",
+      "description": "A self-hostable bookmark-everything app (links, notes and images) with AI-based automatic tagging and full text search",
+      "language": "TypeScript",
+      "stars": "26,822",
+      "forks": "1,317",
+      "stars_today": "178 stars today"
+    },
+    {
+      "rank": 8,
+      "owner": "firecrawl",
+      "name": "firecrawl",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "description": "The API to search, scrape, and interact with the web at scale. 🔥",
+      "language": "TypeScript",
+      "stars": "146,082",
+      "forks": "8,404",
+      "stars_today": "834 stars today"
+    },
+    {
+      "rank": 9,
+      "owner": "alibaba",
+      "name": "zvec",
+      "url": "https://github.com/alibaba/zvec",
+      "description": "A lightweight, lightning-fast, in-process vector database",
+      "language": "C++",
+      "stars": "13,399",
+      "forks": "814",
+      "stars_today": "355 stars today"
+    },
+    {
+      "rank": 10,
+      "owner": "gastownhall",
+      "name": "gastown",
+      "url": "https://github.com/gastownhall/gastown",
+      "description": "Gas Town - multi-agent workspace manager",
+      "language": "Go",
+      "stars": "16,638",
+      "forks": "1,536",
+      "stars_today": "293 stars today"
+    }
+  ]
+}
