@@ -1,0 +1,84 @@
+{
+  "collected_at": "2026-07-07T20:13:48.141475+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "language": "JavaScript",
+      "stars": "71,970",
+      "forks": "7,789",
+      "stars_today": "1,311 stars today"
+    },
+    {
+      "rank": 2,
+      "owner": "ruvnet",
+      "name": "RuView",
+      "url": "https://github.com/ruvnet/RuView",
+      "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+      "language": "Rust",
+      "stars": "78,391",
+      "forks": "10,551",
+      "stars_today": "1,122 stars today"
+    },
+    {
+      "rank": 3,
+      "owner": "TencentCloud",
+      "name": "CubeSandbox",
+      "url": "https://github.com/TencentCloud/CubeSandbox",
+      "description": "Instant, Concurrent, Secure & Lightweight Sandbox for AI Agents.",
+      "language": "Rust",
+      "stars": "8,386",
+      "forks": "707",
+      "stars_today": "665 stars today"
+    },
+    {
+      "rank": 4,
+      "owner": "dotnet",
+      "name": "skills",
+      "url": "https://github.com/dotnet/skills",
+      "description": "Repository for skills to assist AI coding agents with .NET and C#",
+      "language": "C#",
+      "stars": "4,268",
+      "forks": "321",
+      "stars_today": "82 stars today"
+    },
+    {
+      "rank": 5,
+      "owner": "iOfficeAI",
+      "name": "OfficeCLI",
+      "url": "https://github.com/iOfficeAI/OfficeCLI",
+      "description": "OfficeCLI is the first and best Office suite purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+      "language": "C#",
+      "stars": "9,751",
+      "forks": "668",
+      "stars_today": "802 stars today"
+    },
+    {
+      "rank": 6,
+      "owner": "bradautomates",
+      "name": "claude-video",
+      "url": "https://github.com/bradautomates/claude-video",
+      "description": "Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.",
+      "language": "Python",
+      "stars": "5,043",
+      "forks": "654",
+      "stars_today": "953 stars today"
+    },
+    {
+      "rank": 7,
+      "owner": "kyutai-labs",
+      "name": "pocket-tts",
+      "url": "https://github.com/kyutai-labs/pocket-tts",
+      "description": "A TTS that fits in your CPU (and pocket)",
+      "language": "Python",
+      "stars": "6,034",
+      "forks": "635",
+      "stars_today": "510 stars today"
+    }
+  ]
+}
