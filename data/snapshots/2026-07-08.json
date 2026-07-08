@@ -1,0 +1,117 @@
+{
+  "collected_at": "2026-07-08T19:55:19.407121+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "language": "JavaScript",
+      "stars": "73,704",
+      "forks": "7,955",
+      "stars_today": "1,322 stars today"
+    },
+    {
+      "rank": 2,
+      "owner": "ruvnet",
+      "name": "RuView",
+      "url": "https://github.com/ruvnet/RuView",
+      "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+      "language": "Rust",
+      "stars": "79,034",
+      "forks": "10,639",
+      "stars_today": "793 stars today"
+    },
+    {
+      "rank": 3,
+      "owner": "TencentCloud",
+      "name": "TencentDB-Agent-Memory",
+      "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+      "description": "TencentDB Agent Memory delivers fully local long-term memory for AI Agents via a 4-tier progressive pipeline, with zero external API dependencies.",
+      "language": "TypeScript",
+      "stars": "7,558",
+      "forks": "701",
+      "stars_today": "351 stars today"
+    },
+    {
+      "rank": 4,
+      "owner": "prisma",
+      "name": "prisma",
+      "url": "https://github.com/prisma/prisma",
+      "description": "Next-generation ORM for Node.js & TypeScript | PostgreSQL, MySQL, MariaDB, SQL Server, SQLite, MongoDB and CockroachDB",
+      "language": "TypeScript",
+      "stars": "46,502",
+      "forks": "2,278",
+      "stars_today": "30 stars today"
+    },
+    {
+      "rank": 5,
+      "owner": "mvanhorn",
+      "name": "last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "language": "Python",
+      "stars": "50,657",
+      "forks": "4,229",
+      "stars_today": "373 stars today"
+    },
+    {
+      "rank": 6,
+      "owner": "argoproj",
+      "name": "argo-cd",
+      "url": "https://github.com/argoproj/argo-cd",
+      "description": "Declarative Continuous Deployment for Kubernetes",
+      "language": "Go",
+      "stars": "23,408",
+      "forks": "7,424",
+      "stars_today": "20 stars today"
+    },
+    {
+      "rank": 7,
+      "owner": "iOfficeAI",
+      "name": "OfficeCLI",
+      "url": "https://github.com/iOfficeAI/OfficeCLI",
+      "description": "OfficeCLI is the first and best Office suite purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+      "language": "C#",
+      "stars": "11,566",
+      "forks": "782",
+      "stars_today": "1,712 stars today"
+    },
+    {
+      "rank": 8,
+      "owner": "alibaba",
+      "name": "zvec",
+      "url": "https://github.com/alibaba/zvec",
+      "description": "A lightweight, lightning-fast, in-process vector database",
+      "language": "C++",
+      "stars": "14,339",
+      "forks": "883",
+      "stars_today": "370 stars today"
+    },
+    {
+      "rank": 9,
+      "owner": "Diolinux",
+      "name": "PhotoGIMP",
+      "url": "https://github.com/Diolinux/PhotoGIMP",
+      "description": "A Patch for GIMP 3+ for Photoshop Users",
+      "language": "CSS",
+      "stars": "14,934",
+      "forks": "592",
+      "stars_today": "2,031 stars today"
+    },
+    {
+      "rank": 10,
+      "owner": "bradautomates",
+      "name": "claude-video",
+      "url": "https://github.com/bradautomates/claude-video",
+      "description": "Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.",
+      "language": "Python",
+      "stars": "5,942",
+      "forks": "711",
+      "stars_today": "948 stars today"
+    }
+  ]
+}
