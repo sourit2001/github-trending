@@ -1,0 +1,117 @@
+{
+  "collected_at": "2026-07-11T19:31:05.943141+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "catchorg",
+      "name": "Catch2",
+      "url": "https://github.com/catchorg/Catch2",
+      "description": "A modern, C++-native, test framework for unit-tests, TDD and BDD - using C++14, C++17 and later (C++11 support is in v2.x branch, and C++03 on the Catch1.x branch)",
+      "language": "C++",
+      "stars": "20,940",
+      "forks": "3,428",
+      "stars_today": "117 stars today"
+    },
+    {
+      "rank": 2,
+      "owner": "abseil",
+      "name": "abseil-cpp",
+      "url": "https://github.com/abseil/abseil-cpp",
+      "description": "Abseil Common Libraries (C++)",
+      "language": "C++",
+      "stars": "17,732",
+      "forks": "3,207",
+      "stars_today": "120 stars today"
+    },
+    {
+      "rank": 3,
+      "owner": "davila7",
+      "name": "claude-code-templates",
+      "url": "https://github.com/davila7/claude-code-templates",
+      "description": "CLI tool for configuring and monitoring Claude Code",
+      "language": "Python",
+      "stars": "28,970",
+      "forks": "3,174",
+      "stars_today": "230 stars today"
+    },
+    {
+      "rank": 4,
+      "owner": "google-labs-code",
+      "name": "stitch-skills",
+      "url": "https://github.com/google-labs-code/stitch-skills",
+      "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+      "language": "TypeScript",
+      "stars": "7,008",
+      "forks": "943",
+      "stars_today": "338 stars today"
+    },
+    {
+      "rank": 5,
+      "owner": "hashicorp",
+      "name": "terraform",
+      "url": "https://github.com/hashicorp/terraform",
+      "description": "Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.",
+      "language": "Go",
+      "stars": "49,326",
+      "forks": "10,680",
+      "stars_today": "229 stars today"
+    },
+    {
+      "rank": 6,
+      "owner": "zeux",
+      "name": "meshoptimizer",
+      "url": "https://github.com/zeux/meshoptimizer",
+      "description": "Mesh optimization library that makes meshes smaller and faster to render",
+      "language": "C++",
+      "stars": "8,115",
+      "forks": "787",
+      "stars_today": "111 stars today"
+    },
+    {
+      "rank": 7,
+      "owner": "openai",
+      "name": "plugins",
+      "url": "https://github.com/openai/plugins",
+      "description": "OpenAI Plugins",
+      "language": "JavaScript",
+      "stars": "4,364",
+      "forks": "650",
+      "stars_today": "75 stars today"
+    },
+    {
+      "rank": 8,
+      "owner": "chriskohlhoff",
+      "name": "asio",
+      "url": "https://github.com/chriskohlhoff/asio",
+      "description": "Asio C++ Library",
+      "language": "C++",
+      "stars": "6,129",
+      "forks": "1,508",
+      "stars_today": "75 stars today"
+    },
+    {
+      "rank": 9,
+      "owner": "oven-sh",
+      "name": "bun",
+      "url": "https://github.com/oven-sh/bun",
+      "description": "Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one",
+      "language": "Rust",
+      "stars": "94,530",
+      "forks": "4,960",
+      "stars_today": "654 stars today"
+    },
+    {
+      "rank": 10,
+      "owner": "actions",
+      "name": "checkout",
+      "url": "https://github.com/actions/checkout",
+      "description": "Action for checking out a repo",
+      "language": "TypeScript",
+      "stars": "8,446",
+      "forks": "2,714",
+      "stars_today": "8 stars today"
+    }
+  ]
+}
