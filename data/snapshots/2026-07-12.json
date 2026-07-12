@@ -1,0 +1,117 @@
+{
+  "collected_at": "2026-07-12T19:30:25.342716+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "HKUDS",
+      "name": "Vibe-Trading",
+      "url": "https://github.com/HKUDS/Vibe-Trading",
+      "description": "\"Vibe-Trading: Your Personal Trading Agent\"",
+      "language": "Python",
+      "stars": "20,401",
+      "forks": "3,580",
+      "stars_today": "776 stars today"
+    },
+    {
+      "rank": 2,
+      "owner": "PrefectHQ",
+      "name": "prefect",
+      "url": "https://github.com/PrefectHQ/prefect",
+      "description": "Prefect is a workflow orchestration framework for building resilient data pipelines in Python.",
+      "language": "Python",
+      "stars": "23,092",
+      "forks": "2,386",
+      "stars_today": "55 stars today"
+    },
+    {
+      "rank": 3,
+      "owner": "Shubhamsaboo",
+      "name": "awesome-llm-apps",
+      "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+      "description": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+      "language": "Python",
+      "stars": "118,414",
+      "forks": "17,615",
+      "stars_today": "450 stars today"
+    },
+    {
+      "rank": 4,
+      "owner": "anthropics",
+      "name": "claude-cookbooks",
+      "url": "https://github.com/anthropics/claude-cookbooks",
+      "description": "A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
+      "language": "Jupyter Notebook",
+      "stars": "48,291",
+      "forks": "5,717",
+      "stars_today": "464 stars today"
+    },
+    {
+      "rank": 5,
+      "owner": "home-assistant",
+      "name": "core",
+      "url": "https://github.com/home-assistant/core",
+      "description": "🏡 Open source home automation that puts local control and privacy first.",
+      "language": "Python",
+      "stars": "88,974",
+      "forks": "38,075",
+      "stars_today": "404 stars today"
+    },
+    {
+      "rank": 6,
+      "owner": "Crosstalk-Solutions",
+      "name": "project-nomad",
+      "url": "https://github.com/Crosstalk-Solutions/project-nomad",
+      "description": "Project N.O.M.A.D, is a self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered—anytime, anywhere.",
+      "language": "TypeScript",
+      "stars": "33,717",
+      "forks": "3,383",
+      "stars_today": "122 stars today"
+    },
+    {
+      "rank": 7,
+      "owner": "ColeMurray",
+      "name": "background-agents",
+      "url": "https://github.com/ColeMurray/background-agents",
+      "description": "An open-source background agents coding system",
+      "language": "TypeScript",
+      "stars": "2,214",
+      "forks": "341",
+      "stars_today": "9 stars today"
+    },
+    {
+      "rank": 8,
+      "owner": "k1tbyte",
+      "name": "Wand-Enhancer",
+      "url": "https://github.com/k1tbyte/Wand-Enhancer",
+      "description": "Advanced UX and interoperability extension for Wand (WeMod) app",
+      "language": "C#",
+      "stars": "6,826",
+      "forks": "19,178",
+      "stars_today": "603 stars today"
+    },
+    {
+      "rank": 9,
+      "owner": "pingdotgg",
+      "name": "t3code",
+      "url": "https://github.com/pingdotgg/t3code",
+      "description": "",
+      "language": "TypeScript",
+      "stars": "13,708",
+      "forks": "2,877",
+      "stars_today": "79 stars today"
+    },
+    {
+      "rank": 10,
+      "owner": "virattt",
+      "name": "ai-hedge-fund",
+      "url": "https://github.com/virattt/ai-hedge-fund",
+      "description": "An AI Hedge Fund Team",
+      "language": "Python",
+      "stars": "61,343",
+      "forks": "10,851",
+      "stars_today": "109 stars today"
+    }
+  ]
+}
