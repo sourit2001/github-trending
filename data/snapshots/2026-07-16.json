@@ -1,0 +1,117 @@
+{
+  "collected_at": "2026-07-16T19:33:49.163974+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "apache",
+      "name": "ossie",
+      "url": "https://github.com/apache/ossie",
+      "description": "Apache Ossie, industry wide specification effort to standardize how we exchange semantic metadata across analytics, AI and BI platforms, providing a vendor neutral, single source of truth for semantic data",
+      "language": "Python",
+      "stars": "844",
+      "forks": "129",
+      "stars_today": "81 stars today"
+    },
+    {
+      "rank": 2,
+      "owner": "Nutlope",
+      "name": "hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "language": "CSS",
+      "stars": "10,586",
+      "forks": "522",
+      "stars_today": "3,181 stars today"
+    },
+    {
+      "rank": 3,
+      "owner": "PostHog",
+      "name": "posthog",
+      "url": "https://github.com/PostHog/posthog",
+      "description": "🦔 PostHog is the leading platform for building self-driving products. Our developer tools – AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more – capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.",
+      "language": "Python",
+      "stars": "35,765",
+      "forks": "2,984",
+      "stars_today": "146 stars today"
+    },
+    {
+      "rank": 4,
+      "owner": "openinterpreter",
+      "name": "openinterpreter",
+      "url": "https://github.com/openinterpreter/openinterpreter",
+      "description": "A coding agent for low-cost models",
+      "language": "Rust",
+      "stars": "65,918",
+      "forks": "5,671",
+      "stars_today": "633 stars today"
+    },
+    {
+      "rank": 5,
+      "owner": "PrismML-Eng",
+      "name": "Bonsai-demo",
+      "url": "https://github.com/PrismML-Eng/Bonsai-demo",
+      "description": "Bonsai Demo",
+      "language": "Shell",
+      "stars": "1,473",
+      "forks": "150",
+      "stars_today": "323 stars today"
+    },
+    {
+      "rank": 6,
+      "owner": "hasaneyldrm",
+      "name": "exercises-dataset",
+      "url": "https://github.com/hasaneyldrm/exercises-dataset",
+      "description": "1,324-exercise fitness dataset — animation GIFs, 180×180 thumbnails, muscle-group & equipment data, and step-by-step instructions in 6 languages. The exercise data layer behind the LogPress app.",
+      "language": "HTML",
+      "stars": "14,918",
+      "forks": "1,790",
+      "stars_today": "697 stars today"
+    },
+    {
+      "rank": 7,
+      "owner": "Shubhamsaboo",
+      "name": "awesome-llm-apps",
+      "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+      "description": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+      "language": "Python",
+      "stars": "122,714",
+      "forks": "18,102",
+      "stars_today": "935 stars today"
+    },
+    {
+      "rank": 8,
+      "owner": "YimMenu",
+      "name": "YimMenuV2",
+      "url": "https://github.com/YimMenu/YimMenuV2",
+      "description": "Experimental menu for GTA 5: Enhanced",
+      "language": "C++",
+      "stars": "1,492",
+      "forks": "357",
+      "stars_today": "122 stars today"
+    },
+    {
+      "rank": 9,
+      "owner": "HKUDS",
+      "name": "DeepTutor",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
+      "language": "Python",
+      "stars": "26,786",
+      "forks": "3,608",
+      "stars_today": "647 stars today"
+    },
+    {
+      "rank": 10,
+      "owner": "github",
+      "name": "copilot-sdk",
+      "url": "https://github.com/github/copilot-sdk",
+      "description": "Multi-platform SDK for integrating GitHub Copilot Agent into apps and services",
+      "language": "Java",
+      "stars": "9,610",
+      "forks": "1,315",
+      "stars_today": "62 stars today"
+    }
+  ]
+}
