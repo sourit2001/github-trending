@@ -1,0 +1,117 @@
+{
+  "collected_at": "2026-07-17T19:31:47.968442+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "codecrafters-io",
+      "name": "build-your-own-x",
+      "url": "https://github.com/codecrafters-io/build-your-own-x",
+      "description": "Master programming by recreating your favorite technologies from scratch.",
+      "language": "Markdown",
+      "stars": "527,162",
+      "forks": "49,891",
+      "stars_today": "1,070 stars today"
+    },
+    {
+      "rank": 2,
+      "owner": "PostHog",
+      "name": "posthog",
+      "url": "https://github.com/PostHog/posthog",
+      "description": "🦔 PostHog is the leading platform for building self-driving products. Our developer tools – AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more – capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.",
+      "language": "Python",
+      "stars": "36,126",
+      "forks": "3,009",
+      "stars_today": "437 stars today"
+    },
+    {
+      "rank": 3,
+      "owner": "Nutlope",
+      "name": "hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "language": "CSS",
+      "stars": "11,856",
+      "forks": "594",
+      "stars_today": "1,486 stars today"
+    },
+    {
+      "rank": 4,
+      "owner": "github",
+      "name": "copilot-sdk",
+      "url": "https://github.com/github/copilot-sdk",
+      "description": "Multi-platform SDK for integrating GitHub Copilot Agent into apps and services",
+      "language": "Java",
+      "stars": "9,773",
+      "forks": "1,327",
+      "stars_today": "234 stars today"
+    },
+    {
+      "rank": 5,
+      "owner": "anthropics",
+      "name": "cwc-workshops",
+      "url": "https://github.com/anthropics/cwc-workshops",
+      "description": "",
+      "language": "TypeScript",
+      "stars": "1,547",
+      "forks": "488",
+      "stars_today": "37 stars today"
+    },
+    {
+      "rank": 6,
+      "owner": "PrismML-Eng",
+      "name": "Bonsai-demo",
+      "url": "https://github.com/PrismML-Eng/Bonsai-demo",
+      "description": "Bonsai Demo",
+      "language": "Shell",
+      "stars": "1,688",
+      "forks": "166",
+      "stars_today": "279 stars today"
+    },
+    {
+      "rank": 7,
+      "owner": "protocolbuffers",
+      "name": "protobuf",
+      "url": "https://github.com/protocolbuffers/protobuf",
+      "description": "Protocol Buffers - Google's data interchange format",
+      "language": "C++",
+      "stars": "71,527",
+      "forks": "16,191",
+      "stars_today": "18 stars today"
+    },
+    {
+      "rank": 8,
+      "owner": "docusealco",
+      "name": "docuseal",
+      "url": "https://github.com/docusealco/docuseal",
+      "description": "Open source DocuSign alternative. Create, fill, and sign digital documents ✍️",
+      "language": "Ruby",
+      "stars": "17,771",
+      "forks": "1,767",
+      "stars_today": "152 stars today"
+    },
+    {
+      "rank": 9,
+      "owner": "openinterpreter",
+      "name": "openinterpreter",
+      "url": "https://github.com/openinterpreter/openinterpreter",
+      "description": "A coding agent for open models like Kimi K3",
+      "language": "Rust",
+      "stars": "66,278",
+      "forks": "5,698",
+      "stars_today": "431 stars today"
+    },
+    {
+      "rank": 10,
+      "owner": "RyanCodrai",
+      "name": "turbovec",
+      "url": "https://github.com/RyanCodrai/turbovec",
+      "description": "A vector index built on TurboQuant, written in Rust with Python bindings",
+      "language": "Python",
+      "stars": "13,246",
+      "forks": "1,176",
+      "stars_today": "280 stars today"
+    }
+  ]
+}
