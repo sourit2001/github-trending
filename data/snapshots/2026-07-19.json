@@ -1,0 +1,117 @@
+{
+  "collected_at": "2026-07-19T19:31:22.769864+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "kvcache-ai",
+      "name": "ktransformers",
+      "url": "https://github.com/kvcache-ai/ktransformers",
+      "description": "A Flexible Framework for Experiencing Heterogeneous LLM Inference/Fine-tune Optimizations",
+      "language": "Python",
+      "stars": "18,292",
+      "forks": "1,449",
+      "stars_today": "328 stars today"
+    },
+    {
+      "rank": 2,
+      "owner": "jamiepine",
+      "name": "voicebox",
+      "url": "https://github.com/jamiepine/voicebox",
+      "description": "The open-source AI voice studio. Clone, dictate, create.",
+      "language": "TypeScript",
+      "stars": "43,215",
+      "forks": "5,284",
+      "stars_today": "629 stars today"
+    },
+    {
+      "rank": 3,
+      "owner": "KnockOutEZ",
+      "name": "wigolo",
+      "url": "https://github.com/KnockOutEZ/wigolo",
+      "description": "The go-to web for your AI coding agent — local-first search, fetch, crawl & research over MCP. No API keys, no cloud, $0/query. Public beta.",
+      "language": "TypeScript",
+      "stars": "1,725",
+      "forks": "108",
+      "stars_today": "605 stars today"
+    },
+    {
+      "rank": 4,
+      "owner": "andrewrabert",
+      "name": "jellium-desktop",
+      "url": "https://github.com/andrewrabert/jellium-desktop",
+      "description": "An unofficial desktop client for Jellyfin",
+      "language": "Rust",
+      "stars": "1,258",
+      "forks": "107",
+      "stars_today": "54 stars today"
+    },
+    {
+      "rank": 5,
+      "owner": "github",
+      "name": "copilot-sdk",
+      "url": "https://github.com/github/copilot-sdk",
+      "description": "Multi-platform SDK for integrating GitHub Copilot Agent into apps and services",
+      "language": "Java",
+      "stars": "9,928",
+      "forks": "1,349",
+      "stars_today": "46 stars today"
+    },
+    {
+      "rank": 6,
+      "owner": "PostHog",
+      "name": "posthog",
+      "url": "https://github.com/PostHog/posthog",
+      "description": "🦔 PostHog is the leading platform for building self-driving products. Our developer tools – AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more – capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.",
+      "language": "Python",
+      "stars": "36,880",
+      "forks": "3,052",
+      "stars_today": "424 stars today"
+    },
+    {
+      "rank": 7,
+      "owner": "microsoft",
+      "name": "terminal",
+      "url": "https://github.com/microsoft/terminal",
+      "description": "The new Windows Terminal and the original Windows console host, all in the same place!",
+      "language": "C++",
+      "stars": "104,127",
+      "forks": "9,435",
+      "stars_today": "103 stars today"
+    },
+    {
+      "rank": 8,
+      "owner": "AstrBotDevs",
+      "name": "AstrBot",
+      "url": "https://github.com/AstrBotDevs/AstrBot",
+      "description": "AI Agent Assistant & development framework that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
+      "language": "Python",
+      "stars": "36,661",
+      "forks": "2,543",
+      "stars_today": "62 stars today"
+    },
+    {
+      "rank": 9,
+      "owner": "1jehuang",
+      "name": "jcode",
+      "url": "https://github.com/1jehuang/jcode",
+      "description": "Coding Agent Harness",
+      "language": "Rust",
+      "stars": "8,815",
+      "forks": "1,023",
+      "stars_today": "199 stars today"
+    },
+    {
+      "rank": 10,
+      "owner": "MoonshotAI",
+      "name": "kimi-cli",
+      "url": "https://github.com/MoonshotAI/kimi-cli",
+      "description": "Kimi Code CLI is your next CLI agent.",
+      "language": "Python",
+      "stars": "9,822",
+      "forks": "1,191",
+      "stars_today": "418 stars today"
+    }
+  ]
+}
