@@ -1,0 +1,117 @@
+{
+  "collected_at": "2026-07-21T19:50:40.894489+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "koala73",
+      "name": "worldmonitor",
+      "url": "https://github.com/koala73/worldmonitor",
+      "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+      "language": "TypeScript",
+      "stars": "64,828",
+      "forks": "10,118",
+      "stars_today": "1,167 stars today"
+    },
+    {
+      "rank": 2,
+      "owner": "bojieli",
+      "name": "ai-agent-book",
+      "url": "https://github.com/bojieli/ai-agent-book",
+      "description": "《深入理解 AI Agent：设计原理与工程实践》（李博杰 著）开源主仓库：全书正文、编译版 PDF 与按章配套代码",
+      "language": "Python",
+      "stars": "14,179",
+      "forks": "1,324",
+      "stars_today": "4,434 stars today"
+    },
+    {
+      "rank": 3,
+      "owner": "ayghri",
+      "name": "i-have-adhd",
+      "url": "https://github.com/ayghri/i-have-adhd",
+      "description": "A skill for your coding agent to stop it from burying the answer. ADHD-friendly output.",
+      "language": "Unknown",
+      "stars": "6,576",
+      "forks": "266",
+      "stars_today": "1,846 stars today"
+    },
+    {
+      "rank": 4,
+      "owner": "earthtojake",
+      "name": "text-to-cad",
+      "url": "https://github.com/earthtojake/text-to-cad",
+      "description": "A collection of agent skills for CAD, robotics and hardware design",
+      "language": "JavaScript",
+      "stars": "8,998",
+      "forks": "1,018",
+      "stars_today": "378 stars today"
+    },
+    {
+      "rank": 5,
+      "owner": "1jehuang",
+      "name": "jcode",
+      "url": "https://github.com/1jehuang/jcode",
+      "description": "The most intelligent agent harness for code",
+      "language": "Rust",
+      "stars": "10,224",
+      "forks": "1,125",
+      "stars_today": "835 stars today"
+    },
+    {
+      "rank": 6,
+      "owner": "oblien",
+      "name": "openship",
+      "url": "https://github.com/oblien/openship",
+      "description": "Self-hosted deployment platform",
+      "language": "TypeScript",
+      "stars": "5,987",
+      "forks": "432",
+      "stars_today": "1,556 stars today"
+    },
+    {
+      "rank": 7,
+      "owner": "AstrBotDevs",
+      "name": "AstrBot",
+      "url": "https://github.com/AstrBotDevs/AstrBot",
+      "description": "AI Agent Assistant & development framework that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
+      "language": "Python",
+      "stars": "37,421",
+      "forks": "2,606",
+      "stars_today": "416 stars today"
+    },
+    {
+      "rank": 8,
+      "owner": "every-app",
+      "name": "open-seo",
+      "url": "https://github.com/every-app/open-seo",
+      "description": "Open source alternative to Semrush and Ahrefs",
+      "language": "TypeScript",
+      "stars": "6,484",
+      "forks": "706",
+      "stars_today": "850 stars today"
+    },
+    {
+      "rank": 9,
+      "owner": "tradesdontlie",
+      "name": "tradingview-mcp",
+      "url": "https://github.com/tradesdontlie/tradingview-mcp",
+      "description": "AI-assisted TradingView chart analysis — connect Claude Code to your TradingView Desktop for personal workflow automation",
+      "language": "JavaScript",
+      "stars": "4,769",
+      "forks": "2,168",
+      "stars_today": "219 stars today"
+    },
+    {
+      "rank": 10,
+      "owner": "hyprwm",
+      "name": "Hyprland",
+      "url": "https://github.com/hyprwm/Hyprland",
+      "description": "Hyprland is an independent, highly customizable, dynamic tiling Wayland compositor that doesn't sacrifice on its looks.",
+      "language": "C++",
+      "stars": "36,970",
+      "forks": "1,859",
+      "stars_today": "88 stars today"
+    }
+  ]
+}
