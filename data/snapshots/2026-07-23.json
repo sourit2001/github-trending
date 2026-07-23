@@ -1,0 +1,117 @@
+{
+  "collected_at": "2026-07-23T19:44:55.767436+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "block",
+      "name": "buzz",
+      "url": "https://github.com/block/buzz",
+      "description": "A hive mind communication platform",
+      "language": "Rust",
+      "stars": "6,359",
+      "forks": "507",
+      "stars_today": "2,460 stars today"
+    },
+    {
+      "rank": 2,
+      "owner": "koala73",
+      "name": "worldmonitor",
+      "url": "https://github.com/koala73/worldmonitor",
+      "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+      "language": "TypeScript",
+      "stars": "71,280",
+      "forks": "10,773",
+      "stars_today": "3,196 stars today"
+    },
+    {
+      "rank": 3,
+      "owner": "shiyu-coder",
+      "name": "Kronos",
+      "url": "https://github.com/shiyu-coder/Kronos",
+      "description": "Kronos: A Foundation Model for the Language of Financial Markets",
+      "language": "Python",
+      "stars": "32,970",
+      "forks": "5,640",
+      "stars_today": "398 stars today"
+    },
+    {
+      "rank": 4,
+      "owner": "citrolabs",
+      "name": "ego-lite",
+      "url": "https://github.com/citrolabs/ego-lite",
+      "description": "The best browser for both you and your AI agents work in parallel.",
+      "language": "JavaScript",
+      "stars": "1,517",
+      "forks": "87",
+      "stars_today": "219 stars today"
+    },
+    {
+      "rank": 5,
+      "owner": "ComposioHQ",
+      "name": "awesome-claude-skills",
+      "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
+      "language": "Python",
+      "stars": "69,334",
+      "forks": "7,846",
+      "stars_today": "637 stars today"
+    },
+    {
+      "rank": 6,
+      "owner": "earthtojake",
+      "name": "text-to-cad",
+      "url": "https://github.com/earthtojake/text-to-cad",
+      "description": "A collection of agent skills for CAD, robotics and hardware design",
+      "language": "JavaScript",
+      "stars": "9,886",
+      "forks": "1,090",
+      "stars_today": "293 stars today"
+    },
+    {
+      "rank": 7,
+      "owner": "agegr",
+      "name": "pi-web",
+      "url": "https://github.com/agegr/pi-web",
+      "description": "Web UI for the pi coding agent",
+      "language": "TypeScript",
+      "stars": "2,319",
+      "forks": "323",
+      "stars_today": "315 stars today"
+    },
+    {
+      "rank": 8,
+      "owner": "alibaba",
+      "name": "open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "description": "Open-source & free — Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "language": "Go",
+      "stars": "11,358",
+      "forks": "784",
+      "stars_today": "265 stars today"
+    },
+    {
+      "rank": 9,
+      "owner": "ruvnet",
+      "name": "RuView",
+      "url": "https://github.com/ruvnet/RuView",
+      "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+      "language": "Rust",
+      "stars": "85,056",
+      "forks": "11,356",
+      "stars_today": "1,726 stars today"
+    },
+    {
+      "rank": 10,
+      "owner": "Julian-adv",
+      "name": "OpenMMO",
+      "url": "https://github.com/Julian-adv/OpenMMO",
+      "description": "",
+      "language": "Rust",
+      "stars": "1,307",
+      "forks": "163",
+      "stars_today": "395 stars today"
+    }
+  ]
+}
