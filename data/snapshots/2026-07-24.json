@@ -1,0 +1,117 @@
+{
+  "collected_at": "2026-07-24T19:45:56.612068+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "block",
+      "name": "buzz",
+      "url": "https://github.com/block/buzz",
+      "description": "A hive mind communication platform",
+      "language": "Rust",
+      "stars": "9,515",
+      "forks": "732",
+      "stars_today": "3,274 stars today"
+    },
+    {
+      "rank": 2,
+      "owner": "koala73",
+      "name": "worldmonitor",
+      "url": "https://github.com/koala73/worldmonitor",
+      "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+      "language": "TypeScript",
+      "stars": "73,101",
+      "forks": "10,969",
+      "stars_today": "2,194 stars today"
+    },
+    {
+      "rank": 3,
+      "owner": "ComposioHQ",
+      "name": "awesome-claude-skills",
+      "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
+      "language": "Python",
+      "stars": "69,963",
+      "forks": "7,890",
+      "stars_today": "662 stars today"
+    },
+    {
+      "rank": 4,
+      "owner": "Pumpkin-MC",
+      "name": "Pumpkin",
+      "url": "https://github.com/Pumpkin-MC/Pumpkin",
+      "description": "Empowering everyone to host fast and efficient Minecraft servers.",
+      "language": "Rust",
+      "stars": "9,274",
+      "forks": "631",
+      "stars_today": "472 stars today"
+    },
+    {
+      "rank": 5,
+      "owner": "shiyu-coder",
+      "name": "Kronos",
+      "url": "https://github.com/shiyu-coder/Kronos",
+      "description": "Kronos: A Foundation Model for the Language of Financial Markets",
+      "language": "Python",
+      "stars": "33,438",
+      "forks": "5,676",
+      "stars_today": "506 stars today"
+    },
+    {
+      "rank": 6,
+      "owner": "Automattic",
+      "name": "harper",
+      "url": "https://github.com/Automattic/harper",
+      "description": "Offline, privacy-first grammar checker. Fast, open-source, Rust-powered",
+      "language": "Rust",
+      "stars": "12,940",
+      "forks": "480",
+      "stars_today": "877 stars today"
+    },
+    {
+      "rank": 7,
+      "owner": "citrolabs",
+      "name": "ego-lite",
+      "url": "https://github.com/citrolabs/ego-lite",
+      "description": "The fastest browser for AI agents to run web automation, built for sharing your logged-in browser state with your AI agents, like Codex or Claude Code, without disturbing you. Zero cost, zero config.",
+      "language": "JavaScript",
+      "stars": "2,423",
+      "forks": "115",
+      "stars_today": "884 stars today"
+    },
+    {
+      "rank": 8,
+      "owner": "yorukot",
+      "name": "superfile",
+      "url": "https://github.com/yorukot/superfile",
+      "description": "Pretty fancy and modern terminal file manager",
+      "language": "Go",
+      "stars": "19,429",
+      "forks": "593",
+      "stars_today": "312 stars today"
+    },
+    {
+      "rank": 9,
+      "owner": "ruvnet",
+      "name": "RuView",
+      "url": "https://github.com/ruvnet/RuView",
+      "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+      "language": "Rust",
+      "stars": "85,828",
+      "forks": "11,435",
+      "stars_today": "1,021 stars today"
+    },
+    {
+      "rank": 10,
+      "owner": "Lordog",
+      "name": "dive-into-llms",
+      "url": "https://github.com/Lordog/dive-into-llms",
+      "description": "《动手学大模型Dive into LLMs》系列编程实践教程",
+      "language": "Jupyter Notebook",
+      "stars": "44,967",
+      "forks": "5,385",
+      "stars_today": "654 stars today"
+    }
+  ]
+}
