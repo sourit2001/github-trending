@@ -1,0 +1,117 @@
+{
+  "collected_at": "2026-07-25T19:33:55.295838+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "block",
+      "name": "buzz",
+      "url": "https://github.com/block/buzz",
+      "description": "A hive mind communication platform",
+      "language": "Rust",
+      "stars": "11,588",
+      "forks": "911",
+      "stars_today": "2,506 stars today"
+    },
+    {
+      "rank": 2,
+      "owner": "alibaba",
+      "name": "open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "description": "Open-source & free — Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "language": "Go",
+      "stars": "12,826",
+      "forks": "881",
+      "stars_today": "439 stars today"
+    },
+    {
+      "rank": 3,
+      "owner": "citrolabs",
+      "name": "ego-lite",
+      "url": "https://github.com/citrolabs/ego-lite",
+      "description": "The fastest browser for AI agents to run web automation, built for sharing your logged-in browser state with your AI agents, like Codex or Claude Code, without disturbing you. Zero cost, zero config.",
+      "language": "JavaScript",
+      "stars": "3,413",
+      "forks": "164",
+      "stars_today": "986 stars today"
+    },
+    {
+      "rank": 4,
+      "owner": "ComposioHQ",
+      "name": "awesome-claude-skills",
+      "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
+      "language": "Python",
+      "stars": "70,500",
+      "forks": "7,935",
+      "stars_today": "574 stars today"
+    },
+    {
+      "rank": 5,
+      "owner": "anthropics",
+      "name": "claude-cookbooks",
+      "url": "https://github.com/anthropics/claude-cookbooks",
+      "description": "A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
+      "language": "Jupyter Notebook",
+      "stars": "49,813",
+      "forks": "5,893",
+      "stars_today": "144 stars today"
+    },
+    {
+      "rank": 6,
+      "owner": "Automattic",
+      "name": "harper",
+      "url": "https://github.com/Automattic/harper",
+      "description": "Offline, privacy-first grammar checker. Fast, open-source, Rust-powered",
+      "language": "Rust",
+      "stars": "13,342",
+      "forks": "504",
+      "stars_today": "503 stars today"
+    },
+    {
+      "rank": 7,
+      "owner": "shiyu-coder",
+      "name": "Kronos",
+      "url": "https://github.com/shiyu-coder/Kronos",
+      "description": "Kronos: A Foundation Model for the Language of Financial Markets",
+      "language": "Python",
+      "stars": "33,740",
+      "forks": "5,698",
+      "stars_today": "319 stars today"
+    },
+    {
+      "rank": 8,
+      "owner": "Pumpkin-MC",
+      "name": "Pumpkin",
+      "url": "https://github.com/Pumpkin-MC/Pumpkin",
+      "description": "Empowering everyone to host fast and efficient Minecraft servers.",
+      "language": "Rust",
+      "stars": "9,636",
+      "forks": "650",
+      "stars_today": "357 stars today"
+    },
+    {
+      "rank": 9,
+      "owner": "permissionlesstech",
+      "name": "bitchat",
+      "url": "https://github.com/permissionlesstech/bitchat",
+      "description": "bluetooth mesh chat, IRC vibes",
+      "language": "Swift",
+      "stars": "28,541",
+      "forks": "4,213",
+      "stars_today": "1,695 stars today"
+    },
+    {
+      "rank": 10,
+      "owner": "palmier-io",
+      "name": "palmier-pro",
+      "url": "https://github.com/palmier-io/palmier-pro",
+      "description": "macOS video editor built for AI",
+      "language": "Swift",
+      "stars": "12,146",
+      "forks": "892",
+      "stars_today": "346 stars today"
+    }
+  ]
+}
