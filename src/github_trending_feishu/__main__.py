@@ -36,6 +36,8 @@ class TrendingRepo:
     stars: str
     forks: str
     stars_today: str
+    zh_description: str = ""
+    use_case: str = ""
 
     @property
     def full_name(self) -> str:
@@ -183,7 +185,106 @@ def fetch_trending(language: str = "", since: str = "daily") -> list[TrendingRep
 
     parser = TrendingParser()
     parser.feed(html)
-    return parser.repos
+    return enrich_repos(parser.repos)
+
+
+def enrich_repos(repos: list[TrendingRepo]) -> list[TrendingRepo]:
+    return [enrich_repo(repo) for repo in repos]
+
+
+def enrich_repo(repo: TrendingRepo) -> TrendingRepo:
+    zh_description, use_case = summarize_repo_in_chinese(repo)
+    repo.zh_description = zh_description
+    repo.use_case = use_case
+    return repo
+
+
+def summarize_repo_in_chinese(repo: TrendingRepo) -> tuple[str, str]:
+    description = repo.description.strip()
+    context = f"{repo.full_name} {description} {repo.language}".lower()
+
+    keyword_rules: list[tuple[tuple[str, ...], str, str]] = [
+        (
+            ("ai", "agent", "coding agent", "codex", "llm", "mcp"),
+            "面向 AI Agent 和自动化工作流的项目，用来把模型能力接入开发、工具调用或界面操作。",
+            "适合用于研发提效、自动化代码审查、智能助手集成、内部工具 Agent 化等场景。",
+        ),
+        (
+            ("penetration", "vulnerabil", "security", "scan", "attack", "pentest"),
+            "开源安全工具，聚焦漏洞发现、渗透测试或应用安全检测。",
+            "适合用于上线前安全自查、红队演练、漏洞验证和安全团队日常扫描。",
+        ),
+        (
+            ("machine learning", "ml", "deep learning", "model", "training", "dataset"),
+            "机器学习相关项目，覆盖模型、训练、数据处理或学习资料。",
+            "适合用于 AI 研发、模型实验、课程学习、技术调研和团队知识沉淀。",
+        ),
+        (
+            ("devtools", "debug", "browser", "chrome"),
+            "开发者工具项目，帮助开发、调试或观测 Web 应用与浏览器运行状态。",
+            "适合用于前端调试、自动化测试、性能分析和开发工具链集成。",
+        ),
+        (
+            ("self-hosted", "self hosted", "server", "manager", "management", "dashboard"),
+            "可自部署的管理类项目，用于集中管理资源、内容或服务。",
+            "适合用于个人私有化部署、团队内部平台、数据资产管理和替代商业 SaaS。",
+        ),
+        (
+            ("photo", "video", "media", "music", "player", "rom", "game"),
+            "媒体或娱乐内容管理项目，用来整理、播放或管理个人数字内容。",
+            "适合用于家庭媒体库、影音资料归档、游戏资源整理和私有娱乐中心。",
+        ),
+        (
+            ("documentation", "book", "specification", "course", "tutorial", "guide"),
+            "知识文档或规范类项目，提供系统化资料、标准说明或实践指南。",
+            "适合用于技术学习、团队培训、方案选型参考和工程规范建设。",
+        ),
+        (
+            ("ui", "component", "frontend", "react", "vue", "css", "tailwind"),
+            "前端界面或组件相关项目，帮助构建交互界面、组件库或设计系统。",
+            "适合用于 Web 产品开发、设计系统建设、原型验证和前端工程提效。",
+        ),
+        (
+            ("api", "framework", "sdk", "library", "toolkit"),
+            "开发框架或工具库项目，为应用开发提供 API、SDK 或基础能力封装。",
+            "适合用于新项目搭建、现有系统能力扩展、二次开发和工程基础设施建设。",
+        ),
+    ]
+
+    for keywords, zh_description, use_case in keyword_rules:
+        if any(keyword in context for keyword in keywords):
+            return zh_description, use_case
+
+    language_label = repo.language or "未知语言"
+    if contains_cjk(description):
+        zh_description = description
+    elif description:
+        zh_description = f"一个以 {language_label} 为主要技术栈的开源项目，核心能力是：{description}"
+    else:
+        zh_description = f"一个以 {language_label} 为主要技术栈的 GitHub Trending 开源项目。"
+
+    use_case = build_default_use_case(language_label)
+    return zh_description, use_case
+
+
+def contains_cjk(value: str) -> bool:
+    return any("\u4e00" <= char <= "\u9fff" for char in value)
+
+
+def build_default_use_case(language: str) -> str:
+    language_use_cases = {
+        "Python": "适合用于脚本自动化、数据处理、AI 原型验证或后端服务开发。",
+        "TypeScript": "适合用于 Web 应用、Node.js 服务、前端工程化和类型安全的工具开发。",
+        "JavaScript": "适合用于 Web 交互、浏览器扩展、Node.js 工具和快速原型开发。",
+        "Go": "适合用于云原生服务、CLI 工具、高并发后端和基础设施组件。",
+        "Rust": "适合用于高性能系统、命令行工具、底层组件和安全敏感场景。",
+        "C#": "适合用于 .NET 企业应用、桌面工具、游戏开发和后端服务。",
+        "Java": "适合用于企业后端、Android 应用、大型服务和中间件开发。",
+    }
+    return language_use_cases.get(
+        language,
+        "适合用于技术调研、原型验证、学习参考，或按项目定位集成到现有系统中。",
+    )
 
 
 def build_report(repos: list[TrendingRepo], title: str, collected_at: datetime) -> str:
@@ -196,6 +297,12 @@ def build_report(repos: list[TrendingRepo], title: str, collected_at: datetime) 
         "|---:|---|---|---:|---:|---:|---|",
     ]
     for repo in repos:
+        description_parts = [
+            f"**中文简介：** {repo.zh_description or '-'}",
+            f"**适用场景：** {repo.use_case or '-'}",
+        ]
+        if repo.description:
+            description_parts.append(f"**原始描述：** {repo.description}")
         lines.append(
             "| "
             f"{repo.rank} | "
@@ -204,7 +311,7 @@ def build_report(repos: list[TrendingRepo], title: str, collected_at: datetime) 
             f"{repo.stars or '-'} | "
             f"{repo.forks or '-'} | "
             f"{repo.stars_today or '-'} | "
-            f"{escape_table(repo.description) or '-'} |"
+            f"{escape_table('<br>'.join(description_parts))} |"
         )
     lines.append("")
     return "\n".join(lines)
@@ -218,6 +325,8 @@ def build_feishu_card(repos: list[TrendingRepo], title: str) -> dict[str, Any]:
     elements: list[dict[str, Any]] = []
     for repo in repos:
         description = repo.description or "No description"
+        zh_description = repo.zh_description or "暂无中文简介"
+        use_case = repo.use_case or "暂无适用场景"
         metadata = " · ".join(
             item
             for item in [
@@ -234,7 +343,9 @@ def build_feishu_card(repos: list[TrendingRepo], title: str) -> dict[str, Any]:
                     "tag": "lark_md",
                     "content": (
                         f"**{repo.rank}. [{repo.full_name}]({repo.url})**\n"
-                        f"{description}\n"
+                        f"**中文简介：** {zh_description}\n"
+                        f"**适用场景：** {use_case}\n"
+                        f"**原始描述：** {description}\n"
                         f"{metadata}"
                     ),
                 },
