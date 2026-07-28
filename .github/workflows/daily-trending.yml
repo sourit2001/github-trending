@@ -29,6 +29,7 @@ jobs:
           TRENDING_LANGUAGE: ""
           TRENDING_SINCE: daily
           TRENDING_LIMIT: "10"
+          REPORT_TIMEZONE: Asia/Shanghai
         run: PYTHONPATH=src python -m github_trending_feishu
 
       - name: Commit daily report

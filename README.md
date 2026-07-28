@@ -46,5 +46,19 @@ PYTHONPATH=src python -m github_trending_feishu
 - `TRENDING_LIMIT`: 发送项目数量
 - `REPORT_DIR`: Markdown 报告目录，默认 `data/reports`
 - `SNAPSHOT_DIR`: JSON 快照目录，默认 `data/snapshots`
+- `REPORT_TIMEZONE`: 报告文件名使用的日期时区，默认 `Asia/Shanghai`
 
 如果不配置 `DEEPSEEK_API_KEY`，程序会使用本地规则生成中文内容；如果 DeepSeek 调用失败，也会自动回退到本地规则，避免影响飞书推送。
+
+## 同步到 Obsidian
+
+GitHub Actions 运行在 GitHub 的服务器上，不能直接写入你 Mac 本地的 iCloud Drive。当前流程会把报告提交到本仓库：
+
+- Markdown 报告：`data/reports/YYYY-MM-DD.md`
+- JSON 快照：`data/snapshots/YYYY-MM-DD.json`
+
+如果 Mac mini 上已有拉取程序，需要让它拉取本仓库的最新提交，再把 `data/reports/YYYY-MM-DD.md` 复制或同步到 Obsidian 的 iCloud vault 目录。
+
+注意当前 workflow 是先生成报告并发送飞书，然后才执行自动提交。看到飞书消息时，GitHub 上的报告提交可能还在后续步骤中，Mac mini 如果立即拉取可能会拉不到当天文件。建议拉取程序延迟 1-2 分钟，或按固定间隔轮询 GitHub 仓库更新。
+
+workflow 默认在 `18:12 UTC` 运行，也就是北京时间第二天 `02:12`。报告文件名默认按 `Asia/Shanghai` 生成，例如北京时间 7 月 28 日运行会写入 `data/reports/2026-07-28.md`。

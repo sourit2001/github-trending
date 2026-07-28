@@ -17,6 +17,7 @@ from typing import Any
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 
 GITHUB_TRENDING_URL = "https://github.com/trending"
@@ -611,6 +612,14 @@ def write_json(path: Path, data: Any) -> None:
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def parse_report_timezone(value: str) -> ZoneInfo | timezone:
+    try:
+        return ZoneInfo(value)
+    except ZoneInfoNotFoundError:
+        print(f"Unknown REPORT_TIMEZONE {value!r}, fallback to UTC.", file=sys.stderr)
+        return timezone.utc
+
+
 def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Send GitHub Trending repos to Feishu.")
     parser.add_argument("--language", default=os.getenv("TRENDING_LANGUAGE", ""))
@@ -620,6 +629,7 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--feishu-secret", default=os.getenv("FEISHU_SECRET", ""))
     parser.add_argument("--report-dir", default=os.getenv("REPORT_DIR", "data/reports"))
     parser.add_argument("--snapshot-dir", default=os.getenv("SNAPSHOT_DIR", "data/snapshots"))
+    parser.add_argument("--report-timezone", default=os.getenv("REPORT_TIMEZONE", "Asia/Shanghai"))
     parser.add_argument("--dry-run", action="store_true")
     return parser.parse_args(argv)
 
@@ -634,7 +644,8 @@ def main(argv: list[str] | None = None) -> int:
     if not repos:
         raise RuntimeError("No repositories parsed from GitHub Trending.")
 
-    date_key = collected_at.strftime("%Y-%m-%d")
+    report_timezone = parse_report_timezone(args.report_timezone)
+    date_key = collected_at.astimezone(report_timezone).strftime("%Y-%m-%d")
     snapshot_path = Path(args.snapshot_dir) / f"{date_key}.json"
     report_path = Path(args.report_dir) / f"{date_key}.md"
 
