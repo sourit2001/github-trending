@@ -8,6 +8,7 @@
 2. 在 GitHub 仓库的 `Settings -> Secrets and variables -> Actions` 中新增 secret：
    - `FEISHU_WEBHOOK_URL`: 飞书机器人 Webhook URL
    - `FEISHU_SECRET`: 可选，如果机器人开启了签名校验，则填写飞书给出的签名密钥
+   - `DEEPSEEK_API_KEY`: 可选，DeepSeek API Key；配置后用于生成更准确的中文简介和适用场景
 3. 手动运行 `Daily GitHub Trending` workflow，或等待每天自动运行。
 
 默认配置：
@@ -37,8 +38,13 @@ PYTHONPATH=src python -m github_trending_feishu
 
 - `FEISHU_WEBHOOK_URL`: 飞书机器人 Webhook URL
 - `FEISHU_SECRET`: 可选，飞书机器人签名密钥
+- `DEEPSEEK_API_KEY`: 可选，配置后使用 DeepSeek 官方 API 生成更准确的中文简介和适用场景
+- `DEEPSEEK_MODEL`: 可选，DeepSeek 模型，默认 `deepseek-v4-flash`
+- `DEEPSEEK_TIMEOUT`: 可选，DeepSeek 请求超时时间，默认 45 秒
 - `TRENDING_LANGUAGE`: GitHub Trending 语言，例如 `python`、`typescript`、`go`
 - `TRENDING_SINCE`: `daily`、`weekly` 或 `monthly`
 - `TRENDING_LIMIT`: 发送项目数量
 - `REPORT_DIR`: Markdown 报告目录，默认 `data/reports`
 - `SNAPSHOT_DIR`: JSON 快照目录，默认 `data/snapshots`
+
+如果不配置 `DEEPSEEK_API_KEY`，程序会使用本地规则生成中文内容；如果 DeepSeek 调用失败，也会自动回退到本地规则，避免影响飞书推送。
