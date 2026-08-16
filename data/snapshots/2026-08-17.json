@@ -1,0 +1,59 @@
+{
+  "collected_at": "2026-08-16T18:46:16.944539+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "cordiverse",
+      "name": "cordis",
+      "url": "https://github.com/cordiverse/cordis",
+      "description": "Meta-Framework of Spatiotemporal Composability",
+      "language": "TypeScript",
+      "stars": "4,617",
+      "forks": "240",
+      "stars_today": "719 stars today",
+      "zh_description": "时空可组合性的元框架，用于构建跨时空数据协同的底层系统。",
+      "use_case": "适用于需要时空数据建模、组合与调度的应用，如地理信息系统、时序分析或分布式事件编排。"
+    },
+    {
+      "rank": 2,
+      "owner": "basecamp",
+      "name": "omarchy",
+      "url": "https://github.com/basecamp/omarchy",
+      "description": "Beautiful, Modern & Opinionated Linux",
+      "language": "Shell",
+      "stars": "25,267",
+      "forks": "2,576",
+      "stars_today": "225 stars today",
+      "zh_description": "一款美观、现代且带明确设计主张的 Linux 操作系统发行版。",
+      "use_case": "适合追求界面美感与一致体验的桌面用户，或作为开发者日常工作站和自托管环境。"
+    },
+    {
+      "rank": 3,
+      "owner": "public-apis",
+      "name": "public-apis",
+      "url": "https://github.com/public-apis/public-apis",
+      "description": "A collective list of free APIs",
+      "language": "Python",
+      "stars": "461,386",
+      "forks": "50,974",
+      "stars_today": "1,583 stars today",
+      "zh_description": "汇总大量免费公开 API 的集体列表，按类别整理便于查阅。",
+      "use_case": "适用于开发者在构建应用时快速查找可用接口，用于数据获取、功能扩展或原型验证。"
+    },
+    {
+      "rank": 4,
+      "owner": "cactus-compute",
+      "name": "needle",
+      "url": "https://github.com/cactus-compute/needle",
+      "description": "14MB foundation model for tiny devices; phones, wearables, smart home, and robots.",
+      "language": "Python",
+      "stars": "6,453",
+      "forks": "427",
+      "stars_today": "447 stars today",
+      "zh_description": "面向手机、可穿戴设备、智能家居和机器人的 14MB 轻量基础模型。",
+      "use_case": "适用于资源受限的终端设备，在本地运行推理任务，如语音控制、健康监测、环境感知等离线AI场景。"
+    }
+  ]
+}
