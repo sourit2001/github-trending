@@ -8,19 +8,21 @@ import json
 import os
 import re
 import sys
-from dataclasses import asdict, dataclass
+from concurrent.futures import ThreadPoolExecutor
+from dataclasses import asdict, dataclass, field
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 from time import time
 from typing import Any
 from urllib.error import HTTPError, URLError
-from urllib.parse import urlencode
+from urllib.parse import quote, urlencode
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 
 GITHUB_TRENDING_URL = "https://github.com/trending"
+GITHUB_API_URL = "https://api.github.com"
 DEEPSEEK_CHAT_COMPLETIONS_URL = "https://api.deepseek.com/chat/completions"
 DEFAULT_DEEPSEEK_MODEL = "deepseek-v4-flash"
 DEFAULT_USER_AGENT = (
@@ -42,6 +44,15 @@ class TrendingRepo:
     stars_today: str
     zh_description: str = ""
     use_case: str = ""
+    problem: str = ""
+    key_features: list[str] = field(default_factory=list)
+    target_users: str = ""
+    getting_started: str = ""
+    cautions: str = ""
+    topics: list[str] = field(default_factory=list)
+    license: str = ""
+    pushed_at: str = ""
+    readme_excerpt: str = ""
 
     @property
     def full_name(self) -> str:
@@ -189,22 +200,108 @@ def fetch_trending(language: str = "", since: str = "daily") -> list[TrendingRep
 
     parser = TrendingParser()
     parser.feed(html)
-    return enrich_repos(parser.repos)
+    return parser.repos
 
 
 def enrich_repos(repos: list[TrendingRepo]) -> list[TrendingRepo]:
+    enrich_repos_with_github(repos)
     enrich_repos_with_deepseek(repos)
     return [enrich_repo(repo) for repo in repos]
 
 
 def enrich_repo(repo: TrendingRepo) -> TrendingRepo:
-    if repo.zh_description and repo.use_case:
-        return repo
-
-    zh_description, use_case = summarize_repo_in_chinese(repo)
-    repo.zh_description = zh_description
-    repo.use_case = use_case
+    if not repo.zh_description or not repo.use_case:
+        zh_description, use_case = summarize_repo_in_chinese(repo)
+        repo.zh_description = repo.zh_description or zh_description
+        repo.use_case = repo.use_case or use_case
+    repo.problem = repo.problem or infer_problem(repo)
+    repo.key_features = repo.key_features or infer_key_features(repo)
+    if not repo.key_features:
+        repo.key_features = [f"以 {repo.language or '开源技术'} 实现核心能力", "提供可复用的开源代码和文档"]
+    repo.target_users = repo.target_users or infer_target_users(repo)
+    repo.getting_started = repo.getting_started or "建议先阅读项目 README，确认运行环境、安装步骤和示例，再进行本地验证。"
+    repo.cautions = repo.cautions or build_fallback_cautions(repo)
     return repo
+
+
+def enrich_repos_with_github(repos: list[TrendingRepo]) -> None:
+    if not repos:
+        return
+    with ThreadPoolExecutor(max_workers=min(5, len(repos))) as executor:
+        list(executor.map(enrich_repo_with_github, repos))
+
+
+def enrich_repo_with_github(repo: TrendingRepo) -> None:
+    try:
+        metadata = request_github_json(f"/repos/{quote(repo.owner)}/{quote(repo.name)}")
+        repo.topics = [str(topic) for topic in metadata.get("topics", []) if topic]
+        license_info = metadata.get("license") or {}
+        repo.license = str(license_info.get("spdx_id") or license_info.get("name") or "")
+        repo.pushed_at = str(metadata.get("pushed_at") or "")
+    except RuntimeError as exc:
+        print(f"GitHub metadata unavailable for {repo.full_name}: {exc}", file=sys.stderr)
+
+    try:
+        readme = request_github_readme(repo)
+        repo.readme_excerpt = prepare_readme_for_summary(readme)
+    except RuntimeError as exc:
+        print(f"GitHub README unavailable for {repo.full_name}: {exc}", file=sys.stderr)
+
+
+def github_request_headers(accept: str) -> dict[str, str]:
+    headers = {
+        "Accept": accept,
+        "User-Agent": DEFAULT_USER_AGENT,
+        "X-GitHub-Api-Version": "2022-11-28",
+    }
+    token = os.getenv("GITHUB_TOKEN", "").strip()
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    return headers
+
+
+def request_github_json(path: str) -> dict[str, Any]:
+    request = Request(
+        f"{GITHUB_API_URL}{path}",
+        headers=github_request_headers("application/vnd.github+json"),
+    )
+    try:
+        with urlopen(request, timeout=20) as response:
+            payload = json.loads(response.read().decode("utf-8", errors="replace"))
+    except HTTPError as exc:
+        raise RuntimeError(f"HTTP {exc.code}") from exc
+    except (URLError, json.JSONDecodeError) as exc:
+        raise RuntimeError(str(exc)) from exc
+    if not isinstance(payload, dict):
+        raise RuntimeError("unexpected response shape")
+    return payload
+
+
+def request_github_readme(repo: TrendingRepo) -> str:
+    path = f"/repos/{quote(repo.owner)}/{quote(repo.name)}/readme"
+    request = Request(
+        f"{GITHUB_API_URL}{path}",
+        headers=github_request_headers("application/vnd.github.raw+json"),
+    )
+    try:
+        with urlopen(request, timeout=20) as response:
+            return response.read().decode("utf-8", errors="replace")
+    except HTTPError as exc:
+        raise RuntimeError(f"HTTP {exc.code}") from exc
+    except URLError as exc:
+        raise RuntimeError(str(exc.reason)) from exc
+
+
+def prepare_readme_for_summary(readme: str, limit: int = 6000) -> str:
+    text = re.sub(r"<!--.*?-->", " ", readme, flags=re.DOTALL)
+    text = re.sub(r"!\[[^]]*]\([^)]*\)", " ", text)
+    text = re.sub(r"<img\b[^>]*>", " ", text, flags=re.IGNORECASE)
+    text = re.sub(r"<picture\b.*?</picture>", " ", text, flags=re.IGNORECASE | re.DOTALL)
+    text = re.sub(r"\[!\[[^]]*]\([^)]*\)]\([^)]*\)", " ", text)
+    text = re.sub(r"\n{3,}", "\n\n", text).strip()
+    if len(text) <= limit:
+        return text
+    return text[:limit].rsplit("\n", 1)[0].rstrip() + "\n[README 已截断]"
 
 
 def enrich_repos_with_deepseek(repos: list[TrendingRepo]) -> None:
@@ -232,6 +329,13 @@ def enrich_repos_with_deepseek(repos: list[TrendingRepo]) -> None:
         if zh_description and use_case:
             repo.zh_description = zh_description
             repo.use_case = use_case
+            repo.problem = normalize_text(summary.get("problem", ""))
+            features = summary.get("key_features", [])
+            if isinstance(features, list):
+                repo.key_features = [normalize_text(str(item)) for item in features if normalize_text(str(item))][:4]
+            repo.target_users = normalize_text(summary.get("target_users", ""))
+            repo.getting_started = normalize_text(summary.get("getting_started", ""))
+            repo.cautions = normalize_text(summary.get("cautions", ""))
 
 
 def request_deepseek_summaries(
@@ -248,9 +352,9 @@ def request_deepseek_summaries(
                     "role": "system",
                     "content": (
                         "你是面向中文技术读者的 GitHub Trending 分析助手。"
-                        "只根据用户给出的仓库名、语言和英文描述生成内容，不要编造 README 中才可能存在的信息。"
-                        "中文简介必须准确对应原始描述，说明这个仓库具体是干什么的。"
-                        "适用场景必须结合项目能力写具体使用场景，不能写泛泛的研发提效、技术调研。"
+                        "只根据提供的仓库元数据和 README 摘录生成内容；没有证据的能力不要推测。"
+                        "要用非项目作者也能理解的中文，解释它是什么、为何需要、能做什么、适合谁以及如何开始。"
+                        "避免宣传话术和泛泛的“研发提效、技术调研”，不把 Trending 热度等同于成熟度。"
                         "输出必须是合法 JSON，不要 Markdown，不要额外解释。"
                     ),
                 },
@@ -260,7 +364,7 @@ def request_deepseek_summaries(
                 },
             ],
             "temperature": 0.2,
-            "max_tokens": 2400,
+            "max_tokens": 6000,
             "response_format": {"type": "json_object"},
         },
         ensure_ascii=False,
@@ -310,7 +414,12 @@ def request_deepseek_summaries(
         if full_name:
             summaries[full_name] = {
                 "zh_description": str(item.get("zh_description", "")).strip(),
+                "problem": str(item.get("problem", "")).strip(),
+                "key_features": item.get("key_features", []),
+                "target_users": str(item.get("target_users", "")).strip(),
                 "use_case": str(item.get("use_case", "")).strip(),
+                "getting_started": str(item.get("getting_started", "")).strip(),
+                "cautions": str(item.get("cautions", "")).strip(),
             }
     return summaries
 
@@ -321,17 +430,23 @@ def build_deepseek_prompt(repos: list[TrendingRepo]) -> str:
             "full_name": repo.full_name,
             "language": repo.language or "Unknown",
             "description": repo.description,
+            "topics": repo.topics,
+            "license": repo.license or "Unknown",
+            "last_push": repo.pushed_at or "Unknown",
+            "readme_excerpt": repo.readme_excerpt,
         }
         for repo in repos
     ]
     return (
-        "请为下面每个 GitHub 仓库生成中文简介和适用场景。\n"
+        "请为下面每个 GitHub 仓库生成面向普通技术读者的结构化解读。\n"
         "要求：\n"
-        "1. 中文简介 25-45 个汉字左右，必须忠实翻译并概括原始描述里的具体产品/工具用途。\n"
-        "2. 适用场景 35-70 个汉字左右，必须结合描述中的功能点，例如自托管、语音聊天、游戏联动、跨端支持等。\n"
-        "3. 不要因为描述里出现 AI、agent、chat 这些词就套通用 AI Agent 模板。\n"
-        "4. 如果原始描述是中文，也要整理成更清楚的一句话。\n"
-        '5. 只输出 {"repos":[{"full_name":"owner/name","zh_description":"...","use_case":"..."}]}。\n\n'
+        "1. 每个仓库全部中文字段合计约 150-250 个汉字，信息不足时宁可写得短，不要编造。\n"
+        "2. zh_description：25-45 字，一句话解释项目是什么；problem：25-50 字，解释它解决的具体问题。\n"
+        "3. key_features：2-4 条，每条 8-25 字，只写 README 明确支持的能力。\n"
+        "4. target_users：20-40 字，说明最适合的用户；use_case：30-60 字，给出具体使用场景。\n"
+        "5. getting_started：20-45 字，概括安装、部署或接入方式；cautions：15-45 字，写依赖、成熟度、平台或许可证提醒。\n"
+        "6. 不要因为出现 AI、agent、chat 就套通用模板；不要把 star 数量当成功能或质量证据。\n"
+        '7. 只输出 {"repos":[{"full_name":"owner/name","zh_description":"...","problem":"...","key_features":["..."],"target_users":"...","use_case":"...","getting_started":"...","cautions":"..."}]}。\n\n'
         f"仓库列表：{json.dumps(repo_payload, ensure_ascii=False)}"
     )
 
@@ -354,6 +469,11 @@ def summarize_repo_in_chinese(repo: TrendingRepo) -> tuple[str, str]:
     context = f"{repo.full_name} {description} {repo.language}".lower()
 
     keyword_rules: list[tuple[tuple[str, ...], str, str]] = [
+        (
+            ("ai-video-generator", "video automation", "video generation", "generate hd short videos", "一键生成高清短视频"),
+            "AI 短视频自动生成工具，可根据主题或关键词完成文案、配音、字幕和视频合成流程。",
+            "适合批量制作 YouTube Shorts、TikTok、Reels 等短视频，或验证自动化内容生产流程。",
+        ),
         (
             ("grok companion", "waifu", "neuro-sama", "voice chat", "minecraft", "factorio"),
             build_companion_summary(repo),
@@ -464,7 +584,7 @@ def extract_feature_labels(description: str) -> list[str]:
         (("realtime voice chat", "voice chat"), "实时语音聊天"),
         (("minecraft",), "Minecraft 联动"),
         (("factorio",), "Factorio 联动"),
-        (("web", "macos", "windows"), "Web/macOS/Windows 多端支持"),
+        (("web / macos / windows", "web/macos/windows"), "Web/macOS/Windows 多端支持"),
     ]
 
     features: list[str] = []
@@ -494,33 +614,100 @@ def build_default_use_case(language: str) -> str:
     )
 
 
+def infer_target_users(repo: TrendingRepo) -> str:
+    context = f"{repo.description} {' '.join(repo.topics or [])}".lower()
+    if any(word in context for word in ("short-video", "video-automation", "content-creation", "video generator")):
+        return "适合短视频创作者、内容运营人员，以及需要批量生产视频素材的团队。"
+    if any(word in context for word in ("design", "ui", "frontend", "react", "vue")):
+        return "适合前端开发者、产品设计师，以及需要搭建界面或设计系统的团队。"
+    if any(word in context for word in ("agent", "llm", "model", "machine learning")):
+        return "适合 AI 应用开发者、算法工程师，以及正在验证智能化产品的团队。"
+    if any(word in context for word in ("server", "devops", "kubernetes", "deploy", "ci/cd")):
+        return "适合后端、DevOps 和平台工程团队，以及需要自建服务的技术人员。"
+    return f"适合希望评估或集成这类能力的 {repo.language or '软件'} 开发者和技术团队。"
+
+
+def infer_problem(repo: TrendingRepo) -> str:
+    context = f"{repo.description} {' '.join(repo.topics or [])}".lower()
+    if any(word in context for word in ("short-video", "video-automation", "video generator", "生成高清短视频")):
+        return "把选题、文案、配音、字幕和画面合成串成自动流程，减少手工制作短视频的重复工作。"
+    if any(word in context for word in ("agent", "llm", "generative-ai")):
+        return "降低大模型能力接入具体应用和自动化流程时的开发与整合成本。"
+    if "self-hosted" in context or "self hosted" in context:
+        return "让用户能够在自己的环境中运行服务，并自行掌控数据和部署方式。"
+    return f"围绕“{repo.zh_description.rstrip('。')}”提供可复用实现，减少从零开发和整合的工作量。"
+
+
+def infer_key_features(repo: TrendingRepo) -> list[str]:
+    context = f"{repo.description} {' '.join(repo.topics or [])}".lower()
+    feature_rules = [
+        (("ai-video-generator", "video generation", "生成高清短视频"), "根据主题或关键词生成短视频"),
+        (("video-workflow", "video-automation", "workflow-automation"), "自动串联视频制作工作流"),
+        (("text-to-speech", "tts"), "支持文字转语音配音"),
+        (("subtitles", "subtitle"), "支持字幕生成与合成"),
+        (("self-hosted", "self hosted", "local-first"), "支持自行部署和掌控数据"),
+        (("api", "sdk"), "提供 API 或 SDK 接入能力"),
+    ]
+    features = [
+        label
+        for keywords, label in feature_rules
+        if any(matches_keyword(context, keyword) for keyword in keywords)
+    ]
+    if features:
+        return features[:4]
+    return extract_feature_labels(repo.description)[:3]
+
+
+def build_fallback_cautions(repo: TrendingRepo) -> str:
+    details: list[str] = []
+    if repo.license:
+        details.append(f"许可证为 {repo.license}")
+    else:
+        details.append("使用前需确认许可证")
+    details.append("Trending 代表近期关注度，不代表已达到生产成熟度")
+    return "；".join(details) + "。"
+
+
 def build_report(repos: list[TrendingRepo], title: str, collected_at: datetime) -> str:
     lines = [
         f"# {title}",
         "",
         f"Collected at: {collected_at.astimezone(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}",
         "",
-        "| Rank | Repo | Language | Stars | Forks | Today | Description |",
-        "|---:|---|---|---:|---:|---:|---|",
+        "> 解读基于仓库公开描述、README 与元数据自动生成；Trending 热度不等同于项目成熟度。",
+        "",
     ]
     for repo in repos:
-        description_parts = [
-            f"**中文简介：** {repo.zh_description or '-'}",
-            f"**适用场景：** {repo.use_case or '-'}",
-        ]
-        if repo.description:
-            description_parts.append(f"**原始描述：** {repo.description}")
-        lines.append(
-            "| "
-            f"{repo.rank} | "
-            f"[{repo.full_name}]({repo.url}) | "
-            f"{repo.language or 'Unknown'} | "
-            f"{repo.stars or '-'} | "
-            f"{repo.forks or '-'} | "
-            f"{repo.stars_today or '-'} | "
-            f"{escape_table('<br>'.join(description_parts))} |"
+        metadata = " · ".join(
+            item for item in (
+                repo.language or "Unknown",
+                f"⭐ {repo.stars}" if repo.stars else "",
+                repo.stars_today,
+                f"License: {repo.license}" if repo.license else "",
+            ) if item
         )
-    lines.append("")
+        lines.extend([
+            f"## {repo.rank}. [{repo.full_name}]({repo.url})",
+            "",
+            metadata,
+            "",
+            f"**它是什么：** {repo.zh_description or '-'}",
+            "",
+            f"**解决的问题：** {repo.problem or '-'}",
+            "",
+            f"**核心能力：** {'；'.join(repo.key_features or []) or '-'}",
+            "",
+            f"**适合谁：** {repo.target_users or '-'}",
+            "",
+            f"**典型场景：** {repo.use_case or '-'}",
+            "",
+            f"**如何开始：** {repo.getting_started or '-'}",
+            "",
+            f"**阅读提示：** {repo.cautions or '-'}",
+            "",
+        ])
+        if repo.description:
+            lines.extend([f"<details><summary>GitHub 原始描述</summary>", "", repo.description, "", "</details>", ""])
     return "\n".join(lines)
 
 
@@ -531,7 +718,6 @@ def escape_table(value: str) -> str:
 def build_feishu_card(repos: list[TrendingRepo], title: str) -> dict[str, Any]:
     elements: list[dict[str, Any]] = []
     for repo in repos:
-        description = repo.description or "No description"
         zh_description = repo.zh_description or "暂无中文简介"
         use_case = repo.use_case or "暂无适用场景"
         metadata = " · ".join(
@@ -550,9 +736,13 @@ def build_feishu_card(repos: list[TrendingRepo], title: str) -> dict[str, Any]:
                     "tag": "lark_md",
                     "content": (
                         f"**{repo.rank}. [{repo.full_name}]({repo.url})**\n"
-                        f"**中文简介：** {zh_description}\n"
-                        f"**适用场景：** {use_case}\n"
-                        f"**原始描述：** {description}\n"
+                        f"**它是什么：** {zh_description}\n"
+                        f"**解决的问题：** {repo.problem or '暂无说明'}\n"
+                        f"**核心能力：** {'；'.join(repo.key_features or []) or '暂无说明'}\n"
+                        f"**适合谁：** {repo.target_users or '暂无说明'}\n"
+                        f"**典型场景：** {use_case}\n"
+                        f"**如何开始：** {repo.getting_started or '请查看 README'}\n"
+                        f"**阅读提示：** {repo.cautions or '请自行评估项目成熟度'}\n"
                         f"{metadata}"
                     ),
                 },
@@ -612,6 +802,12 @@ def write_json(path: Path, data: Any) -> None:
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def repo_to_snapshot(repo: TrendingRepo) -> dict[str, Any]:
+    data = asdict(repo)
+    data.pop("readme_excerpt", None)
+    return data
+
+
 def parse_report_timezone(value: str) -> ZoneInfo | timezone:
     try:
         return ZoneInfo(value)
@@ -643,6 +839,7 @@ def main(argv: list[str] | None = None) -> int:
     repos = fetch_trending(language=args.language, since=args.since)[: args.limit]
     if not repos:
         raise RuntimeError("No repositories parsed from GitHub Trending.")
+    repos = enrich_repos(repos)
 
     report_timezone = parse_report_timezone(args.report_timezone)
     date_key = collected_at.astimezone(report_timezone).strftime("%Y-%m-%d")
@@ -655,7 +852,7 @@ def main(argv: list[str] | None = None) -> int:
             "collected_at": collected_at.isoformat(),
             "language": args.language,
             "since": args.since,
-            "repos": [asdict(repo) for repo in repos],
+            "repos": [repo_to_snapshot(repo) for repo in repos],
         },
     )
     report_path.parent.mkdir(parents=True, exist_ok=True)

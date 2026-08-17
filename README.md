@@ -17,7 +17,7 @@
 - 范围：GitHub Trending daily
 - 数量：前 10 个项目
 - 语言：全部语言
-- 内容：仓库基础信息、中文简介、适用场景、原始描述
+- 内容：仓库基础信息、README 深度解读、解决的问题、核心能力、适用人群、使用方式和注意事项
 
 ## 本地测试
 
@@ -41,6 +41,7 @@ PYTHONPATH=src python -m github_trending_feishu
 - `DEEPSEEK_API_KEY`: 可选，配置后使用 DeepSeek 官方 API 生成更准确的中文简介和适用场景
 - `DEEPSEEK_MODEL`: 可选，DeepSeek 模型，默认 `deepseek-v4-flash`
 - `DEEPSEEK_TIMEOUT`: 可选，DeepSeek 请求超时时间，默认 45 秒
+- `GITHUB_TOKEN`: 可选，用于提高 GitHub README 和仓库元数据 API 的请求额度；GitHub Actions 会自动使用当前工作流令牌
 - `TRENDING_LANGUAGE`: GitHub Trending 语言，例如 `python`、`typescript`、`go`
 - `TRENDING_SINCE`: `daily`、`weekly` 或 `monthly`
 - `TRENDING_LIMIT`: 发送项目数量
@@ -49,6 +50,18 @@ PYTHONPATH=src python -m github_trending_feishu
 - `REPORT_TIMEZONE`: 报告文件名使用的日期时区，默认 `Asia/Shanghai`
 
 如果不配置 `DEEPSEEK_API_KEY`，程序会使用本地规则生成中文内容；如果 DeepSeek 调用失败，也会自动回退到本地规则，避免影响飞书推送。
+
+生成解读时，程序会读取公开仓库的 README、Topics、License 和最近更新时间。每个仓库的解读约 150-250 个汉字，包括：
+
+- 它是什么
+- 解决的问题
+- 核心能力
+- 适合谁
+- 典型场景
+- 如何开始
+- 阅读提示
+
+README 只作为当次分析输入，不会完整写入每日 JSON 快照。README 获取失败时，程序会根据 Trending 页面的一行描述生成简化版内容。
 
 ## 同步到 Obsidian
 
