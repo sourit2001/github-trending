@@ -43,12 +43,9 @@ class TrendingRepo:
     forks: str
     stars_today: str
     zh_description: str = ""
-    use_case: str = ""
     problem: str = ""
     key_features: list[str] = field(default_factory=list)
-    target_users: str = ""
-    getting_started: str = ""
-    cautions: str = ""
+    use_cases: list[str] = field(default_factory=list)
     topics: list[str] = field(default_factory=list)
     license: str = ""
     pushed_at: str = ""
@@ -210,17 +207,12 @@ def enrich_repos(repos: list[TrendingRepo]) -> list[TrendingRepo]:
 
 
 def enrich_repo(repo: TrendingRepo) -> TrendingRepo:
-    if not repo.zh_description or not repo.use_case:
-        zh_description, use_case = summarize_repo_in_chinese(repo)
+    if not repo.zh_description:
+        zh_description = summarize_repo_in_chinese(repo)
         repo.zh_description = repo.zh_description or zh_description
-        repo.use_case = repo.use_case or use_case
     repo.problem = repo.problem or infer_problem(repo)
     repo.key_features = repo.key_features or infer_key_features(repo)
-    if not repo.key_features:
-        repo.key_features = [f"以 {repo.language or '开源技术'} 实现核心能力", "提供可复用的开源代码和文档"]
-    repo.target_users = repo.target_users or infer_target_users(repo)
-    repo.getting_started = repo.getting_started or "建议先阅读项目 README，确认运行环境、安装步骤和示例，再进行本地验证。"
-    repo.cautions = repo.cautions or build_fallback_cautions(repo)
+    repo.use_cases = repo.use_cases or infer_use_cases(repo)
     return repo
 
 
@@ -298,10 +290,69 @@ def prepare_readme_for_summary(readme: str, limit: int = 6000) -> str:
     text = re.sub(r"<img\b[^>]*>", " ", text, flags=re.IGNORECASE)
     text = re.sub(r"<picture\b.*?</picture>", " ", text, flags=re.IGNORECASE | re.DOTALL)
     text = re.sub(r"\[!\[[^]]*]\([^)]*\)]\([^)]*\)", " ", text)
+    text = re.sub(r"<details\b.*?</details>", " ", text, flags=re.IGNORECASE | re.DOTALL)
     text = re.sub(r"\n{3,}", "\n\n", text).strip()
+
+    heading_pattern = re.compile(r"^(#{1,6})\s+(.+?)\s*$", re.MULTILINE)
+    matches = list(heading_pattern.finditer(text))
+    if not matches:
+        return truncate_readme_text(text, limit)
+
+    preferred = re.compile(
+        r"overview|about|what (?:is|does)|introduction|features?|capabilities|"
+        r"how it works|workflow|usage|examples?|architecture|"
+        r"概览|简介|介绍|是什么|功能|特性|能力|工作原理|流程|用法|使用|示例|架构",
+        re.IGNORECASE,
+    )
+    excluded = re.compile(
+        r"install|getting started|quick ?start|prerequisite|requirement|configuration|"
+        r"contribut|license|changelog|roadmap|faq|support|sponsor|acknowledg|"
+        r"安装|快速开始|环境要求|配置|贡献|许可证|更新日志|路线图|常见问题|赞助",
+        re.IGNORECASE,
+    )
+
+    selected: list[str] = []
+    intro_end = matches[0].start()
+    intro = text[:intro_end].strip()
+    if intro:
+        selected.append(intro[:1600])
+
+    covered_until = 0
+    first_heading = matches[0]
+    if len(first_heading.group(1)) == 1 and not excluded.search(normalize_text(first_heading.group(2))):
+        first_section_end = matches[1].start() if len(matches) > 1 else len(text)
+        selected.append(text[first_heading.start():first_section_end].strip()[:1600])
+        covered_until = first_section_end
+
+    for index, match in enumerate(matches):
+        if match.start() < covered_until:
+            continue
+        heading = normalize_text(match.group(2))
+        level = len(match.group(1))
+        section_end = len(text)
+        for later_match in matches[index + 1:]:
+            if len(later_match.group(1)) <= level:
+                section_end = later_match.start()
+                break
+        if excluded.search(heading):
+            covered_until = section_end
+            continue
+        if not preferred.search(heading):
+            continue
+        section = text[match.start():section_end].strip()
+        if section:
+            selected.append(section[:2200])
+            covered_until = section_end
+
+    focused = "\n\n".join(selected).strip()
+    return truncate_readme_text(focused or text, limit)
+
+
+def truncate_readme_text(text: str, limit: int) -> str:
     if len(text) <= limit:
         return text
-    return text[:limit].rsplit("\n", 1)[0].rstrip() + "\n[README 已截断]"
+    truncated = text[:limit].rsplit("\n", 1)[0].rstrip()
+    return truncated or text[:limit].rstrip()
 
 
 def enrich_repos_with_deepseek(repos: list[TrendingRepo]) -> None:
@@ -325,17 +376,15 @@ def enrich_repos_with_deepseek(repos: list[TrendingRepo]) -> None:
         if not summary:
             continue
         zh_description = normalize_text(summary.get("zh_description", ""))
-        use_case = normalize_text(summary.get("use_case", ""))
-        if zh_description and use_case:
+        if zh_description:
             repo.zh_description = zh_description
-            repo.use_case = use_case
             repo.problem = normalize_text(summary.get("problem", ""))
             features = summary.get("key_features", [])
             if isinstance(features, list):
-                repo.key_features = [normalize_text(str(item)) for item in features if normalize_text(str(item))][:4]
-            repo.target_users = normalize_text(summary.get("target_users", ""))
-            repo.getting_started = normalize_text(summary.get("getting_started", ""))
-            repo.cautions = normalize_text(summary.get("cautions", ""))
+                repo.key_features = [normalize_text(str(item)) for item in features if normalize_text(str(item))][:5]
+            use_cases = summary.get("use_cases", [])
+            if isinstance(use_cases, list):
+                repo.use_cases = [normalize_text(str(item)) for item in use_cases if normalize_text(str(item))][:3]
 
 
 def request_deepseek_summaries(
@@ -351,10 +400,11 @@ def request_deepseek_summaries(
                 {
                     "role": "system",
                     "content": (
-                        "你是面向中文技术读者的 GitHub Trending 分析助手。"
-                        "只根据提供的仓库元数据和 README 摘录生成内容；没有证据的能力不要推测。"
-                        "要用非项目作者也能理解的中文，解释它是什么、为何需要、能做什么、适合谁以及如何开始。"
-                        "避免宣传话术和泛泛的“研发提效、技术调研”，不把 Trending 热度等同于成熟度。"
+                        "你是面向中文技术读者的 GitHub Trending README 摘要助手。"
+                        "你的任务是压缩 README 中的事实，而不是评价项目或补全通用建议。"
+                        "只根据提供的仓库描述、Topics 和 README 摘录生成内容，没有证据就少写。"
+                        "保留 README 中具体的产品名、组件、输入输出、工作流程和功能边界。"
+                        "禁止宣传话术以及“提升效率、降低成本、方便开发、适合技术调研”等空话。"
                         "输出必须是合法 JSON，不要 Markdown，不要额外解释。"
                     ),
                 },
@@ -416,10 +466,7 @@ def request_deepseek_summaries(
                 "zh_description": str(item.get("zh_description", "")).strip(),
                 "problem": str(item.get("problem", "")).strip(),
                 "key_features": item.get("key_features", []),
-                "target_users": str(item.get("target_users", "")).strip(),
-                "use_case": str(item.get("use_case", "")).strip(),
-                "getting_started": str(item.get("getting_started", "")).strip(),
-                "cautions": str(item.get("cautions", "")).strip(),
+                "use_cases": item.get("use_cases", []),
             }
     return summaries
 
@@ -438,15 +485,16 @@ def build_deepseek_prompt(repos: list[TrendingRepo]) -> str:
         for repo in repos
     ]
     return (
-        "请为下面每个 GitHub 仓库生成面向普通技术读者的结构化解读。\n"
+        "请把下面每个仓库的 README 压缩成简洁、具体的中文说明。\n"
         "要求：\n"
-        "1. 每个仓库全部中文字段合计约 150-250 个汉字，信息不足时宁可写得短，不要编造。\n"
-        "2. zh_description：25-45 字，一句话解释项目是什么；problem：25-50 字，解释它解决的具体问题。\n"
-        "3. key_features：2-4 条，每条 8-25 字，只写 README 明确支持的能力。\n"
-        "4. target_users：20-40 字，说明最适合的用户；use_case：30-60 字，给出具体使用场景。\n"
-        "5. getting_started：20-45 字，概括安装、部署或接入方式；cautions：15-45 字，写依赖、成熟度、平台或许可证提醒。\n"
-        "6. 不要因为出现 AI、agent、chat 就套通用模板；不要把 star 数量当成功能或质量证据。\n"
-        '7. 只输出 {"repos":[{"full_name":"owner/name","zh_description":"...","problem":"...","key_features":["..."],"target_users":"...","use_case":"...","getting_started":"...","cautions":"..."}]}。\n\n'
+        "1. 每个仓库四个字段合计约 120-200 个汉字；README 信息少时可以更短。\n"
+        "2. zh_description：60-100 字，说明项目接收什么输入、经过什么核心处理、产生什么结果。\n"
+        "3. problem：25-45 字，指出它替代了哪种具体手工流程、分散工具或技术限制；无法确认时输出空字符串。\n"
+        "4. key_features：3-5 条，每条 8-25 字，必须是 README 明确写出的功能，保留具体组件或协议名称。\n"
+        "5. use_cases：2-3 条，每条 15-35 字，写可以实际完成的任务，不写用户画像。\n"
+        "6. 不输出安装方法、阅读建议、成熟度评价、许可证提醒、目标用户或原始英文描述。\n"
+        "7. 不要把 star、编程语言或 Trending 热度写成功能；禁止“赋能、助力、提升效率、降低成本”等套话。\n"
+        '8. 只输出 {"repos":[{"full_name":"owner/name","zh_description":"...","problem":"...","key_features":["..."],"use_cases":["..."]}]}。\n\n'
         f"仓库列表：{json.dumps(repo_payload, ensure_ascii=False)}"
     )
 
@@ -464,11 +512,16 @@ def extract_json_object(content: str) -> str:
     return content
 
 
-def summarize_repo_in_chinese(repo: TrendingRepo) -> tuple[str, str]:
+def summarize_repo_in_chinese(repo: TrendingRepo) -> str:
     description = repo.description.strip()
-    context = f"{repo.full_name} {description} {repo.language}".lower()
+    context = f"{repo.full_name} {description} {repo.language} {' '.join(repo.topics)}".lower()
 
     keyword_rules: list[tuple[tuple[str, ...], str, str]] = [
+        (
+            ("coding agent that runs", "coding agent", "openai/codex"),
+            "在本地计算机终端中运行的编程代理，可直接围绕当前代码库执行开发任务；本仓库对应 Codex CLI。",
+            "适合在终端内处理代码任务。",
+        ),
         (
             ("ai-video-generator", "video automation", "video generation", "generate hd short videos", "一键生成高清短视频"),
             "AI 短视频自动生成工具，可根据主题或关键词完成文案、配音、字幕和视频合成流程。",
@@ -546,20 +599,17 @@ def summarize_repo_in_chinese(repo: TrendingRepo) -> tuple[str, str]:
         ),
     ]
 
-    for keywords, zh_description, use_case in keyword_rules:
+    for keywords, zh_description, _ in keyword_rules:
         if any(matches_keyword(context, keyword) for keyword in keywords):
-            return zh_description, use_case
+            return zh_description
 
-    language_label = repo.language or "未知语言"
     if contains_cjk(description):
         zh_description = description
     elif description:
-        zh_description = f"一个以 {language_label} 为主要技术栈的开源项目，核心能力是：{description}"
+        zh_description = description
     else:
-        zh_description = f"一个以 {language_label} 为主要技术栈的 GitHub Trending 开源项目。"
-
-    use_case = build_default_use_case(language_label)
-    return zh_description, use_case
+        zh_description = f"{repo.full_name} 暂未提供可用于摘要的项目说明。"
+    return zh_description
 
 
 def matches_keyword(context: str, keyword: str) -> bool:
@@ -598,49 +648,25 @@ def contains_cjk(value: str) -> bool:
     return any("\u4e00" <= char <= "\u9fff" for char in value)
 
 
-def build_default_use_case(language: str) -> str:
-    language_use_cases = {
-        "Python": "适合用于脚本自动化、数据处理、AI 原型验证或后端服务开发。",
-        "TypeScript": "适合用于 Web 应用、Node.js 服务、前端工程化和类型安全的工具开发。",
-        "JavaScript": "适合用于 Web 交互、浏览器扩展、Node.js 工具和快速原型开发。",
-        "Go": "适合用于云原生服务、CLI 工具、高并发后端和基础设施组件。",
-        "Rust": "适合用于高性能系统、命令行工具、底层组件和安全敏感场景。",
-        "C#": "适合用于 .NET 企业应用、桌面工具、游戏开发和后端服务。",
-        "Java": "适合用于企业后端、Android 应用、大型服务和中间件开发。",
-    }
-    return language_use_cases.get(
-        language,
-        "适合用于技术调研、原型验证、学习参考，或按项目定位集成到现有系统中。",
-    )
-
-
-def infer_target_users(repo: TrendingRepo) -> str:
-    context = f"{repo.description} {' '.join(repo.topics or [])}".lower()
-    if any(word in context for word in ("short-video", "video-automation", "content-creation", "video generator")):
-        return "适合短视频创作者、内容运营人员，以及需要批量生产视频素材的团队。"
-    if any(word in context for word in ("design", "ui", "frontend", "react", "vue")):
-        return "适合前端开发者、产品设计师，以及需要搭建界面或设计系统的团队。"
-    if any(word in context for word in ("agent", "llm", "model", "machine learning")):
-        return "适合 AI 应用开发者、算法工程师，以及正在验证智能化产品的团队。"
-    if any(word in context for word in ("server", "devops", "kubernetes", "deploy", "ci/cd")):
-        return "适合后端、DevOps 和平台工程团队，以及需要自建服务的技术人员。"
-    return f"适合希望评估或集成这类能力的 {repo.language or '软件'} 开发者和技术团队。"
-
-
 def infer_problem(repo: TrendingRepo) -> str:
-    context = f"{repo.description} {' '.join(repo.topics or [])}".lower()
+    context = f"{repo.full_name} {repo.description} {' '.join(repo.topics)} {repo.readme_excerpt}".lower()
+    if any(word in context for word in ("coding agent that runs", "coding agent", "openai/codex")):
+        return "把编程代理放进本地终端和代码目录，避免只能在独立聊天页面中处理代码任务。"
     if any(word in context for word in ("short-video", "video-automation", "video generator", "生成高清短视频")):
         return "把选题、文案、配音、字幕和画面合成串成自动流程，减少手工制作短视频的重复工作。"
-    if any(word in context for word in ("agent", "llm", "generative-ai")):
-        return "降低大模型能力接入具体应用和自动化流程时的开发与整合成本。"
     if "self-hosted" in context or "self hosted" in context:
-        return "让用户能够在自己的环境中运行服务，并自行掌控数据和部署方式。"
-    return f"围绕“{repo.zh_description.rstrip('。')}”提供可复用实现，减少从零开发和整合的工作量。"
+        return "替代必须把数据交给第三方托管的服务，让应用和数据运行在自己的环境中。"
+    if any(word in context for word in ("multi-provider", "multiple providers", "unified interface")):
+        return "统一不同服务商的调用接口，避免为每个模型或后端分别维护一套接入代码。"
+    return ""
 
 
 def infer_key_features(repo: TrendingRepo) -> list[str]:
-    context = f"{repo.description} {' '.join(repo.topics or [])}".lower()
+    context = f"{repo.full_name} {repo.description} {' '.join(repo.topics)} {repo.readme_excerpt}".lower()
     feature_rules = [
+        (("coding agent that runs", "coding agent", "openai/codex"), "在本地终端中运行编程代理"),
+        (("sign in with chatgpt",), "支持使用 ChatGPT 账号登录"),
+        (("api key",), "支持使用 API Key 调用"),
         (("ai-video-generator", "video generation", "生成高清短视频"), "根据主题或关键词生成短视频"),
         (("video-workflow", "video-automation", "workflow-automation"), "自动串联视频制作工作流"),
         (("text-to-speech", "tts"), "支持文字转语音配音"),
@@ -658,14 +684,21 @@ def infer_key_features(repo: TrendingRepo) -> list[str]:
     return extract_feature_labels(repo.description)[:3]
 
 
-def build_fallback_cautions(repo: TrendingRepo) -> str:
-    details: list[str] = []
-    if repo.license:
-        details.append(f"许可证为 {repo.license}")
-    else:
-        details.append("使用前需确认许可证")
-    details.append("Trending 代表近期关注度，不代表已达到生产成熟度")
-    return "；".join(details) + "。"
+def infer_use_cases(repo: TrendingRepo) -> list[str]:
+    context = f"{repo.full_name} {repo.description} {' '.join(repo.topics)} {repo.readme_excerpt}".lower()
+    if any(word in context for word in ("coding agent that runs", "coding agent", "openai/codex")):
+        return ["在本地代码库中通过终端处理编程任务", "把终端中的代码工作交给 AI 代理执行"]
+    if any(word in context for word in ("short-video", "video-automation", "video generator", "生成高清短视频")):
+        return ["批量制作 YouTube Shorts、TikTok 和 Reels", "生成产品介绍、资讯或营销短视频"]
+    if any(word in context for word in ("voice chat", "speech-to-speech", "voice-agent")):
+        return ["构建实时语音助手或语音客服", "在本地运行语音交互应用"]
+    if any(word in context for word in ("penetration", "pentest", "vulnerability", "security scanner")):
+        return ["扫描应用中的已知漏洞和配置风险", "在上线前执行自动化安全检查"]
+    if any(word in context for word in ("terminal file manager", "file-manager", "file manager")):
+        return ["在终端中浏览、复制和整理文件", "通过键盘操作管理远程服务器文件"]
+    if any(word in context for word in ("multi-provider", "multiple providers", "unified interface")):
+        return ["用同一套代码切换不同模型服务商", "在一个应用中对比多个模型的输出"]
+    return []
 
 
 def build_report(repos: list[TrendingRepo], title: str, collected_at: datetime) -> str:
@@ -674,7 +707,7 @@ def build_report(repos: list[TrendingRepo], title: str, collected_at: datetime) 
         "",
         f"Collected at: {collected_at.astimezone(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}",
         "",
-        "> 解读基于仓库公开描述、README 与元数据自动生成；Trending 热度不等同于项目成熟度。",
+        "> 内容根据仓库 README 的概览、功能、工作原理、用法和示例章节压缩生成。",
         "",
     ]
     for repo in repos:
@@ -691,23 +724,15 @@ def build_report(repos: list[TrendingRepo], title: str, collected_at: datetime) 
             "",
             metadata,
             "",
-            f"**它是什么：** {repo.zh_description or '-'}",
+            f"**项目简介：** {repo.zh_description or '-'}",
             "",
             f"**解决的问题：** {repo.problem or '-'}",
             "",
-            f"**核心能力：** {'；'.join(repo.key_features or []) or '-'}",
+            f"**主要功能：** {'；'.join(repo.key_features) or '-'}",
             "",
-            f"**适合谁：** {repo.target_users or '-'}",
-            "",
-            f"**典型场景：** {repo.use_case or '-'}",
-            "",
-            f"**如何开始：** {repo.getting_started or '-'}",
-            "",
-            f"**阅读提示：** {repo.cautions or '-'}",
+            f"**使用场景：** {'；'.join(repo.use_cases) or '-'}",
             "",
         ])
-        if repo.description:
-            lines.extend([f"<details><summary>GitHub 原始描述</summary>", "", repo.description, "", "</details>", ""])
     return "\n".join(lines)
 
 
@@ -719,7 +744,6 @@ def build_feishu_card(repos: list[TrendingRepo], title: str) -> dict[str, Any]:
     elements: list[dict[str, Any]] = []
     for repo in repos:
         zh_description = repo.zh_description or "暂无中文简介"
-        use_case = repo.use_case or "暂无适用场景"
         metadata = " · ".join(
             item
             for item in [
@@ -736,13 +760,10 @@ def build_feishu_card(repos: list[TrendingRepo], title: str) -> dict[str, Any]:
                     "tag": "lark_md",
                     "content": (
                         f"**{repo.rank}. [{repo.full_name}]({repo.url})**\n"
-                        f"**它是什么：** {zh_description}\n"
-                        f"**解决的问题：** {repo.problem or '暂无说明'}\n"
-                        f"**核心能力：** {'；'.join(repo.key_features or []) or '暂无说明'}\n"
-                        f"**适合谁：** {repo.target_users or '暂无说明'}\n"
-                        f"**典型场景：** {use_case}\n"
-                        f"**如何开始：** {repo.getting_started or '请查看 README'}\n"
-                        f"**阅读提示：** {repo.cautions or '请自行评估项目成熟度'}\n"
+                        f"**项目简介：** {zh_description}\n"
+                        f"**解决的问题：** {repo.problem or '-'}\n"
+                        f"**主要功能：** {'；'.join(repo.key_features) or '-'}\n"
+                        f"**使用场景：** {'；'.join(repo.use_cases) or '-'}\n"
                         f"{metadata}"
                     ),
                 },

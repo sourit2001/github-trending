@@ -32,39 +32,58 @@ def sample_repo(**overrides: object) -> TrendingRepo:
 
 
 class ReadmePreparationTests(unittest.TestCase):
-    def test_removes_visual_noise_and_truncates(self) -> None:
-        readme = "<!-- hidden -->\n![logo](logo.png)\n# Tool\n" + ("feature details\n" * 50)
-        result = prepare_readme_for_summary(readme, limit=120)
+    def test_keeps_content_sections_and_skips_setup_noise(self) -> None:
+        readme = """<!-- hidden -->
+![logo](logo.png)
+# Tool
+A tool that turns text into a searchable index.
+
+## Installation
+Run pip install tool and configure an API key.
+
+## Features
+- Parses Markdown and PDF files
+- Builds a local search index
+
+## How it works
+Documents are parsed, chunked, indexed, and queried locally.
+
+## License
+MIT
+"""
+        result = prepare_readme_for_summary(readme, limit=500)
 
         self.assertNotIn("hidden", result)
         self.assertNotIn("logo.png", result)
-        self.assertIn("# Tool", result)
-        self.assertTrue(result.endswith("[README 已截断]"))
+        self.assertNotIn("pip install", result)
+        self.assertNotIn("## License", result)
+        self.assertIn("turns text into a searchable index", result)
+        self.assertIn("## Features", result)
+        self.assertIn("parsed, chunked, indexed", result)
 
 
 class EnrichmentTests(unittest.TestCase):
-    def test_fallback_populates_all_reader_facing_fields(self) -> None:
+    def test_fallback_avoids_filling_unsupported_sections(self) -> None:
         repo = enrich_repo(sample_repo())
 
         self.assertTrue(repo.zh_description)
         self.assertTrue(repo.problem)
         self.assertTrue(repo.key_features)
-        self.assertTrue(repo.target_users)
-        self.assertTrue(repo.use_case)
-        self.assertTrue(repo.getting_started)
-        self.assertTrue(repo.cautions)
+        self.assertEqual(repo.use_cases, [])
 
     def test_prompt_contains_readme_and_structured_schema(self) -> None:
         repo = sample_repo(
-            readme_excerpt="# Tool\nInstall with pip.",
+            readme_excerpt="# Tool\nTurns documents into a local search index.",
             topics=["developer-tools"],
             license="MIT",
         )
         prompt = build_deepseek_prompt([repo])
 
-        self.assertIn("Install with pip", prompt)
+        self.assertIn("local search index", prompt)
         self.assertIn("key_features", prompt)
-        self.assertIn("getting_started", prompt)
+        self.assertIn("use_cases", prompt)
+        self.assertNotIn("getting_started", prompt)
+        self.assertNotIn("target_users", prompt)
         self.assertIn("MIT", prompt)
 
     def test_video_generator_fallback_stays_specific(self) -> None:
@@ -76,7 +95,20 @@ class EnrichmentTests(unittest.TestCase):
         self.assertIn("短视频", repo.zh_description)
         self.assertIn("短视频", repo.problem)
         self.assertTrue(any("文字转语音" in feature for feature in repo.key_features))
-        self.assertIn("短视频创作者", repo.target_users)
+        self.assertTrue(any("YouTube Shorts" in use_case for use_case in repo.use_cases))
+
+    def test_coding_agent_fallback_uses_repository_facts(self) -> None:
+        repo = enrich_repo(sample_repo(
+            owner="openai",
+            name="codex",
+            description="Lightweight coding agent that runs in your terminal",
+            language="Rust",
+        ))
+
+        self.assertIn("本地", repo.zh_description)
+        self.assertIn("终端", repo.problem)
+        self.assertTrue(any("终端" in feature for feature in repo.key_features))
+        self.assertTrue(any("代码库" in use_case for use_case in repo.use_cases))
 
     @patch.dict("os.environ", {"DEEPSEEK_API_KEY": "test-key"})
     @patch("github_trending_feishu.__main__.request_deepseek_summaries")
@@ -86,10 +118,7 @@ class EnrichmentTests(unittest.TestCase):
                 "zh_description": "一个具体工具。",
                 "problem": "解决具体问题。",
                 "key_features": ["能力一", "能力二"],
-                "target_users": "目标用户。",
-                "use_case": "具体场景。",
-                "getting_started": "按照 README 安装。",
-                "cautions": "仍需评估成熟度。",
+                "use_cases": ["场景一", "场景二"],
             }
         }
         repo = sample_repo()
@@ -98,7 +127,7 @@ class EnrichmentTests(unittest.TestCase):
 
         self.assertEqual(repo.problem, "解决具体问题。")
         self.assertEqual(repo.key_features, ["能力一", "能力二"])
-        self.assertEqual(repo.getting_started, "按照 README 安装。")
+        self.assertEqual(repo.use_cases, ["场景一", "场景二"])
 
     def test_snapshot_excludes_full_readme_input(self) -> None:
         snapshot = repo_to_snapshot(sample_repo(readme_excerpt="large README"))
@@ -115,10 +144,13 @@ class RenderingTests(unittest.TestCase):
             datetime(2026, 8, 17, tzinfo=timezone.utc),
         )
 
-        self.assertIn("**它是什么：**", report)
+        self.assertIn("**项目简介：**", report)
         self.assertIn("**解决的问题：**", report)
-        self.assertIn("**核心能力：**", report)
-        self.assertIn("**如何开始：**", report)
+        self.assertIn("**主要功能：**", report)
+        self.assertIn("**使用场景：**", report)
+        self.assertNotIn("**适合谁：**", report)
+        self.assertNotIn("**如何开始：**", report)
+        self.assertNotIn("**阅读提示：**", report)
         self.assertNotIn("| Rank |", report)
 
 
