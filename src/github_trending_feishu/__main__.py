@@ -7,6 +7,7 @@ import hmac
 import json
 import os
 import re
+import socket
 import sys
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict, dataclass, field
@@ -262,7 +263,7 @@ def request_github_json(path: str) -> dict[str, Any]:
             payload = json.loads(response.read().decode("utf-8", errors="replace"))
     except HTTPError as exc:
         raise RuntimeError(f"HTTP {exc.code}") from exc
-    except (URLError, json.JSONDecodeError) as exc:
+    except (URLError, TimeoutError, socket.timeout, json.JSONDecodeError) as exc:
         raise RuntimeError(str(exc)) from exc
     if not isinstance(payload, dict):
         raise RuntimeError("unexpected response shape")
@@ -367,7 +368,7 @@ def enrich_repos_with_deepseek(repos: list[TrendingRepo]) -> None:
             api_key=api_key,
             model=model,
         )
-    except RuntimeError as exc:
+    except (RuntimeError, TimeoutError, socket.timeout) as exc:
         print(f"DeepSeek summary failed, fallback to local rules: {exc}", file=sys.stderr)
         return
 
@@ -439,7 +440,7 @@ def request_deepseek_summaries(
     except HTTPError as exc:
         detail = exc.read().decode("utf-8", errors="replace")
         raise RuntimeError(f"HTTP {exc.code} {detail}") from exc
-    except (URLError, json.JSONDecodeError) as exc:
+    except (URLError, TimeoutError, socket.timeout, json.JSONDecodeError) as exc:
         raise RuntimeError(str(exc)) from exc
 
     try:

@@ -129,6 +129,18 @@ class EnrichmentTests(unittest.TestCase):
         self.assertEqual(repo.key_features, ["能力一", "能力二"])
         self.assertEqual(repo.use_cases, ["场景一", "场景二"])
 
+    @patch.dict("os.environ", {"DEEPSEEK_API_KEY": "test-key"})
+    @patch("github_trending_feishu.__main__.request_deepseek_summaries", side_effect=TimeoutError("read timed out"))
+    def test_deepseek_timeout_falls_back_without_raising(self, request_summaries: object) -> None:
+        repo = sample_repo()
+
+        enrich_repos_with_deepseek([repo])
+        enriched = enrich_repo(repo)
+
+        self.assertIs(enriched, repo)
+        self.assertTrue(repo.zh_description)
+        self.assertTrue(repo.key_features)
+
     def test_snapshot_excludes_full_readme_input(self) -> None:
         snapshot = repo_to_snapshot(sample_repo(readme_excerpt="large README"))
 
