@@ -1,0 +1,263 @@
+{
+  "collected_at": "2026-08-25T18:56:00.613111+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "freestylefly",
+      "name": "awesome-gpt-image-2",
+      "url": "https://github.com/freestylefly/awesome-gpt-image-2",
+      "description": "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+      "language": "JavaScript",
+      "stars": "17,402",
+      "forks": "1,803",
+      "stars_today": "1,698 stars today",
+      "zh_description": "AI 应用或智能体相关项目，用来构建对话、自动执行任务或接入大语言模型能力。",
+      "problem": "",
+      "key_features": [
+        "自动串联视频制作工作流"
+      ],
+      "use_cases": [],
+      "topics": [
+        "agents",
+        "ai-image-generation",
+        "chatgpt",
+        "dsh-plugin",
+        "gpt-image-2",
+        "image-prompts",
+        "prompt-as-code",
+        "prompt-engineering",
+        "skills",
+        "workflow-automation"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-08-25T07:16:50Z"
+    },
+    {
+      "rank": 2,
+      "owner": "anthropics",
+      "name": "claude-plugins-community",
+      "url": "https://github.com/anthropics/claude-plugins-community",
+      "description": "Community plugin marketplace for Claude Cowork and Claude Code. Read-only mirror — submit plugins at clau.de/plugin-directory-submission.",
+      "language": "Python",
+      "stars": "1,657",
+      "forks": "176",
+      "stars_today": "350 stars today",
+      "zh_description": "面向 AI Agent 和自动化工作流的项目，用来把模型能力接入开发、工具调用或界面操作。",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-08-24T17:07:15Z"
+    },
+    {
+      "rank": 3,
+      "owner": "apache",
+      "name": "maka",
+      "url": "https://github.com/apache/maka",
+      "description": "Apache Maka (Incubating) is a local-first AI agent workspace. Model messages, tool calls, tool results, permission decisions, and termination events are recorded as an append-only log.",
+      "language": "TypeScript",
+      "stars": "3,252",
+      "forks": "325",
+      "stars_today": "538 stars today",
+      "zh_description": "可自托管的应用项目，强调用户自己掌控数据、部署环境和服务运行方式。",
+      "problem": "",
+      "key_features": [
+        "支持自行部署和掌控数据"
+      ],
+      "use_cases": [],
+      "topics": [
+        "agent-runtime",
+        "ai",
+        "ai-agent",
+        "apache",
+        "cli",
+        "desktop",
+        "electron",
+        "event-sourcing",
+        "incubator",
+        "llm",
+        "local-first",
+        "maka",
+        "tool-use",
+        "typescript"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-08-25T16:38:33Z"
+    },
+    {
+      "rank": 4,
+      "owner": "TauricResearch",
+      "name": "TradingAgents",
+      "url": "https://github.com/TauricResearch/TradingAgents",
+      "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+      "language": "Python",
+      "stars": "100,073",
+      "forks": "19,343",
+      "stars_today": "191 stars today",
+      "zh_description": "AI 应用或智能体相关项目，用来构建对话、自动执行任务或接入大语言模型能力。",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "agent",
+        "finance",
+        "llm",
+        "multiagent",
+        "trading"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-07-18T15:55:05Z"
+    },
+    {
+      "rank": 5,
+      "owner": "AgriciDaniel",
+      "name": "claude-obsidian",
+      "url": "https://github.com/AgriciDaniel/claude-obsidian",
+      "description": "Self-organizing AI second brain for Obsidian + Claude Code. Drop any source and Claude reads, links, and files it into one connected knowledge graph of plain Markdown you own. AI note-taking, personal knowledge management (PKM), and an open-source Notion alternative. Based on Karpathy's LLM Wiki pattern.",
+      "language": "Python",
+      "stars": "12,551",
+      "forks": "1,379",
+      "stars_today": "810 stars today",
+      "zh_description": "面向 AI Agent 和自动化工作流的项目，用来把模型能力接入开发、工具调用或界面操作。",
+      "problem": "",
+      "key_features": [
+        "支持自行部署和掌控数据"
+      ],
+      "use_cases": [],
+      "topics": [
+        "agent-skills",
+        "ai-note-taking",
+        "ai-second-brain",
+        "claude-code",
+        "claude-code-skill",
+        "claude-memory",
+        "claude-plugin",
+        "karpathy-llm-wiki",
+        "knowledge-graph",
+        "knowledge-management",
+        "note-taking",
+        "notion-alternative",
+        "obsidian",
+        "obsidian-ai",
+        "obsidian-plugin",
+        "obsidian-second-brain",
+        "open-source",
+        "personal-knowledge-management",
+        "pkm",
+        "second-brain"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-08-01T12:03:27Z"
+    },
+    {
+      "rank": 6,
+      "owner": "tinyhumansai",
+      "name": "openhuman",
+      "url": "https://github.com/tinyhumansai/openhuman",
+      "description": "Your Personal AI super intelligence. A brain that builds a local-first memory of your life, a fantastic orchestrator of agent fleets and workflows, and a deep researcher.",
+      "language": "Rust",
+      "stars": "37,669",
+      "forks": "3,727",
+      "stars_today": "541 stars today",
+      "zh_description": "可自托管的应用项目，强调用户自己掌控数据、部署环境和服务运行方式。",
+      "problem": "",
+      "key_features": [
+        "支持自行部署和掌控数据"
+      ],
+      "use_cases": [],
+      "topics": [],
+      "license": "GPL-3.0",
+      "pushed_at": "2026-08-25T14:19:31Z"
+    },
+    {
+      "rank": 7,
+      "owner": "basecamp",
+      "name": "omarchy",
+      "url": "https://github.com/basecamp/omarchy",
+      "description": "Beautiful, Modern & Opinionated Linux",
+      "language": "Shell",
+      "stars": "31,049",
+      "forks": "3,163",
+      "stars_today": "1,080 stars today",
+      "zh_description": "Beautiful, Modern & Opinionated Linux",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-08-25T18:29:54Z"
+    },
+    {
+      "rank": 8,
+      "owner": "Shubhamsaboo",
+      "name": "awesome-llm-apps",
+      "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+      "description": "100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
+      "language": "Python",
+      "stars": "134,118",
+      "forks": "19,734",
+      "stars_today": "161 stars today",
+      "zh_description": "AI 应用或智能体相关项目，用来构建对话、自动执行任务或接入大语言模型能力。",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "agents",
+        "llms",
+        "python",
+        "rag"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-08-22T04:01:54Z"
+    },
+    {
+      "rank": 9,
+      "owner": "multica-ai",
+      "name": "andrej-karpathy-skills",
+      "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+      "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+      "language": "Unknown",
+      "stars": "207,076",
+      "forks": "21,139",
+      "stars_today": "828 stars today",
+      "zh_description": "面向 AI Agent 和自动化工作流的项目，用来把模型能力接入开发、工具调用或界面操作。",
+      "problem": "把编程代理放进本地终端和代码目录，避免只能在独立聊天页面中处理代码任务。",
+      "key_features": [
+        "在本地终端中运行编程代理"
+      ],
+      "use_cases": [
+        "在本地代码库中通过终端处理编程任务",
+        "把终端中的代码工作交给 AI 代理执行"
+      ],
+      "topics": [],
+      "license": "",
+      "pushed_at": "2026-04-20T10:05:04Z"
+    },
+    {
+      "rank": 10,
+      "owner": "openai",
+      "name": "codex",
+      "url": "https://github.com/openai/codex",
+      "description": "Lightweight coding agent that runs in your terminal",
+      "language": "Rust",
+      "stars": "117,999",
+      "forks": "17,991",
+      "stars_today": "1,183 stars today",
+      "zh_description": "在本地计算机终端中运行的编程代理，可直接围绕当前代码库执行开发任务；本仓库对应 Codex CLI。",
+      "problem": "把编程代理放进本地终端和代码目录，避免只能在独立聊天页面中处理代码任务。",
+      "key_features": [
+        "在本地终端中运行编程代理"
+      ],
+      "use_cases": [
+        "在本地代码库中通过终端处理编程任务",
+        "把终端中的代码工作交给 AI 代理执行"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-08-25T18:51:36Z"
+    }
+  ]
+}
