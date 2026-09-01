@@ -1,0 +1,292 @@
+{
+  "collected_at": "2026-09-01T21:01:25.197469+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "Gitlawb",
+      "name": "openclaude",
+      "url": "https://github.com/Gitlawb/openclaude",
+      "description": "runs anywhere. uses anything",
+      "language": "TypeScript",
+      "stars": "31,205",
+      "forks": "8,943",
+      "stars_today": "37 stars today",
+      "zh_description": "AI 应用或智能体相关项目，用来构建对话、自动执行任务或接入大语言模型能力。",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "ai",
+        "ai-agent",
+        "ai-tools",
+        "cli",
+        "coding"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-08-31T02:25:05Z"
+    },
+    {
+      "rank": 2,
+      "owner": "Imbad0202",
+      "name": "academic-research-skills",
+      "url": "https://github.com/Imbad0202/academic-research-skills",
+      "description": "Academic Research Skills for Claude Code: research → write → review → revise → finalize",
+      "language": "Python",
+      "stars": "44,815",
+      "forks": "3,546",
+      "stars_today": "161 stars today",
+      "zh_description": "面向 AI Agent 和自动化工作流的项目，用来把模型能力接入开发、工具调用或界面操作。",
+      "problem": "",
+      "key_features": [
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [],
+      "topics": [
+        "academic-pipeline",
+        "academic-writing",
+        "ai-research",
+        "claude",
+        "claude-code",
+        "literature-review",
+        "peer-review",
+        "prompt-engineering"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-09-01T17:57:41Z"
+    },
+    {
+      "rank": 3,
+      "owner": "THU-MAIC",
+      "name": "OpenMAIC",
+      "url": "https://github.com/THU-MAIC/OpenMAIC",
+      "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+      "language": "TypeScript",
+      "stars": "29,347",
+      "forks": "4,959",
+      "stars_today": "3,122 stars today",
+      "zh_description": "AI 应用或智能体相关项目，用来构建对话、自动执行任务或接入大语言模型能力。",
+      "problem": "替代必须把数据交给第三方托管的服务，让应用和数据运行在自己的环境中。",
+      "key_features": [
+        "支持文字转语音配音",
+        "支持自行部署和掌控数据",
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-09-01T11:28:02Z"
+    },
+    {
+      "rank": 4,
+      "owner": "iv-org",
+      "name": "invidious",
+      "url": "https://github.com/iv-org/invidious",
+      "description": "Invidious is an alternative front-end to YouTube",
+      "language": "Crystal",
+      "stars": "23,728",
+      "forks": "2,673",
+      "stars_today": "583 stars today",
+      "zh_description": "媒体或娱乐内容管理项目，用来整理、播放或管理个人数字内容。",
+      "problem": "",
+      "key_features": [
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [],
+      "topics": [
+        "agplv3",
+        "hacktoberfest",
+        "invidious",
+        "libre",
+        "video",
+        "watch",
+        "youtube",
+        "youtube-video"
+      ],
+      "license": "AGPL-3.0",
+      "pushed_at": "2026-08-28T21:50:40Z"
+    },
+    {
+      "rank": 5,
+      "owner": "jingyaogong",
+      "name": "minimind",
+      "url": "https://github.com/jingyaogong/minimind",
+      "description": "🧠 Train a 64M-parameter LLM from scratch in just 2h!",
+      "language": "Python",
+      "stars": "56,971",
+      "forks": "7,410",
+      "stars_today": "1,005 stars today",
+      "zh_description": "AI 应用或智能体相关项目，用来构建对话、自动执行任务或接入大语言模型能力。",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "artificial-intelligence",
+        "large-language-model"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-08-31T10:08:14Z"
+    },
+    {
+      "rank": 6,
+      "owner": "debpalash",
+      "name": "VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "language": "Python",
+      "stars": "13,709",
+      "forks": "2,034",
+      "stars_today": "745 stars today",
+      "zh_description": "实时语音交互项目，重点提供语音聊天、语音输入输出或音频驱动的人机互动能力。",
+      "problem": "",
+      "key_features": [
+        "支持使用 API Key 调用",
+        "支持文字转语音配音",
+        "支持自行部署和掌控数据",
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [],
+      "topics": [
+        "ai",
+        "audiobook",
+        "cuda",
+        "dubbing",
+        "elevenlabs-alternative",
+        "huggingface",
+        "local-first",
+        "mlx",
+        "omnivoice-studio",
+        "speech-to-text",
+        "tauri",
+        "text-to-speech",
+        "transcription",
+        "translate",
+        "tts",
+        "voice-ai",
+        "voice-cloning",
+        "voice-generation",
+        "voicestudio",
+        "workflow"
+      ],
+      "license": "AGPL-3.0",
+      "pushed_at": "2026-09-01T20:56:59Z"
+    },
+    {
+      "rank": 7,
+      "owner": "3b1b",
+      "name": "manim",
+      "url": "https://github.com/3b1b/manim",
+      "description": "Animation engine for explanatory math videos",
+      "language": "Python",
+      "stars": "92,510",
+      "forks": "7,614",
+      "stars_today": "74 stars today",
+      "zh_description": "媒体或娱乐内容管理项目，用来整理、播放或管理个人数字内容。",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "3b1b-videos",
+        "animation",
+        "explanatory-math-videos",
+        "python"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-01T20:13:14Z"
+    },
+    {
+      "rank": 8,
+      "owner": "firecrawl",
+      "name": "pdf-inspector",
+      "url": "https://github.com/firecrawl/pdf-inspector",
+      "description": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+      "language": "Rust",
+      "stars": "17,852",
+      "forks": "1,217",
+      "stars_today": "545 stars today",
+      "zh_description": "开源安全工具，聚焦漏洞发现、渗透测试或应用安全检测。",
+      "problem": "",
+      "key_features": [
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [],
+      "topics": [
+        "markdown",
+        "nodejs",
+        "ocr-routing",
+        "pdf",
+        "pdf-classification",
+        "pdf-extraction",
+        "pdf-parser",
+        "python",
+        "rust",
+        "text-extraction"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-01T17:35:02Z"
+    },
+    {
+      "rank": 9,
+      "owner": "browser-use",
+      "name": "video-use",
+      "url": "https://github.com/browser-use/video-use",
+      "description": "Edit videos with coding agents",
+      "language": "Python",
+      "stars": "22,842",
+      "forks": "2,806",
+      "stars_today": "509 stars today",
+      "zh_description": "在本地计算机终端中运行的编程代理，可直接围绕当前代码库执行开发任务；本仓库对应 Codex CLI。",
+      "problem": "把编程代理放进本地终端和代码目录，避免只能在独立聊天页面中处理代码任务。",
+      "key_features": [
+        "在本地终端中运行编程代理"
+      ],
+      "use_cases": [
+        "在本地代码库中通过终端处理编程任务",
+        "把终端中的代码工作交给 AI 代理执行"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-08-30T09:45:51Z"
+    },
+    {
+      "rank": 10,
+      "owner": "K-Dense-AI",
+      "name": "scientific-agent-skills",
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+      "language": "Python",
+      "stars": "41,463",
+      "forks": "3,822",
+      "stars_today": "914 stars today",
+      "zh_description": "面向 AI Agent 和自动化工作流的项目，用来把模型能力接入开发、工具调用或界面操作。",
+      "problem": "",
+      "key_features": [
+        "支持使用 API Key 调用",
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [],
+      "topics": [
+        "agent-skills",
+        "ai-scientist",
+        "bioinformatics",
+        "chemoinformatics",
+        "claude",
+        "claude-skills",
+        "claudecode",
+        "clinical-research",
+        "computational-biology",
+        "data-analysis",
+        "drug-discovery",
+        "genomics",
+        "materials-science",
+        "metabolomics",
+        "proteomics",
+        "scientific-computing",
+        "scientific-visualization"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-08-31T17:14:03Z"
+    }
+  ]
+}
