@@ -1,0 +1,342 @@
+{
+  "collected_at": "2026-09-03T21:01:14.816944+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "fmtlib",
+      "name": "fmt",
+      "url": "https://github.com/fmtlib/fmt",
+      "description": "A modern formatting library",
+      "language": "C++",
+      "stars": "25,005",
+      "forks": "3,011",
+      "stars_today": "955 stars today",
+      "zh_description": "{fmt} 是一个 C++ 格式化库，接收带占位符的格式字符串与参数，输出格式化文本。它实现了 C++20 std::format 和 C++23 std::print 语法，提供安全 printf 实现，支持 chrono 时间、范围容器、颜色样式和 Unicode，也可写文件。",
+      "problem": "替代 C stdio 和 C++ iostreams 的不安全与繁琐格式化接口。",
+      "key_features": [
+        "位置参数用于本地化",
+        "实现 C++20 std::format 与 C++23 std::print",
+        "Dragonbox 算法保证浮点舍入正确",
+        "便携 Unicode 支持",
+        "支持用户自定义类型与范围容器"
+      ],
+      "use_cases": [
+        "将带占位符的字符串与变量格式化为 std::string",
+        "使用自定义格式打印 chrono 日期时间",
+        "单线程高速写入文本文件"
+      ],
+      "topics": [
+        "c-plus-plus",
+        "chrono",
+        "cpp",
+        "cross-platform",
+        "floating-point",
+        "formatting",
+        "multiplatform",
+        "output",
+        "performance",
+        "printf",
+        "ranges",
+        "unicode"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-02T18:18:06Z"
+    },
+    {
+      "rank": 2,
+      "owner": "NousResearch",
+      "name": "hermes-agent",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "description": "The agent that grows with you",
+      "language": "Python",
+      "stars": "240,766",
+      "forks": "49,312",
+      "stars_today": "778 stars today",
+      "zh_description": "Hermes Agent 是 Nous Research 的自改进 AI 代理，内置学习回路：从经验创建技能、使用中改进、主动持久化知识、检索历史对话、构建用户模型。可在 VPS 或 GPU 集群运行，通过 Telegram 等聊天平台远程对话，并支持随时切换模型提供商。",
+      "problem": "替代无法跨会话学习和记忆的 AI 代理，解决长期任务中上下文丢失和模型锁定问题。",
+      "key_features": [
+        "从经验创建技能并持续改进",
+        "检索自己过去的对话内容",
+        "通过 Telegram、Discord 等平台交互",
+        "兼容多家模型提供商，无代码切换",
+        "完整 TUI，支持多行编辑和斜杠命令"
+      ],
+      "use_cases": [
+        "在云端 VM 上通过 Telegram 与代理协作",
+        "让代理在多次会话中积累并复用技能",
+        "使用 OpenRouter 或自家端点切换底层模型"
+      ],
+      "topics": [
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "anthropic",
+        "chatgpt",
+        "claude",
+        "claude-code",
+        "codex",
+        "hermes",
+        "hermes-agent",
+        "llm",
+        "nous-research",
+        "openai"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-03T20:07:04Z"
+    },
+    {
+      "rank": 3,
+      "owner": "anthropics",
+      "name": "skills",
+      "url": "https://github.com/anthropics/skills",
+      "description": "Public repository for Agent Skills",
+      "language": "Python",
+      "stars": "173,590",
+      "forks": "20,594",
+      "stars_today": "277 stars today",
+      "zh_description": "该仓库包含 Anthropic 对 Claude Agent Skills 的实现和示例。Skills 由 SKILL.md 加指令、脚本、资源组成，Claude 按需动态加载。技能覆盖创意设计、开发技术、企业沟通和文档处理，并附有 docx/pdf/pptx/xlsx 文档技能源码和 Agent Skills 规范。",
+      "problem": "为特定业务场景需要反复为 Claude 编写一次性提示词，缺乏标准化可复用技能包。",
+      "key_features": [
+        "技能由文件夹内 SKILL.md 及资源定义",
+        "提供 docx、pdf、pptx、xlsx 文档编辑技能",
+        "包含 Agent Skills 规范与技能模板",
+        "覆盖创意设计到企业沟通的多类示例"
+      ],
+      "use_cases": [
+        "创建带 frontmatter 的自定义 Claude 技能",
+        "参照 docx 等生产级技能构建文档生成能力",
+        "使用模板快速搭建品牌或分析类技能"
+      ],
+      "topics": [
+        "agent-skills"
+      ],
+      "license": "",
+      "pushed_at": "2026-09-03T16:37:14Z"
+    },
+    {
+      "rank": 4,
+      "owner": "blader",
+      "name": "humanizer",
+      "url": "https://github.com/blader/humanizer",
+      "description": "Agent skill that removes signs of AI-generated writing from text",
+      "language": "Python",
+      "stars": "41,372",
+      "forks": "3,542",
+      "stars_today": "1,214 stars today",
+      "zh_description": "接收用户粘贴的文本或指定文件路径，利用维基百科“AI写作迹象”中的35种模式识别并重写AI腔内容，生成自然的人类写作风格文本。改写后会展示第一版草稿及仍显生硬处的简短批评；若提供个人写作样本，则模仿其节奏与用词；处理文件时仅修改散文，保留代码、数据、frontmatter和链接目标。",
+      "problem": "替代人工逐句识别AI腔并手工润色的低效流程，以及缺乏统一检测模式的文本优化工具。",
+      "key_features": [
+        "基于Wikipedia 35种AI写作迹象检测",
+        "改写后给出草稿与人工味批评",
+        "支持依据个人样本匹配写作风格",
+        "文件模式仅改散文不动代码和链接",
+        "事实缺失时主动询问而不编造"
+      ],
+      "use_cases": [
+        "将博客草稿中AI味浓的段落转为自然口吻",
+        "指定Markdown文件路径批量优化其中散文",
+        "粘贴个人范文后让重写风格贴近本人行文"
+      ],
+      "topics": [
+        "agent-skills",
+        "ai-writing",
+        "claude-code",
+        "codex",
+        "cursor",
+        "prompt-engineering",
+        "writing-tools"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-08-19T05:58:53Z"
+    },
+    {
+      "rank": 5,
+      "owner": "google-research",
+      "name": "timesfm",
+      "url": "https://github.com/google-research/timesfm",
+      "description": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
+      "language": "Python",
+      "stars": "30,663",
+      "forks": "2,926",
+      "stars_today": "1,626 stars today",
+      "zh_description": "TimesFM是Google Research发布的预训练时间序列基础模型，采用decoder-only架构。输入历史时序数据后输出未来预测。提供3.0及1.0至2.5多个checkpoint，并集成到BigQuery ML、Google Sheets和Vertex Model Garden中。",
+      "problem": "传统时序预测需从零训练模型，难以跨领域复用通用预训练能力。",
+      "key_features": [
+        "基于decoder-only架构的预训练时序模型",
+        "提供TimesFM 3.0及历史版本checkpoint",
+        "支持BigQuery ML中的SQL预测查询",
+        "可在Google Sheets中直接使用",
+        "提供Vertex Model Garden Docker端点"
+      ],
+      "use_cases": [
+        "在BigQuery中用SQL对业务时序数据进行预测",
+        "在Google Sheets中预测日常表格数据走势",
+        "调用Vertex模型花园的Docker端点执行时序预测"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-02T21:37:52Z"
+    },
+    {
+      "rank": 6,
+      "owner": "averygan",
+      "name": "reclip",
+      "url": "https://github.com/averygan/reclip",
+      "description": "Download videos from almost any website. Lightweight, self-hosted media downloader with a clean web UI.",
+      "language": "HTML",
+      "stars": "8,314",
+      "forks": "1,360",
+      "stars_today": "123 stars today",
+      "zh_description": "ReClip 接收来自 YouTube、TikTok、Instagram、Twitter/X 等 1000+ 网站的媒体链接，通过 yt-dlp 解析并提取媒体，输出 MP4 视频或 MP3 音频；支持批量粘贴多个 URL、自动去重与画质选择，并由自托管的响应式 Web 界面完成下载。",
+      "problem": "替代逐个网站手动保存视频，或在不同下载工具与在线下载站之间切换的分散流程。",
+      "key_features": [
+        "基于 yt-dlp 支持 1000+ 站点",
+        "MP4 视频或 MP3 音频提取",
+        "批量粘贴多个 URL 并自动去重",
+        "画质与分辨率选择",
+        "无框架、无构建步骤的响应式 UI"
+      ],
+      "use_cases": [
+        "从 YouTube、TikTok、Instagram 等站点下载视频为 MP4",
+        "粘贴视频链接并提取为 MP3 音频文件",
+        "在 Web 界面查看视频信息后按需选择分辨率下载"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-07-09T17:49:44Z"
+    },
+    {
+      "rank": 7,
+      "owner": "bannedbook",
+      "name": "fanqiang",
+      "url": "https://github.com/bannedbook/fanqiang",
+      "description": "翻墙-科学上网",
+      "language": "Kotlin",
+      "stars": "52,110",
+      "forks": "8,466",
+      "stars_today": "539 stars today",
+      "zh_description": "汇集翻墙/科学上网相关资源的中文项目库，提供 FQNews 安卓 APP、安卓翻墙软件及教程，Chrome/Firefox/Edge 一键翻墙包（含 Mac、Linux 版），自建 V2ray 和 Shadowsocks 服务器简明教程，以及免费 ss 账号与 v2ray 免费账号。",
+      "problem": "替代用户在不同平台间自行搜索零散翻墙工具与教程的流程，集中整理可用的客户端与服务器配置方案。",
+      "key_features": [
+        "提供安卓翻墙软件和 FQNews 新闻APP",
+        "包含 Chrome/Edge/Firefox 一键翻墙包",
+        "提供自建 V2ray/Shadowsocks 服务器教程",
+        "汇总免费 ss 账号和 v2ray 免费账号",
+        "支持 Mac/Linux 平台翻墙环境配置"
+      ],
+      "use_cases": [
+        "根据教程在服务器上自建 V2ray 并配置科学上网",
+        "使用 Chrome 一键翻墙包快速配置浏览器代理",
+        "获取免费 v2ray 账号用于安卓客户端连接"
+      ],
+      "topics": [
+        "brook",
+        "daze",
+        "fanqiang",
+        "goflyway",
+        "lightsocks",
+        "proxy",
+        "psiphon",
+        "shadowsocks",
+        "ssr",
+        "trojan",
+        "v2ray"
+      ],
+      "license": "",
+      "pushed_at": "2026-08-30T01:09:00Z"
+    },
+    {
+      "rank": 8,
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "language": "JavaScript",
+      "stars": "91,993",
+      "forks": "9,808",
+      "stars_today": "260 stars today",
+      "zh_description": "为 AI 编码智能体打包生产级工程技能，覆盖 DEFINE、PLAN、BUILD、VERIFY、REVIEW、SHIP 六阶段，共 25 个技能。每个技能是含步骤、验证门和反合理化表的结构化工作流，融合 Google 工程实践如测试金字塔、Hyrum's Law 与 trunk-based development。",
+      "problem": "AI 编码智能体默认选择最短路径，跳过需求规格、测试、安全评审等步骤，缺少强制工程纪律与质量门约束。",
+      "key_features": [
+        "覆盖定义、规划、构建、验证、评审、发布全流程",
+        "每项技能含验证门与反合理化表格防止跳过步骤",
+        "验证阶段要求测试通过、构建输出等证据",
+        "采用渐进披露设计按需加载细节节省 token",
+        "内置 interview-me、spec-driven-development 等具体技能"
+      ],
+      "use_cases": [
+        "让智能体通过 interview-me 一次一个问题澄清模糊需求",
+        "使用 spec-driven-development 在写代码前生成 PRD 规格",
+        "用验证类技能设定质量门槛拦截省略测试等行为"
+      ],
+      "topics": [
+        "agent-skills",
+        "antigravity",
+        "claude-code",
+        "codex",
+        "cursor",
+        "skills"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-03T06:36:52Z"
+    },
+    {
+      "rank": 9,
+      "owner": "ByteByteGoHq",
+      "name": "system-design-101",
+      "url": "https://github.com/ByteByteGoHq/system-design-101",
+      "description": "Explain complex systems using visuals and simple terms. Help you prepare for system design interviews.",
+      "language": "Unknown",
+      "stars": "88,276",
+      "forks": "9,818",
+      "stars_today": "158 stars today",
+      "zh_description": "该项目主要用于：<p> <a href=\"https://blog.bytebytego.com/?utmsource=site\"> </a> </p>",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "aws",
+        "cloud-computing",
+        "coding-interviews",
+        "computer-science",
+        "interview-questions",
+        "software-architecture",
+        "software-development",
+        "software-engineering",
+        "system-design",
+        "system-design-interview"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2025-04-04T17:30:30Z"
+    },
+    {
+      "rank": 10,
+      "owner": "magnitudedev",
+      "name": "magnitude",
+      "url": "https://github.com/magnitudedev/magnitude",
+      "description": "Open source inference server that runs the best local models for your hardware, plugged into the agent you already use. Works with Pi, OpenCode, Hermes, OpenClaw, Codex, Claude Code, Oh My Pi, and Cline.",
+      "language": "TypeScript",
+      "stars": "1,897",
+      "forks": "142",
+      "stars_today": "130 stars today",
+      "zh_description": "开源推理服务器，自动分析本机硬件并推荐适配的本地模型，随后完成下载、调参和运行，对接 Pi、OpenCode、Hermes、OpenClaw、Codex、Claude Code 等现有 agent，也提供内置 harness。",
+      "problem": "替代依赖 API key、计费和速率限制的在线推理接入，以及无法离线使用 agent 的限制。",
+      "key_features": [
+        "自动分析硬件并推荐模型",
+        "负责模型下载、调参和运行",
+        "兼容 Pi、Codex、Claude Code 等 agent",
+        "模型按需加载和自动卸载",
+        "端到端设置推测解码和并发"
+      ],
+      "use_cases": [
+        "将现有 agent 切换到本地模型，全离线运行",
+        "根据硬件推荐下载合适的模型并启动推理服务"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-03T17:50:02Z"
+    }
+  ]
+}
