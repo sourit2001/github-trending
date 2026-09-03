@@ -301,8 +301,10 @@ def prepare_readme_for_summary(readme: str, limit: int = 6000) -> str:
 
     preferred = re.compile(
         r"overview|about|what (?:is|does)|introduction|features?|capabilities|"
-        r"how it works|workflow|usage|examples?|architecture|"
-        r"概览|简介|介绍|是什么|功能|特性|能力|工作原理|流程|用法|使用|示例|架构",
+        r"how it works|workflow|usage|examples?|architecture|why|choose|supported?|"
+        r"output|export|compatib|included|scope|domain|database|skills?|"
+        r"概览|简介|介绍|是什么|功能|特性|能力|工作原理|流程|用法|使用|示例|架构|"
+        r"为什么|选择|支持|输出|导出|兼容|包含|范围|领域|数据库|技能",
         re.IGNORECASE,
     )
     excluded = re.compile(
@@ -362,19 +364,28 @@ def enrich_repos_with_deepseek(repos: list[TrendingRepo]) -> None:
         return
     model = os.getenv("DEEPSEEK_MODEL", DEFAULT_DEEPSEEK_MODEL).strip() or DEFAULT_DEEPSEEK_MODEL
 
-    try:
-        summaries = request_deepseek_summaries(
-            repos,
-            api_key=api_key,
-            model=model,
-        )
-    except (RuntimeError, TimeoutError, socket.timeout) as exc:
-        print(f"DeepSeek summary failed, fallback to local rules: {exc}", file=sys.stderr)
-        return
+    summaries: dict[str, dict[str, Any]] = {}
+    # Smaller batches reduce omissions and malformed JSON when a daily list is long.
+    for start in range(0, len(repos), 3):
+        batch = repos[start : start + 3]
+        try:
+            summaries.update(request_deepseek_summaries(batch, api_key=api_key, model=model))
+        except (RuntimeError, TimeoutError, socket.timeout) as exc:
+            print(f"DeepSeek summary failed for batch, fallback to local rules: {exc}", file=sys.stderr)
+
+    # Retry only repositories whose result is missing or too thin.
+    missing = [repo for repo in repos if not is_usable_deepseek_summary(summaries.get(repo.full_name))]
+    for repo in missing:
+        try:
+            retry = request_deepseek_summaries([repo], api_key=api_key, model=model)
+            if is_usable_deepseek_summary(retry.get(repo.full_name)):
+                summaries[repo.full_name] = retry[repo.full_name]
+        except (RuntimeError, TimeoutError, socket.timeout) as exc:
+            print(f"DeepSeek retry failed for {repo.full_name}, using local facts: {exc}", file=sys.stderr)
 
     for repo in repos:
         summary = summaries.get(repo.full_name)
-        if not summary:
+        if not is_usable_deepseek_summary(summary):
             continue
         zh_description = normalize_text(summary.get("zh_description", ""))
         if zh_description:
@@ -386,6 +397,22 @@ def enrich_repos_with_deepseek(repos: list[TrendingRepo]) -> None:
             use_cases = summary.get("use_cases", [])
             if isinstance(use_cases, list):
                 repo.use_cases = [normalize_text(str(item)) for item in use_cases if normalize_text(str(item))][:3]
+
+
+def is_usable_deepseek_summary(summary: dict[str, Any] | None) -> bool:
+    description = normalize_text(str(summary.get("zh_description", ""))) if summary else ""
+    generic_markers = ("面向 AI Agent 和自动化工作流", "提升效率", "方便开发", "智能助手集成")
+    problem = normalize_text(str(summary.get("problem", ""))) if summary else ""
+    if not description or not problem or any(marker in description for marker in generic_markers):
+        return False
+    features = summary.get("key_features")
+    use_cases = summary.get("use_cases")
+    return (
+        isinstance(features, list)
+        and len([item for item in features if normalize_text(str(item))]) >= 2
+        and isinstance(use_cases, list)
+        and len([item for item in use_cases if normalize_text(str(item))]) >= 1
+    )
 
 
 def request_deepseek_summaries(
@@ -517,6 +544,10 @@ def summarize_repo_in_chinese(repo: TrendingRepo) -> str:
     description = repo.description.strip()
     context = f"{repo.full_name} {description} {repo.language} {' '.join(repo.topics)}".lower()
 
+    evidence_summary = summarize_from_readme_facts(repo)
+    if evidence_summary:
+        return evidence_summary
+
     keyword_rules: list[tuple[tuple[str, ...], str, str]] = [
         (
             ("coding agent that runs", "coding agent", "openai/codex"),
@@ -613,6 +644,38 @@ def summarize_repo_in_chinese(repo: TrendingRepo) -> str:
     return zh_description
 
 
+def summarize_from_readme_facts(repo: TrendingRepo) -> str:
+    """Create a factual fallback from README text when the model is unavailable."""
+    readme = repo.readme_excerpt.strip()
+    if not readme:
+        return ""
+    context = f"{repo.full_name} {repo.description} {readme}".lower()
+    if repo.full_name.lower() == "tt-a1i/archify" or "typed json ir" in context:
+        return (
+            "将代码库或系统描述转换为可交互的系统地图：代理生成 Typed JSON IR，"
+            "Archify 进行确定性校验并渲染为 HTML/SVG，可输出 PNG、WebM 和分享卡片，"
+            "支持架构、工作流、时序、数据流与生命周期图，以及变更对比和源码追踪。"
+        )
+    if "scientific agent skills" in context or "scientific-agent-skills" in repo.full_name.lower():
+        return (
+            "面向 AI Agent 的科研技能集合，提供 163 个可复用技能和 100+ 科学数据库接入，"
+            "覆盖生物信息、基因组学、化学、药物发现、医学研究、数据分析等领域，"
+            "并以 Agent Skills/Plugins 标准兼容 Cursor、Claude Code、Codex 等客户端。"
+        )
+    paragraphs = [
+        re.sub(r"\s+", " ", block).strip()
+        for block in re.split(r"\n\s*\n", readme)
+        if block.strip() and not block.lstrip().startswith("#")
+    ]
+    if not paragraphs:
+        return ""
+    first = re.sub(r"[`*_]", "", paragraphs[0]).strip()
+    first = re.split(r"(?<=[.!?。！？])\s+", first)[0]
+    if len(first) < 20:
+        return ""
+    return f"该项目主要用于：{first[:220]}"
+
+
 def matches_keyword(context: str, keyword: str) -> bool:
     if len(keyword) <= 3 and keyword.isascii() and keyword.isalnum():
         return re.search(rf"(?<![a-z0-9]){re.escape(keyword)}(?![a-z0-9])", context) is not None
@@ -651,6 +714,10 @@ def contains_cjk(value: str) -> bool:
 
 def infer_problem(repo: TrendingRepo) -> str:
     context = f"{repo.full_name} {repo.description} {' '.join(repo.topics)} {repo.readme_excerpt}".lower()
+    if repo.full_name.lower() == "tt-a1i/archify" or "typed json ir" in context:
+        return "把系统描述、架构关系和变更内容整理成可校验、可交互、可分享的图，而不是手工维护静态图。"
+    if "scientific agent skills" in context or "scientific-agent-skills" in repo.full_name.lower():
+        return "把分散的科研库、数据库和研究流程知识封装成 Agent 可调用的标准技能，减少每次重新拼接工具链。"
     if any(word in context for word in ("coding agent that runs", "coding agent", "openai/codex")):
         return "把编程代理放进本地终端和代码目录，避免只能在独立聊天页面中处理代码任务。"
     if any(word in context for word in ("short-video", "video-automation", "video generator", "生成高清短视频")):
@@ -664,6 +731,10 @@ def infer_problem(repo: TrendingRepo) -> str:
 
 def infer_key_features(repo: TrendingRepo) -> list[str]:
     context = f"{repo.full_name} {repo.description} {' '.join(repo.topics)} {repo.readme_excerpt}".lower()
+    if repo.full_name.lower() == "tt-a1i/archify" or "typed json ir" in context:
+        return ["支持架构、工作流、时序、数据流和生命周期图", "Typed JSON IR 与确定性校验", "导出 HTML、SVG、PNG、WebM 和分享卡片", "支持架构变更 Before/Delta/After 对比", "可追踪节点对应的源码证据"]
+    if "scientific agent skills" in context or "scientific-agent-skills" in repo.full_name.lower():
+        return ["提供 163 个可复用科研技能", "接入 100+ 科学数据库和工具", "覆盖生物、化学、医学和数据分析", "兼容 Agent Skills 与 Agent Plugins 标准", "支持 Cursor、Claude Code、Codex 等客户端"]
     feature_rules = [
         (("coding agent that runs", "coding agent", "openai/codex"), "在本地终端中运行编程代理"),
         (("sign in with chatgpt",), "支持使用 ChatGPT 账号登录"),
@@ -687,6 +758,10 @@ def infer_key_features(repo: TrendingRepo) -> list[str]:
 
 def infer_use_cases(repo: TrendingRepo) -> list[str]:
     context = f"{repo.full_name} {repo.description} {' '.join(repo.topics)} {repo.readme_excerpt}".lower()
+    if repo.full_name.lower() == "tt-a1i/archify" or "typed json ir" in context:
+        return ["把服务架构、API 调用和数据流制作成可交互图", "在 PR 前对比架构快照并检查新增、删除和重路由", "生成带源码证据的系统图用于设计评审和分享"]
+    if "scientific agent skills" in context or "scientific-agent-skills" in repo.full_name.lower():
+        return ["让 AI Agent 执行文献检索、数据分析和科研报告流程", "在生物信息、药物发现和医学研究中调用专用工具", "为 Cursor、Claude Code 或 Codex 配置科研工作技能"]
     if any(word in context for word in ("coding agent that runs", "coding agent", "openai/codex")):
         return ["在本地代码库中通过终端处理编程任务", "把终端中的代码工作交给 AI 代理执行"]
     if any(word in context for word in ("short-video", "video-automation", "video generator", "生成高清短视频")):

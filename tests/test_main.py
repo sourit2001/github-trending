@@ -61,6 +61,21 @@ MIT
         self.assertIn("## Features", result)
         self.assertIn("parsed, chunked, indexed", result)
 
+    def test_keeps_nonstandard_product_sections(self) -> None:
+        readme = """# Archify
+Turn a codebase into an interactive system map.
+## Why Archify
+- Typed JSON IR
+## Choose the right diagram
+- Architecture and sequence
+## Installation
+Run the installer.
+"""
+        result = prepare_readme_for_summary(readme, limit=1200)
+        self.assertIn("Why Archify", result)
+        self.assertIn("Choose the right diagram", result)
+        self.assertNotIn("Run the installer", result)
+
 
 class EnrichmentTests(unittest.TestCase):
     def test_fallback_avoids_filling_unsupported_sections(self) -> None:
@@ -109,6 +124,28 @@ class EnrichmentTests(unittest.TestCase):
         self.assertIn("终端", repo.problem)
         self.assertTrue(any("终端" in feature for feature in repo.key_features))
         self.assertTrue(any("代码库" in use_case for use_case in repo.use_cases))
+
+    def test_readme_fallback_is_specific_for_archify(self) -> None:
+        repo = enrich_repo(sample_repo(
+            owner="tt-a1i",
+            name="archify",
+            description="A system map renderer",
+            readme_excerpt="# Archify\nTyped JSON IR renders architecture and workflow diagrams.",
+        ))
+        self.assertIn("Typed JSON IR", repo.zh_description)
+        self.assertGreaterEqual(len(repo.key_features), 2)
+        self.assertTrue(repo.use_cases)
+
+    def test_readme_fallback_is_specific_for_scientific_skills(self) -> None:
+        repo = enrich_repo(sample_repo(
+            owner="K-Dense-AI",
+            name="scientific-agent-skills",
+            description="Scientific Agent Skills",
+            readme_excerpt="# Scientific Agent Skills\n163 ready-to-use scientific skills and 100+ databases.",
+        ))
+        self.assertIn("163", repo.zh_description)
+        self.assertTrue(any("数据库" in feature for feature in repo.key_features))
+        self.assertTrue(repo.use_cases)
 
     @patch.dict("os.environ", {"DEEPSEEK_API_KEY": "test-key"})
     @patch("github_trending_feishu.__main__.request_deepseek_summaries")

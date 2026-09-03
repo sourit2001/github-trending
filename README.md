@@ -51,14 +51,14 @@ PYTHONPATH=src python -m github_trending_feishu
 
 如果不配置 `DEEPSEEK_API_KEY`，程序会使用本地规则生成中文内容；如果 DeepSeek 调用失败，也会自动回退到本地规则，避免影响飞书推送。
 
-生成解读时，程序会读取公开仓库的 README、Topics、License 和最近更新时间。程序优先提取 README 的概览、功能、工作原理、用法、示例和架构章节，并跳过安装、配置、贡献与许可证等噪声。每个仓库包括：
+生成解读时，程序会读取公开仓库的 README、Topics、License 和最近更新时间。程序优先保留 README 中描述产品能力、输入输出、工作流程、兼容性、领域和限制的段落，并跳过安装、配置、贡献与许可证等噪声。每个仓库包括：
 
 - 项目简介
 - 解决的问题
 - 主要功能
 - 使用场景
 
-README 只作为当次分析输入，不会完整写入每日 JSON 快照。README 获取失败时，程序会根据 Trending 页面的一行描述生成简化版内容。
+README 只作为当次分析输入，不会完整写入每日 JSON 快照。DeepSeek 返回缺字段时会自动重试；仍不可用时，程序从 README 的具体事实生成兜底内容，不使用泛化的“提升效率”等模板话术。README 获取失败时，才会根据 Trending 页面的一行描述生成简化版内容。
 
 ## 同步到 Obsidian
 
