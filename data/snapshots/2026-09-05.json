@@ -1,0 +1,331 @@
+{
+  "collected_at": "2026-09-04T20:44:49.051556+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "fmtlib",
+      "name": "fmt",
+      "url": "https://github.com/fmtlib/fmt",
+      "description": "A modern formatting library",
+      "language": "C++",
+      "stars": "25,447",
+      "forks": "3,034",
+      "stars_today": "681 stars today",
+      "zh_description": "{fmt} 接收格式字符串和参数，解析类似 Python 的格式语法，输出类型安全的格式化字符串或打印到标准输出/文件；包含 chrono 时间、容器、颜色等扩展头文件，支持 C++20 std::format 与 C++23 std::print。",
+      "problem": "替代 C stdio 和 C++ iostreams 的手写格式化输出，解决 printf 类型不安全与 iostream 语法繁琐的问题。",
+      "key_features": [
+        "实现 C++20 std::format 与 C++23 std::print",
+        "格式语法类似 Python 的 format，支持位置参数",
+        "基于 Dragonbox 的快速浮点数格式化，保证正确舍入",
+        "可移植 Unicode 支持与安全 printf 实现",
+        "支持用户自定义类型和 chrono、容器、颜色扩展"
+      ],
+      "use_cases": [
+        "用 fmt::print 输出彩色和带样式的文本到终端",
+        "把时间、容器等内容格式化成字符串或日志",
+        "在文件输出中通过单线程写入格式化内容"
+      ],
+      "topics": [
+        "c-plus-plus",
+        "chrono",
+        "cpp",
+        "cross-platform",
+        "floating-point",
+        "formatting",
+        "multiplatform",
+        "output",
+        "performance",
+        "printf",
+        "ranges",
+        "unicode"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-04T19:28:44Z"
+    },
+    {
+      "rank": 2,
+      "owner": "anthropics",
+      "name": "skills",
+      "url": "https://github.com/anthropics/skills",
+      "description": "Public repository for Agent Skills",
+      "language": "Python",
+      "stars": "174,072",
+      "forks": "20,638",
+      "stars_today": "512 stars today",
+      "zh_description": "仓库收录 Anthropic 为 Claude 实现的 Agent Skills，每个技能是含 SKILL.md 指令、脚本和资源的文件夹，Claude 可动态加载以完成专门任务。内含创意、技术、企业等示例技能，以及 docx、pdf、pptx、xlsx 文档创建编辑技能、Agent Skills 规范与模板。",
+      "problem": "替代为每个专门任务重复编写提示词的做法，将指令、脚本和资源打包为可复用的标准技能文件夹。",
+      "key_features": [
+        "技能以文件夹组织，内含 SKILL.md 和 YAML frontmatter",
+        "提供 Agent Skills 规范、示例与起始模板",
+        "包含 docx、pdf、pptx、xlsx 文档创建和编辑技能",
+        "frontmatter 仅需 name 与 description 两个字段",
+        "示例覆盖创意、技术开发和企业沟通等领域"
+      ],
+      "use_cases": [
+        "创建符合公司品牌指南的文档并进行编辑",
+        "按组织特定数据工作流完成分析任务",
+        "测试 Web 应用或生成 MCP 服务器"
+      ],
+      "topics": [
+        "agent-skills"
+      ],
+      "license": "",
+      "pushed_at": "2026-09-03T16:37:14Z"
+    },
+    {
+      "rank": 3,
+      "owner": "blader",
+      "name": "humanizer",
+      "url": "https://github.com/blader/humanizer",
+      "description": "Agent skill that removes signs of AI-generated writing from text",
+      "language": "Python",
+      "stars": "42,588",
+      "forks": "3,603",
+      "stars_today": "1,132 stars today",
+      "zh_description": "输入AI生成的文本或文件，依据维基百科“AI写作迹象”的35种模式进行两轮检查和重写，生成更像人类写作的文本，不改变原意；提供写作样本时可匹配风格，处理文件时保留代码、数据、frontmatter和链接目标。",
+      "problem": "替代人工逐句辨识并改写AI腔文本的繁琐过程，解决AI文本痕迹明显但难系统化修正的问题。",
+      "key_features": [
+        "基于维基百科35种AI写作迹象模式",
+        "两遍处理：先重写再对照原文本核查",
+        "不编造事实，缺失细节会向作者确认",
+        "支持用写作样本匹配个人风格",
+        "仅改散文，保留代码、数据和frontmatter"
+      ],
+      "use_cases": [
+        "把AI生成的博客草稿改写成自然人类口吻",
+        "重写指定Markdown文件中的散文而不动代码和链接",
+        "附上个人写作样本，让改写保留自己的语言风格"
+      ],
+      "topics": [
+        "agent-skills",
+        "ai-writing",
+        "claude-code",
+        "codex",
+        "cursor",
+        "prompt-engineering",
+        "writing-tools"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-08-19T05:58:53Z"
+    },
+    {
+      "rank": 4,
+      "owner": "NousResearch",
+      "name": "hermes-agent",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "description": "The agent that grows with you",
+      "language": "Python",
+      "stars": "241,410",
+      "forks": "49,520",
+      "stars_today": "721 stars today",
+      "zh_description": "接收用户跨会话的对话与交互数据，通过内置学习循环从经验创建技能并在使用中改进，自行持久化知识、检索历史对话并构建用户画像，生成个性化应答。支持 Telegram、Discord、Slack 等接入，可在 VPS、GPU 集群或 serverless 环境运行，并可切换不同模型提供商。",
+      "problem": "现有代理缺少内置学习循环，跨会话记忆与技能积累需手动管理或外挂工具。",
+      "key_features": [
+        "内置学习循环，从经验创建技能并改进",
+        "自我提示持久化知识并搜索历史对话",
+        "接入 Telegram、Discord、Slack、WhatsApp、Signal",
+        "支持切换 Nous Portal、OpenRouter、OpenAI 等模型",
+        "提供完整 TUI，支持自动补全和流式输出"
+      ],
+      "use_cases": [
+        "在云端 VM 运行 agent 并通过 Telegram 远程交流",
+        "用 hermes model 命令在多个模型提供商间切换",
+        "让 agent 跨会话积累技能并形成用户画像"
+      ],
+      "topics": [
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "anthropic",
+        "chatgpt",
+        "claude",
+        "claude-code",
+        "codex",
+        "hermes",
+        "hermes-agent",
+        "llm",
+        "nous-research",
+        "openai"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-04T20:33:21Z"
+    },
+    {
+      "rank": 5,
+      "owner": "magnitudedev",
+      "name": "magnitude",
+      "url": "https://github.com/magnitudedev/magnitude",
+      "description": "Open source inference server that runs the best local models for your hardware, plugged into the agent you already use. Works with Pi, OpenCode, Hermes, OpenClaw, Codex, Claude Code, Oh My Pi, and Cline.",
+      "language": "TypeScript",
+      "stars": "2,367",
+      "forks": "163",
+      "stars_today": "395 stars today",
+      "zh_description": "开源的本地推理服务器，先分析机器芯片、内存和带宽，推荐适配的模型及预估 tok/s，再自动下载、调优并运行。兼容 Pi、OpenCode、Hermes、Codex、Claude Code 等 agent，按需加载模型，空闲或内存满时自动卸载，模型和提示完全留在本机。",
+      "problem": "为 agent 手动挑选本地模型并适配硬件调优的流程繁琐且易出错。",
+      "key_features": [
+        "分析硬件配置并推荐模型及 tok/s 估算",
+        "自动下载、调优并运行本地模型",
+        "兼容 Pi、OpenCode、Hermes、Claude Code 等",
+        "按需加载模型，空闲或内存紧张时自动卸载",
+        "完全本地离线运行，无 API key 和速率限制"
+      ],
+      "use_cases": [
+        "让 Claude Code 或 Codex 改用本地模型运行",
+        "在无网络环境继续使用 AI 编程助手",
+        "在已有 agent 中免除 token 费用与速率限制"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-04T18:42:49Z"
+    },
+    {
+      "rank": 6,
+      "owner": "bikini",
+      "name": "exploitarium",
+      "url": "https://github.com/bikini/exploitarium",
+      "description": "A single archive of public exploit PoCs and vulnerability research writeups. At the time I post these, none have been reported. Feel free to report them yourself and take credit for the CVE if handed out lulz. Please do not abuse these. I do this so to allure people into the field, and I've always found this is the most efficient way.",
+      "language": "Python",
+      "stars": "4,480",
+      "forks": "1,239",
+      "stars_today": "68 stars today",
+      "zh_description": "一个集中存放公开漏洞 PoC 与漏洞研究 writeup 的单一归档，包含多个漏洞条目及说明文档。内容发布时相关漏洞尚未被公开报告，可作为漏洞复现与进一步安全研究的参考材料。",
+      "problem": "替代了在多处站点间手工搜集漏洞 PoC 和 writeup 的分散流程。",
+      "key_features": [
+        "集中归档公开 exploit PoC 与 writeup",
+        "收录发布时尚未被报告的漏洞",
+        "每个漏洞条目附带说明 README",
+        "模糊测试工作流由 AI 自动化驱动"
+      ],
+      "use_cases": [
+        "查阅 PoC 学习漏洞利用与细节",
+        "复现未公开漏洞并撰写研究报告",
+        "作为提交 CVE 前的研究参考"
+      ],
+      "topics": [],
+      "license": "",
+      "pushed_at": "2026-07-15T23:21:55Z"
+    },
+    {
+      "rank": 7,
+      "owner": "bannedbook",
+      "name": "fanqiang",
+      "url": "https://github.com/bannedbook/fanqiang",
+      "description": "翻墙-科学上网",
+      "language": "Kotlin",
+      "stars": "52,744",
+      "forks": "8,521",
+      "stars_today": "735 stars today",
+      "zh_description": "翻墙-科学上网项目库，收录安卓/iOS/桌面端翻墙软件教程、Chrome/Edge/Firefox 一键翻墙包、自建 V2ray/Shadowsocks 服务器简明教程以及免费 ss/v2ray 账号分享。",
+      "problem": "替代逐站搜集翻墙工具与教程、分散管理多协议客户端的流程。",
+      "key_features": [
+        "收录安卓、苹果、Mac等客户端翻墙教程",
+        "提供Chrome一键翻墙包及Mac版",
+        "EdgeGo与Firefox一键翻墙包",
+        "自建V2ray服务器简明教程",
+        "免费ss与v2ray账号分享"
+      ],
+      "use_cases": [
+        "查找安卓或iOS可用的翻墙客户端并配置",
+        "通过一键包让Chrome/Edge/Firefox直接访问外网",
+        "在自有服务器上部署V2ray或Shadowsocks"
+      ],
+      "topics": [
+        "brook",
+        "daze",
+        "fanqiang",
+        "goflyway",
+        "lightsocks",
+        "proxy",
+        "psiphon",
+        "shadowsocks",
+        "ssr",
+        "trojan",
+        "v2ray"
+      ],
+      "license": "",
+      "pushed_at": "2026-08-30T01:09:00Z"
+    },
+    {
+      "rank": 8,
+      "owner": "debpalash",
+      "name": "VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "language": "Python",
+      "stars": "17,727",
+      "forks": "2,324",
+      "stars_today": "1,345 stars today",
+      "zh_description": "该项目主要用于：<div align=\"center\"> <p> </p> <h1>VoiceStudio</h1> <p> <a href=\"https://trendshift.io/repositories/28176?utmsource=repository-badge&amp;utmmedium=badge&amp;utmcampaign=badge-repository-28176\" target=\"blank\" rel=\"noopener",
+      "problem": "",
+      "key_features": [
+        "支持使用 API Key 调用",
+        "支持文字转语音配音",
+        "支持自行部署和掌控数据",
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [],
+      "topics": [
+        "ai",
+        "audiobook",
+        "cuda",
+        "dubbing",
+        "elevenlabs-alternative",
+        "huggingface",
+        "local-first",
+        "mlx",
+        "omnivoice-studio",
+        "speech-to-text",
+        "tauri",
+        "text-to-speech",
+        "transcription",
+        "translate",
+        "tts",
+        "voice-ai",
+        "voice-cloning",
+        "voice-generation",
+        "voicestudio",
+        "workflow"
+      ],
+      "license": "AGPL-3.0",
+      "pushed_at": "2026-09-04T12:45:34Z"
+    },
+    {
+      "rank": 9,
+      "owner": "google-research",
+      "name": "timesfm",
+      "url": "https://github.com/google-research/timesfm",
+      "description": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
+      "language": "Python",
+      "stars": "31,003",
+      "forks": "2,955",
+      "stars_today": "340 stars today",
+      "zh_description": "该项目主要用于：TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-04T19:50:14Z"
+    },
+    {
+      "rank": 10,
+      "owner": "radixark",
+      "name": "miles",
+      "url": "https://github.com/radixark/miles",
+      "description": "Miles is an enterprise-facing reinforcement learning framework for LLM and VLM post-training, forked from and co-evolving with slime.",
+      "language": "Python",
+      "stars": "2,530",
+      "forks": "441",
+      "stars_today": "55 stars today",
+      "zh_description": "该项目主要用于：<div align=\"center\">",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-04T20:44:23Z"
+    }
+  ]
+}
