@@ -1,0 +1,351 @@
+{
+  "collected_at": "2026-09-06T20:23:18.720489+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "cathrynlavery",
+      "name": "diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "language": "HTML",
+      "stars": "32,237",
+      "forks": "2,071",
+      "stars_today": "621 stars today",
+      "zh_description": "面向 Claude Code、Codex、Pi 等 Agent Skills 主机的图表生成技能，包含 39 种编辑级图表类型。输入文字描述或 draw.io/Mermaid 源文件，经品牌提取与语义模式匹配，输出自包含 HTML+SVG 图表。支持从网站提取品牌色与字体并生成风格指南，静态 HTML 为默认输出，可选动态效果。",
+      "problem": "替代了在 Figma 中手工绘制图表，以及通用 AI 生成的圆角框风格粗糙图表。",
+      "key_features": [
+        "39 种图表类型，覆盖架构、流程、Sankey 等布局",
+        "语义模式将行为与布局分离，减少类型数量",
+        "从网站自动提取配色与字体，匹配品牌风格",
+        "可导入并重绘 draw.io 或 Mermaid 源文件",
+        "输出自包含 HTML+SVG，无阴影无 Mermaid 依赖"
+      ],
+      "use_cases": [
+        "让 Claude Code 依据网站风格生成架构图或流程图",
+        "将已有 Mermaid 图重绘为统一的编辑级视觉风格",
+        "在不打开 Figma 的情况下直接生成可截图的静态图表"
+      ],
+      "topics": [
+        "agent-skills",
+        "claude-code",
+        "codex",
+        "data-visualization",
+        "diagrams",
+        "drawio",
+        "mermaid",
+        "svg"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-03T02:53:29Z"
+    },
+    {
+      "rank": 2,
+      "owner": "NousResearch",
+      "name": "hermes-agent",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "description": "The agent that grows with you",
+      "language": "Python",
+      "stars": "242,473",
+      "forks": "49,852",
+      "stars_today": "520 stars today",
+      "zh_description": "Hermes Agent 是 Nous Research 构建的自我改进 AI agent。接收终端或聊天消息后，通过内置学习循环从交互经验中创建并改进技能、持久化知识并检索历史对话，生成响应并逐步构建跨会话的用户模型。可运行于 VPS、GPU 集群或 serverless。",
+      "problem": "现有 AI agent 缺少内置学习循环，难以从交互中持续改进技能并跨会话保留知识。",
+      "key_features": [
+        "内置学习循环，从经验创建并改进技能",
+        "接入 Telegram、Discord、Slack 等聊天应用",
+        "TUI：多行编辑、斜杠命令补全、流式工具输出"
+      ],
+      "use_cases": [
+        "通过 Telegram 让 agent 在云端 VM 后台执行任务",
+        "使用 TUI 对话并实时查看工具流式输出"
+      ],
+      "topics": [
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "anthropic",
+        "chatgpt",
+        "claude",
+        "claude-code",
+        "codex",
+        "hermes",
+        "hermes-agent",
+        "llm",
+        "nous-research",
+        "openai"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-06T20:21:21Z"
+    },
+    {
+      "rank": 3,
+      "owner": "openai",
+      "name": "skills",
+      "url": "https://github.com/openai/skills",
+      "description": "Skills Catalog for Codex",
+      "language": "Python",
+      "stars": "25,569",
+      "forks": "1,727",
+      "stars_today": "44 stars today",
+      "zh_description": "该项目主要用于：> [!IMPORTANT] > This repository is deprecated.",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "",
+      "pushed_at": "2026-07-14T16:47:46Z"
+    },
+    {
+      "rank": 4,
+      "owner": "blader",
+      "name": "humanizer",
+      "url": "https://github.com/blader/humanizer",
+      "description": "Agent skill that removes signs of AI-generated writing from text",
+      "language": "Python",
+      "stars": "44,125",
+      "forks": "3,673",
+      "stars_today": "748 stars today",
+      "zh_description": "该 Agent 技能以 Markdown 实现，接收粘贴的 AI 味文本、指令或文件路径，可附写作样例。它找出并标注 AI 写作痕迹，在不改动原意的前提下先改写、再点评并输出最终版本；处理文件时仅改散文，保留代码、数据、frontmatter 与链接，缺失事实细节会提问。",
+      "problem": "人工逐句识别并改写 AI 腔文本耗时，通用改写容易偏离原意或丢失事实细节。",
+      "key_features": [
+        "支持 /humanizer 命令或自然语言直接调用",
+        "可附 2-3 段个人文稿做风格匹配",
+        "缺失姓名、日期等事实细节时主动询问",
+        "输出首轮改写、风格问题点评与最终版",
+        "仅改散文，保留代码、数据与链接目标"
+      ],
+      "use_cases": [
+        "把粘贴的 AI 文本改成尊重原意的真人文字",
+        "对 Markdown 文件去掉 AI 味但不改代码数据",
+        "提供个人文稿后让改写贴合自己的用词与节奏"
+      ],
+      "topics": [
+        "agent-skills",
+        "ai-writing",
+        "claude-code",
+        "codex",
+        "cursor",
+        "prompt-engineering",
+        "writing-tools"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-06T20:17:54Z"
+    },
+    {
+      "rank": 5,
+      "owner": "ruvnet",
+      "name": "ruflo",
+      "url": "https://github.com/ruvnet/ruflo",
+      "description": "🌊 The original agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+      "language": "TypeScript",
+      "stars": "70,935",
+      "forks": "8,431",
+      "stars_today": "276 stars today",
+      "zh_description": "Ruflo 是面向 Claude Code 与 Codex 的 agent 执行层。初始化后，用户经 CLI/MCP 提交任务，Router 将请求路由到 Swarm 中的 100+ agents，借助自学习记忆与跨机器联邦通信完成协调工作并返回结果。",
+      "problem": "缺少统一执行层时，需为每个 Claude Code/Codex agent 分别配置工具、记忆与多机协作，编排复杂。",
+      "key_features": [
+        "原生集成 Claude Code 与 Codex",
+        "提供 100+ 专用 agents 与 Swarm 调度",
+        "自学习记忆跨会话保留",
+        "跨机器联邦通信与安全护栏"
+      ],
+      "use_cases": [
+        "通过 npx ruflo init 后让 Claude Code 自动路由任务并协调 agents",
+        "部署多 agent swarm 协调自主工作流",
+        "构建带记忆与 RAG 的对话式 AI 系统"
+      ],
+      "topics": [
+        "agentic-ai",
+        "agentic-framework",
+        "agentic-workflow",
+        "agents",
+        "ai-agents",
+        "ai-assistant",
+        "ai-skills",
+        "autonomous-agents",
+        "claude-code",
+        "codex",
+        "dsh-plugin",
+        "harness",
+        "mcp-server",
+        "multi-agent",
+        "multi-agent-systems",
+        "npm",
+        "skills",
+        "swarm",
+        "swarm-intelligence",
+        "typescript"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-05T15:57:31Z"
+    },
+    {
+      "rank": 6,
+      "owner": "magnitudedev",
+      "name": "magnitude",
+      "url": "https://github.com/magnitudedev/magnitude",
+      "description": "Open source inference server that runs the best local models for your hardware, plugged into the agent you already use. Works with Pi, OpenCode, Hermes, OpenClaw, Codex, Claude Code, Oh My Pi, and Cline.",
+      "language": "TypeScript",
+      "stars": "3,617",
+      "forks": "256",
+      "stars_today": "604 stars today",
+      "zh_description": "Magnitude 是开源推理服务器。它对芯片、内存和带宽进行硬件画像，推荐适配的本地模型并自动下载、调优，然后按需加载运行模型；所有数据留在本机，可与 Codex、Claude Code、Pi、OpenCode 等 agent 配合使用。",
+      "problem": "替代手动配置云推理 API、管理密钥和按 token 付费，以及人工挑选和调优本地模型的流程。",
+      "key_features": [
+        "兼容 Codex、Claude Code 等 agent",
+        "自动检测硬件并推荐适配模型",
+        "按需加载与卸载本地模型",
+        "内置投机解码和并发调优"
+      ],
+      "use_cases": [
+        "离线环境下让 agent 使用本地模型处理请求",
+        "让 Pi、OpenCode 等工具接入同一本地推理服务",
+        "根据当前硬件自动下载并运行最佳开源模型"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-06T19:11:30Z"
+    },
+    {
+      "rank": 7,
+      "owner": "BraveOPotato",
+      "name": "FckSignups",
+      "url": "https://github.com/BraveOPotato/FckSignups",
+      "description": "A list of tools that are open-source, in-browser, and require no-signups!",
+      "language": "TypeScript",
+      "stars": "3,246",
+      "forks": "207",
+      "stars_today": "436 stars today",
+      "zh_description": "一个React+TypeScript构建的开源目录站，收录并展示200余款开源、可在浏览器内使用且无需注册的工具。对相似工具进行人工筛选，将独特工具置于页面顶部精选区。",
+      "problem": "替代手动搜索和筛选分散的开源在线工具，解决工具同质化难以甄别的问题。",
+      "key_features": [
+        "收录200余款开源浏览器内工具",
+        "所有工具无需注册即可使用",
+        "设置精选区标记独特工具",
+        "基于React与TypeScript开发"
+      ],
+      "use_cases": [
+        "查找无需注册即可在浏览器中使用开源工具",
+        "浏览精选区发现界面或功能独特的在线工具"
+      ],
+      "topics": [],
+      "license": "GPL-3.0",
+      "pushed_at": "2026-09-06T19:19:46Z"
+    },
+    {
+      "rank": 8,
+      "owner": "aipoch",
+      "name": "open-science",
+      "url": "https://github.com/aipoch/open-science",
+      "description": "Open Science by AIPOCH is an open-source, local-first, model-agnostic AI research workbench for macOS, Windows, and Linux, with scientific agents, Python/R notebooks, data connectors, and reproducible provenance.",
+      "language": "TypeScript",
+      "stars": "3,801",
+      "forks": "237",
+      "stars_today": "145 stars today",
+      "zh_description": "本地优先、模型无关的开源AI科研工作台。用户以自然语言设定研究目标，智能体读取文件、搜索网络、执行Python/R代码并调用科学数据连接器，最终生成带出处与不可变版本的可复现研究结果。",
+      "problem": "研究工作分散于聊天窗口、notebook、脚本与多种数据库，上下文在切换中丢失，答案与生成证据脱节。",
+      "key_features": [
+        "内置22类科研技能，如AlphaFold2、Chai-1等",
+        "24个科研连接器，含PubMed、ChEMBL等",
+        "支持Python/R执行、Notebook及SSH远程HPC",
+        "不可变构件版本记录并标记可验证的生产证据",
+        "可选用Claude、Codex或自定义网关作为会话模型"
+      ],
+      "use_cases": [
+        "让智能体检索PubMed或Genes & Ontologies并产出带出处的研究草稿",
+        "选用LigandMPNN设计蛋白序列并保存可追溯的构件版本",
+        "通过消息分支修订早期提示词，对比不同研究路径的结果"
+      ],
+      "topics": [
+        "ai-for-science",
+        "ai-research",
+        "ai-workbench",
+        "bioinformatics",
+        "claude-science-alternative",
+        "desktop-app",
+        "electron",
+        "linux",
+        "local-first",
+        "macos",
+        "mcp",
+        "model-agnostic",
+        "open-science",
+        "python",
+        "r",
+        "reproducible-research",
+        "research-software",
+        "research-workbench",
+        "scientific-ai",
+        "windows"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-06T17:53:00Z"
+    },
+    {
+      "rank": 9,
+      "owner": "OpenWhispr",
+      "name": "openwhispr",
+      "url": "https://github.com/OpenWhispr/openwhispr",
+      "description": "Voice-to-text dictation app with local (Nvidia Parakeet/Whisper) and cloud models (BYOK). Privacy-first and available cross-platform.",
+      "language": "JavaScript",
+      "stars": "7,246",
+      "forks": "928",
+      "stars_today": "225 stars today",
+      "zh_description": "实时语音交互项目，重点提供语音聊天、语音输入输出或音频驱动的人机互动能力。",
+      "problem": "",
+      "key_features": [
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [],
+      "topics": [
+        "ai",
+        "anthropic",
+        "cross-platform",
+        "gemini",
+        "groq",
+        "linux",
+        "macos",
+        "nvidia",
+        "open-source",
+        "openai",
+        "parakeet",
+        "speech-to-text",
+        "transcribe",
+        "whisper",
+        "windows"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-05T00:12:21Z"
+    },
+    {
+      "rank": 10,
+      "owner": "humanlayer",
+      "name": "skills",
+      "url": "https://github.com/humanlayer/skills",
+      "description": "",
+      "language": "TypeScript",
+      "stars": "3,083",
+      "forks": "88",
+      "stars_today": "451 stars today",
+      "zh_description": "该仓库是一套 Claude Code 技能集合，通过 npx skills add 安装后用斜杠命令调用。输入项目 CLAUDE.md、React 组件或 agent 流程说明，输出改进的指令块、精确的 prop 类型、可运行的 GitHub Actions 工作流、本地组件及解释性 HTML 图表。",
+      "problem": "替代手工调整 CLAUDE.md 指令、手动收窄 React 类型以及自行搭建 agentic 循环工作流和说明图表的繁琐流程。",
+      "key_features": [
+        "用 important if 块重写 CLAUDE.md 以改进指令遵循",
+        "收窄 React 组件 prop 类型以匹配实际代码路径",
+        "生成仓库本地技能与迭代式 GitHub Actions 工作流、记忆文件",
+        "通过访谈设计传感器-控制器-执行器与扰动控制回路",
+        "用图示和 HTML 工件解释当前主题"
+      ],
+      "use_cases": [
+        "在项目中运行 /improve-claude-md 自动重构 CLAUDE.md 指令",
+        "对组件使用 /narrow-react-prop-types 让类型反映真实使用路径",
+        "用 /design-control-loop 把 agentic 控制回路落地为本地可运行组件"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-08-13T15:05:30Z"
+    }
+  ]
+}
