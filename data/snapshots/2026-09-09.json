@@ -1,0 +1,330 @@
+{
+  "collected_at": "2026-09-08T21:08:44.568431+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "ayghri",
+      "name": "i-have-adhd",
+      "url": "https://github.com/ayghri/i-have-adhd",
+      "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+      "language": "Python",
+      "stars": "29,941",
+      "forks": "1,838",
+      "stars_today": "422 stars today",
+      "zh_description": "为 Claude Code 等编码代理添加一项技能，使代理不再把关键答案埋没在冗长输出中，而是输出对 ADHD 友好的直接结果。该技能无需 ADHD 医学诊断，任何用户都能启用。",
+      "problem": "解决编码代理回复冗长时关键信息被淹没、需要用户自己翻找答案的问题。",
+      "key_features": [
+        "直接给出关键答案，避免埋在长文中",
+        "产出对 ADHD 友好的简洁输出",
+        "无需 ADHD 诊断即可使用"
+      ],
+      "use_cases": [
+        "让编码代理在回答技术问题时先给结论",
+        "将冗长的代理回复转换为更易扫读的短答案"
+      ],
+      "topics": [
+        "adhd",
+        "claude-",
+        "claude-code-plugin",
+        "claude-skills",
+        "developer-tools",
+        "productivity"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-08T17:08:54Z"
+    },
+    {
+      "rank": 2,
+      "owner": "cathrynlavery",
+      "name": "diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "language": "HTML",
+      "stars": "34,581",
+      "forks": "2,194",
+      "stars_today": "1,020 stars today",
+      "zh_description": "面向 Claude Code、Codex、Pi 等 Agent Skills 兼容主机的绘图技能。根据绘图请求和语义模式挑选版式，输出自包含 HTML+SVG 图表；可读取 draw.io/Mermaid 源按指定格式重绘，也能抓取网站自动匹配品牌色。",
+      "problem": "替代用 Figma 手工调样式、被 Mermaid 默认模板限制和长时间选色的流程。",
+      "key_features": [
+        "39 种编辑级图表类型，含 Sankey、鱼骨图",
+        "输出自包含 HTML+SVG，无阴影且非 Mermaid 模板",
+        "语义模式分离行为与布局，复用最近的可视类型",
+        "支持导入 draw.io 或 Mermaid 源并重绘",
+        "抓取网站颜色与字体，自动套用品牌风格"
+      ],
+      "use_cases": [
+        "生成前端、后端、数据库和 Redis 缓存的应用架构图",
+        "让技能读取目标网址后按品牌色绘制全套图表",
+        "将现有 Mermaid 或 draw.io 图按指定大小与细节重新输出"
+      ],
+      "topics": [
+        "agent-skills",
+        "claude-code",
+        "codex",
+        "data-visualization",
+        "diagrams",
+        "drawio",
+        "mermaid",
+        "svg"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-08T19:45:13Z"
+    },
+    {
+      "rank": 3,
+      "owner": "openai",
+      "name": "skills",
+      "url": "https://github.com/openai/skills",
+      "description": "Skills Catalog for Codex",
+      "language": "Python",
+      "stars": "26,458",
+      "forks": "1,775",
+      "stars_today": "490 stars today",
+      "zh_description": "该项目主要用于：> [!IMPORTANT] > This repository is deprecated.",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "",
+      "pushed_at": "2026-09-08T20:35:26Z"
+    },
+    {
+      "rank": 4,
+      "owner": "heygen-com",
+      "name": "hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "description": "Write HTML. Render video. Built for agents.",
+      "language": "TypeScript",
+      "stars": "47,662",
+      "forks": "4,388",
+      "stars_today": "2,628 stars today",
+      "zh_description": "媒体或娱乐内容管理项目，用来整理、播放或管理个人数字内容。",
+      "problem": "把编程代理放进本地终端和代码目录，避免只能在独立聊天页面中处理代码任务。",
+      "key_features": [
+        "在本地终端中运行编程代理"
+      ],
+      "use_cases": [
+        "在本地代码库中通过终端处理编程任务",
+        "把终端中的代码工作交给 AI 代理执行"
+      ],
+      "topics": [
+        "ai",
+        "animation",
+        "ffmpeg",
+        "framework",
+        "gsap",
+        "html",
+        "mcp",
+        "puppeteer",
+        "rendering",
+        "typescript",
+        "video"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-08T21:08:44Z"
+    },
+    {
+      "rank": 5,
+      "owner": "multica-ai",
+      "name": "andrej-karpathy-skills",
+      "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+      "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+      "language": "Unknown",
+      "stars": "211,379",
+      "forks": "21,469",
+      "stars_today": "325 stars today",
+      "zh_description": "该项目主要用于：> Check out my new project [Multica](https://github.com/multica-ai/multica) — an open-source platform for running and managing coding agents with reusable skills.",
+      "problem": "把编程代理放进本地终端和代码目录，避免只能在独立聊天页面中处理代码任务。",
+      "key_features": [
+        "在本地终端中运行编程代理"
+      ],
+      "use_cases": [
+        "在本地代码库中通过终端处理编程任务",
+        "把终端中的代码工作交给 AI 代理执行"
+      ],
+      "topics": [],
+      "license": "",
+      "pushed_at": "2026-04-20T10:05:04Z"
+    },
+    {
+      "rank": 6,
+      "owner": "microsoft",
+      "name": "markitdown",
+      "url": "https://github.com/microsoft/markitdown",
+      "description": "Python tool for converting files and office documents to Markdown.",
+      "language": "Python",
+      "stars": "181,593",
+      "forks": "13,342",
+      "stars_today": "2,045 stars today",
+      "zh_description": "把PDF、PPT、Word、Excel、图片、音频、HTML、ZIP、YouTube链接、EPUB等转换成Markdown，保留标题、表格等结构，并输出包含YAML front matter的文本，供LLM和文本分析管线使用。",
+      "problem": "textract等抽取工具不保留标题表格结构，难以直接为LLM生成结构化Markdown。",
+      "key_features": [
+        "支持PDF/Office/图片/音频/HTML/EPUB等转Markdown",
+        "图片提取EXIF与OCR，音频提取元数据并转录",
+        "输出含YAML front matter，ZIP文件自动遍历"
+      ],
+      "use_cases": [
+        "将PDF和Office文档转换为Markdown供LLM摘要或问答",
+        "从录音转录语音并保存带元数据的Markdown存档"
+      ],
+      "topics": [
+        "autogen",
+        "autogen-extension",
+        "langchain",
+        "markdown",
+        "microsoft-office",
+        "openai",
+        "pdf"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-07T04:58:15Z"
+    },
+    {
+      "rank": 7,
+      "owner": "jo-inc",
+      "name": "camofox-browser",
+      "url": "https://github.com/jo-inc/camofox-browser",
+      "description": "Stealth headless browser for AI agents — bypass Cloudflare, bot detection, and anti-scraping. Drop-in Puppeteer/Playwright replacement.",
+      "language": "JavaScript",
+      "stars": "10,416",
+      "forks": "1,047",
+      "stars_today": "872 stars today",
+      "zh_description": "基于Camoufox（Firefox分支）构建的反检测浏览器服务器。AI代理通过REST API提交抓取、点击、搜索指令，引擎在C++层伪造WebGL、AudioContext、WebRTC等指纹后执行操作，返回可访问性快照、稳定元素ID、截图或下载文件，可绕过Cloudflare等反爬检测。",
+      "problem": "替代无头Chrome和Puppeteer在反爬站点上被指纹识别与拦截而无法自动化浏览的限制。",
+      "key_features": [
+        "基于Camoufox在C++层伪造指纹以绕过Cloudflare",
+        "返回可访问性快照，较HTML减小约90%的token",
+        "提供稳定元素引用e1/e2/e3供可靠点击",
+        "支持Netscape格式Cookie导入与用户级会话隔离",
+        "内置@google_search等搜索宏及YouTube字幕提取"
+      ],
+      "use_cases": [
+        "使用已登录Cookie在需要认证的网站自动执行操作",
+        "从Cloudflare等反爬保护站点抽取结构化页面数据",
+        "使用搜索宏从Google、Amazon获取结果并提取信息"
+      ],
+      "topics": [
+        "ai-agent",
+        "anti-bot",
+        "antidetect-browser",
+        "automation",
+        "bot-detection",
+        "browser-automation",
+        "cloudflare-bypass",
+        "headless-browser",
+        "javascript",
+        "nodejs",
+        "playwright",
+        "puppeteer",
+        "scraping",
+        "stealth-browser",
+        "web-scraping"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-06T03:30:20Z"
+    },
+    {
+      "rank": 8,
+      "owner": "MoonTechLab",
+      "name": "LunaTV",
+      "url": "https://github.com/MoonTechLab/LunaTV",
+      "description": "本项目采用 CC BY-NC-SA 协议，禁止任何商业化行为，任何衍生项目必须保留本项目地址并以相同协议开源",
+      "language": "TypeScript",
+      "stars": "10,139",
+      "forks": "9,044",
+      "stars_today": "505 stars today",
+      "zh_description": "MoonTV是一款基于Next.js 14、TypeScript与Tailwind CSS构建的影视聚合播放器。用户输入剧名后，系统通过多源聚合搜索返回片源列表，展示剧集、演员等详情，并利用HLS.js/ArtPlayer在线播放；支持Redis/Kvrocks/Upstash存储收藏与播放进度，多端同步。",
+      "problem": "替代了在不同影视站点间逐个搜索资源并手动管理观看记录的分散流程。",
+      "key_features": [
+        "多源聚合搜索，一次返回全部源的结果",
+        "详情页完整展示剧集、演员、年份与简介",
+        "集成HLS.js与ArtPlayer实现在线播放",
+        "用Redis/Kvrocks/Upstash跨端同步收藏和进度",
+        "PWA支持离线缓存与安装到主屏"
+      ],
+      "use_cases": [
+        "在手机PWA中搜索资源并继续上次未看完的剧集",
+        "跨设备同步播放进度，在Android TV和手机间切换继续播放",
+        "配合OrionTV在Android TV上播放，记录与网页端同步"
+      ],
+      "topics": [],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-05-28T06:05:20Z"
+    },
+    {
+      "rank": 9,
+      "owner": "browser-use",
+      "name": "browser-use",
+      "url": "https://github.com/browser-use/browser-use",
+      "description": "🌐 Make websites accessible for AI agents. Automate tasks online with ease.",
+      "language": "Python",
+      "stars": "113,405",
+      "forks": "12,485",
+      "stars_today": "320 stars today",
+      "zh_description": "browser-use让AI代理像人类一样操作网络浏览器。用户用自然语言描述目标，AI代理自动打开网页、点击按钮、输入文字和填写表单，并可从网页提取结构化数据，例如将关注者数据导出为CSV。",
+      "problem": "替代为AI代理逐个网站编写浏览器自动化脚本来完成网页操作的方式。",
+      "key_features": [
+        "AI代理可按自然语言指令打开网页",
+        "点击按钮、输入文字和填写表单",
+        "提取关注者数据并导出为CSV"
+      ],
+      "use_cases": [
+        "自动提取社交平台关注者信息并导出为CSV文件",
+        "指挥AI代理执行网页上的点击、输入和表单提交任务"
+      ],
+      "topics": [
+        "ai-agents",
+        "ai-tools",
+        "browser-automation",
+        "browser-use",
+        "llm",
+        "playwright",
+        "python"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-07T19:55:36Z"
+    },
+    {
+      "rank": 10,
+      "owner": "The-Swarm-Corporation",
+      "name": "AutoHedge",
+      "url": "https://github.com/The-Swarm-Corporation/AutoHedge",
+      "description": "Build your autonomous hedge fund in minutes. AutoHedge harnesses the power of swarm intelligence and AI agents to automate market analysis, risk management, and trade execution.",
+      "language": "Python",
+      "stars": "5,652",
+      "forks": "836",
+      "stars_today": "494 stars today",
+      "zh_description": "AutoHedge 接收实时行情数据，使用总监、量化、风控、执行四类专用代理按序生成交易论点、做技术统计检验、计算仓位与控制风险、生成并下发执行订单，输出结构化 JSON 结果并在 Solana 上完成交易；具备可配置日志与模块化框架以支持审计和扩展新交易场所。",
+      "problem": "传统流程需人工分工完成市场分析、风险管理和下单，多角色传递延迟高，难以无人值守连续应对行情。",
+      "key_features": [
+        "四代理流水线：总监生成论点、量化分析、风控定仓、执行下单",
+        "实时行情驱动，当前支持 Solana 全自动执行",
+        "风险优先架构：执行前做风控评估与仓位规模计算",
+        "结构化输出 JSON 交易建议，便于下游系统集成",
+        "企业级日志与模块化框架，可扩展新策略与交易所"
+      ],
+      "use_cases": [
+        "在 Solana 部署后无需人工盯盘，自动完成行情分析到下单全流程",
+        "接收 JSON 交易推荐并接入自有的风控、结算或执行系统",
+        "通过模块化接口加入自定义量化策略，并扩展更多交易场所"
+      ],
+      "topics": [
+        "ai",
+        "blackrock",
+        "finance",
+        "goldmansachs",
+        "hedgefund",
+        "jpmorgan",
+        "ml",
+        "quant",
+        "quantitative-finance",
+        "quantitative-trading",
+        "trading"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-05-11T05:44:09Z"
+    }
+  ]
+}
