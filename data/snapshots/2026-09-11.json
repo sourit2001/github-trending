@@ -1,0 +1,338 @@
+{
+  "collected_at": "2026-09-10T20:51:14.296307+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "ayghri",
+      "name": "i-have-adhd",
+      "url": "https://github.com/ayghri/i-have-adhd",
+      "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+      "language": "Python",
+      "stars": "37,921",
+      "forks": "2,187",
+      "stars_today": "3,854 stars today",
+      "zh_description": "该 skill 作用于编码代理的回复，阻止其把答案埋在冗长内容中，改为 ADHD 友好输出；README 注明无需 ADHD 诊断。",
+      "problem": "用于替代编码代理默认把答案埋在长篇输出之中的回复方式。",
+      "key_features": [
+        "面向编码代理的 skill",
+        "ADHD 友好输出",
+        "阻止答案被埋在长输出中",
+        "无需 ADHD 诊断"
+      ],
+      "use_cases": [
+        "让编码代理直接给出核心答案",
+        "在 Claude Code 等代理中启用 ADHD 友好回复"
+      ],
+      "topics": [
+        "adhd",
+        "claude-",
+        "claude-code-plugin",
+        "claude-skills",
+        "developer-tools",
+        "productivity"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-10T15:48:41Z"
+    },
+    {
+      "rank": 2,
+      "owner": "bilawalsidhu",
+      "name": "gods-eye-view",
+      "url": "https://github.com/bilawalsidhu/gods-eye-view",
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "language": "JavaScript",
+      "stars": "23,811",
+      "forks": "4,963",
+      "stars_today": "1,588 stars today",
+      "zh_description": "God's Eye View 把航班应答机、船舶信标、轨道根数、地震仪和公共摄像头等公开信号汇集到浏览器内的 3D 地球，可下钻到单架飞机、单艘船或街道；交通沿真实道路用聚合数据模拟。",
+      "problem": "替代在多个公开数据源、地图工具和桌面客户端间分散查看信号的方式。",
+      "key_features": [
+        "Cesium ion 与 Google 3D 地球",
+        "AISStream 实时全球船舶",
+        "NASA FIRMS 实时活跃火点",
+        "TomTom 实时车流与拥堵颜色",
+        "OpenAI 语音与 AI HUD 摘要"
+      ],
+      "use_cases": [
+        "在 3D 地球上追踪航班、船舶、火灾与地震信号",
+        "从全球视图下钻查看单个飞机、船舶或街道",
+        "添加自有数据源并作为独立图层扩展"
+      ],
+      "topics": [
+        "3d-globe",
+        "cesium",
+        "flight-tracking",
+        "geospatial",
+        "geospatial-intelligence",
+        "gis",
+        "osint",
+        "photogrammetry",
+        "satellite-tracking",
+        "spatial-intelligence",
+        "webgl",
+        "worldview"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-09-05T08:30:57Z"
+    },
+    {
+      "rank": 3,
+      "owner": "alsk1992",
+      "name": "CloddsBot",
+      "url": "https://github.com/alsk1992/CloddsBot",
+      "description": "Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs, 5 EVM chains. Scans for edge, executes instantly, manages risk while you sleep. Agent commerce protocol for machine-to-machine payments. Self-hosted. Built on Claude.",
+      "language": "TypeScript",
+      "stars": "1,559",
+      "forks": "252",
+      "stars_today": "299 stars today",
+      "zh_description": "CloddsBot 是自托管 AI 交易终端，用户通过 21 个消息平台用自然语言对话，由 Claude 驱动 118+ 策略，在 10 个预测市场、7 个期货交易所、Solana DeFi 和 EVM 链执行交易，并含风险引擎与 Bittensor 子网挖矿。",
+      "problem": "替代在多个预测市场、期货交易所和 DeFi 协议间分散手动交易与监控的流程。",
+      "key_features": [
+        "21 个消息平台自然语言交易",
+        "118+ 策略与 4 类 AI 代理",
+        "Polymarket、Kalshi 等 10 个预测市场",
+        "7 个期货交易所与 Solana/EVM DeFi",
+        "VaR/CVaR 风险引擎与 Kelly 仓位"
+      ],
+      "use_cases": [
+        "在预测市场寻找套利机会并自动执行交易",
+        "管理 Solana 与 EVM 链上现货、永续合约和代币发行",
+        "通过 Telegram 等渠道监控仓位、鲸鱼和风险"
+      ],
+      "topics": [
+        "agi",
+        "ai",
+        "arbitrage",
+        "claude",
+        "crypto",
+        "defi",
+        "ethereum",
+        "futures",
+        "hft",
+        "hyperliquid",
+        "kalshi",
+        "polymarket",
+        "prediction-markets",
+        "pumpswap",
+        "solana",
+        "telegram-bot",
+        "trading",
+        "trading-bot",
+        "typescript",
+        "x402"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-10T17:51:49Z"
+    },
+    {
+      "rank": 4,
+      "owner": "Tencent",
+      "name": "teamai-cli",
+      "url": "https://github.com/Tencent/teamai-cli",
+      "description": "Make Every Team AI Native",
+      "language": "TypeScript",
+      "stars": "3,712",
+      "forks": "239",
+      "stars_today": "837 stars today",
+      "zh_description": "TeamAI 用于管理团队的技能（skills）、规则（rules）、MCP 与知识，覆盖 Claude Code、Codex、CodeBuddy、WorkBuddy、OpenCode、Cursor 及其他 AI 代理。README 未说明输入格式、核心处理流程与输出形态。",
+      "problem": "在多款 AI 代理中各自分散维护技能、规则与 MCP 配置。",
+      "key_features": [
+        "跨 Claude Code、Codex、Cursor 等代理管理团队技能",
+        "统一管理团队规则（rules）",
+        "统一管理 MCP 配置",
+        "统一管理团队知识"
+      ],
+      "use_cases": [
+        "在 Claude Code 与 Codex 等代理间复用同一套团队技能",
+        "为多个 AI 代理统一维护团队规则与 MCP 配置"
+      ],
+      "topics": [],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-09-10T09:35:29Z"
+    },
+    {
+      "rank": 5,
+      "owner": "liquidslr",
+      "name": "system-design-notes",
+      "url": "https://github.com/liquidslr/system-design-notes",
+      "description": "Notes of the book System Desgin Interview - An Insider's Guide",
+      "language": "Unknown",
+      "stars": "18,689",
+      "forks": "3,476",
+      "stars_today": "891 stars today",
+      "zh_description": "《System Design Interview – An Insider's Guide》第 1、2 卷的读书笔记，按原书章节编号组织，覆盖从零扩展到百万用户、信封估算、限流器、一致性哈希、键值存储、分布式唯一 ID 生成器、URL 短链、网页爬虫、通知系统、News Feed、聊天系统、搜索自动补全、YouTube、Google Drive 等设计题。README 标注笔记仍在进行中。",
+      "problem": "替代在书中逐章翻找特定设计题内容的手工整理。",
+      "key_features": [
+        "按原书章节编号组织，列出第 1 章至第 16 章目录",
+        "包含设计限流器、一致性哈希、键值存储等章节",
+        "包含 YouTube、Google Drive、Proximity Service 等系统设计章节",
+        "笔记状态标注为 work in progress"
+      ],
+      "use_cases": [
+        "按章节查阅 URL 短链、聊天系统等设计题笔记",
+        "查看限流器、一致性哈希等组件的笔记内容",
+        "对照原书卷一卷二逐章复习系统设计题"
+      ],
+      "topics": [],
+      "license": "",
+      "pushed_at": "2026-08-12T22:22:21Z"
+    },
+    {
+      "rank": 6,
+      "owner": "cathrynlavery",
+      "name": "diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "language": "HTML",
+      "stars": "37,638",
+      "forks": "2,387",
+      "stars_today": "1,287 stars today",
+      "zh_description": "提供 39 种编辑级图示类型的 Agent Skill，可用于 Claude Code、Codex、Factory Droid、Pi 及兼容 Agent Skills 的宿主，产物为自包含 HTML + SVG。它可读取网站提取主色与字体栈、映射为 paper/ink/muted/accent/link 角色并写入样式指南，也能把 draw.io、Mermaid、Excalidraw 源重绘为指定格式、尺寸与细节层级。",
+      "problem": "替代在 Figma 中手动挑色排版，以及 Mermaid 生成的通用圆角框图。",
+      "key_features": [
+        "39 种编辑级图示类型，输出自包含 HTML + SVG",
+        "读取网站提取配色与字体，写入样式指南",
+        "可将 draw.io、Mermaid、Excalidraw 源重绘为指定格式",
+        "语义模式描述行为，与布局分离",
+        "静态 HTML 为默认，可选无障碍动效"
+      ],
+      "use_cases": [
+        "生成前端、后端、数据库与 Redis 缓存的架构图",
+        "把已有 Mermaid 或 draw.io 图重绘为指定格式与细节层级",
+        "按网站品牌色绘制飞轮、Sankey、UML 类图等图示"
+      ],
+      "topics": [
+        "agent-skills",
+        "claude-code",
+        "codex",
+        "data-visualization",
+        "diagrams",
+        "drawio",
+        "mermaid",
+        "svg"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-10T04:26:30Z"
+    },
+    {
+      "rank": 7,
+      "owner": "freestylefly",
+      "name": "awesome-gpt-image-2",
+      "url": "https://github.com/freestylefly/awesome-gpt-image-2",
+      "description": "Prompt as Code | GPT Image 2 / 2.5 提示词与案例库，530+ 个案例、20+ 套工业级模板与可复用 Skills，新增 2.5 同提示词对比专区，附完整提示词与生成记录，持续更新。",
+      "language": "JavaScript",
+      "stars": "30,786",
+      "forks": "2,982",
+      "stars_today": "957 stars today",
+      "zh_description": "收录 500+ 逆向案例与 20+ 工业级模板，按 UI、信息图、海报、产品电商、品牌标识、建筑等分类给出完整提示词与生成记录；另有 gpt-image-2-style-library 技能，从同一份数据中挑选 GPT-Image2 风格、模板、分类与场景标签并生成提示词。",
+      "problem": "替代逐个搜集图像案例、手工拼写与复用提示词、在多个工具间复制模板的分散流程。",
+      "key_features": [
+        "530+ 案例与 20+ 工业级提示词模板",
+        "gpt-image-2-style-library Agent Skill 选风格",
+        "npm CLI 把技能写入 Codex、Claude 技能目录",
+        "GPT-Image 2.5 同提示词对比专区"
+      ],
+      "use_cases": [
+        "按分类浏览案例找到视觉方向并套用模板",
+        "调用技能生成信息图等场景的提示词结构",
+        "对照 2.5 同提示词的生成结果比较差异"
+      ],
+      "topics": [
+        "agents",
+        "ai-image-generation",
+        "chatgpt",
+        "dsh-plugin",
+        "gpt-image-2",
+        "image-prompts",
+        "prompt-as-code",
+        "prompt-engineering",
+        "skills",
+        "workflow-automation"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-09T08:31:41Z"
+    },
+    {
+      "rank": 8,
+      "owner": "armory3d",
+      "name": "armorpaint",
+      "url": "https://github.com/armory3d/armorpaint",
+      "description": "Graphics Creation Tools",
+      "language": "C",
+      "stars": "4,375",
+      "forks": "517",
+      "stars_today": "87 stars today",
+      "zh_description": "该项目主要用于：armorpaint ==============",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "3d",
+        "armorpaint",
+        "painting",
+        "texturing",
+        "tool"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-09-09T19:25:19Z"
+    },
+    {
+      "rank": 9,
+      "owner": "JustVugg",
+      "name": "colibri",
+      "url": "https://github.com/JustVugg/colibri",
+      "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
+      "language": "C",
+      "stars": "27,412",
+      "forks": "3,002",
+      "stars_today": "130 stars today",
+      "zh_description": "纯 C 编写、无引擎依赖的 MoE 推理引擎，把 VRAM、RAM 与磁盘当作统一的推理层级，专家权重按需从磁盘流式读取。统一使用 coli chat/serve/web 前端，可运行 GLM-5.2/5.3（744B）、Inkling（975B）、Kimi K3（2.8T）等模型家族。",
+      "problem": "替代必须依赖大容量显存或内存才能加载前沿 MoE 模型的硬件限制。",
+      "key_features": [
+        "纯 C、零引擎依赖的推理引擎",
+        "VRAM、RAM、磁盘统一为多级内存层级",
+        "Dual-SSD 让两块盘同时流式读取专家",
+        "每 token 五步路径，放置只决定速度",
+        "八个模型家族各一个 C 文件"
+      ],
+      "use_cases": [
+        "在 25GB 内存、十二核 CPU 上流式运行 744B 的 GLM-5.2",
+        "用第二块 SSD 放模型副本提高专家读取带宽",
+        "通过 coli serve 或 coli web 启动模型服务"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-10T13:06:32Z"
+    },
+    {
+      "rank": 10,
+      "owner": "THU-MAIC",
+      "name": "OpenMAIC",
+      "url": "https://github.com/THU-MAIC/OpenMAIC",
+      "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+      "language": "TypeScript",
+      "stars": "35,212",
+      "forks": "5,621",
+      "stars_today": "806 stars today",
+      "zh_description": "输入一个主题或文档，OpenMAIC 通过多智能体编排生成幻灯片、测验、交互式 HTML 模拟与项目式学习活动，由 AI 教师和 AI 同学白板绘图、TTS 讲解并实时讨论，可导出可编辑 .pptx 或交互 .html。",
+      "problem": "替代手工制作课件、幻灯片与测验的流程，以及在不同工具间分散生成教学内容的做法。",
+      "key_features": [
+        "生成幻灯片、测验、交互 HTML 模拟与 PBL 活动",
+        "AI 教师与 AI 同学白板绘图、TTS 讲解并实时讨论",
+        "导出可编辑 .pptx 与交互式 .html 页面",
+        "render-service 用 Chromium 与 FFmpeg 渲染 MP4",
+        "Pro 工作台会话可续跑并重放事件历史"
+      ],
+      "use_cases": [
+        "在飞书、Slack、Telegram 等 20+ 消息应用中生成课堂",
+        "上传文档、音频、视频并检索抽取出的文本",
+        "制定多课节课程，创建课程与文件夹并调整页面顺序"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-09-10T20:30:17Z"
+    }
+  ]
+}
