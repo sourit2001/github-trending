@@ -1,0 +1,373 @@
+{
+  "collected_at": "2026-09-11T20:57:16.579783+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "ayghri",
+      "name": "i-have-adhd",
+      "url": "https://github.com/ayghri/i-have-adhd",
+      "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+      "language": "Python",
+      "stars": "41,419",
+      "forks": "2,351",
+      "stars_today": "3,440 stars today",
+      "zh_description": "一个 Claude 技能（skill / claude-code-plugin），作用对象是 Claude 编码代理的输出：抑制代理把结论埋在长段落里的写法，改为直接抛出答案，生成面向 ADHD 使用者的输出。README 说明无需 ADHD 诊断即可使用。",
+      "problem": "替代从编码代理冗长回复中手工翻找答案的过程。",
+      "key_features": [
+        "阻止编码代理把答案埋在文字中",
+        "输出面向 ADHD 使用者",
+        "以 Claude 技能/插件形式接入",
+        "无需 ADHD 诊断即可使用"
+      ],
+      "use_cases": [
+        "让 Claude 编码代理直接给出结论而非长段落",
+        "在 Claude Code 中以技能方式启用该输出风格"
+      ],
+      "topics": [
+        "adhd",
+        "claude-",
+        "claude-code-plugin",
+        "claude-skills",
+        "developer-tools",
+        "productivity"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-10T15:48:41Z"
+    },
+    {
+      "rank": 2,
+      "owner": "bilawalsidhu",
+      "name": "gods-eye-view",
+      "url": "https://github.com/bilawalsidhu/gods-eye-view",
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "language": "JavaScript",
+      "stars": "26,802",
+      "forks": "5,485",
+      "stars_today": "3,642 stars today",
+      "zh_description": "在浏览器本地运行的 3D 地球空间情报工具：把航班应答机、船舶信标、轨道要素、地震仪、公共摄像头等公开数据叠加到基于 Cesium 的逼真地球上，可自定义数据层，并接入 OpenAI 语音与 AI HUD 摘要。",
+      "problem": "替代在航班、船舶、卫星、摄像头等多个分散公开数据源之间来回切换查看。",
+      "key_features": [
+        "Cesium ion 与 Google 逼真 3D 地球",
+        "AISStream 实时全球船舶数据",
+        "NASA FIRMS 实时活跃火点",
+        "OpenAI 语音体验与 AI HUD 摘要",
+        "TomTom 实时流速与拥堵配色"
+      ],
+      "use_cases": [
+        "在同一地球上从全球视角下钻到单架飞机、单艘船或某条街道",
+        "叠加火点、船舶与航班图层做开源情报观察",
+        "按模块接入自有的公开数据源"
+      ],
+      "topics": [
+        "3d-globe",
+        "cesium",
+        "flight-tracking",
+        "geospatial",
+        "geospatial-intelligence",
+        "gis",
+        "osint",
+        "photogrammetry",
+        "satellite-tracking",
+        "spatial-intelligence",
+        "webgl",
+        "worldview"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-09-11T20:39:57Z"
+    },
+    {
+      "rank": 3,
+      "owner": "nab138",
+      "name": "iloader",
+      "url": "https://github.com/nab138/iloader",
+      "description": "User friendly sideloader",
+      "language": "TypeScript",
+      "stars": "2,877",
+      "forks": "200",
+      "stars_today": "36 stars today",
+      "zh_description": "面向 iOS 设备的侧载工具，用于安装 SideStore（或 LiveContainer + SideStore），自动导入证书并写入 rppairing 与 lockdown 配对文件，也可导入任意 IPA，并提供错误处理、配对文件管理及证书与 App ID 管理。",
+      "problem": "替代手工导入配对文件、逐个配置证书与 App ID 的侧载流程。",
+      "key_features": [
+        "自动导入证书与 rppairing+lockdown 配对文件",
+        "安装 SideStore 或 LiveContainer + SideStore",
+        "导入任意 IPA",
+        "针对常见问题的智能错误建议",
+        "在 StikDebug、SideStore、Protokolle 中管理配对文件"
+      ],
+      "use_cases": [
+        "在 iOS 设备上安装 SideStore 搭建侧载环境",
+        "导入自备 IPA 并完成安装",
+        "吊销开发证书或删除已注册的 App ID"
+      ],
+      "topics": [
+        "idevice",
+        "ios",
+        "sideloading",
+        "sidestore"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-10T20:49:24Z"
+    },
+    {
+      "rank": 4,
+      "owner": "melgarafael",
+      "name": "DeskcommCRM",
+      "url": "https://github.com/melgarafael/DeskcommCRM",
+      "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
+      "language": "TypeScript",
+      "stars": "1,273",
+      "forks": "485",
+      "stars_today": "126 stars today",
+      "zh_description": "自托管 CRM，经 WAHA 接入 WhatsApp：AI 智能体在聊天中接待、筛选并促成销售，线索存入 Supabase，支持多租户与 LGPD。",
+      "problem": "替代 Kommo、Octadesk、Intercom 等聊天销售 CRM，以及手工在 WhatsApp 上接待与整理线索。",
+      "key_features": [
+        "经 WAHA 接入 WhatsApp，AI 智能体接待并销售",
+        "一条命令在 VPS 部署应用、WhatsApp 与数据库",
+        "多租户，符合 LGPD，数据存 Supabase",
+        "MCP-ready，含 RAG 与 Nuvemshop 集成"
+      ],
+      "use_cases": [
+        "让 AI 智能体在 WhatsApp 中接待、筛选并成交客户",
+        "在 VPS 上用单条命令部署 CRM、WhatsApp 与数据库"
+      ],
+      "topics": [
+        "ai",
+        "ai-agents",
+        "chatbot",
+        "crm",
+        "customer-support",
+        "ecommerce",
+        "lgpd",
+        "mcp",
+        "multi-tenant",
+        "nextjs",
+        "nuvemshop",
+        "open-source",
+        "rag",
+        "sales-automation",
+        "self-hosted",
+        "supabase",
+        "typescript",
+        "waha",
+        "whatsapp",
+        "whatsapp-api"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-11T16:04:39Z"
+    },
+    {
+      "rank": 5,
+      "owner": "vastsa",
+      "name": "PI-Desktop",
+      "url": "https://github.com/vastsa/PI-Desktop",
+      "description": "Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins",
+      "language": "TypeScript",
+      "stars": "2,741",
+      "forks": "216",
+      "stars_today": "545 stars today",
+      "zh_description": "本地优先的编码智能体桌面端：Electron 协调 React 界面、Rust 宿主核心（权限、文件系统、SQLite、密钥）与 pi Agent 边车（模型调用、智能体循环）。",
+      "problem": "编码智能体多依附终端、编辑器扩展或托管服务，特权操作缺少独立的权限审查层。",
+      "key_features": [
+        "Rust 宿主核心管理权限、文件系统、SQLite 与密钥",
+        "支持 OpenAI、Anthropic、本地模型及兼容 API",
+        "特权操作经权限层，可查看 diff 与命令输出",
+        "插件可贡献工具、命令、面板、主题与服务"
+      ],
+      "use_cases": [
+        "跨多个仓库和会话运行编码智能体并查看改动 diff",
+        "安装插件、MCP 服务器与 Skills 扩展智能体"
+      ],
+      "topics": [
+        "ai-agent",
+        "coding-agent",
+        "desktop-app",
+        "electron",
+        "global",
+        "i18n",
+        "local-first",
+        "mcp",
+        "pi",
+        "pi-agent",
+        "pi-desktop",
+        "plugins",
+        "react",
+        "rust",
+        "typescript"
+      ],
+      "license": "LGPL-3.0",
+      "pushed_at": "2026-09-11T19:55:18Z"
+    },
+    {
+      "rank": 6,
+      "owner": "armory3d",
+      "name": "armorpaint",
+      "url": "https://github.com/armory3d/armorpaint",
+      "description": "Graphics Creation Tools",
+      "language": "C",
+      "stars": "4,690",
+      "forks": "531",
+      "stars_today": "354 stars today",
+      "zh_description": "面向 3D 模型的 PBR 纹理绘制软件；源码在 paint 目录，面向开发者，可编译到 Windows、Linux、macOS/iOS 与 Android，发行二进制在官网付费下载。",
+      "problem": "闭源付费 PBR 贴图工具只能使用发行二进制，无法自行编译或修改源码。",
+      "key_features": [
+        "对 3D 模型进行 PBR 纹理绘制",
+        "源码位于 paint 目录，含各平台编译流程",
+        "支持 Windows、Linux、macOS/iOS、Android 构建",
+        "发行二进制在官网付费获取"
+      ],
+      "use_cases": [
+        "在 Windows 用 Visual Studio 与 clang tools 编译 ArmorPaint",
+        "在 Linux 安装 clang 及依赖后从源码构建 ArmorPaint"
+      ],
+      "topics": [
+        "3d",
+        "armorpaint",
+        "painting",
+        "texturing",
+        "tool"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-09-11T20:46:26Z"
+    },
+    {
+      "rank": 7,
+      "owner": "alsk1992",
+      "name": "CloddsBot",
+      "url": "https://github.com/alsk1992/CloddsBot",
+      "description": "Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs, 5 EVM chains. Scans for edge, executes instantly, manages risk while you sleep. Agent commerce protocol for machine-to-machine payments. Self-hosted. Built on Claude.",
+      "language": "TypeScript",
+      "stars": "2,098",
+      "forks": "278",
+      "stars_today": "627 stars today",
+      "zh_description": "自托管 AI 交易终端，用自然语言对话操作预测市场、加密现货与永续合约。接入 Polymarket、Kalshi、Hyperliquid、Binance 等 10 个预测市场和 7 个交易所，覆盖 Solana（Jupiter、Pump.fun、Raydium、Orca）与 EVM 链（Uniswap V3、1inch、Virtuals Protocol）。含套利检测、风控引擎与 Kelly 仓位。",
+      "problem": "替代在多个交易所网页、DEX 界面与 Telegram 机器人之间手动切换、分别下单和盯盘的流程。",
+      "key_features": [
+        "21 个消息平台对话入口，含 Telegram、Discord、Slack、Matrix",
+        "118 项内置技能：交易、分析、自动化、AI 记忆",
+        "风控引擎含 VaR/CVaR、熔断与 Kelly 仓位",
+        "4 个 AI Agent：Claude 主控、交易、研究、告警",
+        "x402 agent 商务协议支持机器间支付"
+      ],
+      "use_cases": [
+        "在 Polymarket 与 Kalshi 间检测套利并执行下单",
+        "用对话查询持仓、跟踪巨鲸地址并跟单",
+        "在 Bittensor 子网挖 TAO 并管理投资组合"
+      ],
+      "topics": [
+        "agi",
+        "ai",
+        "arbitrage",
+        "claude",
+        "crypto",
+        "defi",
+        "ethereum",
+        "futures",
+        "hft",
+        "hyperliquid",
+        "kalshi",
+        "polymarket",
+        "prediction-markets",
+        "pumpswap",
+        "solana",
+        "telegram-bot",
+        "trading",
+        "trading-bot",
+        "typescript",
+        "x402"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-10T23:10:57Z"
+    },
+    {
+      "rank": 8,
+      "owner": "nashsu",
+      "name": "llm_wiki",
+      "url": "https://github.com/nashsu/llm_wiki",
+      "description": "LLM Wiki is a cross-platform desktop application that turns your documents into an organized, interlinked knowledge base — automatically. Instead of traditional RAG (retrieve-and-answer from scratch every time), the LLM incrementally builds and maintains a persistent wiki from your sources。",
+      "language": "TypeScript",
+      "stars": "18,676",
+      "forks": "2,132",
+      "stars_today": "640 stars today",
+      "zh_description": "跨平台桌面应用，把 PDF、Office、EPUB/MOBI、图片与批量 URL 导入，经两步思维链由 LLM 生成带来源追溯的 wiki 页面并持续维护，而非每次查询从头检索的 RAG。聊天由 Rust 后端 Agent 运行，内置 LanceDB 向量检索、四信号知识图谱与 Louvain 社区发现。",
+      "problem": "取代传统 RAG 每次查询都从头检索、知识不落盘、无法积累的问答方式。",
+      "key_features": [
+        "两步思维链导入，生成带来源追溯的 wiki 页面",
+        "多格式解析：PDF、Office、EPUB/MOBI、图片、媒体、URL 批量",
+        "四信号知识图谱：直接链接、来源重叠、Adamic-Adar、类型亲和",
+        "LanceDB 向量语义检索，兼容 OpenAI 接口",
+        "Rust 后端 Agent 支持 wiki/图谱/网页检索与 shell 审批"
+      ],
+      "use_cases": [
+        "递归导入文件夹并保留目录结构生成 wiki",
+        "用 Deep Research 经 Tavily、SerpApi、SearXNG 搜索并自动入库",
+        "导出、导入完整项目归档以在设备间迁移知识库"
+      ],
+      "topics": [],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-08-25T06:42:02Z"
+    },
+    {
+      "rank": 9,
+      "owner": "Sonarr",
+      "name": "Sonarr",
+      "url": "https://github.com/Sonarr/Sonarr",
+      "description": "Smart PVR for newsgroup and bittorrent users.",
+      "language": "C#",
+      "stars": "15,708",
+      "forks": "1,948",
+      "stars_today": "174 stars today",
+      "zh_description": "面向 Usenet 与 BitTorrent 用户的 PVR：监视多个 RSS 源获取剧集新集，自动抓取、整理、重命名并归档；发现更高画质版本时自动升级已有文件，下载失败会改用其他发布版本重试。可扫描既有媒体库补全缺失剧集，并与 SABnzbd、NZBGet 及 Kodi、Plex 集成。",
+      "problem": "替代手动订阅 RSS、逐个下载剧集、自行重命名与画质升级的流程。",
+      "key_features": [
+        "监视多个 RSS 源自动检测并抓取新剧集",
+        "下载失败自动改用其他发布版本重试",
+        "完全可配置的剧集重命名规则",
+        "与 SABnzbd、NZBGet 下载器完整集成",
+        "与 Kodi、Plex 的通知、库更新与元数据集成"
+      ],
+      "use_cases": [
+        "扫描已有媒体库并自动下载缺失剧集",
+        "设置画质阈值，出现更高版本时自动升级",
+        "手动搜索指定发布版本，或查看未自动下载的原因"
+      ],
+      "topics": [],
+      "license": "GPL-3.0",
+      "pushed_at": "2026-09-11T03:42:35Z"
+    },
+    {
+      "rank": 10,
+      "owner": "jihe520",
+      "name": "MathModelAgent",
+      "url": "https://github.com/jihe520/MathModelAgent",
+      "description": "🤖📐专为数学建模设计的 Agent & skills ,自动完成数学建模，生成一份完整的可以直接提交的论文。 An Agent Designed for Mathematical Modeling ,Automatically complete mathmodel and generate a complete paper ready for submission.",
+      "language": "Python",
+      "stars": "4,832",
+      "forks": "391",
+      "stars_today": "132 stars today",
+      "zh_description": "输入数学建模赛题，由建模手、代码手、论文手等 multi-agents 分别完成问题分析、建模与编码求解，代码在 Jupyter 或 E2B 云端解释器中执行，最终按 Typst 赛事模板排版并自动验收，输出可直接提交的 PDF 论文。",
+      "problem": "替代手工完成赛题分析、建模求解、绘图与论文排版，以及分散使用多个工具串联的流程。",
+      "key_features": [
+        "multi-agents：建模手、代码手、论文手分工",
+        "代码解释器基于 Jupyter，结果存为 notebook",
+        "17 套 Typst 赛事模板，覆盖国赛、MCM/ICM",
+        "RAG 知识库用 ChromaDB 检索建模方法与模板",
+        "9 步自动验收：文本泄漏检测、Typst 编译与 PDF 检查"
+      ],
+      "use_cases": [
+        "用 /1start-mathmodel 端到端生成可直接提交的赛事论文",
+        "单独调用分析或论文 Skill，只做某一阶段的任务",
+        "通过 HIL 在关键节点审批、编辑或重新生成中间结果"
+      ],
+      "topics": [
+        "agent",
+        "llm",
+        "mathmodel",
+        "skills"
+      ],
+      "license": "",
+      "pushed_at": "2026-09-10T20:40:40Z"
+    }
+  ]
+}
