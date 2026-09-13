@@ -1,0 +1,392 @@
+{
+  "collected_at": "2026-09-13T20:48:52.496783+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "JustVugg",
+      "name": "colibri",
+      "url": "https://github.com/JustVugg/colibri",
+      "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
+      "language": "C",
+      "stars": "29,558",
+      "forks": "3,222",
+      "stars_today": "960 stars today",
+      "zh_description": "纯C、无引擎依赖的MoE推理引擎，把显存、内存和存储当作统一的多层推理层级，专家权重按需从磁盘流式读取。已支持GLM-5.2/5.3（744B）、Kimi K3（2.8T）、DeepSeek V4 Flash等九个模型家族，统一由coli chat、coli serve、coli web前端调用。",
+      "problem": "大型MoE模型通常要求显存或内存容纳全部专家权重，此项目让25GB内存机器通过磁盘流式读取运行744B模型。",
+      "key_features": [
+        "显存、内存、磁盘统一为单一多层推理层级",
+        "双SSD镜像模型，按带宽哈希路由专家读取",
+        "每token五步流程，放置只决定速度不改变结果",
+        "启动时逐文件校验镜像大小与safetensors头"
+      ],
+      "use_cases": [
+        "在25GB内存、十二核CPU机器上流式运行744B GLM-5.2",
+        "用第二块SSD放置模型副本，聚合两块盘读取带宽",
+        "设置CUDA_EXPERT_GB=auto与PIN_GB=all让专家集常驻显存"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-13T20:43:54Z"
+    },
+    {
+      "rank": 2,
+      "owner": "bilawalsidhu",
+      "name": "gods-eye-view",
+      "url": "https://github.com/bilawalsidhu/gods-eye-view",
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "language": "JavaScript",
+      "stars": "31,647",
+      "forks": "6,353",
+      "stars_today": "2,898 stars today",
+      "zh_description": "在浏览器本地运行的空间情报三维地球，用Cesium叠加航班应答机、船舶AIS信标、轨道根数、地震仪与公开摄像头等实时数据，并可接入TomTom交通流和NASA FIRMS火点。每个数据图层是独立模块，可直接在源码中增删。",
+      "problem": "航班、船舶、卫星、摄像头等公开信号分散在多个平台，此项目把它们聚合到同一个可探索的三维地球上。",
+      "key_features": [
+        "基于Cesium的写实三维地球与地形影像",
+        "接入AISStream全球船舶与NASA FIRMS火点",
+        "TomTom提供实时流速与拥堵配色",
+        "OpenAI驱动语音体验与AI HUD摘要"
+      ],
+      "use_cases": [
+        "从全球视图下钻到单架飞机、单艘船或某条街道",
+        "用Cesium ion令牌加载Google写实三维地形与影像",
+        "沿真实道路模拟交通流量并跳转到对应摄像头画面"
+      ],
+      "topics": [
+        "3d-globe",
+        "cesium",
+        "flight-tracking",
+        "geospatial",
+        "geospatial-intelligence",
+        "gis",
+        "osint",
+        "photogrammetry",
+        "satellite-tracking",
+        "spatial-intelligence",
+        "webgl",
+        "worldview"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-09-13T20:39:51Z"
+    },
+    {
+      "rank": 3,
+      "owner": "tech-leads-club",
+      "name": "agent-skills",
+      "url": "https://github.com/tech-leads-club/agent-skills",
+      "description": "The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Cursor, Copilot and more with absolute confidence.",
+      "language": "TypeScript",
+      "stars": "5,580",
+      "forks": "498",
+      "stars_today": "215 stars today",
+      "zh_description": "面向AI编程代理的技能注册表命令行工具，按需从CDN拉取约45KB的技能目录，选定后下载并缓存到~/.cache/agent-skills/，再安装进代理配置。每个技能以SKILL.md为主指令，另带templates与references目录。",
+      "problem": "技能市场中被报告超过13%的技能含严重漏洞，此项目提供经校验与测试的技能库以替代来源不明的技能包。",
+      "key_features": [
+        "技能目录从CDN按需拉取后本地缓存",
+        "已下载技能安装到代理的配置目录",
+        "提供list、update、remove等子命令",
+        "技能由SKILL.md、templates、references组成",
+        "含tlc-spec-driven、playwright-skill、figma等技能"
+      ],
+      "use_cases": [
+        "为Claude Code、Cursor、Copilot安装技能",
+        "用tlc-spec-driven按Specify→Design→Tasks→Implement规划功能",
+        "用security-best-practices执行语言与框架特定的安全审查"
+      ],
+      "topics": [
+        "agent",
+        "ai",
+        "antigravity",
+        "claude-code",
+        "copilot",
+        "cursor",
+        "skills"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-09-12T15:29:58Z"
+    },
+    {
+      "rank": 4,
+      "owner": "melgarafael",
+      "name": "DeskcommCRM",
+      "url": "https://github.com/melgarafael/DeskcommCRM",
+      "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
+      "language": "TypeScript",
+      "stars": "2,130",
+      "forks": "582",
+      "stars_today": "444 stars today",
+      "zh_description": "自托管 CRM，通过 WAHA 接入 WhatsApp，内置 AI 智能体在聊天中接待、筛选并推进销售。基于 Next.js 与 Supabase，支持多租户与 LGPD；hostgator-setup-kit 可在 VPS 上用一条命令部署应用、WhatsApp 与数据库。",
+      "problem": "替代 Kommo、Octadesk、Intercom 这类按月订阅的托管 CRM，不再把客户数据放在第三方。",
+      "key_features": [
+        "WAHA 接入 WhatsApp，AI 智能体接待并筛选线索",
+        "多租户架构并支持 LGPD 合规",
+        "MCP 就绪，可接入 MCP 工具",
+        "hostgator-setup-kit 单命令部署整套服务"
+      ],
+      "use_cases": [
+        "在 WhatsApp 上由 AI 智能体接待客户并筛选销售线索",
+        "在自有 VPS 部署 CRM、WhatsApp 网关与数据库",
+        "通过 MCP 把 CRM 接到外部 AI 工具链"
+      ],
+      "topics": [
+        "ai",
+        "ai-agents",
+        "chatbot",
+        "crm",
+        "customer-support",
+        "ecommerce",
+        "lgpd",
+        "mcp",
+        "multi-tenant",
+        "nextjs",
+        "nuvemshop",
+        "open-source",
+        "rag",
+        "sales-automation",
+        "self-hosted",
+        "supabase",
+        "typescript",
+        "waha",
+        "whatsapp",
+        "whatsapp-api"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-12T19:40:07Z"
+    },
+    {
+      "rank": 5,
+      "owner": "vxcontrol",
+      "name": "pentagi",
+      "url": "https://github.com/vxcontrol/pentagi",
+      "description": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
+      "language": "Go",
+      "stars": "23,888",
+      "forks": "3,092",
+      "stars_today": "613 stars today",
+      "zh_description": "接收渗透测试目标后，多智能体在隔离 Docker 沙箱中自主规划并执行测试步骤，可调用外部搜索 API 与内置渗透工具，命令和输出存入带 pgvector 的 PostgreSQL，并生成含利用指南的漏洞报告。",
+      "problem": "替代手工逐个调用 nmap、metasploit、sqlmap 等分散工具并手动整理测试记录与报告。",
+      "key_features": [
+        "多智能体分工执行研究、开发与基础设施任务",
+        "Docker 沙箱隔离并按任务自动选择镜像",
+        "内置 nmap、metasploit、sqlmap 等 20+ 工具",
+        "Graphiti 与 Neo4j 知识图谱（可选）",
+        "REST 与 GraphQL API，Bearer 令牌认证"
+      ],
+      "use_cases": [
+        "对目标系统自动执行多步渗透测试并留存命令输出",
+        "生成含利用指南的漏洞报告",
+        "用 API 把渗透测试接入自动化流程"
+      ],
+      "topics": [
+        "ai-agents",
+        "ai-security-tool",
+        "anthropic",
+        "autonomous-agents",
+        "golang",
+        "gpt",
+        "graphql",
+        "multi-agent-system",
+        "offensive-security",
+        "open-source",
+        "openai",
+        "penetration-testing",
+        "penetration-testing-tools",
+        "react",
+        "security-automation",
+        "security-testing",
+        "security-tools",
+        "self-hosted"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-10T05:45:01Z"
+    },
+    {
+      "rank": 6,
+      "owner": "multimodal-art-projection",
+      "name": "YuE",
+      "url": "https://github.com/multimodal-art-projection/YuE",
+      "description": "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
+      "language": "Python",
+      "stars": "7,681",
+      "forks": "858",
+      "stars_today": "500 stars today",
+      "zh_description": "输入歌词与风格提示，先写出旋律与和弦的符号乐谱，再由 AR–NAR Mixture-of-Transformers 与流匹配生成声学隐变量，经 VAE 解码为含人声与伴奏的立体声歌曲。Python API 分 plan、generate_semantic、synthesize、decode 四步。",
+      "problem": "让歌曲先以可读可改的乐谱形式存在再渲染，突破只能直接生成音频、无法编辑中间结构的限制。",
+      "key_features": [
+        "plan() 到 decode() 的分阶段 Python API",
+        "可转录录音并生成 zero-shot 翻唱",
+        "yue2-music 技能包（SKILL.md）操作 ABC 乐谱",
+        "公开 YuE2-3B、MERT2、SheetSage2 模型"
+      ],
+      "use_cases": [
+        "用歌词与风格提示生成含人声与伴奏的完整歌曲",
+        "转录已有录音并产出翻唱版本",
+        "修改乐谱后重新渲染并比较不同和声版本"
+      ],
+      "topics": [
+        "ai",
+        "audio-generation",
+        "deep-learning",
+        "foundation-models",
+        "gpt",
+        "huggingface",
+        "llama",
+        "llms",
+        "music-generation",
+        "style-transfers",
+        "voice-cloning"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-11T17:37:59Z"
+    },
+    {
+      "rank": 7,
+      "owner": "yuliskov",
+      "name": "SmartTube",
+      "url": "https://github.com/yuliskov/SmartTube",
+      "description": "Browse media content with your own rules on Android TV",
+      "language": "Java",
+      "stars": "33,411",
+      "forks": "2,030",
+      "stars_today": "238 stars today",
+      "zh_description": "在 Android TV、电视盒或电视棒上运行的媒体客户端：集成 SponsorBlock 跳过赞助、片头等片段，可选 AV1、VP9、AVC 编解码，支持 8K、60fps、HDR、直播聊天与画中画。投屏需先在电视端打开应用，再用一次性连接码与手机配对。",
+      "problem": "替代官方 YouTube 电视应用：其界面含广告元素且依赖 Google Services。",
+      "key_features": [
+        "SponsorBlock 集成，可自选跳过类别",
+        "可选 AV1、VP9、AVC 编解码",
+        "支持 8K、60fps、HDR 播放",
+        "画中画与后台播放",
+        "通过一次性连接码配对手机投屏"
+      ],
+      "use_cases": [
+        "在 Android TV 或电视盒上播放 YouTube 视频并跳过赞助段落",
+        "用手机输入电视上的配对码把视频投屏到电视",
+        "在电视上查看直播聊天或切到画中画继续播放"
+      ],
+      "topics": [
+        "android",
+        "android-tv",
+        "android-tv-box",
+        "java",
+        "kotlin",
+        "retrofit2",
+        "rxjava-android"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-13T00:11:44Z"
+    },
+    {
+      "rank": 8,
+      "owner": "alphaXiv",
+      "name": "OpenResearch",
+      "url": "https://github.com/alphaXiv/OpenResearch",
+      "description": "Run parallel research agents with any model",
+      "language": "Rust",
+      "stars": "1,987",
+      "forks": "143",
+      "stars_today": "304 stars today",
+      "zh_description": "接收 Claude Code、Codex、OpenCode 或 Cursor 作为研究代理，在本地优先工作区中并行运行，用任意模型审阅文献、提出假设、执行实验并生成研究产物。",
+      "problem": "替代在多个编码代理与工具间手工切换、分散管理文献假设实验及研究产物的流程。",
+      "key_features": [
+        "本地优先研究代理与自动研究工作区",
+        "将 Claude Code、Codex、OpenCode、Cursor 转为研究代理",
+        "支持审阅文献、提出假设、运行实验",
+        "生成研究产物",
+        "orx telemetry 命令控制遥测"
+      ],
+      "use_cases": [
+        "用 Claude Code 或 Codex 并行审阅文献并形成假设",
+        "在本地工作区运行实验并生成研究产物",
+        "用 Cursor 或 OpenCode 驱动自动研究流程"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-09-12T06:05:16Z"
+    },
+    {
+      "rank": 9,
+      "owner": "debpalash",
+      "name": "VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "language": "Python",
+      "stars": "26,453",
+      "forks": "3,265",
+      "stars_today": "2,546 stars today",
+      "zh_description": "本地运行语音克隆、语音设计与视频配音：输入短参考音频或文本，由 16 个 TTS、11 个 ASR 引擎处理，可转写、翻译、保留说话人再合成导出；EPUB/PDF 可生成 .m4b 有声书，localhost:3900 提供 OpenAI 兼容 API。",
+      "problem": "替代需要账号、API key 或订阅计量的云端语音合成与配音服务。",
+      "key_features": [
+        "16 个 TTS 引擎、11 个 ASR 引擎",
+        "短参考片段的零样本语音克隆",
+        "视频配音：转写、翻译、保留说话人、导出",
+        "EPUB/PDF 导入并导出多角色 .m4b",
+        "Demucs 人声分离与 Pyannote 说话人分离"
+      ],
+      "use_cases": [
+        "用短参考音频克隆音色并批量排队生成语音",
+        "把视频转写、翻译、配音后导出，并标记时间轴问题",
+        "把 EPUB/PDF 渲染为多角色有声书并导出 .m4b"
+      ],
+      "topics": [
+        "ai",
+        "audiobook",
+        "cuda",
+        "dubbing",
+        "elevenlabs-alternative",
+        "huggingface",
+        "local-first",
+        "mlx",
+        "omnivoice-studio",
+        "speech-to-text",
+        "tauri",
+        "text-to-speech",
+        "transcription",
+        "translate",
+        "tts",
+        "voice-ai",
+        "voice-cloning",
+        "voice-generation",
+        "voicestudio",
+        "workflow"
+      ],
+      "license": "AGPL-3.0",
+      "pushed_at": "2026-09-11T05:50:20Z"
+    },
+    {
+      "rank": 10,
+      "owner": "SnailSploit",
+      "name": "Claude-Red",
+      "url": "https://github.com/SnailSploit/Claude-Red",
+      "description": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
+      "language": "Python",
+      "stars": "4,059",
+      "forks": "585",
+      "stars_today": "507 stars today",
+      "zh_description": "Claude-Red 是面向 Claude Skills 系统的攻击性安全技能库。每个技能是结构化 SKILL.md 文件，按对话触发按需加载，为 Claude 注入特定攻击面的方法论，覆盖 SQLi、XSS、SSRF、SSTI、XXE、反序列化、请求走私、WAF 绕过等。",
+      "problem": "替代在会话中手工拼接渗透方法论与 payload 笔记的做法，把分散的攻击面知识收进可加载的技能文件。",
+      "key_features": [
+        "每个技能为结构化 SKILL.md，供 Claude Skills 系统加载",
+        "技能按对话触发按需加载，未使用时不计入上下文",
+        "Web 技能含 SQLi、XSS、SSRF、SSTI、XXE、IDOR、文件上传",
+        "含请求走私 CL.TE/TE.CL、参数污染、GraphQL、WAF 绕过",
+        "技能覆盖 shellcode、EDR 规避、ADCS 滥用与漏洞利用开发"
+      ],
+      "use_cases": [
+        "在授权红队行动中按攻击面加载技能，展开方法化测试",
+        "用于 bug bounty 分诊中的漏洞验证与利用链梳理",
+        "围绕目标进行攻击面枚举、提权路径与边缘情况探索"
+      ],
+      "topics": [
+        "claude-ai",
+        "claude-pt",
+        "claude-skills",
+        "redteam",
+        "redteam-tools",
+        "skills"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-08-30T11:02:24Z"
+    }
+  ]
+}
