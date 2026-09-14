@@ -1,0 +1,383 @@
+{
+  "collected_at": "2026-09-14T21:48:28.425416+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "JustVugg",
+      "name": "colibri",
+      "url": "https://github.com/JustVugg/colibri",
+      "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
+      "language": "C",
+      "stars": "31,905",
+      "forks": "3,379",
+      "stars_today": "2,233 stars today",
+      "zh_description": "纯 C、零依赖的 MoE 推理引擎，把 VRAM、RAM 与磁盘当作单一多层内存层次，专家权重按需从磁盘流式读取，放置策略只决定速度。提供 coli chat、coli serve、coli web 前端，可运行 GLM-5.2/5.3（744B）、Kimi K3（2.8T）等九个模型家族。",
+      "problem": "替代为运行大 MoE 模型而依赖大显存硬件，以及手工在存储、内存、显存之间搬运权重的方式",
+      "key_features": [
+        "纯 C 实现，引擎零依赖",
+        "VRAM、RAM、存储统一为多层推理层次",
+        "COLI_MODEL_MIRROR 双 SSD 镜像，按带宽哈希分流专家",
+        "coli chat / coli serve / coli web 三种前端",
+        "支持 GLM-5.2/5.3 744B、Kimi K3 2.8T 等九个家族"
+      ],
+      "use_cases": [
+        "在 25 GB 内存的笔记本上从磁盘流式运行 744B MoE 模型",
+        "挂第二块 SSD 作镜像，与主盘并行读取专家权重",
+        "在大主机上用 CUDA_EXPERT_GB=auto、PIN_GB=all 让专家常驻"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-14T21:35:36Z"
+    },
+    {
+      "rank": 2,
+      "owner": "alibaba",
+      "name": "open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "language": "Go",
+      "stars": "25,498",
+      "forks": "1,853",
+      "stars_today": "1,796 stars today",
+      "zh_description": "AI 代码审查 CLI：读取 Git diff，由确定性流水线完成文件筛选、文件捆绑与规则匹配，再交给可配置的 LLM Agent 生成行级评论。Agent 可读完整文件、检索代码库、查看其他变更文件；ocr scan 可审查无有意义 diff 的整份文件。",
+      "problem": "替代通用 Agent 做审查时漏审文件、行号与文件引用漂移、质量随提示词波动的问题",
+      "key_features": [
+        "确定性流水线负责文件选择与捆绑",
+        "模板引擎做细粒度规则匹配",
+        "独立的评论定位与评论反思模块",
+        "内置 NPE、线程安全、XSS、SQL 注入规则集",
+        "兼容 OpenAI 与 Anthropic 接口"
+      ],
+      "use_cases": [
+        "用 ocr review --from main --to feature-branch 审查分支自合并基点起的改动",
+        "用 ocr scan 审查没有有意义 diff 的整份文件或目录"
+      ],
+      "topics": [
+        "agent",
+        "agent-skills",
+        "code-review",
+        "code-review-assistant",
+        "harness",
+        "repository-level-context"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-14T12:41:06Z"
+    },
+    {
+      "rank": 3,
+      "owner": "multimodal-art-projection",
+      "name": "YuE",
+      "url": "https://github.com/multimodal-art-projection/YuE",
+      "description": "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
+      "language": "Python",
+      "stars": "8,282",
+      "forks": "901",
+      "stars_today": "578 stars today",
+      "zh_description": "输入歌词与风格提示，先写出旋律与和弦的符号化方案，再由 AR–NAR Mixture-of-Transformers 自回归预测乐谱与语义 token，用流匹配生成声学潜变量，经 VAE 解码为带人声与伴奏的立体声音频。Python API 分为 plan、generate_semantic、synthesize、decode 四阶段。",
+      "problem": "替代只能整段输出音频、渲染前无法读取、播放或修改乐谱的音乐生成流程",
+      "key_features": [
+        "符号化规划，渲染前可读写和修改乐谱",
+        "AR–NAR Mixture-of-Transformers 主干加流匹配",
+        "VAE 解码为含人声与伴奏的立体声",
+        "分阶段 API：plan / generate_semantic / synthesize / decode",
+        "yue2-music skill 支持生成、转写翻唱、编辑 ABC 乐谱"
+      ],
+      "use_cases": [
+        "给定歌词和风格提示生成完整歌曲",
+        "转写已有录音并做零样本翻唱",
+        "修改 ABC 乐谱后重新渲染，保留人声旋律与歌词顺序并对比版本"
+      ],
+      "topics": [
+        "ai",
+        "audio-generation",
+        "deep-learning",
+        "foundation-models",
+        "gpt",
+        "huggingface",
+        "llama",
+        "llms",
+        "music-generation",
+        "style-transfers",
+        "voice-cloning"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-14T10:31:07Z"
+    },
+    {
+      "rank": 4,
+      "owner": "debpalash",
+      "name": "VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "language": "Python",
+      "stars": "29,006",
+      "forks": "3,538",
+      "stars_today": "2,774 stars today",
+      "zh_description": "输入参考音频、文本、视频或 EPUB/PDF，经本地 TTS/ASR 引擎注册表与配音流水线处理，输出克隆语音、配音视频、字幕与 .m4b 有声书，桌面壳为 Tauri v2。",
+      "problem": "替代需账号、API key 与订阅计量的云端语音服务，以及逐个手配 TTS/ASR 脚本的流程。",
+      "key_features": [
+        "零样本克隆：短参考片段合成音色",
+        "视频配音：转录→翻译→保留说话人→导出",
+        "16 个 TTS、11 个 ASR 引擎，646 语言目录",
+        "Demucs 人声分离与 Pyannote/WhisperX 分离",
+        "OpenAI 兼容 /v1/audio/speech 接口"
+      ],
+      "use_cases": [
+        "用短音频克隆音色，批量渲染多角色有声书并导出 .m4b",
+        "将视频转录翻译、保留说话人音色后导出成片",
+        "通过 MCP 或 OpenAI 兼容接口调用本地合成与转录"
+      ],
+      "topics": [
+        "ai",
+        "audiobook",
+        "cuda",
+        "dubbing",
+        "elevenlabs-alternative",
+        "huggingface",
+        "local-first",
+        "mlx",
+        "omnivoice-studio",
+        "speech-to-text",
+        "tauri",
+        "text-to-speech",
+        "transcription",
+        "translate",
+        "tts",
+        "voice-ai",
+        "voice-cloning",
+        "voice-generation",
+        "voicestudio",
+        "workflow"
+      ],
+      "license": "AGPL-3.0",
+      "pushed_at": "2026-09-14T18:25:11Z"
+    },
+    {
+      "rank": 5,
+      "owner": "666ghj",
+      "name": "MiroFish",
+      "url": "https://github.com/666ghj/MiroFish",
+      "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
+      "language": "Python",
+      "stars": "73,086",
+      "forks": "11,284",
+      "stars_today": "524 stars today",
+      "zh_description": "输入新闻、政策草案、金融信号或小说等种子材料与自然语言预测需求，经 GraphRAG 建图与 Persona 生成，由数千 Agent 双平台并行模拟演化，输出预测报告与可交互数字世界。",
+      "problem": "突破传统预测难以刻画个体交互涌现的限制，替代零散脚本搭建多智能体模拟的流程。",
+      "key_features": [
+        "GraphRAG 建图与个体、集体记忆注入",
+        "实体关系抽取与 Persona 生成",
+        "双平台并行模拟，动态更新时序记忆",
+        "ReportAgent 工具集，可与任意 Agent 对话"
+      ],
+      "use_cases": [
+        "上传舆情报告，模拟事件走向并生成预测报告",
+        "注入变量推演政策或金融信号的可能后果",
+        "与模拟世界中的任意 Agent 对话追问细节"
+      ],
+      "topics": [
+        "agent-memory",
+        "financial-forecasting",
+        "future-prediction",
+        "knowledge-graph",
+        "llms",
+        "multi-agent-simulation",
+        "public-opinion-analysis",
+        "python3",
+        "social-prediction",
+        "swarm-intelligence"
+      ],
+      "license": "AGPL-3.0",
+      "pushed_at": "2026-09-03T05:00:50Z"
+    },
+    {
+      "rank": 6,
+      "owner": "Panniantong",
+      "name": "Agent-Reach",
+      "url": "https://github.com/Panniantong/Agent-Reach",
+      "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+      "language": "Python",
+      "stars": "81,152",
+      "forks": "7,067",
+      "stars_today": "640 stars today",
+      "zh_description": "通过 CLI 与 MCP 让 AI Agent 读取互联网：抓取 Twitter、Reddit、YouTube、B站、小红书、GitHub 等平台的字幕、帖子与搜索结果，各平台配首选与备选后端路由。",
+      "problem": "替代逐个平台申请付费 API、绕过封锁、导出 Cookie 并自行编写抓取脚本的配置流程。",
+      "key_features": [
+        "每平台首选+备选多后端路由，失效自动切换",
+        "agent-reach doctor 检查平台连通与修复",
+        "MCP 接入全网语义搜索，免费无需 Key",
+        "OpenCLI 复用 Chrome 登录态，Cookie 仅存本地"
+      ],
+      "use_cases": [
+        "让 Agent 提取 YouTube 字幕并总结教程内容",
+        "搜索 Reddit、Twitter、小红书上的产品口碑",
+        "读取 B站视频详情、雪球行情与 RSS 更新"
+      ],
+      "topics": [
+        "agent-infrastructure",
+        "ai-agent",
+        "ai-search",
+        "automation",
+        "bilibili",
+        "claude-code",
+        "cli",
+        "cursor",
+        "free-api",
+        "llm-tools",
+        "mcp",
+        "python",
+        "reddit-scraper",
+        "twitter-scraper",
+        "web-scraper",
+        "xiaohongshu",
+        "youtube-transcript"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-01T08:09:58Z"
+    },
+    {
+      "rank": 7,
+      "owner": "rlaope",
+      "name": "oh-my-hermes",
+      "url": "https://github.com/rlaope/oh-my-hermes",
+      "description": "All in one plugin for Hermes Agent ⚚ the coding intelligence, a long-term memory system and model optimized workflow packages",
+      "language": "Python",
+      "stars": "1,988",
+      "forks": "159",
+      "stars_today": "52 stars today",
+      "zh_description": "Hermes Agent 的插件，在原生 skill 之上加一层调度：每个请求先被打分并列出影响分数的信号，再路由到 quick、deep、ultrabrain 等模型+effort 链，分道并行并加载所需专用 skill，另含长期记忆系统与工作流包。",
+      "problem": "替代手动改写不同模型提示词、凭经验决定任务交给哪个模型的人工分发流程。",
+      "key_features": [
+        "对 13 个模型家族各写一段提示词校准块",
+        "/omh-model-setup 技能用于接入新模型家族",
+        "请求先打分再分发，并列出影响分数的信号",
+        "ultrabrain、deep、quick 等九类可编辑模型+effort 链",
+        "提供长期记忆系统与优化工作流包"
+      ],
+      "use_cases": [
+        "在 Hermes 中用 /omh-model-setup 为新模型家族生成校准块",
+        "在一个文件里覆盖 ultrabrain、deep 等类别的模型与 effort 链",
+        "按 light 或 exhaustive-search 信号把请求路由到 quick 通道或不易漏项的模型"
+      ],
+      "topics": [
+        "agent",
+        "ai",
+        "ai-agent",
+        "ai-tools",
+        "claude-code",
+        "codex",
+        "hermes-agent",
+        "hermes-skill",
+        "skills"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-14T21:36:10Z"
+    },
+    {
+      "rank": 8,
+      "owner": "localsend",
+      "name": "localsend",
+      "url": "https://github.com/localsend/localsend",
+      "description": "An open-source cross-platform alternative to AirDrop",
+      "language": "Dart",
+      "stars": "91,260",
+      "forks": "5,094",
+      "stars_today": "311 stars today",
+      "zh_description": "跨平台应用，在同一局域网内的附近设备之间共享文件和消息。每台设备即时生成 TLS/SSL 证书，通过 REST API 在 HTTPS 上相互通信，不依赖互联网连接或第三方服务器。",
+      "problem": "替代依赖外部服务器或互联网连接的传输应用，以及经云盘中转的分享流程。",
+      "key_features": [
+        "使用 REST API 实现设备间通信",
+        "HTTPS 加密，TLS/SSL 证书每台设备即时生成",
+        "无需互联网连接与第三方服务器",
+        "提供命令行界面（CLI）"
+      ],
+      "use_cases": [
+        "在没有互联网的局域网内向附近设备发送文件与消息",
+        "通过 CLI 在同一网络内的设备之间传输文件"
+      ],
+      "topics": [
+        "dart",
+        "file-sharing",
+        "flutter",
+        "flutter-apps"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-14T13:10:57Z"
+    },
+    {
+      "rank": 9,
+      "owner": "TauricResearch",
+      "name": "TradingAgents",
+      "url": "https://github.com/TauricResearch/TradingAgents",
+      "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+      "language": "Python",
+      "stars": "106,039",
+      "forks": "20,295",
+      "stars_today": "756 stars today",
+      "zh_description": "AI 应用或智能体相关项目，用来构建对话、自动执行任务或接入大语言模型能力。",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "agent",
+        "finance",
+        "llm",
+        "multiagent",
+        "trading"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-14T18:09:35Z"
+    },
+    {
+      "rank": 10,
+      "owner": "ruvnet",
+      "name": "RuView",
+      "url": "https://github.com/ruvnet/RuView",
+      "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+      "language": "Rust",
+      "stars": "93,798",
+      "forks": "12,428",
+      "stars_today": "370 stars today",
+      "zh_description": "输入路由器 WiFi 经人体散射后的 CSI；4-6 个 ESP32 节点用 TDM 捕获 1/6/11 信道，经多频/多静态融合、Coherence Gate 过滤与 RuVector 处理，神经网络输出 17 个身体关键点和生命体征。",
+      "problem": "替代依赖摄像头的姿态与生命体征监测，解决无视频像素下获取空间信号的问题。",
+      "key_features": [
+        "ESP32 mesh 用 TDM 协议捕获 CSI",
+        "多频融合 3 信道×56 子载波",
+        "多静态融合 N×(N-1) 链路注意力",
+        "Coherence Gate 接受或拒绝测量",
+        "RuVector 网络输出 17 个关键点和生命体征"
+      ],
+      "use_cases": [
+        "在 4-6 个 ESP32 节点上采集 CSI 并重建人体姿态",
+        "输出呼吸、心率等生命体征与房间模型",
+        "通过 Coherence Gate 获得数天稳定测量"
+      ],
+      "topics": [
+        "awesome",
+        "claude",
+        "densepose",
+        "esp32",
+        "firmware",
+        "home-assistant",
+        "home-automation",
+        "iot",
+        "monitoring",
+        "networking",
+        "npm",
+        "pose-estimation",
+        "react",
+        "rf",
+        "self-learning",
+        "skills",
+        "spatial-intelligence",
+        "typescript",
+        "wifi",
+        "wifi-security"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-14T18:17:04Z"
+    }
+  ]
+}
