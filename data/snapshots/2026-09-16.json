@@ -1,0 +1,368 @@
+{
+  "collected_at": "2026-09-15T21:19:51.901835+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "alibaba",
+      "name": "open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "language": "Go",
+      "stars": "28,291",
+      "forks": "2,035",
+      "stars_today": "2,751 stars today",
+      "zh_description": "OpenCodeReview 是命令行代码审查工具：读取 Git diff，把变更文件交给可配置的 LLM Agent，Agent 可读取完整文件、检索代码库、查看其他变更文件补充上下文，输出行级定位的结构化评论；ocr scan 则对整文件审查。",
+      "problem": "通用 Agent 做代码审查时覆盖不全、报告位置漂移、质量随提示词波动，缺乏对审查流程的硬约束。",
+      "key_features": [
+        "确定性文件筛选与智能文件打包，子 Agent 隔离上下文并发审查",
+        "模板引擎做规则匹配，内置 NPE、线程安全、XSS、SQL 注入规则集",
+        "独立的评论定位与反思模块，修正位置与内容准确度",
+        "支持 OpenAI 与 Anthropic 兼容模型端点",
+        "ocr scan 对整文件审查，用于无有效 diff 的目录"
+      ],
+      "use_cases": [
+        "以 merge-base 模式审查特性分支相对主干的全部改动",
+        "用 ocr scan 审查陌生代码库或整个目录的源文件",
+        "接入 OpenAI 或 Anthropic 兼容端点获得行级审查评论"
+      ],
+      "topics": [
+        "agent",
+        "agent-skills",
+        "code-review",
+        "code-review-assistant",
+        "harness",
+        "repository-level-context"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-15T19:33:15Z"
+    },
+    {
+      "rank": 2,
+      "owner": "JustVugg",
+      "name": "colibri",
+      "url": "https://github.com/JustVugg/colibri",
+      "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
+      "language": "C",
+      "stars": "33,648",
+      "forks": "3,530",
+      "stars_today": "2,035 stars today",
+      "zh_description": "纯 C、零引擎依赖的 MoE 推理引擎，把存储、内存、显存当作单一分层逐 token 调度，专家权重从磁盘流式读取。覆盖 744B 至 2.8T 参数模型，如 GLM-5.2/5.3、Kimi K3、DeepSeek V4 Flash、Qwen3.6、OLMoE，共用 coli chat / coli serve / coli web 前端。",
+      "problem": "大模型需整份驻留显存或内存才能推理，专家读取受单盘带宽限制。",
+      "key_features": [
+        "存储、RAM、VRAM 视为单一分层，专家按需从磁盘流式读取",
+        "Dual-SSD：模型放两份，按带宽比例哈希路由并行读专家",
+        "镜像启动时校验大小与 safetensors 头，读错回退主盘",
+        "每个模型族一个 C 文件，共用同一前端",
+        "coli chat / coli serve / coli web 三种入口"
+      ],
+      "use_cases": [
+        "在 25 GB 内存笔记本上从磁盘流式运行 744B 的 GLM-5.2 对话",
+        "把模型镜像放第二块 SSD，用两盘带宽并行读取专家权重",
+        "用 coli serve 或 coli web 将支持的 MoE 模型作为服务运行"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-15T21:09:28Z"
+    },
+    {
+      "rank": 3,
+      "owner": "debpalash",
+      "name": "VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "language": "Python",
+      "stars": "30,789",
+      "forks": "3,688",
+      "stars_today": "2,081 stars today",
+      "zh_description": "输入参考音频、视频、EPUB/PDF 或麦克风语音，经 16 个 TTS 与 11 个 ASR 引擎处理，输出克隆语音、配音视频、听写文本和 .m4b 有声书，覆盖 646 种语言。",
+      "problem": "替代需账号、API key 与用量计费的云端语音服务，以及分散的克隆、配音、转写工具。",
+      "key_features": [
+        "零样本声音克隆：由短参考片段合成",
+        "视频配音：转写、翻译、保留说话人后导出",
+        "有声书：EPUB/PDF 导入，导出 .m4b",
+        "Demucs 人声分离与 Pyannote、WhisperX 说话人分离",
+        "本地 OpenAI 兼容 API：合成与转写端点"
+      ],
+      "use_cases": [
+        "用一段参考音频克隆音色并批量合成台词",
+        "翻译外语视频并用原说话人音色配音导出",
+        "导入 EPUB 分章渲染为多角色 .m4b 有声书"
+      ],
+      "topics": [
+        "ai",
+        "audiobook",
+        "cuda",
+        "dubbing",
+        "elevenlabs-alternative",
+        "huggingface",
+        "local-first",
+        "mlx",
+        "omnivoice-studio",
+        "speech-to-text",
+        "tauri",
+        "text-to-speech",
+        "transcription",
+        "translate",
+        "tts",
+        "voice-ai",
+        "voice-cloning",
+        "voice-generation",
+        "voicestudio",
+        "workflow"
+      ],
+      "license": "AGPL-3.0",
+      "pushed_at": "2026-09-15T14:32:21Z"
+    },
+    {
+      "rank": 4,
+      "owner": "melgarafael",
+      "name": "DeskcommCRM",
+      "url": "https://github.com/melgarafael/DeskcommCRM",
+      "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
+      "language": "TypeScript",
+      "stars": "2,761",
+      "forks": "675",
+      "stars_today": "205 stars today",
+      "zh_description": "DeskcommCRM 是自托管的开源 CRM，在自有服务器上运行 Next.js 应用、由 WAHA 接入的 WhatsApp 与 Supabase 数据库。原生 AI 代理在 WhatsApp 中接待、筛选客户并完成销售，支持 MCP、多租户与 LGPD。",
+      "problem": "替代 Kommo、Octadesk、Intercom 等按月订阅、功能受限且数据不在自己服务器的聊天销售工具。",
+      "key_features": [
+        "原生 AI 代理在 WhatsApp 接待、筛选并销售",
+        "通过 WAHA 接入 WhatsApp API",
+        "支持 MCP、多租户与 LGPD",
+        "Next.js 前端配 Supabase 数据库",
+        "hostgator-setup-kit 单命令安装应用、WhatsApp 与数据库"
+      ],
+      "use_cases": [
+        "在自有 VPS 上部署 CRM，用 WhatsApp 承接销售对话",
+        "让 AI 代理自动接待并筛选 WhatsApp 线索"
+      ],
+      "topics": [
+        "ai",
+        "ai-agents",
+        "chatbot",
+        "crm",
+        "customer-support",
+        "ecommerce",
+        "lgpd",
+        "mcp",
+        "multi-tenant",
+        "nextjs",
+        "nuvemshop",
+        "open-source",
+        "rag",
+        "sales-automation",
+        "self-hosted",
+        "supabase",
+        "typescript",
+        "waha",
+        "whatsapp",
+        "whatsapp-api"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-15T20:25:28Z"
+    },
+    {
+      "rank": 5,
+      "owner": "alphaXiv",
+      "name": "OpenResearch",
+      "url": "https://github.com/alphaXiv/OpenResearch",
+      "description": "Turn your coding agents into research agents",
+      "language": "Rust",
+      "stars": "3,248",
+      "forks": "221",
+      "stars_today": "593 stars today",
+      "zh_description": "OpenResearch 是本地优先的研究 agent 工作区，把 Claude Code、Codex、OpenCode、Cursor 变成研究 agent，用于综述文献、提出假设、运行实验并产出研究产物。orx CLI 可关闭遥测。",
+      "problem": "针对编码 agent 只能写代码、文献综述与实验流程需在别处人工串联的限制。",
+      "key_features": [
+        "把 Claude Code、Codex、OpenCode、Cursor 转为研究 agent",
+        "本地优先的研究工作区",
+        "覆盖文献综述、假设、实验与产物",
+        "orx 命令行可查询和关闭遥测"
+      ],
+      "use_cases": [
+        "用 Claude Code 或 Cursor 完成文献综述",
+        "在本地运行实验并生成研究产物"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-09-15T21:15:12Z"
+    },
+    {
+      "rank": 6,
+      "owner": "NationalSecurityAgency",
+      "name": "ghidra",
+      "url": "https://github.com/NationalSecurityAgency/ghidra",
+      "description": "Ghidra is a software reverse engineering (SRE) framework",
+      "language": "Java",
+      "stars": "76,623",
+      "forks": "8,443",
+      "stars_today": "755 stars today",
+      "zh_description": "Ghidra 是 NSA 研究理事会开发维护的软件逆向工程框架，提供分析编译代码的工具套件，可在 Windows、macOS、Linux 上以交互或自动化模式运行，支持多种处理器指令集与可执行格式。",
+      "problem": "解决复杂逆向工程中的规模化与团队协作问题，并提供可定制、可扩展的研究平台。",
+      "key_features": [
+        "反汇编、汇编、反编译、图形化与脚本",
+        "支持多种处理器指令集与可执行格式",
+        "可在 Windows、macOS、Linux 运行",
+        "支持交互模式与自动化模式",
+        "可用 Java 或 Python 开发扩展组件与脚本"
+      ],
+      "use_cases": [
+        "分析恶意代码并生成漏洞相关线索",
+        "反编译二进制文件并查看调用图",
+        "编写脚本自动化批量逆向分析"
+      ],
+      "topics": [
+        "disassembler",
+        "reverse-engineering",
+        "software-analysis"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-15T16:02:22Z"
+    },
+    {
+      "rank": 7,
+      "owner": "pacifio",
+      "name": "atlas",
+      "url": "https://github.com/pacifio/atlas",
+      "description": "Source control for agents. Use multiple coding agents, track their changes and query them in one place",
+      "language": "Rust",
+      "stars": "4,564",
+      "forks": "278",
+      "stars_today": "102 stars today",
+      "zh_description": "Atlas 通过 ACP 把 Claude Code、Codex 等代理作为外部子进程运行，Atlas 原生代理在 Codex 引擎分支上进程内运行。发送消息前注入 @ 提及、共享代理记忆、语义匹配与会话交接，结果记录在 .atlas/sessions.db，并把每个会话与其产生的 commit 关联为 checkpoint。",
+      "problem": "代理切换会丢失上下文，各代理历史互不可读，上下文散落在 CLAUDE.md、AGENTS.md 和各自记忆文件中。",
+      "key_features": [
+        "通过 ACP 运行 Claude Code、Codex 等代理",
+        "共享代理记忆：设备端嵌入加 HNSW 语义索引",
+        "会话捕获到 .atlas/sessions.db，含提示与工具调用",
+        "checkpoint 将会话关联到提交，amend 与 rebase 后重新指向",
+        "@ 提及本地解析文件、技能、笔记与历史会话"
+      ],
+      "use_cases": [
+        "在多个标签页并行运行 Claude Code 与 Codex 会话",
+        "用 @ 提及把笔记、技能或历史会话内联进提示",
+        "导入既有 Claude Code 历史，查询某次提交出自哪个会话"
+      ],
+      "topics": [
+        "ai",
+        "ai-coding-assistant",
+        "claude-code",
+        "codex",
+        "coding-agents",
+        "git",
+        "gitops",
+        "kilo-code",
+        "mcp",
+        "mcp-client",
+        "opencode",
+        "opencode-ai",
+        "opencode-skills",
+        "self-hosted",
+        "skills"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-15T20:36:14Z"
+    },
+    {
+      "rank": 8,
+      "owner": "MG1937",
+      "name": "ASC",
+      "url": "https://github.com/MG1937/ASC",
+      "description": "ASC is a super FAST Android decompiler front-end designed for Agents/Mobile Researchers.",
+      "language": "Python",
+      "stars": "1,107",
+      "forks": "191",
+      "stars_today": "122 stars today",
+      "zh_description": "ASC 是面向代理与移动研究者的 Android 反编译前端。它不整体解压 APK，而是直接在 Deflate 位流中探测，构建稠密 Huffman 查找表提取核心元数据，以无状态、零开销引擎按需在毫秒内提取和搜索代码关系。",
+      "problem": "传统反编译需整包解压并构建全局索引与交叉引用，占用数 GB 内存且耗时数十分钟。",
+      "key_features": [
+        "无状态零开销引擎，按需毫秒级提取与搜索代码",
+        "直接在 Deflate 位流中探测，跳过无关数据块",
+        "构建稠密 Huffman 查找表提取核心元数据",
+        "解析 R8 常量重定位与指令去重留下的痕迹"
+      ],
+      "use_cases": [
+        "对大型 APK 按需查询代码关系而无需完整解压",
+        "作为代理或研究者的反编译前端做毫秒级代码检索"
+      ],
+      "topics": [
+        "agent",
+        "agentic-ai",
+        "android",
+        "decompilation",
+        "decompile",
+        "decompiler",
+        "mobile",
+        "reverse",
+        "reverse-engineering"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-15T18:43:35Z"
+    },
+    {
+      "rank": 9,
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "language": "JavaScript",
+      "stars": "94,700",
+      "forks": "10,058",
+      "stars_today": "386 stars today",
+      "zh_description": "Agent Skills 把高级工程师的工作流、质量门槛和最佳实践封装成 SKILL.md，供 AI 编码代理在 Define、Plan、Build、Verify、Review、Ship 各阶段按步骤执行。每个技能包含流程、验证要求和反合理化表，通过 /spec、/plan、/build、/test、/review、/ship 入口调用。",
+      "problem": "代理默认走最短路径，跳过规格、测试与安全审查等步骤。",
+      "key_features": [
+        "25 个技能：24 个生命周期技能加 using-agent-skills 元技能",
+        "每个 SKILL.md 含步骤、验证门槛与反合理化表",
+        "命令入口 /spec、/plan、/build、/test、/review、/ship",
+        "渐进式披露，引用按需加载以控制 token 消耗",
+        "内置 Hyrum 定律、Beyonce 规则与测试金字塔等实践"
+      ],
+      "use_cases": [
+        "用 interview-me 逐题访谈澄清需求至约 95% 置信度",
+        "用 spec-driven-development 先写 PRD 再进入实现",
+        "用 constraint-driven-development 写出 CONSTRAINTS.md 并布置检查"
+      ],
+      "topics": [
+        "agent-skills",
+        "antigravity",
+        "claude-code",
+        "codex",
+        "cursor",
+        "skills"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-12T03:14:59Z"
+    },
+    {
+      "rank": 10,
+      "owner": "earendil-works",
+      "name": "pi",
+      "url": "https://github.com/earendil-works/pi",
+      "description": "AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI",
+      "language": "TypeScript",
+      "stars": "105,621",
+      "forks": "13,278",
+      "stars_today": "437 stars today",
+      "zh_description": "包含三个包：pi-coding-agent 是交互式编码代理 CLI；pi-agent-core 是带工具调用与状态管理的代理运行时；pi-ai 是统一多供应商 LLM API，涵盖 OpenAI、Anthropic、Google 等。",
+      "problem": "替代分别适配多家 LLM 接口、自行拼装代理循环与工具调度的分散做法",
+      "key_features": [
+        "pi-coding-agent：交互式编码代理 CLI",
+        "pi-agent-core：带工具调用与状态管理的运行时",
+        "pi-ai：统一多供应商 LLM API",
+        "覆盖 OpenAI、Anthropic、Google 等供应商",
+        "代理为自可扩展（self extensible）编码代理"
+      ],
+      "use_cases": [
+        "在终端与编码代理交互完成编码任务",
+        "用 pi-ai 统一接口调用多家 LLM 模型",
+        "基于 pi-agent-core 构建带工具调用的代理"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-09-15T21:08:14Z"
+    }
+  ]
+}
