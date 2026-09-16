@@ -1,0 +1,314 @@
+{
+  "collected_at": "2026-09-16T21:17:06.276247+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "alibaba",
+      "name": "open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "language": "Go",
+      "stars": "31,553",
+      "forks": "2,245",
+      "stars_today": "3,215 stars today",
+      "zh_description": "读取 Git diff，先由确定性流程完成文件筛选、关联文件打包与规则匹配，再由可读取完整文件、检索代码库的 LLM Agent 生成行级审查评论；ocr scan 可审查没有有效 diff 的完整文件，模型端点兼容 OpenAI 与 Anthropic。",
+      "problem": "通用 Agent 审查大变更集时漏掉部分文件、评论行号漂移，纯自然语言驱动的流程缺少硬约束。",
+      "key_features": [
+        "确定性文件筛选与关联文件打包，分组并发审查",
+        "内置 NPE、线程安全、XSS、SQL 注入多语言规则集",
+        "用模板引擎做细粒度规则匹配",
+        "独立的评论定位与评论反思模块",
+        "ocr review --from/--to 支持 merge-base 分支区间审查"
+      ],
+      "use_cases": [
+        "用 ocr review --from main --to feature-branch 审查分支区间变更",
+        "用 ocr scan 审计没有有效 diff 的陌生代码库或目录",
+        "将 message_en.properties 与 message_zh.properties 作为同一单元审查"
+      ],
+      "topics": [
+        "agent",
+        "agent-skills",
+        "code-review",
+        "code-review-assistant",
+        "harness",
+        "repository-level-context"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-16T14:52:32Z"
+    },
+    {
+      "rank": 2,
+      "owner": "cloudflare",
+      "name": "security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "stars": "6,876",
+      "forks": "408",
+      "stars_today": "1,249 stars today",
+      "zh_description": "让编码 Agent 充当安全审计员，编排隔离 Agent 依次完成侦察、覆盖导向漏洞搜寻、候选验证、结构化输出、独立记录核验与目标无关报告；直接审计或渗透请求走完整审计模式，安全问答与定向漏洞工作走引导模式。",
+      "problem": "把原本需要人工分阶段执行、结论需独立复核的安全审计流程，交给单个编码 Agent 编排完成。",
+      "key_features": [
+        "编排侦察、覆盖导向搜寻、候选验证等多阶段流程",
+        "各阶段由相互隔离的 Agent 执行",
+        "输出机器可读并经独立核验的结构化发现",
+        "默认输出目录为 ~/security-audit-skill/<repo-name>/run-<N>",
+        "触发词含 security audit、find vulnerabilities、pen-test"
+      ],
+      "use_cases": [
+        "对当前代码库执行完整安全审计并生成报告产物",
+        "对 ./src 目录做漏洞搜寻与候选发现验证",
+        "指定输出目录生成审计报告，如 ~/audits/my-project"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-09-14T19:29:02Z"
+    },
+    {
+      "rank": 3,
+      "owner": "JustVugg",
+      "name": "colibri",
+      "url": "https://github.com/JustVugg/colibri",
+      "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
+      "language": "C",
+      "stars": "34,927",
+      "forks": "3,669",
+      "stars_today": "1,532 stars today",
+      "zh_description": "纯 C、无引擎依赖的 MoE 推理引擎，把显存、内存与磁盘当作统一分层，专家权重按需从磁盘流式读取；每个模型为一个 C 文件，共用 coli chat、coli serve、coli web 前端。",
+      "problem": "在消费级与异构硬件上运行 744B 至 2.8T 参数 MoE 模型，减少对稀缺硬件的依赖。",
+      "key_features": [
+        "支持 GLM-5.2/5.3 744B、Kimi K3 2.8T 等九个模型家族",
+        "每个模型一个 C 文件，共用同一套前端",
+        "COLI_MODEL_MIRROR 双 SSD 镜像让专家读取带宽相加",
+        "专家按确定性哈希路由到主盘或镜像盘",
+        "启动时校验镜像的逐文件大小与 safetensors 头"
+      ],
+      "use_cases": [
+        "在 25GB 内存、十二核 CPU 的机器上从磁盘流式运行 744B 模型",
+        "用第二块 SSD 镜像模型，使专家读取约快 33%",
+        "在大内存主机上用 CUDA_EXPERT_GB=auto PIN_GB=all 令专家全部驻留"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-15T21:33:15Z"
+    },
+    {
+      "rank": 4,
+      "owner": "abue-ammar",
+      "name": "tinycast",
+      "url": "https://github.com/abue-ammar/tinycast",
+      "description": "Tinycast — a tiny, fully native macOS launcher, hotkeys, and clipboard history.",
+      "language": "Swift",
+      "stars": "5,519",
+      "forks": "262",
+      "stars_today": "1,136 stars today",
+      "zh_description": "用全局快捷键唤出面板，输入模糊搜索即可启动应用、打开文件、查剪贴板历史或做单位与实时汇率换算；面板内还有 34 项 Rectangle 风格窗口操作、Markdown 笔记、快捷指令、自定义 shell 命令，并以原生 SwiftUI 渲染运行 Raycast 扩展。",
+      "problem": "把启动器、剪贴板历史、窗口管理与笔记等多个分散的 macOS 小工具合并为一个常驻进程，并可直接导入 Raycast 配置。",
+      "key_features": [
+        "模糊搜索启动应用，可固定并一键退出全部",
+        "剪贴板历史含文本与图片，可搜索回贴",
+        "Spotlight 搜索文件与文件夹，不自建索引",
+        "34 项 Rectangle 风格窗口管理动作",
+        "原生 SwiftUI 渲染运行已有 Raycast 扩展"
+      ],
+      "use_cases": [
+        "用全局热键切换指定应用的显示与隐藏",
+        "在面板内完成单位、实时汇率与加密货币换算",
+        "运行 Shortcuts 里的快捷指令或自定义 shell 命令"
+      ],
+      "topics": [],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-09-16T21:05:04Z"
+    },
+    {
+      "rank": 5,
+      "owner": "jamiepine",
+      "name": "voicebox",
+      "url": "https://github.com/jamiepine/voicebox",
+      "description": "The open-source AI voice studio. Clone, dictate, create.",
+      "language": "TypeScript",
+      "stars": "54,300",
+      "forks": "6,784",
+      "stars_today": "409 stars today",
+      "zh_description": "在本地选择 7 种 TTS 引擎之一，可用几秒参考音频做零样本克隆或使用预置音色，把文本合成 23 种语言的语音，长脚本自动分块并交叉淡化；同时提供全局热键听写，经 Whisper 转写后粘贴进任意文本框。",
+      "problem": "替代云端 ElevenLabs（语音输出）与 WisprFlow（语音输入）两项服务，模型、音色数据与录音均留在本机。",
+      "key_features": [
+        "7 个 TTS 引擎可按次切换，含 Qwen3-TTS、Kokoro",
+        "零样本克隆与 Kokoro 50+ 预置音色",
+        "23 种语言，含阿拉伯语、印地语、斯瓦希里语",
+        "Whisper 全局听写热键，支持按住说话与切换",
+        "MCP 的 voicebox.speak 与本地 REST 接口"
+      ],
+      "use_cases": [
+        "用几秒参考音频克隆音色并合成多语言旁白",
+        "在多轨故事编辑器里编排播客对话与叙述",
+        "让 Claude Code、Cursor 等 MCP agent 用克隆音色朗读"
+      ],
+      "topics": [
+        "ai",
+        "cuda",
+        "mlx",
+        "qwen3-tts",
+        "qwen3-tts-ui",
+        "voice-ai",
+        "voice-clone",
+        "whisper"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-08-09T00:03:42Z"
+    },
+    {
+      "rank": 6,
+      "owner": "anthropics",
+      "name": "knowledge-work-plugins",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+      "language": "Python",
+      "stars": "24,259",
+      "forks": "2,919",
+      "stars_today": "96 stars today",
+      "zh_description": "按职能打包的 Claude 插件：每个插件把该岗位需要的 skills、connectors、slash commands 与 sub-agents 组合在一起，供 Claude Cowork 使用，也兼容 Claude Code；团队可按自有的工具、术语与流程改写插件内容。",
+      "problem": "减少在每次会话中重复交代工作方式、可调用工具与关键流程的做法。",
+      "key_features": [
+        "按职能打包 skills、connectors 与 slash commands",
+        "每个插件包含对应的 sub-agents",
+        "兼容 Claude Cowork 与 Claude Code",
+        "可替换为公司自有工具、术语与流程"
+      ],
+      "use_cases": [
+        "为某个职能角色加载插件后直接执行该岗位任务",
+        "把插件中的工具与术语改写为团队自用版本"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-16T19:06:16Z"
+    },
+    {
+      "rank": 7,
+      "owner": "ankitects",
+      "name": "anki",
+      "url": "https://github.com/ankitects/anki",
+      "description": "Anki is a smart spaced repetition flashcard program",
+      "language": "Rust",
+      "stars": "30,785",
+      "forks": "3,208",
+      "stars_today": "50 stars today",
+      "zh_description": "该项目主要用于：[ ](https://github.com/ankitects/anki/actions/workflows/ci.yml) [ ](https://dev-docs.ankiweb.net) [ ](https://sonarcloud.io/summary/newcode?id=ankitectsanki)",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-09-16T20:59:17Z"
+    },
+    {
+      "rank": 8,
+      "owner": "NationalSecurityAgency",
+      "name": "ghidra",
+      "url": "https://github.com/NationalSecurityAgency/ghidra",
+      "description": "Ghidra is a software reverse engineering (SRE) framework",
+      "language": "Java",
+      "stars": "77,686",
+      "forks": "8,589",
+      "stars_today": "1,059 stars today",
+      "zh_description": "Ghidra 是 NSA 研究部门开发并维护的软件逆向工程（SRE）框架，可对 Windows、macOS、Linux 上编译后的代码做反汇编、汇编、反编译与图形化分析，并支持脚本化处理。它可交互运行或自动化运行，支持多种处理器指令集与可执行格式，允许用 Java 或 Python 开发扩展组件和脚本。",
+      "problem": "针对复杂逆向工程中的规模化与团队协作问题，替代零散分析工具组合与手工反汇编流程。",
+      "key_features": [
+        "反汇编、汇编、反编译与图形化分析",
+        "支持多种处理器指令集与可执行格式",
+        "交互模式与自动化模式两种运行方式",
+        "用 Java 或 Python 开发扩展组件和脚本"
+      ],
+      "use_cases": [
+        "分析 Windows、macOS、Linux 上编译后的可执行代码",
+        "分析恶意代码并挖掘网络与系统中的潜在漏洞",
+        "用 Java 或 Python 编写自定义 Ghidra 扩展与脚本"
+      ],
+      "topics": [
+        "disassembler",
+        "reverse-engineering",
+        "software-analysis"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-15T16:02:22Z"
+    },
+    {
+      "rank": 9,
+      "owner": "anthropics",
+      "name": "claude-code",
+      "url": "https://github.com/anthropics/claude-code",
+      "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+      "language": "TypeScript",
+      "stars": "145,435",
+      "forks": "23,468",
+      "stars_today": "155 stars today",
+      "zh_description": "Claude Code 是运行在终端中的代理式编码工具，读取代码库并接受自然语言指令，据此执行常规任务、解释复杂代码和处理 git 工作流；可在终端、IDE 中使用，也可在 GitHub 上 @claude 调用。使用过程会收集使用数据、对话数据与通过 /bug 提交的反馈。",
+      "problem": "替代在终端与 IDE 之间来回切换、手工执行 git 操作并逐段阅读解释代码的流程。",
+      "key_features": [
+        "终端内接受自然语言指令的编码代理",
+        "理解代码库并解释复杂代码",
+        "执行常规任务与 git 工作流",
+        "可在终端、IDE 使用或在 GitHub @claude",
+        "通过 /bug 命令提交反馈"
+      ],
+      "use_cases": [
+        "用自然语言指令让代理完成日常编码任务",
+        "让代理解释代码库中的复杂代码",
+        "让代理处理 git 工作流"
+      ],
+      "topics": [],
+      "license": "",
+      "pushed_at": "2026-09-16T18:56:57Z"
+    },
+    {
+      "rank": 10,
+      "owner": "roboflow",
+      "name": "supervision",
+      "url": "https://github.com/roboflow/supervision",
+      "description": "We write your reusable computer vision tools. 💜",
+      "language": "Python",
+      "stars": "50,565",
+      "forks": "4,812",
+      "stars_today": "292 stars today",
+      "zh_description": "Python 计算机视觉工具库，提供可复用的检测与后处理组件，覆盖目标检测、实例分割、定向边界框和目标跟踪，涉及视频处理、COCO、Pascal VOC、YOLO 等标注格式及指标评估，可与 PyTorch、TensorFlow 模型配合。",
+      "problem": "替代为检测、分割、跟踪结果自行编写可视化绘制与指标统计脚本的分散流程。",
+      "key_features": [
+        "目标检测与实例分割结果处理",
+        "定向边界框（OBB）支持",
+        "COCO、Pascal VOC、YOLO 格式",
+        "目标跟踪与视频处理",
+        "检测与分割指标评估"
+      ],
+      "use_cases": [
+        "在视频流中跟踪目标并绘制检测框",
+        "对 YOLO 等模型输出做分割与边界框后处理",
+        "按 COCO、Pascal VOC 格式评估检测结果"
+      ],
+      "topics": [
+        "classification",
+        "coco",
+        "computer-vision",
+        "deep-learning",
+        "hacktoberfest",
+        "image-processing",
+        "instance-segmentation",
+        "low-code",
+        "machine-learning",
+        "metrics",
+        "object-detection",
+        "oriented-bounding-box",
+        "pascal-voc",
+        "python",
+        "pytorch",
+        "tensorflow",
+        "tracking",
+        "video-processing",
+        "yolo"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-16T20:26:40Z"
+    }
+  ]
+}
