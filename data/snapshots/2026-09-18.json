@@ -1,0 +1,250 @@
+{
+  "collected_at": "2026-09-17T21:21:22.975354+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "alibaba",
+      "name": "open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "language": "Go",
+      "stars": "34,518",
+      "forks": "2,456",
+      "stars_today": "3,290 stars today",
+      "zh_description": "该项目主要用于：<div align=\"center\"> <a href=\"https://open-codereview.ai\">",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "agent",
+        "agent-skills",
+        "code-review",
+        "code-review-assistant",
+        "harness",
+        "repository-level-context"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-17T13:19:37Z"
+    },
+    {
+      "rank": 2,
+      "owner": "cloudflare",
+      "name": "security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "stars": "10,344",
+      "forks": "558",
+      "stars_today": "3,606 stars today",
+      "zh_description": "该项目主要用于：A coding-agent skill that turns your agent into a security auditor.",
+      "problem": "把编程代理放进本地终端和代码目录，避免只能在独立聊天页面中处理代码任务。",
+      "key_features": [
+        "在本地终端中运行编程代理"
+      ],
+      "use_cases": [
+        "在本地代码库中通过终端处理编程任务",
+        "把终端中的代码工作交给 AI 代理执行"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-09-14T19:29:02Z"
+    },
+    {
+      "rank": 3,
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "language": "JavaScript",
+      "stars": "95,776",
+      "forks": "10,143",
+      "stars_today": "680 stars today",
+      "zh_description": "该项目主要用于：Production-grade engineering skills for AI coding agents.",
+      "problem": "把编程代理放进本地终端和代码目录，避免只能在独立聊天页面中处理代码任务。",
+      "key_features": [
+        "在本地终端中运行编程代理",
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [
+        "在本地代码库中通过终端处理编程任务",
+        "把终端中的代码工作交给 AI 代理执行"
+      ],
+      "topics": [
+        "agent-skills",
+        "antigravity",
+        "claude-code",
+        "codex",
+        "cursor",
+        "skills"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-12T03:14:59Z"
+    },
+    {
+      "rank": 4,
+      "owner": "Tencent",
+      "name": "BrowserSkill",
+      "url": "https://github.com/Tencent/BrowserSkill",
+      "description": "Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.",
+      "language": "TypeScript",
+      "stars": "4,035",
+      "forks": "287",
+      "stars_today": "1,350 stars today",
+      "zh_description": "AI 应用或智能体相关项目，用来构建对话、自动执行任务或接入大语言模型能力。",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "agent",
+        "browser-use",
+        "dsh-plugin"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-17T09:11:26Z"
+    },
+    {
+      "rank": 5,
+      "owner": "alphaXiv",
+      "name": "OpenResearch",
+      "url": "https://github.com/alphaXiv/OpenResearch",
+      "description": "Turn your coding agents into research agents",
+      "language": "Rust",
+      "stars": "4,875",
+      "forks": "302",
+      "stars_today": "940 stars today",
+      "zh_description": "该项目主要用于：<div align=\"center\">",
+      "problem": "把编程代理放进本地终端和代码目录，避免只能在独立聊天页面中处理代码任务。",
+      "key_features": [
+        "在本地终端中运行编程代理",
+        "支持自行部署和掌控数据"
+      ],
+      "use_cases": [
+        "在本地代码库中通过终端处理编程任务",
+        "把终端中的代码工作交给 AI 代理执行"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-09-17T01:46:04Z"
+    },
+    {
+      "rank": 6,
+      "owner": "anthropics",
+      "name": "claude-code",
+      "url": "https://github.com/anthropics/claude-code",
+      "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+      "language": "TypeScript",
+      "stars": "145,818",
+      "forks": "23,593",
+      "stars_today": "538 stars today",
+      "zh_description": "该项目主要用于：[![npm]](https://www.npmjs.com/package/@anthropic-ai/claude-code)",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "",
+      "pushed_at": "2026-09-17T17:02:03Z"
+    },
+    {
+      "rank": 7,
+      "owner": "NationalSecurityAgency",
+      "name": "ghidra",
+      "url": "https://github.com/NationalSecurityAgency/ghidra",
+      "description": "Ghidra is a software reverse engineering (SRE) framework",
+      "language": "Java",
+      "stars": "78,417",
+      "forks": "8,679",
+      "stars_today": "912 stars today",
+      "zh_description": "该项目主要用于：In support of NSA's Cybersecurity mission, Ghidra was built to solve scaling and teaming problems on complex SRE efforts, and to provide a customizable and extensible SRE research platform.",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "disassembler",
+        "reverse-engineering",
+        "software-analysis"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-17T12:45:32Z"
+    },
+    {
+      "rank": 8,
+      "owner": "anthropics",
+      "name": "knowledge-work-plugins",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+      "language": "Python",
+      "stars": "24,530",
+      "forks": "2,939",
+      "stars_today": "287 stars today",
+      "zh_description": "该项目主要用于：Plugins that turn Claude into a specialist for your role, team, and company.",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-17T21:15:52Z"
+    },
+    {
+      "rank": 9,
+      "owner": "Tencent",
+      "name": "WeKnora",
+      "url": "https://github.com/Tencent/WeKnora",
+      "description": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
+      "language": "Go",
+      "stars": "26,132",
+      "forks": "3,548",
+      "stars_today": "1,123 stars today",
+      "zh_description": "AI 应用或智能体相关项目，用来构建对话、自动执行任务或接入大语言模型能力。",
+      "problem": "",
+      "key_features": [
+        "支持使用 API Key 调用",
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [],
+      "topics": [
+        "agent",
+        "agentic",
+        "ai",
+        "chatbot",
+        "dsh-plugin",
+        "embeddings",
+        "evaluation",
+        "generative-ai",
+        "golang",
+        "knowledge-base",
+        "llm",
+        "multi-tenant",
+        "ollama",
+        "openai",
+        "question-answering",
+        "rag",
+        "reranking",
+        "semantic-search",
+        "vector-search",
+        "wiki"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-09-17T16:55:44Z"
+    },
+    {
+      "rank": 10,
+      "owner": "abue-ammar",
+      "name": "tinycast",
+      "url": "https://github.com/abue-ammar/tinycast",
+      "description": "Tinycast — a tiny, fully native macOS launcher, hotkeys, and clipboard history.",
+      "language": "Swift",
+      "stars": "6,097",
+      "forks": "285",
+      "stars_today": "738 stars today",
+      "zh_description": "该项目主要用于：A tiny, fully native macOS launcher.",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-09-17T20:07:44Z"
+    }
+  ]
+}
