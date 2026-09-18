@@ -1,0 +1,332 @@
+{
+  "collected_at": "2026-09-18T20:53:25.295725+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "cloudflare",
+      "name": "security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "stars": "13,314",
+      "forks": "714",
+      "stars_today": "3,019 stars today",
+      "zh_description": "面向编码代理的安全审计技能：输入代码库和审计请求，代理按侦察、覆盖式漏洞搜寻、候选验证、结构化输出、独立记录验证、目标中立报告多阶段编排隔离代理。请求命中 security audit、find vulnerabilities 等触发词时自动激活，可指定输出目录。",
+      "problem": "替代手工逐文件安全排查与分散的渗透测试流程，产出可独立验证的机器可读发现。",
+      "key_features": [
+        "多阶段编排：侦察、覆盖式搜寻、候选验证",
+        "独立记录验证，输出机器可读发现",
+        "全审计模式与指导模式两种触发",
+        "默认输出到 ~/security-audit-skill/<repo>/run-<N>"
+      ],
+      "use_cases": [
+        "对指定代码库执行完整安全审计并生成报告",
+        "对 ./src 定位安全漏洞",
+        "把安全审查产物输出到 ~/audits/my-project"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-09-14T19:29:02Z"
+    },
+    {
+      "rank": 2,
+      "owner": "anthropics",
+      "name": "claude-code",
+      "url": "https://github.com/anthropics/claude-code",
+      "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+      "language": "TypeScript",
+      "stars": "146,234",
+      "forks": "23,758",
+      "stars_today": "442 stars today",
+      "zh_description": "Claude Code 是运行在终端中的 agentic 编码工具，读取并理解代码库，接收自然语言命令后执行常规编码任务、解释复杂代码并处理 git 工作流。可在终端、IDE 中使用，也能在 GitHub 上通过 @claude 调用，npm 包名为 @anthropic-ai/claude-code。",
+      "problem": "替代在终端、IDE 与 GitHub 之间来回切换、手动执行 git 流程和逐段解释代码的分散操作。",
+      "key_features": [
+        "通过自然语言命令执行常规编码任务",
+        "解释代码库中的复杂代码",
+        "处理 git 工作流",
+        "可在终端、IDE 或 GitHub @claude 调用",
+        "/bug 命令提交用户反馈"
+      ],
+      "use_cases": [
+        "在终端用自然语言让工具完成常规编码任务",
+        "让工具解释代码库中难以理解的复杂代码",
+        "在 GitHub 上 @claude 触发编码协助"
+      ],
+      "topics": [],
+      "license": "",
+      "pushed_at": "2026-09-18T19:28:01Z"
+    },
+    {
+      "rank": 3,
+      "owner": "alibaba",
+      "name": "open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "language": "Go",
+      "stars": "36,537",
+      "forks": "2,604",
+      "stars_today": "2,724 stars today",
+      "zh_description": "读取 Git diff，把变更文件交给可配置 LLM，由具备工具调用能力的 Agent 生成行级精确定位的结构化评审意见；Agent 可读取完整文件、检索代码库、查看其他变更文件。ocr scan 可整文件审查无有效 diff 的目录。",
+      "problem": "通用 Agent 评审大变更集时覆盖不全、评论位置漂移、质量随提示波动。",
+      "key_features": [
+        "确定性流程负责文件选取与智能文件打包",
+        "模板引擎做细粒度规则匹配",
+        "内置 NPE、线程安全、XSS、SQL 注入规则集",
+        "独立评论定位与反思模块",
+        "兼容 OpenAI 与 Anthropic 模型接口"
+      ],
+      "use_cases": [
+        "用 ocr review 评审 Git diff 并输出行级评论",
+        "用 ocr scan 审查无 diff 的目录或陌生代码库",
+        "用 --from main --to feature-branch 评审分支区间变更"
+      ],
+      "topics": [
+        "agent",
+        "agent-skills",
+        "code-review",
+        "code-review-assistant",
+        "harness",
+        "repository-level-context"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-18T14:24:55Z"
+    },
+    {
+      "rank": 4,
+      "owner": "Tencent",
+      "name": "BrowserSkill",
+      "url": "https://github.com/Tencent/BrowserSkill",
+      "description": "Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.",
+      "language": "TypeScript",
+      "stars": "5,213",
+      "forks": "362",
+      "stars_today": "1,319 stars today",
+      "zh_description": "在本地运行 bsk CLI、守护进程和浏览器扩展，把可调用 shell 的 AI agent 接到已登录的浏览器。agent 用 bsk 命令提交任务，经本地 IPC 与 127.0.0.1 的 WebSocket 交给扩展，在独立可见的 Agent Window 中执行；仅在明确要求时借用用户已打开的标签页，结束后归还。",
+      "problem": "替代为 agent 单独注册测试账号、或在用户浏览器中直接操作而打断其工作的手工流程。",
+      "key_features": [
+        "通过 bsk CLI 供任意可调用 shell 的 agent 使用",
+        "复用真实登录状态，无需另建测试账号",
+        "浏览器任务在独立 Agent Window 中运行",
+        "遇验证码、登录、确认框可交还用户接管后再继续",
+        "bsk screenshot --full-page 导出整页长截图"
+      ],
+      "use_cases": [
+        "让 Cursor、Claude Code 等 agent 在已登录网站上执行浏览器任务",
+        "借用一个已打开的标签页操作，完成后归还并保留其他窗口",
+        "在 Quick actions 或命令行中生成网页整页长截图"
+      ],
+      "topics": [
+        "agent",
+        "browser-use",
+        "dsh-plugin"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-18T15:01:25Z"
+    },
+    {
+      "rank": 5,
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "language": "JavaScript",
+      "stars": "96,332",
+      "forks": "10,181",
+      "stars_today": "677 stars today",
+      "zh_description": "面向 AI 编码 agent 的技能包，含 24 个生命周期技能与 using-agent-skills 元技能，覆盖定义、规划、构建、验证、评审、发布阶段，入口命令为 /spec、/plan、/build、/test、/review、/ship。每个技能是含步骤、检查点、退出条件和反合理化表的 SKILL.md 工作流，末尾要求验证证据。",
+      "problem": "agent 默认走最短路径，跳过规格、测试与安全评审等步骤，导致产出偏原型质量。",
+      "key_features": [
+        "25 个技能，含 spec-driven-development、interview-me",
+        "SKILL.md 含 Process、Rationalizations、Red Flags、Verification",
+        "反合理化表列出跳过步骤的借口与反驳",
+        "渐进式披露：SKILL.md 为入口，参考按需加载",
+        "内嵌 Hyrum 定律、测试金字塔、Chesterton's Fence 等实践"
+      ],
+      "use_cases": [
+        "开工前用 /spec 写出 PRD、结构与测试边界",
+        "将规格拆解为带验收标准和依赖顺序的小任务",
+        "用 /review 执行质量门并提交测试与构建输出作为证据"
+      ],
+      "topics": [
+        "agent-skills",
+        "antigravity",
+        "claude-code",
+        "codex",
+        "cursor",
+        "skills"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-18T03:32:22Z"
+    },
+    {
+      "rank": 6,
+      "owner": "TencentCloud",
+      "name": "Octop",
+      "url": "https://github.com/TencentCloud/Octop",
+      "description": "A smarter, self-hosted AI assistant — multi-user, multi-agent.",
+      "language": "Python",
+      "stars": "3,915",
+      "forks": "403",
+      "stars_today": "571 stars today",
+      "zh_description": "自托管 AI 助手，单进程同时提供 Web 面板、CLI、IM 频道和 cron 自动化，共用 ~/.octop/ 下的控制面数据库（默认 SQLite，可选 PostgreSQL）。每个用户可建多个 agent，各自拥有工作区、模型提供商、频道和定时任务，支持 16 种 MBTI 人设、本地/COS/S3 工作区后端与文档 RAG 知识库。",
+      "problem": "把对话、工作区和凭据留在本机，替代分散的 IM 机器人与个人助手工具。",
+      "key_features": [
+        "多用户 JWT 认证与 admin 角色",
+        "接入飞书、钉钉、QQ、Discord、企业微信",
+        "ACP 双向：对外提供 stdio server，也可委派外部编码 agent",
+        "知识库对上传文档做 RAG 语义检索",
+        "octop plugin 安装并管理第三方插件"
+      ],
+      "use_cases": [
+        "在 Web 面板、IM 与 cron 之间共享统一的消息处理",
+        "用 octop acp --agent main 将 agent 接给 Zed、OpenCode",
+        "为每个用户配置多个专用 agent 并按任务切换"
+      ],
+      "topics": [
+        "agent",
+        "agentic-ai",
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "local-first",
+        "long-term-memory"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-18T16:17:38Z"
+    },
+    {
+      "rank": 7,
+      "owner": "Fission-AI",
+      "name": "OpenSpec",
+      "url": "https://github.com/Fission-AI/OpenSpec",
+      "description": "Spec-driven development (SDD) for AI coding assistants.",
+      "language": "TypeScript",
+      "stars": "69,282",
+      "forks": "4,748",
+      "stars_today": "298 stars today",
+      "zh_description": "通过 slash 命令接收想法后，在写代码前建立规格层：每个变更是独立文件夹，含 proposal、specs、design、tasks 工件；Stores 把 openspec/ 的规格与变更放在独立仓库，经 git push 共享给团队与编码代理。",
+      "problem": "替代需求只存在于聊天历史、靠模糊提示让 AI 编码助手直接写代码的做法。",
+      "key_features": [
+        "每个变更独立文件夹含 proposal、specs、design、tasks",
+        "通过 slash 命令接入 30+ AI 助手",
+        "Stores 在独立仓库用 openspec/ 存放 specs 与 changes",
+        "工件可随时更新，不设固定阶段门",
+        "跨仓库特性共用一份计划，共享需求只读引用"
+      ],
+      "use_cases": [
+        "在写代码前用 /opsx:propose 生成变更提案与规格",
+        "让跨三个仓库的特性共用同一份计划",
+        "平台团队维护 specs，产品团队在编码代理处只读引用"
+      ],
+      "topics": [
+        "ai",
+        "context-engineering",
+        "engineering",
+        "planning",
+        "prd",
+        "sdd",
+        "sdlc",
+        "spec",
+        "spec-driven-development",
+        "specification"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-17T16:05:08Z"
+    },
+    {
+      "rank": 8,
+      "owner": "ankitects",
+      "name": "anki",
+      "url": "https://github.com/ankitects/anki",
+      "description": "Anki is a smart spaced repetition flashcard program",
+      "language": "Rust",
+      "stars": "31,172",
+      "forks": "3,237",
+      "stars_today": "177 stars today",
+      "zh_description": "该仓库包含 Anki 电脑版的源代码。Anki 是一款间隔重复（spaced repetition）闪卡程序：用户制作闪卡，程序按间隔重复方式安排复习。README 未描述具体的输入输出格式与调度算法细节，仅指向官网和开发文档获取更多信息。",
+      "problem": "替代手动安排复习间隔、用纸质卡片记录待复习内容的流程。",
+      "key_features": [
+        "间隔重复闪卡程序",
+        "仓库为 Anki 电脑版源代码",
+        "含 CI 工作流与 SonarCloud 检测",
+        "开发文档见 dev-docs.ankiweb.net"
+      ],
+      "use_cases": [
+        "制作闪卡并交由程序按间隔重复安排复习",
+        "阅读或修改 Anki 电脑版源码"
+      ],
+      "topics": [],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-09-18T19:26:11Z"
+    },
+    {
+      "rank": 9,
+      "owner": "anthropics",
+      "name": "knowledge-work-plugins",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+      "language": "Python",
+      "stars": "24,842",
+      "forks": "2,966",
+      "stars_today": "300 stars today",
+      "zh_description": "面向知识工作者的 Claude 插件集合，构建于 Claude Cowork，也兼容 Claude Code。每个插件按职能打包 skills、connectors、slash commands 与 sub-agents，并可替换为公司自己的工具、术语和流程。",
+      "problem": "替代每次向 Claude 重复交代工作方式、可用工具与数据来源、关键流程处理方式的做法。",
+      "key_features": [
+        "按职能打包 skills 与 connectors",
+        "提供 slash commands 与 sub-agents",
+        "可在 Claude Cowork 和 Claude Code 中使用",
+        "可定制为公司的工具、术语与流程"
+      ],
+      "use_cases": [
+        "为特定职能岗位加载对应的技能与连接器",
+        "用公司自己的工具和术语定制插件的处理流程"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-18T19:06:12Z"
+    },
+    {
+      "rank": 10,
+      "owner": "supermemoryai",
+      "name": "supermemory",
+      "url": "https://github.com/supermemoryai/supermemory",
+      "description": "Memory and context engine + app that is extremely fast, scalable, and can be run fully locally. The Memory API for the AI era.",
+      "language": "TypeScript",
+      "stars": "30,217",
+      "forks": "2,640",
+      "stars_today": "140 stars today",
+      "zh_description": "面向 AI 的记忆与上下文引擎，提供 Memory API，并发布 supermemory 的 npm 包与 PyPI 包。安装后它在后台运行：从日常对话中抽取事实、偏好与项目上下文并存储，下一次对话时召回。记忆用 projects（container tags）划分作用域，可完全本地运行或自托管。",
+      "problem": "替代手工把历史对话和偏好粘贴进提示词、或每次会话自行搭建存储与检索的做法。",
+      "key_features": [
+        "从对话中抽取事实、偏好与项目上下文并存储",
+        "记忆以 projects（container tags）划分作用域",
+        "提供 supermemory 的 npm 包与 PyPI 包",
+        "可完全本地运行，支持自托管部署",
+        "在 LongMemEval、LoCoMo、ConvoMem 上评测"
+      ],
+      "use_cases": [
+        "跨会话保留项目约定与之前讨论过的内容",
+        "按客户或仓库隔离记忆，区分工作与个人上下文",
+        "本地或自托管部署记忆层，自行掌控数据"
+      ],
+      "topics": [
+        "agent-memory",
+        "ai-memory",
+        "cloudflare-kv",
+        "cloudflare-pages",
+        "cloudflare-workers",
+        "drizzle-orm",
+        "memory",
+        "postgres",
+        "remix",
+        "tailwindcss",
+        "typescript",
+        "vite"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-18T20:34:16Z"
+    }
+  ]
+}
