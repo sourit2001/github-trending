@@ -1,0 +1,313 @@
+{
+  "collected_at": "2026-09-19T20:38:54.041480+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "cloudflare",
+      "name": "security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "stars": "16,037",
+      "forks": "877",
+      "stars_today": "3,162 stars today",
+      "zh_description": "面向编码代理的安全审计技能：接收代码库路径与审计请求，编排相互隔离的代理依次完成侦察、按覆盖面狩猎、候选漏洞验证、结构化输出与独立记录核验，生成目标无关的报告。支持完整审计与指导两种模式。",
+      "problem": "单代理审计缺少独立核验与结构化记录，结论无法复查。",
+      "key_features": [
+        "编排隔离代理：侦察、覆盖狩猎、候选验证",
+        "独立记录核验，产出机器可读结论",
+        "生成目标无关报告，输出目录可指定",
+        "full audit 与 guidance 两种模式"
+      ],
+      "use_cases": [
+        "对代码库执行完整安全审计并输出报告",
+        "在 ./src 中查找安全漏洞",
+        "安全提问时以 guidance 模式给出指导"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-09-14T19:29:02Z"
+    },
+    {
+      "rank": 2,
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "language": "JavaScript",
+      "stars": "96,938",
+      "forks": "10,232",
+      "stars_today": "547 stars today",
+      "zh_description": "为 AI 编码代理提供 25 个工程技能，覆盖 DEFINE 到 SHIP 六个阶段，每个技能是含步骤、验证门与反合理化表的 SKILL.md 工作流，入口命令为 /spec、/plan、/build、/test、/review、/ship。",
+      "problem": "代理默认走最短路径，跳过规格、测试与安全审查等步骤。",
+      "key_features": [
+        "24 个生命周期技能加 using-agent-skills 元技能",
+        "每个技能含步骤、验证门与反合理化表",
+        "SKILL.md 渐进披露，参考按需加载",
+        "嵌入 Hyrum 定律、Beyonce 规则等实践"
+      ],
+      "use_cases": [
+        "写代码前生成覆盖目标、测试与边界的 PRD",
+        "把规格拆成带验收标准的可验证任务",
+        "提交前执行 QA 门禁并给出验证证据"
+      ],
+      "topics": [
+        "agent-skills",
+        "antigravity",
+        "claude-code",
+        "codex",
+        "cursor",
+        "skills"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-18T03:32:22Z"
+    },
+    {
+      "rank": 3,
+      "owner": "coder",
+      "name": "coder",
+      "url": "https://github.com/coder/coder",
+      "description": "Secure environments for developers and their agents",
+      "language": "Go",
+      "stars": "15,571",
+      "forks": "1,519",
+      "stars_today": "406 stars today",
+      "zh_description": "自托管平台，用 Terraform 定义 EC2、Kubernetes Pod、Docker 等开发环境，经 Wireguard 隧道连接，空闲自动关机；Coder Agents 在控制平面运行 AI 编码代理循环，工作区内不存放 LLM 凭据。",
+      "problem": "取代逐台手工搭建开发环境并长期占用资源的流程。",
+      "key_features": [
+        "用 Terraform 定义 EC2、K8s Pod、Docker 工作区",
+        "空闲资源自动关机，经 Wireguard 隧道连接",
+        "Coder Agents 在控制平面运行代理循环",
+        "可接入 Anthropic、OpenAI、Google、Bedrock 或自托管模型"
+      ],
+      "use_cases": [
+        "在 Kubernetes 或 EC2 上创建自托管开发环境",
+        "把编码任务交给运行在自有基础设施上的 AI 代理",
+        "工作区空闲时自动关闭以释放资源"
+      ],
+      "topics": [
+        "agents",
+        "dev-tools",
+        "development-environment",
+        "go",
+        "golang",
+        "ide",
+        "jetbrains",
+        "remote-development",
+        "terraform",
+        "vscode"
+      ],
+      "license": "AGPL-3.0",
+      "pushed_at": "2026-09-19T17:52:51Z"
+    },
+    {
+      "rank": 4,
+      "owner": "anthropics",
+      "name": "claude-code",
+      "url": "https://github.com/anthropics/claude-code",
+      "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+      "language": "TypeScript",
+      "stars": "146,655",
+      "forks": "23,898",
+      "stars_today": "482 stars today",
+      "zh_description": "Claude Code 是运行在终端中的代理式编码工具，接收自然语言命令，读取并理解代码库，执行日常任务、解释复杂代码并处理 git 工作流；也可在 IDE 中使用，或在 GitHub 上 @claude 调用。使用时收集反馈数据，包括代码采纳或拒绝、相关对话数据，以及通过 /bug 命令提交的用户反馈。",
+      "problem": "把执行例行编码任务、解释代码与处理 git 工作流等手工操作，统一为自然语言命令。",
+      "key_features": [
+        "在终端内运行并理解代码库",
+        "通过自然语言命令处理 git 工作流",
+        "解释复杂代码",
+        "支持终端、IDE 与 GitHub 上 @claude 调用",
+        "用 /bug 命令提交用户反馈"
+      ],
+      "use_cases": [
+        "在终端中用自然语言让工具执行日常编码任务",
+        "让工具解释代码库中的复杂代码",
+        "在 GitHub 上 @claude 触发编码任务"
+      ],
+      "topics": [],
+      "license": "",
+      "pushed_at": "2026-09-19T19:16:54Z"
+    },
+    {
+      "rank": 5,
+      "owner": "Open-Dev-Society",
+      "name": "OpenStock",
+      "url": "https://github.com/Open-Dev-Society/OpenStock",
+      "description": "OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free.",
+      "language": "TypeScript",
+      "stars": "15,948",
+      "forks": "2,080",
+      "stars_today": "477 stars today",
+      "zh_description": "OpenStock 是开源股票行情应用，用 Finnhub 取行情、TradingView 组件画图表，用户经 Better Auth 邮箱密码登录，数据存 MongoDB。提供 Cmd/Ctrl+K 股票搜索、每用户自选股、个股详情与财务组件、市场热力图与行情概览，并按 onboarding 收集的国家、投资目标、风险偏好和偏好行业发送个性化邮件。",
+      "problem": "替代收费的行情平台，自行托管行情追踪、自选股与市场概览。",
+      "key_features": [
+        "Better Auth 邮箱密码登录，中间件保护路由",
+        "Finnhub 支撑全局搜索与 Cmd/Ctrl+K 面板",
+        "MongoDB 存每用户自选股，符号唯一",
+        "TradingView K线图、技术指标与财务组件",
+        "Gemini 经 Inngest 发欢迎邮件，cron 发新闻摘要"
+      ],
+      "use_cases": [
+        "保存自选股并查看个股K线图与财务数据",
+        "查看市场热力图、行情报价与头条新闻",
+        "按自选股接收每日新闻摘要邮件"
+      ],
+      "topics": [
+        "coderabbit",
+        "inngest",
+        "nextjs",
+        "shadcn-ui",
+        "stock-market",
+        "tailwindcss"
+      ],
+      "license": "AGPL-3.0",
+      "pushed_at": "2026-09-19T13:13:19Z"
+    },
+    {
+      "rank": 6,
+      "owner": "higgsfield-ai",
+      "name": "higgsfield",
+      "url": "https://github.com/higgsfield-ai/higgsfield",
+      "description": "Fault-tolerant, highly scalable GPU orchestration, and a machine learning framework designed for training models with billions to trillions of parameters",
+      "language": "Jupyter Notebook",
+      "stars": "4,894",
+      "forks": "905",
+      "stars_today": "325 stars today",
+      "zh_description": "Higgsfield 是容错的 GPU 编排与机器学习框架，面向数十亿至万亿参数模型训练。它把节点计算资源以独占或非独占方式分配给训练任务，支持 DeepSpeed ZeRO-3 与 PyTorch FSDP 分片，并提供在已分配节点上启动、执行和监控大型神经网络训练、用队列管理资源竞争，以及与 GitHub Actions 集成。",
+      "problem": "替代手工在多台 GPU 节点上分配资源、排队实验并监控分布式训练流程。",
+      "key_features": [
+        "分配节点资源的独占或非独占访问权限",
+        "支持 DeepSpeed ZeRO-3 与 PyTorch FSDP",
+        "用 @experiment 装饰器启动并与监控训练",
+        "以队列管理实验间的资源竞争",
+        "通过 GitHub Actions 集成机器学习持续集成"
+      ],
+      "use_cases": [
+        "用 Llama70b 与 LlamaLoader 分布式训练 LLaMA 模型",
+        "在多云节点上排队并监控大规模训练任务",
+        "将训练任务接入 GitHub 与 GitHub Actions"
+      ],
+      "topics": [
+        "cluster-management",
+        "deep-learning",
+        "distributed",
+        "llama",
+        "llama2",
+        "llm",
+        "machine-learning",
+        "mlops",
+        "pytorch"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-14T02:46:36Z"
+    },
+    {
+      "rank": 7,
+      "owner": "docling-project",
+      "name": "docling",
+      "url": "https://github.com/docling-project/docling",
+      "description": "Get your documents ready for gen AI",
+      "language": "Python",
+      "stars": "66,973",
+      "forks": "4,833",
+      "stars_today": "94 stars today",
+      "zh_description": "输入是本地路径或 URL 的 PDF、DOCX、PPTX、XLSX、HTML、EPUB、图片、音视频等文件，解析页面布局、阅读顺序、表格结构、代码与公式，生成统一的 DoclingDocument，再导出 Markdown、HTML、DocTags 或无损 JSON。",
+      "problem": "替代针对每种文档格式分别调用转换脚本、手工整理表格与阅读顺序的做法。",
+      "key_features": [
+        "高级 PDF 解析：页面布局、阅读顺序、表格结构",
+        "统一的 DoclingDocument 表示格式",
+        "支持 Markdown、HTML、DocTags、无损 JSON 导出",
+        "集成 LangChain、LlamaIndex、Haystack 与 MCP server",
+        "支持扫描件 OCR、视觉语言模型与 ASR 音频"
+      ],
+      "use_cases": [
+        "把 arXiv PDF 转换成 Markdown 文本",
+        "解析 USPTO 专利、JATS 论文与 XBRL 财报",
+        "通过 docling-serve API 把文档转换作为服务调用"
+      ],
+      "topics": [
+        "ai",
+        "convert",
+        "document-parser",
+        "document-parsing",
+        "documents",
+        "docx",
+        "html",
+        "markdown",
+        "pdf",
+        "pdf-converter",
+        "pdf-to-json",
+        "pdf-to-text",
+        "pptx",
+        "tables",
+        "xlsx"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-18T13:47:32Z"
+    },
+    {
+      "rank": 8,
+      "owner": "cloudflare",
+      "name": "quiche",
+      "url": "https://github.com/cloudflare/quiche",
+      "description": "🥧 Savoury implementation of the QUIC transport protocol and HTTP/3",
+      "language": "Rust",
+      "stars": "11,980",
+      "forks": "1,115",
+      "stars_today": "84 stars today",
+      "zh_description": "该项目主要用于：[ ](https://crates.io/crates/quiche) [ ](https://docs.rs/quiche) [ ](https://opensource.org/licenses/BSD-2-Clause)",
+      "problem": "",
+      "key_features": [
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [],
+      "topics": [
+        "http3",
+        "network-programming",
+        "protocol",
+        "quic",
+        "rust"
+      ],
+      "license": "BSD-2-Clause",
+      "pushed_at": "2026-09-18T10:10:05Z"
+    },
+    {
+      "rank": 9,
+      "owner": "ruanyf",
+      "name": "weekly",
+      "url": "https://github.com/ruanyf/weekly",
+      "description": "科技爱好者周刊，每周五发布",
+      "language": "Unknown",
+      "stars": "103,094",
+      "forks": "4,424",
+      "stars_today": "151 stars today",
+      "zh_description": "科技爱好者周刊，每周五发布",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "",
+      "pushed_at": "2026-09-19T11:38:43Z"
+    },
+    {
+      "rank": 10,
+      "owner": "ZuodaoTech",
+      "name": "everyone-can-use-english",
+      "url": "https://github.com/ZuodaoTech/everyone-can-use-english",
+      "description": "人人都能用英语",
+      "language": "TypeScript",
+      "stars": "37,762",
+      "forks": "5,205",
+      "stars_today": "31 stars today",
+      "zh_description": "该项目主要用于：<div align=\"center\">",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "GPL-3.0",
+      "pushed_at": "2026-06-29T09:40:15Z"
+    }
+  ]
+}
