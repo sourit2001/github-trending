@@ -1,0 +1,233 @@
+{
+  "collected_at": "2026-09-22T21:17:36.968600+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "anthropics",
+      "name": "financial-services",
+      "url": "https://github.com/anthropics/financial-services",
+      "description": "",
+      "language": "Python",
+      "stars": "36,278",
+      "forks": "5,309",
+      "stars_today": "436 stars today",
+      "zh_description": "面向投资银行、股票研究、私募股权与财富管理的参考代理与技能库：以系统提示加技能接收工作流任务，经 MCP 连接器接入终端、研究平台与文档库，产出估值模型、备忘录、研究笔记与对账底稿，全部暂存待人工签署。",
+      "problem": "替代投行、研究、私募等场景中人工逐项撰写模型、备忘录与对账底稿的分散流程。",
+      "key_features": [
+        "含 Pitch Agent、Market Researcher、GL Reconciler 等端到端代理",
+        "同一源可装为 Claude Cowork 插件或经 Managed Agents API 部署",
+        "提供 /comps、/dcf、/earnings、/ic-memo 斜杠命令",
+        "通过 MCP 连接器接入终端、研究平台与文档库",
+        "各代理可打包同名技能并按垂直行业分组安装"
+      ],
+      "use_cases": [
+        "调用 /comps 与 /dcf 起草可比公司分析和估值模型",
+        "用 GL Reconciler 生成总账对账结果供专业人员复核",
+        "撰写 IC 备忘录与财报研究笔记"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-21T21:10:41Z"
+    },
+    {
+      "rank": 2,
+      "owner": "agent-substrate",
+      "name": "substrate",
+      "url": "https://github.com/agent-substrate/substrate",
+      "description": "Agent Substrate: the core system",
+      "language": "Go",
+      "stars": "2,910",
+      "forks": "381",
+      "stars_today": "301 stars today",
+      "zh_description": "面向自主代理的执行运行时：接收以 OCI 容器为单位的 actor，将其复用到少量 ready worker 上，提供创建/销毁、挂起/恢复与流量路由，底层用 Kubernetes Pod 与弹性伸缩管理 worker，并支持 microVM、gVisor 等沙箱技术。",
+      "problem": "取代标准容器运行时承载海量长期空闲代理沙箱的做法，后者密度不足。",
+      "key_features": [
+        "把大量 actors 复用到少量 ready workers 实现复用",
+        "支持 microVM 与 gVisor 等多种沙箱技术",
+        "亚 500ms 恢复，每秒 500 次以上挂起/恢复激活",
+        "借助 Kubernetes Pod 与 Pod 弹性伸缩管理 worker 生命周期",
+        "内核与网络零信任隔离，可承载沙箱化 MCP 服务器"
+      ],
+      "use_cases": [
+        "高密度运行 LangChain 或 ADK 代理并跨调用保留会话状态",
+        "跨会话保留系统与文件系统状态运行编码代理环境",
+        "把 MCP 服务器作为 Substrate Actor 部署并提供持久工具"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-22T20:31:20Z"
+    },
+    {
+      "rank": 3,
+      "owner": "dream-num",
+      "name": "univer",
+      "url": "https://github.com/dream-num/univer",
+      "description": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
+      "language": "TypeScript",
+      "stars": "15,308",
+      "forks": "1,365",
+      "stars_today": "202 stars today",
+      "zh_description": "一套可嵌入的 Office SDK：接收插件与 Facade API 调用，在浏览器或 Node.js 中以 Canvas 渲染引擎和公式引擎处理电子表格、文档、演示、Base、看板，读写工作簿、工作表、区域、文档、公式、命令与事件；PDF 支持尚在开发。",
+      "problem": "替代把表格、文档编辑能力交给托管应用或固定 UI 的方案。",
+      "key_features": [
+        "同构设计：浏览器 UI 与 Node.js 无头处理共用架构",
+        "插件优先架构，能力可增删替换或懒加载",
+        "Canvas 渲染引擎与公式引擎跨文档类型共用",
+        "Facade API 操作工作簿、工作表、区域、文档、命令与事件",
+        "代理可在隔离 Worktree 草稿中修改内容再交人工合并"
+      ],
+      "use_cases": [
+        "将电子表格或文档编辑嵌入 SaaS 产品或内部工具",
+        "在 Node.js 服务端无头处理工作簿与文档",
+        "让代理通过结构化 API 修改表格并用截图与布局诊断校验结果"
+      ],
+      "topics": [
+        "board",
+        "collaboration",
+        "data-table",
+        "doc",
+        "docx",
+        "excel",
+        "grid",
+        "pdf",
+        "ppt",
+        "pptx",
+        "presentation",
+        "sdk",
+        "sheet",
+        "slides",
+        "spreadsheet",
+        "table",
+        "word",
+        "wordprocessor",
+        "xlsx"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-22T07:17:35Z"
+    },
+    {
+      "rank": 4,
+      "owner": "google",
+      "name": "ax",
+      "url": "https://github.com/google/ax",
+      "description": "Google's open agentic orchestration runtime",
+      "language": "Go",
+      "stars": "7,447",
+      "forks": "348",
+      "stars_today": "2,324 stars today",
+      "zh_description": "AX 是声明式智能体编排运行时：接收 Task、Workspace、Gateway、Model 清单，经 gRPC 提交控制平面，在 Agent Substrate 创建沙箱并调度任务。",
+      "problem": "替代手工隔离环境、装配仓库与逐项配置网络白名单和 LLM 凭据的流程。",
+      "key_features": [
+        "Task 在受限沙箱运行智能体代码",
+        "Workspace 预接 Git、MCP 与技能包",
+        "Gateway 按主机白名单限制出站流量"
+      ],
+      "use_cases": [
+        "提交任务并用 ax watch 与 ax ssh 观察沙箱",
+        "预置 Git 分支、MCP 与技能包并指定出网白名单"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-20T03:33:20Z"
+    },
+    {
+      "rank": 5,
+      "owner": "mvt-project",
+      "name": "mvt",
+      "url": "https://github.com/mvt-project/mvt",
+      "description": "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
+      "language": "Python",
+      "stars": "14,015",
+      "forks": "1,350",
+      "stars_today": "441 stars today",
+      "zh_description": "MVT 收集 Android 与 iOS 设备取证痕迹，mvt-ios、mvt-android 分析采集数据以发现潜在入侵；mvt 命令管理插件、版本、补全与 IOC 下载。",
+      "problem": "替代围绕移动设备取证的手工痕迹收集与分散脚本、工具链流程。",
+      "key_features": [
+        "mvt-ios 与 mvt-android 分析对应平台采集",
+        "插件包向 check-* 命令和顶层命令注入模块",
+        "支持 Bash、Zsh、Fish 的补全脚本生成"
+      ],
+      "use_cases": [
+        "分析 iOS 备份或 Android 采集，查找入侵痕迹",
+        "用 download-iocs 获取 IOC 并在 check-* 中匹配"
+      ],
+      "topics": [
+        "android",
+        "forensics",
+        "forensics-tools",
+        "ios",
+        "mobile",
+        "security"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-09-22T18:17:06Z"
+    },
+    {
+      "rank": 6,
+      "owner": "superdesigndev",
+      "name": "treg",
+      "url": "https://github.com/superdesigndev/treg",
+      "description": "OpenRouter for agent tools. Join community here: https://discord.gg/6mQYYfFMAn",
+      "language": "Python",
+      "stars": "2,150",
+      "forks": "214",
+      "stars_today": "197 stars today",
+      "zh_description": "treg 用统一 base URL 与 token 调用 60+ 提供商的 3,000+ 端点，按次计价；/call 解析工具、解密并注入认证后流式转发。",
+      "problem": "替代为单次任务购买 Semrush、Moz、Crunchbase 等订阅或绕过无 API 的注册墙。",
+      "key_features": [
+        "统一 base URL 与 token 调用 60+ 提供商端点",
+        "injectors 支持 env、oauth 等认证注入",
+        "Skill 由 SKILL.md、密钥与工具整包注册"
+      ],
+      "use_cases": [
+        "调用 SEO、社交、数据 enrichment、抓取或生成类端点",
+        "上传技能包，成员用 token 安装且密钥留在服务端"
+      ],
+      "topics": [
+        "agents",
+        "api-keys",
+        "cli",
+        "credentials",
+        "developer-tools",
+        "dsh-plugin",
+        "mcp",
+        "proxy",
+        "python",
+        "registry",
+        "secrets"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-09-22T19:22:48Z"
+    },
+    {
+      "rank": 7,
+      "owner": "browser-use",
+      "name": "video-use",
+      "url": "https://github.com/browser-use/video-use",
+      "description": "Edit videos with coding agents",
+      "language": "Python",
+      "stars": "25,768",
+      "forks": "3,112",
+      "stars_today": "155 stars today",
+      "zh_description": "把原始素材放入文件夹，与 Claude Code 对话后得到 final.mp4。LLM 不观看视频，而是读取两层信息；Layer 1 用 ElevenLabs Scribe 对每个源生成词级时间戳、说话人分离及笑声掌声等音频事件，打包成约 12KB 的 takes_packed.md 作为主要阅读视图。",
+      "problem": "替代在剪辑软件中用预设和菜单逐段手动剪辑的流程，让 LLM 通过读取转录文本按词边界剪切。",
+      "key_features": [
+        "在 Claude Code 中用对话完成剪辑并输出 final.mp4",
+        "LLM 不观看视频，读取两层信息",
+        "ElevenLabs Scribe 生成词级时间戳与说话人分离",
+        "识别 (laughter)、(applause)、(sigh) 等音频事件",
+        "多个 take 打包为约 12KB 的 takes_packed.md"
+      ],
+      "use_cases": [
+        "剪辑口播、教程、旅行或访谈素材为 final.mp4",
+        "按词级时间戳与说话人分离组织多段 take",
+        "依据笑声、掌声等音频事件定位剪辑点"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-08-30T09:45:51Z"
+    }
+  ]
+}
