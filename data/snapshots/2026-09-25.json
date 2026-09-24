@@ -1,0 +1,356 @@
+{
+  "collected_at": "2026-09-24T21:30:02.242878+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "vectorize-io",
+      "name": "hindsight",
+      "url": "https://github.com/vectorize-io/hindsight",
+      "description": "Hindsight: Agent Memory That Learns",
+      "language": "Python",
+      "stars": "27,690",
+      "forks": "2,676",
+      "stars_today": "1,607 stars today",
+      "zh_description": "面向 agent 的记忆系统，围绕 retain、recall、reflect 三个操作处理记忆，产出 memory types、observations、mental models 与 knowledge pages，并可按 memory bank 组织。可通过 server、客户端、Python 内嵌无 server 模式、LLM wrapper 与 MCP server 接入。",
+      "problem": "取代 RAG 与知识图谱等记忆方案，后者侧重回溯对话历史，而非让 agent 随时间学习。",
+      "key_features": [
+        "retain、recall、reflect 三个记忆操作",
+        "observations、mental models 与 knowledge pages",
+        "memory banks 划分记忆库",
+        "LLM wrapper 两行代码接入",
+        "提供 MCP server 与 coding agents 集成"
+      ],
+      "use_cases": [
+        "让 agent 在长期任务中保留并反思历史交互",
+        "在无 server 环境下以 Python 内嵌模式运行记忆",
+        "以 MCP server 形式为编码 agent 提供记忆"
+      ],
+      "topics": [
+        "agentic-ai",
+        "agents",
+        "ai-memory",
+        "memory"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-24T20:49:29Z"
+    },
+    {
+      "rank": 2,
+      "owner": "dream-num",
+      "name": "univer",
+      "url": "https://github.com/dream-num/univer",
+      "description": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
+      "language": "TypeScript",
+      "stars": "17,489",
+      "forks": "1,512",
+      "stars_today": "1,060 stars today",
+      "zh_description": "开源 Office SDK，用于在自有产品中嵌入电子表格、文档、演示、Bases 与 Boards 编辑体验，PDF 待支持。采用插件架构与 Canvas 渲染引擎，含公式引擎，Facade API 在浏览器和 Node.js 中一致可用，UI 可接 React、Vue、Web Components。",
+      "problem": "替代仅作文件查看的表格工具，避免被托管应用或固定 UI 限制。",
+      "key_features": [
+        "插件优先架构，能力以可组合插件交付",
+        "Canvas 渲染引擎与公式引擎",
+        "Facade API 覆盖工作簿、工作表、区域、文档",
+        "同构设计，浏览器与 Node.js 共用架构",
+        "agent 通过结构化 API 编辑并校验内容"
+      ],
+      "use_cases": [
+        "在 SaaS、内部工具或 BI 流程中嵌入表格与文档编辑",
+        "在服务端以无头方式处理工作簿与文档",
+        "让 agent 生成表格迷你应用并绑定单元格数据"
+      ],
+      "topics": [
+        "board",
+        "collaboration",
+        "data-table",
+        "doc",
+        "docx",
+        "excel",
+        "grid",
+        "pdf",
+        "ppt",
+        "pptx",
+        "presentation",
+        "sdk",
+        "sheet",
+        "slides",
+        "spreadsheet",
+        "table",
+        "word",
+        "wordprocessor",
+        "xlsx"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-24T14:02:42Z"
+    },
+    {
+      "rank": 3,
+      "owner": "google",
+      "name": "ax",
+      "url": "https://github.com/google/ax",
+      "description": "Google's open agentic orchestration runtime",
+      "language": "Go",
+      "stars": "10,259",
+      "forks": "497",
+      "stars_today": "1,376 stars today",
+      "zh_description": "声明式 agent 编排器，用 ax.io/v1alpha1 manifest 声明 Workspace 与 Task，AX 负责沙箱化、装配工作区、限制网络并规模化运行。支持 Gateway 出站白名单、Model 指定平台所用 LLM，CLI 经 gRPC 与控制面通信。",
+      "problem": "agent 既不是无状态微服务也不是一次性批处理任务，缺少隔离、资源限制与状态续跑手段。",
+      "key_features": [
+        "Task 在沙箱中运行不可信 agent 代码并限 CPU/内存",
+        "Workspace 预装 Git 仓库、MCP server 与技能包",
+        "Gateway 将出站流量限制到显式主机白名单",
+        "Model 从 Kubernetes secret 读取凭证配置 LLM",
+        "ax suspend/resume 与 ax ssh 操作运行中 agent"
+      ],
+      "use_cases": [
+        "用 ax apply 提交 manifest，并以 ax watch 观察任务",
+        "通过 ax ssh 进入沙箱查看 /workspace 内容",
+        "挂起空闲 agent 后恢复并接着原进度执行"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-24T15:04:15Z"
+    },
+    {
+      "rank": 4,
+      "owner": "NVIDIA",
+      "name": "Model-Optimizer",
+      "url": "https://github.com/NVIDIA/Model-Optimizer",
+      "description": "A unified library of SOTA model optimization techniques like quantization, distillation, pruning, neural architecture search, speculative decoding, etc. It compresses deep learning models for downstream deployment frameworks like TensorRT-LLM, TensorRT, vLLM, etc. to optimize inference speed.",
+      "language": "Python",
+      "stars": "4,035",
+      "forks": "628",
+      "stars_today": "22 stars today",
+      "zh_description": "接收 Hugging Face、PyTorch 或 ONNX 模型，用 Python API 组合量化、剪枝、神经架构搜索、蒸馏、投机解码与稀疏化等技术，导出量化检查点，供 TensorRT-LLM、TensorRT、vLLM 等推理框架部署。",
+      "problem": "替代手动拼装多种模型压缩脚本与各自独立的量化部署流程。",
+      "key_features": [
+        "支持量化、剪枝、NAS、蒸馏、投机解码与稀疏化",
+        "输入支持 Hugging Face、PyTorch、ONNX 模型",
+        "集成 Megatron-Bridge、Megatron-LM、Hugging Face Accelerate",
+        "导出量化检查点供 TensorRT-LLM、TensorRT、vLLM 使用"
+      ],
+      "use_cases": [
+        "把 Hugging Face 模型量化导出为 TensorRT-LLM 可加载的检查点",
+        "在 Megatron-LM 训练流程中嵌入剪枝或蒸馏等优化步骤",
+        "对 ONNX 模型执行神经架构搜索并导出优化后权重"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-24T20:07:19Z"
+    },
+    {
+      "rank": 5,
+      "owner": "FxEmbed",
+      "name": "FxEmbed",
+      "url": "https://github.com/FxEmbed/FxEmbed",
+      "description": "Fix X/Twitter and Bluesky embeds! Use multiple images, videos, polls, translations and more on Discord, Telegram and others",
+      "language": "TypeScript",
+      "stars": "5,346",
+      "forks": "248",
+      "stars_today": "165 stars today",
+      "zh_description": "修复 X/Twitter 与 Bluesky 的嵌入内容，使 Discord、Telegram 等平台能展示多张图片、视频、投票和翻译；对外提供 API，接口文档位于 docs.fxembed.com。",
+      "problem": "替代 X/Twitter、Bluesky 原生嵌入无法展示多图、视频、投票和翻译的限制。",
+      "key_features": [
+        "修复 X/Twitter 嵌入内容",
+        "修复 Bluesky 嵌入内容",
+        "支持多图、视频、投票与翻译展示",
+        "提供 API Reference 文档"
+      ],
+      "use_cases": [
+        "在 Discord 频道中展示 X 帖子的多张图片与视频",
+        "在 Telegram 中呈现 Bluesky 帖子的投票与翻译内容",
+        "通过 API 在自建页面嵌入修复后的帖子"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-09-24T05:51:28Z"
+    },
+    {
+      "rank": 6,
+      "owner": "anthropics",
+      "name": "financial-services",
+      "url": "https://github.com/anthropics/financial-services",
+      "description": "",
+      "language": "Python",
+      "stars": "37,327",
+      "forks": "5,418",
+      "stars_today": "510 stars today",
+      "zh_description": "提供投资银行、股票研究、私募股权与财富管理场景的 Claude 参考代理、技能和数据连接器，可作为 Claude Cowork 插件安装，或经 Claude Managed Agents API 部署；输出模型、备忘录、研究笔记与对账结果，需人工签署。",
+      "problem": "替代人工从零撰写模型、备忘录与研究笔记的重复底稿流程。",
+      "key_features": [
+        "含 Pitch Agent、Market Researcher、GL Reconciler 等命名代理",
+        "提供 /comps、/dcf、/earnings、/ic-memo 斜杠命令",
+        "经 MCP 服务器连接终端、研究平台与文档库",
+        "同一系统提示与技能可装为 Cowork 插件或 Managed Agent",
+        "输出暂存待人工签署，不执行交易或记账"
+      ],
+      "use_cases": [
+        "用 /dcf、/comps 生成估值模型与可比公司分析初稿",
+        "运行 GL Reconciler 对总账执行对账并产出待审结果",
+        "把代理以 Managed Agents 模板部署到自有工作流引擎"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-21T21:10:41Z"
+    },
+    {
+      "rank": 7,
+      "owner": "HKUDS",
+      "name": "CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "language": "Python",
+      "stars": "50,293",
+      "forks": "4,614",
+      "stars_today": "415 stars today",
+      "zh_description": "把软件代码库交给 Claude 插件，经 7 阶段流水线自动生成 cli-anything-* 命令行工具，提供 JSON 输出与 SKILL.md；命令生成 ODF、MLT XML、SVG 等工程文件后，交由 Blender、LibreOffice、FFmpeg 等真实软件渲染。",
+      "problem": "替代易碎的截图点击式 UI 自动化，以及功能受限的 API 和缺失九成功能的简化重实现。",
+      "key_features": [
+        "7 阶段流水线从代码库自动生成完整 CLI",
+        "每个 CLI 同时提供有状态 REPL 与子命令接口",
+        "内置 JSON 输出供 agent 消费，另有人类可读格式",
+        "Phase 6.5 由 skill_generator.py 生成 SKILL.md",
+        "统一命名 cli-anything-gimp，置于 cli_anything.* 命名空间"
+      ],
+      "use_cases": [
+        "让 agent 产出 CAD 构建、3D 场景、图表、游戏画面、字幕",
+        "对 GIMP、Shotcut、Blender、LibreOffice、OBS Studio 执行实际编辑",
+        "通过 cli-hub install <name> 浏览安装社区构建的 CLI"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-22T02:01:29Z"
+    },
+    {
+      "rank": 8,
+      "owner": "mvt-project",
+      "name": "mvt",
+      "url": "https://github.com/mvt-project/mvt",
+      "description": "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
+      "language": "Python",
+      "stars": "14,698",
+      "forks": "1,392",
+      "stars_today": "275 stars today",
+      "zh_description": "面向 Android 与 iOS 的取证工具集：mvt-ios、mvt-android 分析对应平台的设备采集数据，mvt 提供 version、completion、plugins、download-iocs，配合 check-* 命令查找设备可能被入侵的痕迹，并支持插件包扩展取证模块。",
+      "problem": "替代手工逐项排查移动设备取证痕迹的流程，把 IOC 下载比对与采集分析集中到命令行。",
+      "key_features": [
+        "mvt-ios 与 mvt-android 分析对应平台采集数据",
+        "mvt 命令含 version、completion、plugins、download-iocs",
+        "可生成 Bash、Zsh、Fish 的 shell 补全脚本",
+        "插件包在 check-* 命令中扩展取证模块与顶层命令",
+        "三个命令均支持 --verbose 输出调试信息"
+      ],
+      "use_cases": [
+        "用 mvt-ios check-backup 检查 iOS 备份中的入侵痕迹",
+        "用 mvt download-iocs 下载 IOC 供比对",
+        "编写插件包为 MVT 增加自定义取证模块与命令"
+      ],
+      "topics": [
+        "android",
+        "forensics",
+        "forensics-tools",
+        "ios",
+        "mobile",
+        "security"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-09-22T18:17:06Z"
+    },
+    {
+      "rank": 9,
+      "owner": "strands-agents",
+      "name": "harness-sdk",
+      "url": "https://github.com/strands-agents/harness-sdk",
+      "description": "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.",
+      "language": "Python",
+      "stars": "8,216",
+      "forks": "1,233",
+      "stars_today": "463 stars today",
+      "zh_description": "Python 与 TypeScript 的 agent 构建 SDK：在自有进程内运行 agent 循环，无托管控制平面；支持 Amazon Bedrock、Anthropic、OpenAI、Gemini 及自定义模型，内置上下文管理、执行限制、可观测性、MCP、流式输出、多 agent 模式与结构化输出。",
+      "problem": "替代自行手写 agent 循环，以及随之增长的上下文管理、执行限制与可观测性代码。",
+      "key_features": [
+        "模型无关，支持 Bedrock、Anthropic、OpenAI、Gemini 及自定义",
+        "agent 循环默认追踪每一步决策",
+        "Hooks 可拦截并记录、校验或重定向任意步骤",
+        "内置 MCP、流式输出、多 agent 模式与结构化输出",
+        "Guardrails 拦截错误，steering handlers 让 agent 自我纠正"
+      ],
+      "use_cases": [
+        "在自有进程内构建并端到端控制 agent harness",
+        "在代码不变的前提下切换模型与云后端",
+        "用 steering handlers 让 agent 出错时修正而非静默失败"
+      ],
+      "topics": [
+        "agent-framework",
+        "agentic",
+        "agentic-ai",
+        "agents",
+        "ai",
+        "ai-agents",
+        "anthropic",
+        "autonomous-agents",
+        "bedrock",
+        "generative-ai",
+        "harness",
+        "llm",
+        "llm-agent",
+        "mcp",
+        "multi-agent-systems",
+        "openai",
+        "python",
+        "sdk",
+        "strands-agents",
+        "typescript"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-24T21:27:28Z"
+    },
+    {
+      "rank": 10,
+      "owner": "julyx10",
+      "name": "lap",
+      "url": "https://github.com/julyx10/lap",
+      "description": "An offline-first photo manager for large local libraries",
+      "language": "Vue",
+      "stars": "2,831",
+      "forks": "171",
+      "stars_today": "151 stars today",
+      "zh_description": "Lap 是 macOS、Windows、Linux 上的本地优先照片管理器。用户把已有文件夹直接作为图库，应用用 SQLite 建索引，经 LibRaw、libheif、FFmpeg 解码 RAW/HEIC/视频，用 ONNX Runtime 跑 CLIP 文本搜索与 InsightFace 人脸聚类，生成可浏览、检索、整理的图库。",
+      "problem": "替代把照片上传云端相册，以及靠多个文件夹和看图工具手工找图、查重、做标记的流程。",
+      "key_features": [
+        "本地 AI 搜索：文本提示、视觉相似与人脸聚类",
+        "按日期、文件夹、位置、相机、标签、评分、人脸浏览",
+        "智能相册保存规则视图，集合与标签批量归类",
+        "重复照片清理，统计可回收空间并批量删除",
+        "四窗格对比查看，RAW+JPEG/HEIC 配对合并显示"
+      ],
+      "use_cases": [
+        "在 10 万以上文件的本地图库中按地点、相机、人脸检索旧照片",
+        "按日、月、年结构导入并跳过重复文件，不移动原始文件夹",
+        "对比连拍并标记 Picks/Rejects，清理重复照片释放磁盘空间"
+      ],
+      "topics": [
+        "desktop-app",
+        "digital-asset-manager",
+        "duplicate-detection",
+        "face-recognition",
+        "family-photos",
+        "image-search",
+        "large-photo-collections",
+        "linux-app",
+        "local-first",
+        "macos-app",
+        "offline",
+        "open-source",
+        "photo-library",
+        "photo-management",
+        "photo-organizer",
+        "privacy",
+        "windows-app"
+      ],
+      "license": "GPL-3.0",
+      "pushed_at": "2026-09-24T16:20:03Z"
+    }
+  ]
+}
