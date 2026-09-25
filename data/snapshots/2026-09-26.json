@@ -1,0 +1,354 @@
+{
+  "collected_at": "2026-09-25T21:33:44.934290+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "paperclipai",
+      "name": "paperclip",
+      "url": "https://github.com/paperclipai/paperclip",
+      "description": "The open-source app everyone uses to manage agents at work",
+      "language": "TypeScript",
+      "stars": "84,685",
+      "forks": "15,211",
+      "stars_today": "1,853 stars today",
+      "zh_description": "Paperclip 是 Node.js 服务端加 React UI，用于编排一支 AI agent 团队运营业务。接入自有 agent（OpenClaw、Claude Code、Codex、Cursor、Bash、HTTP），按组织架构分配目标，agent 按心跳唤醒领取任务，并在仪表盘追踪工作与成本。",
+      "problem": "替代分别用多个分散工具管理 agent、任务与预算的做法。",
+      "key_features": [
+        "Node.js 服务端 + React UI 编排 agent 团队",
+        "支持 OpenClaw、Claude Code、Codex、Cursor 接入",
+        "按 agent 设月度预算，超限即停止",
+        "组织架构、角色与汇报线，心跳唤醒领任务",
+        "工具调用追踪与不可变审计日志"
+      ],
+      "use_cases": [
+        "定义业务目标后组建 agent 团队并审批策略上线",
+        "在仪表盘查看各 agent 的工作进度与月度成本",
+        "导出导入组织、agent 与 skills 模板，代理密钥自动清理"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-09-25T20:52:40Z"
+    },
+    {
+      "rank": 2,
+      "owner": "anthropics",
+      "name": "claude-plugins-official",
+      "url": "https://github.com/anthropics/claude-plugins-official",
+      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+      "language": "Python",
+      "stars": "36,885",
+      "forks": "4,152",
+      "stars_today": "62 stars today",
+      "zh_description": "Anthropic 管理的 Claude Code 高质量插件目录。对于源仓库只提供 SKILL.md、没有 .claude-plugin/plugin.json 清单的插件，市场条目可用 strict: false 加显式 skills 数组直接声明技能，每个技能在 Claude Code 中注册为 <plugin-name>:<skill-name>。",
+      "problem": "源仓库只含 SKILL.md 而缺少 plugin.json 清单时，无法作为插件在市场条目中登记。",
+      "key_features": [
+        "Anthropic 维护的 Claude Code 插件目录",
+        "用 strict: false 加 skills 数组声明技能",
+        "skills 路径相对 source.path，可跨多级子目录",
+        "技能注册为 plugin-name:skill-name",
+        "source 支持 git-subdir，含 url/path/ref/sha"
+      ],
+      "use_cases": [
+        "登记只提供 SKILL.md 的 skill-bundle 插件",
+        "跨多个库子目录挑选并暴露部分技能",
+        "用 git 子目录与 commit sha 固定插件来源"
+      ],
+      "topics": [
+        "claude-code",
+        "mcp",
+        "skills"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-25T19:33:25Z"
+    },
+    {
+      "rank": 3,
+      "owner": "vectorize-io",
+      "name": "hindsight",
+      "url": "https://github.com/vectorize-io/hindsight",
+      "description": "Hindsight: Agent Memory That Learns",
+      "language": "Python",
+      "stars": "29,716",
+      "forks": "3,141",
+      "stars_today": "1,652 stars today",
+      "zh_description": "Hindsight 是 agent 记忆系统，可以启动服务端连接客户端，或以 Python 内嵌方式无需服务端运行。核心操作为 retain、recall、reflect，管理记忆类型、observations、mental models 与 knowledge pages 以及 memory banks，也可通过 LLM wrapper、MCP server 和各类集成接入 agent。",
+      "problem": "README 称其消除 RAG 与知识图谱等技术在长期记忆上的不足，不止于回放对话历史。",
+      "key_features": [
+        "retain、recall、reflect 三种记忆操作",
+        "记忆类型、observations、mental models 与 knowledge pages",
+        "以 memory banks 组织记忆",
+        "提供 MCP server 与两行代码的 LLM wrapper 接入",
+        "支持 Python 内嵌运行，无需服务端"
+      ],
+      "use_cases": [
+        "用 LLM wrapper 为已有 agent 加入长期记忆",
+        "通过 MCP server 给 coding agent 提供记忆能力",
+        "在无服务端环境下以 Python 内嵌方式运行记忆系统"
+      ],
+      "topics": [
+        "agentic-ai",
+        "agents",
+        "ai-memory",
+        "memory"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-25T20:14:12Z"
+    },
+    {
+      "rank": 4,
+      "owner": "dream-num",
+      "name": "univer",
+      "url": "https://github.com/dream-num/univer",
+      "description": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
+      "language": "TypeScript",
+      "stars": "18,371",
+      "forks": "1,561",
+      "stars_today": "1,048 stars today",
+      "zh_description": "Univer 是构建 Office 应用的开源 SDK，提供电子表格、文档、演示、Bases、Boards 的构建模块。采用插件架构、Canvas 渲染引擎和公式引擎，同一套 Facade API 在浏览器与 Node.js 运行，可嵌入编辑界面或做无头处理。",
+      "problem": "替代依赖托管 Office 应用或固定 UI 的嵌入方式，以及浏览器与服务端分离的两套处理架构。",
+      "key_features": [
+        "插件化架构，能力可增删替换或懒加载",
+        "Canvas 渲染引擎支持大型可编辑文档面",
+        "Facade API 操作工作簿、区域、公式、命令与事件",
+        "同构设计：浏览器 UI 与 Node.js 无头处理共用架构",
+        "代理经结构化 API 编辑，并用截图与布局诊断校验"
+      ],
+      "use_cases": [
+        "在 SaaS、内部工具或 BI 流程中嵌入电子表格与文档编辑",
+        "在 Node.js 服务端用相同架构处理工作簿与文档",
+        "代理在隔离草稿中修改 Office 内容，由人评审后决定合并"
+      ],
+      "topics": [
+        "board",
+        "collaboration",
+        "data-table",
+        "doc",
+        "docx",
+        "excel",
+        "grid",
+        "pdf",
+        "ppt",
+        "pptx",
+        "presentation",
+        "sdk",
+        "sheet",
+        "slides",
+        "spreadsheet",
+        "table",
+        "word",
+        "wordprocessor",
+        "xlsx"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-24T14:02:42Z"
+    },
+    {
+      "rank": 5,
+      "owner": "anthropics",
+      "name": "skills",
+      "url": "https://github.com/anthropics/skills",
+      "description": "Public repository for Agent Skills",
+      "language": "Python",
+      "stars": "178,260",
+      "forks": "21,106",
+      "stars_today": "231 stars today",
+      "zh_description": "该仓库收录 Anthropic 为 Claude 实现的 Agent Skills 示例。每个 skill 是独立文件夹，内含 SKILL.md，以 YAML frontmatter 声明 name 与 description，并写入指令、示例和准则，由 Claude 按需动态加载以执行特定任务。另含 docx、pdf、pptx、xlsx 文档技能及规范与模板。",
+      "problem": "将品牌规范、组织工作流等重复指令从每次对话重述，改为按需加载的 skill 文件夹。",
+      "key_features": [
+        "SKILL.md 以 YAML frontmatter 声明 name 与 description",
+        "提供 docx、pdf、pptx、xlsx 文档创建与编辑技能",
+        "含 Agent Skills 规范 spec 与技能模板 template",
+        "技能覆盖创意设计、开发技术、企业通讯与文档"
+      ],
+      "use_cases": [
+        "按公司品牌规范创建和编辑文档",
+        "按组织特定工作流分析数据",
+        "以 template 为起点编写自定义 skill 文件夹"
+      ],
+      "topics": [
+        "agent-skills"
+      ],
+      "license": "",
+      "pushed_at": "2026-09-24T16:20:39Z"
+    },
+    {
+      "rank": 6,
+      "owner": "androoAGI",
+      "name": "starnet",
+      "url": "https://github.com/androoAGI/starnet",
+      "description": "A living pixel-art station where real AI agents do real work. Local-first desktop agent harness - bring your own key, watch your crew actually run.",
+      "language": "JavaScript",
+      "stars": "440",
+      "forks": "84",
+      "stars_today": "118 stars today",
+      "zh_description": "StarNet 是本地优先的桌面 agent harness：创建具不同类别、人格和装备的 agent 并放入像素艺术空间站。房间代表能力范围化的团队，走廊是授权交接通道，摆放物体即真实能力授予，布局即 agent 运行的工作流。前端站点界面通过 localhost 的 HTTP/NDJSON 与 SSE 消费 sidecar 事件。",
+      "problem": "把并发运行多个 agent、权限约束与花费记录，从分散脚本或单个聊天窗口集中到桌面端。",
+      "key_features": [
+        "OpenRouter key 或 Anthropic、OpenAI、Google 账号接入，密钥存 OS keychain",
+        "接入 Telegram、Discord、Slack、Signal、Matrix 远程对话",
+        "Night Shift 在可调范围内持续工作并记录每次动作",
+        "MCP 连接器及 paste-a-key/OAuth 连接器扩展能力",
+        "花费、预算与运行历史持久化到磁盘并原样展示"
+      ],
+      "use_cases": [
+        "同时运行多个各自独立工作区与权限的 agent",
+        "经 Telegram 等渠道向 agent 派发任务并接收结果",
+        "用 cron 调度多步 recipe 与 skill，成果以文件落入 OUTBOX"
+      ],
+      "topics": [
+        "agent-harness",
+        "ai",
+        "ai-agents",
+        "byok",
+        "desktop-app",
+        "game-ui",
+        "llm",
+        "local-first",
+        "multi-agent",
+        "openrouter",
+        "pixel-art",
+        "tauri"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-23T17:52:14Z"
+    },
+    {
+      "rank": 7,
+      "owner": "derv82",
+      "name": "wifit3",
+      "url": "https://github.com/derv82/wifit3",
+      "description": "Wifite but USB-only & cross-platform.",
+      "language": "Python",
+      "stars": "876",
+      "forks": "84",
+      "stars_today": "168 stars today",
+      "zh_description": "wifit3 是仅需 USB 无线网卡的 Wi-Fi 审计工具，可在 Linux、macOS、Windows 上运行，至少需一张受支持的 USB 网卡。它内置 Python 移植的芯片驱动，直接经 USB 批量与控制传输操作网卡，在用户态完成监听模式与帧注入，绕过内核驱动和 Windows NDIS。",
+      "problem": "替代依赖 aircrack-ng 与 reaver 的工具链，规避内核驱动版本差异和 Windows NDIS 限制。",
+      "key_features": [
+        "多网卡聚合抓包，可指定一张网卡注入",
+        "2.4GHz/5GHz 跳频扫描，跟踪信号与加密套件",
+        "WPA/WPA2 握手包抓取，导出 .pcap 与 .hc22000",
+        "PMKID 采集与 EvilTwin WPA3 降级攻击",
+        "WPS 套件：PixieDust、PushButton、PIN 暴力破解"
+      ],
+      "use_cases": [
+        "用多张 USB 网卡同时抓包、指定一张注入，收集握手与 PMKID",
+        "克隆 AP 并经 CSA、BTM、去认证驱逐客户端捕获 WPA3 降级握手",
+        "对启用 WPS 的接入点执行 PixieDust 或可续跑的 PIN 破解"
+      ],
+      "topics": [
+        "cross-platform",
+        "userland",
+        "wifi-scanner",
+        "wifi-security",
+        "wireless-security"
+      ],
+      "license": "GPL-2.0",
+      "pushed_at": "2026-09-23T09:07:44Z"
+    },
+    {
+      "rank": 8,
+      "owner": "kelseyhightower",
+      "name": "kubernetes-the-hard-way",
+      "url": "https://github.com/kelseyhightower/kubernetes-the-hard-way",
+      "description": "Bootstrap Kubernetes the hard way. No scripts.",
+      "language": "Unknown",
+      "stars": "50,108",
+      "forks": "15,916",
+      "stars_today": "105 stars today",
+      "zh_description": "Kubernetes The Hard Way 是一份教程，逐项演示引导一个 Kubernetes 集群所需完成的任务，刻意绕远路而不借助自动化。README 说明其面向学习，结果不应视为可投产，社区支持可能有限。",
+      "problem": "替代一键自动化部署脚本，用逐步手工配置暴露搭建 Kubernetes 的每个环节。",
+      "key_features": [
+        "以教程形式逐步搭建 Kubernetes 集群",
+        "不提供自动化脚本，需手工执行每一步",
+        "目标为理解引导集群所需的各项任务"
+      ],
+      "use_cases": [
+        "按教程步骤手工引导 Kubernetes 集群的各组件",
+        "通过逐项配置理解集群从零引导的过程"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2025-04-10T06:11:47Z"
+    },
+    {
+      "rank": 9,
+      "owner": "shy3130",
+      "name": "tick-stock-panel",
+      "url": "https://github.com/shy3130/tick-stock-panel",
+      "description": "TSP自托管、零运维的 A 股「选股 + 监控 + 回测」量化工作台 | LLM能力驱使策略定制+个股分析+复盘 | 自由接入第三方数据源与个性化扩展数据 | 个人开源",
+      "language": "Python",
+      "stars": "5,117",
+      "forks": "1,253",
+      "stars_today": "31 stars today",
+      "zh_description": "TSP 是自托管 A 股量化工作台，以 Docker 单容器部署，数据落在本地 Parquet。插件化数据源经能力路由矩阵按 6 类数据集独立路由，用 Polars 计算 68 列指标，DuckDB 存储，FastAPI 与 React 18 提供选股、回测、监控页面和 AI 对话助手。",
+      "problem": "替代数据源绑死、选股与回测监控各用一套工具的脚本拼装方式，统一 enriched 数据口径。",
+      "key_features": [
+        "能力路由矩阵：6 类数据集按源能力独立路由",
+        "选股引擎：25 个内置策略加自定义信号",
+        "回测支持 T+1、费用、滑点与因子归因",
+        "监控中心四类规则 AND/OR、语音播报与飞书推送",
+        "因子平台 DSL 自定义因子，样本外挖掘多因子组合"
+      ],
+      "use_cases": [
+        "用内置策略或自定义信号扫描全 A 股完成选股",
+        "按区间回测策略，查看净值、夏普与交易明细并导出 CSV",
+        "配置竞价、盘中、偏移异动规则，接收弹窗与飞书推送"
+      ],
+      "topics": [
+        "a-stock",
+        "ai-agent",
+        "aigc",
+        "backtesting",
+        "daily",
+        "duckdb",
+        "fastapi",
+        "llm",
+        "polars",
+        "quant",
+        "quantitative-finance",
+        "quantitative-trading",
+        "react",
+        "screener",
+        "self-hosted",
+        "stock",
+        "stock-analysis",
+        "tdx",
+        "tickflow",
+        "tsp"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-25T14:38:45Z"
+    },
+    {
+      "rank": 10,
+      "owner": "google",
+      "name": "ax",
+      "url": "https://github.com/google/ax",
+      "description": "Google's open agentic orchestration runtime",
+      "language": "Go",
+      "stars": "11,417",
+      "forks": "550",
+      "stars_today": "1,386 stars today",
+      "zh_description": "AX 是声明式的高吞吐编排器，接收 ax.io/v1alpha1 的 Task、Workspace、Model 清单，在 Agent Substrate 沙箱中执行 agent 工作负载，按清单预置 Git 仓库、MCP 服务器与技能包，并通过 gRPC 控制面管理。",
+      "problem": "替代手工为每个 agent 单独搭建隔离环境、配置 Git 仓库与模型凭据的分散流程。",
+      "key_features": [
+        "Task、Workspace、Model 三类声明式原语",
+        "依赖 Agent Substrate 提供沙箱隔离与资源限制",
+        "Model 凭据来自 Kubernetes secret",
+        "ax suspend / ax resume 暂停并恢复 agent",
+        "ax ssh 进入运行中的 agent 沙箱"
+      ],
+      "use_cases": [
+        "用 ax apply -f task.yaml 提交任务，再用 ax watch 观察启动状态",
+        "在 Workspace 中预先接好 Git 仓库、MCP 服务器和技能包",
+        "通过 ax ssh 进入沙箱执行 ls -al /workspace 检查内容"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-25T16:54:07Z"
+    }
+  ]
+}
