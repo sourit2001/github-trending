@@ -1,0 +1,310 @@
+{
+  "collected_at": "2026-09-26T21:09:18.978985+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "paperclipai",
+      "name": "paperclip",
+      "url": "https://github.com/paperclipai/paperclip",
+      "description": "The open-source app everyone uses to manage agents at work",
+      "language": "TypeScript",
+      "stars": "87,022",
+      "forks": "15,404",
+      "stars_today": "2,589 stars today",
+      "zh_description": "Paperclip 由 Node.js 服务端和 React 界面组成，用于编排一组 AI agent 运营业务。用户先定义业务目标，再按组织架构配置 CEO、CTO、工程师、设计、市场等 agent，设定预算并审批策略；agent 按心跳唤醒、认领任务并在仪表盘上汇报任务与成本。",
+      "problem": "替代在多个聊天窗口与脚本间手工分派 agent 任务、另用表格记录额度与进度的流程。",
+      "key_features": [
+        "组织架构：角色、汇报线与职位描述",
+        "心跳机制：agent 按计划唤醒、查看并执行任务",
+        "每个 agent 月度预算，触及上限即停止",
+        "工单系统：记录对话、决策与工具调用审计日志",
+        "单次部署支持多组织，数据完全隔离"
+      ],
+      "use_cases": [
+        "为目标配置 CEO、工程师、市场等 agent 团队并设定预算",
+        "通过审批门与回滚暂停、终止或调整 agent 策略",
+        "导出或导入含组织、agent 与技能的公司模板"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-09-26T16:50:06Z"
+    },
+    {
+      "rank": 2,
+      "owner": "vectorize-io",
+      "name": "hindsight",
+      "url": "https://github.com/vectorize-io/hindsight",
+      "description": "Hindsight: Agent Memory That Learns",
+      "language": "Python",
+      "stars": "31,992",
+      "forks": "3,557",
+      "stars_today": "2,152 stars today",
+      "zh_description": "Hindsight 是面向 agent 的长期记忆系统，提供 server、Python 与 Node 客户端及 Python 嵌入模式。通过 retain、recall、reflect 三个操作写入、检索与反思记忆，并组织记忆类型、观察、心智模型、知识页面与记忆库。可用两行 LLM wrapper、MCP server 或集成方式接入 agent。",
+      "problem": "替代仅回溯对话历史的 RAG 与知识图谱式记忆方案，让 agent 能积累并学习。",
+      "key_features": [
+        "retain / recall / reflect 三种记忆操作",
+        "记忆类型、观察、心智模型与知识页面",
+        "记忆库（banks）划分与组织记忆",
+        "两行代码的 LLM wrapper 接入",
+        "提供 MCP server 与无需服务端的 Python 嵌入模式"
+      ],
+      "use_cases": [
+        "为编码 agent 接入长期记忆并跨会话保留上下文",
+        "用记忆库隔离不同 agent 或项目的记忆",
+        "在无 server 情况下以 Python 嵌入方式使用记忆"
+      ],
+      "topics": [
+        "agentic-ai",
+        "agents",
+        "ai-memory",
+        "memory"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-26T14:14:46Z"
+    },
+    {
+      "rank": 3,
+      "owner": "NVIDIA",
+      "name": "Model-Optimizer",
+      "url": "https://github.com/NVIDIA/Model-Optimizer",
+      "description": "A unified library of SOTA model optimization techniques like quantization, distillation, pruning, neural architecture search, speculative decoding, etc. It compresses deep learning models for downstream deployment frameworks like TensorRT-LLM, TensorRT, vLLM, etc. to optimize inference speed.",
+      "language": "Python",
+      "stars": "4,708",
+      "forks": "666",
+      "stars_today": "354 stars today",
+      "zh_description": "NVIDIA Model Optimizer 接收 Hugging Face、PyTorch 或 ONNX 模型，提供 Python API 组合量化、剪枝、神经架构搜索、蒸馏、投机解码与稀疏化等技术，导出优化后的量化检查点，供 TensorRT-LLM、TensorRT、vLLM 等下游推理框架部署。",
+      "problem": "统一此前分散的量化、剪枝、蒸馏、NAS 等模型优化技术实现。",
+      "key_features": [
+        "量化、剪枝、NAS、蒸馏、投机解码与稀疏化",
+        "支持 Hugging Face、PyTorch、ONNX 模型输入",
+        "Python API 组合技术并导出量化检查点",
+        "集成 Megatron-Bridge、Megatron-LM 与 Hugging Face Accelerate",
+        "导出检查点可直接用于 TensorRT-LLM、vLLM 部署"
+      ],
+      "use_cases": [
+        "对 PyTorch 或 ONNX 模型执行量化并导出检查点",
+        "在 Megatron-LM 训练流程中应用蒸馏与剪枝",
+        "将优化后的模型部署到 TensorRT-LLM 或 vLLM"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-26T18:29:27Z"
+    },
+    {
+      "rank": 4,
+      "owner": "dream-num",
+      "name": "univer",
+      "url": "https://github.com/dream-num/univer",
+      "description": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
+      "language": "TypeScript",
+      "stars": "19,151",
+      "forks": "1,630",
+      "stars_today": "845 stars today",
+      "zh_description": "Univer 是开源 Office SDK，把电子表格、文档、演示、Bases、Boards 拆成可组合插件。借助 Canvas 渲染引擎、公式引擎与统一 Facade API，既能在浏览器嵌入编辑界面，也能在 Node.js 无头处理工作簿。",
+      "problem": "替代把 Office 编辑寄托在固定 UI 的托管应用、或只能查看电子表格文件的方案。",
+      "key_features": [
+        "插件优先架构，能力可增删替换或懒加载",
+        "Canvas 渲染引擎承载大型可编辑文档面",
+        "Facade API 操作 workbook、worksheet、range、公式与事件",
+        "浏览器与 Node.js 同构，共用同一套架构",
+        "Agent 通过结构化 API 编辑，用 worktree 隔离草稿供人复核"
+      ],
+      "use_cases": [
+        "在 SaaS 或内部工具中嵌入电子表格与文档编辑",
+        "在 Node.js 服务端按同一架构处理工作簿内容",
+        "让 agent 生成绑定单元格的仪表盘与交互报告，再由人审核合并"
+      ],
+      "topics": [
+        "board",
+        "collaboration",
+        "data-table",
+        "doc",
+        "docx",
+        "excel",
+        "grid",
+        "pdf",
+        "ppt",
+        "pptx",
+        "presentation",
+        "sdk",
+        "sheet",
+        "slides",
+        "spreadsheet",
+        "table",
+        "word",
+        "wordprocessor",
+        "xlsx"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-24T14:02:42Z"
+    },
+    {
+      "rank": 5,
+      "owner": "tensorflow",
+      "name": "tensorflow",
+      "url": "https://github.com/tensorflow/tensorflow",
+      "description": "An Open Source Machine Learning Framework for Everyone",
+      "language": "C++",
+      "stars": "200,423",
+      "forks": "77,584",
+      "stars_today": "31 stars today",
+      "zh_description": "TensorFlow 是端到端开源机器学习平台，由工具、库与社区资源组成生态，供研究者推进机器学习与神经网络研究，也供开发者构建并部署机器学习应用。它提供稳定的 Python 与 C++ API，并为其他语言提供不保证向后兼容的 API。",
+      "problem": "替代在分散的机器学习工具与库之间自行拼接流程，统一提供端到端平台。",
+      "key_features": [
+        "端到端开源机器学习平台",
+        "工具、库与社区资源的完整生态",
+        "提供稳定的 Python API",
+        "提供稳定的 C++ API",
+        "其他语言 API 不保证向后兼容"
+      ],
+      "use_cases": [
+        "用 Python API 构建并部署机器学习应用",
+        "用 C++ API 调用机器学习能力",
+        "开展机器学习与神经网络研究"
+      ],
+      "topics": [
+        "deep-learning",
+        "deep-neural-networks",
+        "distributed",
+        "machine-learning",
+        "ml",
+        "neural-network",
+        "python",
+        "tensorflow"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-26T19:36:23Z"
+    },
+    {
+      "rank": 6,
+      "owner": "openbao",
+      "name": "openbao",
+      "url": "https://github.com/openbao/openbao",
+      "description": "OpenBao is a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.",
+      "language": "Go",
+      "stars": "7,967",
+      "forks": "591",
+      "stars_today": "360 stars today",
+      "zh_description": "OpenBao 用于管理、存储和分发敏感数据，对象包括 secrets、证书和密钥。使用者把需要保管的敏感数据交给它集中存放，由它负责组织与分发，调用方据此获取所需的 secrets、证书或密钥。README 同时给出安全问题的负责披露邮箱 openbao-security@lists.openssf.org。",
+      "problem": "替代将密钥、证书与 secrets 分散保存、人工传递的手工方式",
+      "key_features": [
+        "管理、存储并分发敏感数据",
+        "覆盖 secrets、证书与密钥三类对象",
+        "通过指定邮箱负责披露安全漏洞",
+        "提供 Zulip 讨论、支持与工作组频道"
+      ],
+      "use_cases": [
+        "把应用依赖的 secrets 集中存放并分发",
+        "统一保管与分发证书和密钥",
+        "按披露流程上报 OpenBao 安全漏洞"
+      ],
+      "topics": [
+        "go",
+        "secret-management",
+        "security"
+      ],
+      "license": "MPL-2.0",
+      "pushed_at": "2026-09-24T20:34:53Z"
+    },
+    {
+      "rank": 7,
+      "owner": "block",
+      "name": "buzz",
+      "url": "https://github.com/block/buzz",
+      "description": "A hive mind communication platform",
+      "language": "Rust",
+      "stars": "34,796",
+      "forks": "4,594",
+      "stars_today": "367 stars today",
+      "zh_description": "Buzz 是可自托管的 Nostr 中继工作区，人类与 AI agent 共享同一房间。客户端经 WebSocket 与 REST 收发事件，中继按 NIP-01 记录、NIP-42 认证，提供频道、私信、媒体、工作流与 git 接口，事件存入 Postgres 并支持全文搜索。",
+      "problem": "替代聊天、代码托管、机器人、CI 面板、发布工具与搜索索引等多套分散工具加胶水代码的拼凑。",
+      "key_features": [
+        "基于 Nostr 中继，遵循 NIP-01 与 NIP-42 认证",
+        "人、agent、工作流、仓库共用同一签名事件日志",
+        "提供频道、私信、媒体、工作流与 git REST 接口",
+        "Postgres 全文搜索、Redis 发布订阅、S3/MinIO Blossom 存储",
+        "buzz-acp 桥接 ACP 与 MCP 协议"
+      ],
+      "use_cases": [
+        "让 AI agent 在中继内开仓库、提交补丁并评审代码",
+        "通过 WebSocket 与 REST 管理频道、私信和媒体",
+        "借助统一事件日志与审计记录检索社区内所有操作"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-26T16:10:35Z"
+    },
+    {
+      "rank": 8,
+      "owner": "microsoft",
+      "name": "vscode",
+      "url": "https://github.com/microsoft/vscode",
+      "description": "Visual Studio Code",
+      "language": "TypeScript",
+      "stars": "193,053",
+      "forks": "43,520",
+      "stars_today": "78 stars today",
+      "zh_description": "Visual Studio Code",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "editor",
+        "electron",
+        "microsoft",
+        "typescript",
+        "visual-studio-code"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-26T20:41:39Z"
+    },
+    {
+      "rank": 9,
+      "owner": "anthropics",
+      "name": "claude-code-action",
+      "url": "https://github.com/anthropics/claude-code-action",
+      "description": "",
+      "language": "TypeScript",
+      "stars": "9,064",
+      "forks": "2,161",
+      "stars_today": "15 stars today",
+      "zh_description": "用于 GitHub PR 与 issue 的 Claude Code Action，按 @claude 提及、issue 指派或显式提示词判断是否激活，可回答代码问题、评审 PR、实现修复与重构，认证支持 Anthropic API、Bedrock、Vertex AI 与 Microsoft Foundry。",
+      "problem": "替代人工在 PR 与 issue 中逐条阅读评论并手动编写代码改动的流程。",
+      "key_features": [
+        "按 @claude 提及、issue 指派或提示词自动选择执行模式",
+        "认证支持 Anthropic API、Bedrock、Vertex AI、Foundry",
+        "可回答问题、评审 PR、实现修复与重构",
+        "进度以复选框形式随任务完成动态更新",
+        "结构化 JSON 输出自动转为 GitHub Action 输出"
+      ],
+      "use_cases": [
+        "在 PR 评论中 @claude 请求讲解代码或提出改进",
+        "让 Claude 实现简单修复、重构或新功能",
+        "在自托管 runner 上以 JSON 输出驱动自动化任务"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-09-25T21:52:11Z"
+    },
+    {
+      "rank": 10,
+      "owner": "actions",
+      "name": "runner-images",
+      "url": "https://github.com/actions/runner-images",
+      "description": "GitHub Actions runner images",
+      "language": "PowerShell",
+      "stars": "13,277",
+      "forks": "3,863",
+      "stars_today": "13 stars today",
+      "zh_description": "GitHub Actions runner images",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-09-25T16:37:24Z"
+    }
+  ]
+}
