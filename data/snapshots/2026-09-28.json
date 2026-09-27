@@ -1,0 +1,293 @@
+{
+  "collected_at": "2026-09-27T21:20:10.747673+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "paperclipai",
+      "name": "paperclip",
+      "url": "https://github.com/paperclipai/paperclip",
+      "description": "The open-source app everyone uses to manage agents at work",
+      "language": "TypeScript",
+      "stars": "89,568",
+      "forks": "15,633",
+      "stars_today": "2,527 stars today",
+      "zh_description": "Node.js 服务端加 React UI：接收自带的各种智能体（OpenClaw、Claude Code、Codex、Cursor、Bash、HTTP），按组织架构分配任务，靠心跳唤醒执行，在一个仪表盘跟踪任务进度与每月预算消耗。",
+      "problem": "替代手工分派任务、逐一点算各智能体花费、用分散工具跟踪多智能体进度的流程。",
+      "key_features": [
+        "自带智能体，任意运行时接入同一组织架构",
+        "每个智能体设月度预算，触顶即停止",
+        "按心跳唤醒，沿组织架构上下委派任务",
+        "工单系统记录工具调用与不可变审计日志",
+        "多组织部署，数据完全隔离"
+      ],
+      "use_cases": [
+        "定义业务目标，组建含 CEO、CTO、工程师的智能体团队并审批运行",
+        "审批录用、暂停或终止任意智能体，回滚配置变更",
+        "以组织、智能体、技能为单位导出导入公司模板"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-09-27T21:06:53Z"
+    },
+    {
+      "rank": 2,
+      "owner": "vectorize-io",
+      "name": "hindsight",
+      "url": "https://github.com/vectorize-io/hindsight",
+      "description": "Hindsight: Agent Memory That Learns",
+      "language": "Python",
+      "stars": "37,074",
+      "forks": "4,823",
+      "stars_today": "4,463 stars today",
+      "zh_description": "智能体记忆系统，提供 retain、recall、reflect 三个操作，把对话与经验存为记忆类型、观测、心智模型与知识页，并划分为多个记忆库；支持服务端、Python 嵌入式与 MCP 接入。",
+      "problem": "替代仅靠 RAG 或知识图谱回放对话历史、智能体无法积累经验的记忆方式。",
+      "key_features": [
+        "retain / recall / reflect 三种记忆操作",
+        "记忆类型、观测、心智模型与知识页",
+        "用记忆库（banks）划分记忆范围",
+        "LLM Wrapper 以两行代码接入",
+        "提供 MCP 服务器与多平台集成"
+      ],
+      "use_cases": [
+        "为智能体接入长期记忆，跨会话保留并调用经验",
+        "通过 MCP 服务器让编码智能体读取记忆库",
+        "以 Python 嵌入式方式运行，无需启动服务端"
+      ],
+      "topics": [
+        "agentic-ai",
+        "agents",
+        "ai-memory",
+        "memory"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-26T14:14:46Z"
+    },
+    {
+      "rank": 3,
+      "owner": "debpalash",
+      "name": "VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "language": "Python",
+      "stars": "39,815",
+      "forks": "4,733",
+      "stars_today": "3,060 stars today",
+      "zh_description": "VoiceStudio 在本地硬件上运行语音克隆、语音设计与视频配音，支持浮窗听写、转录和有声书批量生成，覆盖 646 种语言；默认引擎为 k2-fsa/OmniVoice，可切换其他引擎。",
+      "problem": "替代 ElevenLabs 等云端语音服务，把克隆、配音、转录放在本地工作流中完成。",
+      "key_features": [
+        "语音克隆与自定义语音设计",
+        "视频配音，按时间轴对齐语音",
+        "浮窗听写、转录与有声书批量任务",
+        "本地 API 与 MCP 供智能体调用",
+        "本地优先，远程 worker 为可选项"
+      ],
+      "use_cases": [
+        "克隆音色并生成故事或有声书音频",
+        "为视频配上按时间对齐的配音",
+        "用浮窗听写把口述内容转成文本"
+      ],
+      "topics": [
+        "ai",
+        "audiobook",
+        "cuda",
+        "dubbing",
+        "elevenlabs-alternative",
+        "huggingface",
+        "local-first",
+        "mlx",
+        "omnivoice-studio",
+        "speech-to-text",
+        "tauri",
+        "text-to-speech",
+        "transcription",
+        "translate",
+        "tts",
+        "voice-ai",
+        "voice-cloning",
+        "voice-generation",
+        "voicestudio",
+        "workflow"
+      ],
+      "license": "AGPL-3.0",
+      "pushed_at": "2026-09-27T13:29:55Z"
+    },
+    {
+      "rank": 4,
+      "owner": "InfinityLoop1308",
+      "name": "PipePipe",
+      "url": "https://github.com/InfinityLoop1308/PipePipe",
+      "description": "An open-source Android app to let you browse YouTube and other services freely.",
+      "language": "Shell",
+      "stars": "6,532",
+      "forks": "218",
+      "stars_today": "139 stars today",
+      "zh_description": "基于 NewPipe 分叉的 Android 应用，用于浏览 YouTube 等服务。支持弹幕式浮层显示直播聊天、AV1 与 VP9 编解码播放，以及音乐播放器模式与后台播放。登录 Cookie 仅在设定的场景使用，YouTube 下只用于获取播放流。",
+      "problem": "上游 NewPipe 的更新节奏与开发取向受限，该分支自 2022 年起独立开发且与上游互不推送更新。",
+      "key_features": [
+        "弹幕式浮层显示直播聊天",
+        "支持 AV1 与 VP9 编解码播放",
+        "音乐播放器模式与后台播放",
+        "按场景配置登录 Cookie 用途"
+      ],
+      "use_cases": [
+        "在 Android 上播放 YouTube 视频与直播",
+        "以弹幕浮层形式观看直播聊天",
+        "用后台播放模式收听音乐内容"
+      ],
+      "topics": [
+        "android",
+        "mediaplayer",
+        "newpipe",
+        "sponsorblock",
+        "youtube"
+      ],
+      "license": "GPL-3.0",
+      "pushed_at": "2026-09-26T08:12:59Z"
+    },
+    {
+      "rank": 5,
+      "owner": "vercel-labs",
+      "name": "scriptc",
+      "url": "https://github.com/vercel-labs/scriptc",
+      "description": "TypeScript-to-Native Compiler",
+      "language": "TypeScript",
+      "stars": "5,353",
+      "forks": "138",
+      "stars_today": "186 stars today",
+      "zh_description": "用 TypeScript 编译器做解析与类型检查，把 TypeScript 和 JavaScript 编译为带类型的 IR、可读 C、文本 LLVM IR、原生汇编与目标文件、原生可执行文件及 WebAssembly 模块。静态构建自带小型原生运行时，不含 Node 或 JS 引擎；不能静态编译的代码输出诊断信息。",
+      "problem": "替代手工调用 clang 编译程序与运行时 C 的流程；clang 在此仅作为平台链接驱动。",
+      "key_features": [
+        "输出带类型 IR、可读 C 与文本 LLVM IR",
+        "生成原生汇编、目标文件与可执行文件",
+        "生成 WebAssembly 模块，面向 WASI Preview 1",
+        "--dynamic 为 npm 包与 any 类型代码内嵌 quickjs-ng",
+        "静态构建自带原生运行时，不含 JS 引擎"
+      ],
+      "use_cases": [
+        "把 TypeScript 源文件编译成本地可执行文件",
+        "查看生成的 C 代码或 LLVM IR 中间产物",
+        "经 WASI Preview 1 生成 WebAssembly 模块"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-27T20:56:58Z"
+    },
+    {
+      "rank": 6,
+      "owner": "mvschwarz",
+      "name": "openrig",
+      "url": "https://github.com/mvschwarz/openrig",
+      "description": "Multi-agent harness that runs Claude Code and Codex together as one system",
+      "language": "TypeScript",
+      "stars": "883",
+      "forks": "96",
+      "stars_today": "114 stars today",
+      "zh_description": "用 YAML 定义由 Claude Code 与 Codex 组成的智能体团队，一条命令启动。它是本地 Hono HTTP 守护进程加 CLI、终端 UI 与 MCP 服务器，构建在 tmux、SQLite 与运行时适配器之上，可启动团队、查看状态、发送消息并管理上下文。",
+      "problem": "把散落在多个终端会话中的 AI 编码智能体收拢为持久团队，统一拓扑、消息与上下文地址。",
+      "key_features": [
+        "YAML 定义智能体团队，一条命令启动",
+        "CLI 支持启动团队、查看状态与发消息",
+        "MCP 工具 rig_up、rig_ps、rig_send 管理拓扑",
+        "原生运行 Claude Code 与 Codex 会话及终端节点",
+        "由 Hono 守护进程、SQLite 与 tmux 组成"
+      ],
+      "use_cases": [
+        "让 lead agent 协调跨团队专家并汇总结果",
+        "用 TUI 拓扑浏览器查看座位、Specs 与 Terminals",
+        "通过 MCP 工具让智能体自行管理团队拓扑"
+      ],
+      "topics": [
+        "agent-harness",
+        "agent-orchestration",
+        "agent-skills",
+        "ai-coding",
+        "claude-code",
+        "cli",
+        "codex-cli",
+        "multi-agent",
+        "multi-agent-systems",
+        "tmux",
+        "typescript"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-27T17:06:55Z"
+    },
+    {
+      "rank": 7,
+      "owner": "dream-num",
+      "name": "univer",
+      "url": "https://github.com/dream-num/univer",
+      "description": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
+      "language": "TypeScript",
+      "stars": "20,102",
+      "forks": "1,702",
+      "stars_today": "920 stars today",
+      "zh_description": "Univer 是开源 Office SDK，提供表格、文档、演示、Bases、Boards 等构建块，采用插件架构与 Canvas 渲染引擎，通过统一 Facade API 操作工作簿、工作表、区域、公式、命令和事件，可在浏览器与 Node.js 同构运行。",
+      "problem": "替代把 Office 编辑能力托管在固定宿主应用中的限制，开发者需自行拼接表格、文档与演示组件。",
+      "key_features": [
+        "插件优先架构，能力以可组合插件交付",
+        "Canvas 渲染引擎支持大型可编辑文档面",
+        "Facade API 统一操作工作簿、区域与公式",
+        "预设模式与插件模式两种集成方式",
+        "AI 代理可通过结构化 API 编辑并校验内容"
+      ],
+      "use_cases": [
+        "在 SaaS 或内部工具中嵌入表格与文档编辑",
+        "在 Node.js 服务端无界面处理工作簿与文档",
+        "让 AI 代理在隔离草稿中修改 Office 内容并由人审核合并"
+      ],
+      "topics": [
+        "board",
+        "collaboration",
+        "data-table",
+        "doc",
+        "docx",
+        "excel",
+        "grid",
+        "pdf",
+        "ppt",
+        "pptx",
+        "presentation",
+        "sdk",
+        "sheet",
+        "slides",
+        "spreadsheet",
+        "table",
+        "word",
+        "wordprocessor",
+        "xlsx"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-27T19:58:06Z"
+    },
+    {
+      "rank": 8,
+      "owner": "willfaust",
+      "name": "Madeira",
+      "url": "https://github.com/willfaust/Madeira",
+      "description": "Run x86-64 Windows PC games on jailed iOS via FEX-Emu + Wine + DXMT",
+      "language": "C",
+      "stars": "782",
+      "forks": "152",
+      "stars_today": "117 stars today",
+      "zh_description": "Madeira 面向未越狱 iPhone，将 Wine（ARM64EC）、FEX-Emu 的 x86-64 到 ARM64 翻译层与 DXMT 的 D3D11 到 Metal 转换组合为单个 Mach 进程，wineserver 作为线程而非独立进程运行。",
+      "problem": "替代在 iOS 上运行 x86-64 Windows PC 游戏时依赖越狱或分离进程的既有方式。",
+      "key_features": [
+        "运行未越狱 iOS 上的 Windows PC 游戏",
+        "FEX-Emu 做 x86-64 到 ARM64 翻译",
+        "DXMT 将 D3D11 转为 Metal",
+        "Wine 以 ARM64EC 运行",
+        "wineserver 作为线程运行于单一 Mach 进程"
+      ],
+      "use_cases": [
+        "在非越狱 iPhone 上启动 x86-64 Windows 游戏",
+        "通过 D3D11 到 Metal 转换渲染 Windows 游戏画面"
+      ],
+      "topics": [],
+      "license": "GPL-3.0",
+      "pushed_at": "2026-09-25T07:23:42Z"
+    }
+  ]
+}
