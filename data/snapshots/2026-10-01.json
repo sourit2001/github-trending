@@ -1,0 +1,384 @@
+{
+  "collected_at": "2026-09-30T22:14:41.023013+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "NVIDIA",
+      "name": "OpenShell",
+      "url": "https://github.com/NVIDIA/OpenShell",
+      "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
+      "language": "Rust",
+      "stars": "12,478",
+      "forks": "1,534",
+      "stars_today": "1,280 stars today",
+      "zh_description": "接收每个 AI agent 的策略声明，在内核级沙箱中于运行时执行：限制可访问文件与可发起的系统调用，每次网络连接出沙箱前先过策略检查。凭据不下发给 agent，仅在发往已批准端点的请求中注入，因此 agent 可读文件、装包、调 API 而不获得数据、密钥与网络的无限制访问。",
+      "problem": "替代手动为自主 AI agent 逐项开放文件、密钥与网络权限的流程。",
+      "key_features": [
+        "内核级执行：沙箱限制文件访问与系统调用",
+        "每次网络连接出沙箱前先做策略检查",
+        "凭据不暴露给 agent，仅注入已批准端点",
+        "形式化验证策略变更，标记新增主机或 API 访问",
+        "提供 OpenShell skills，教 agent 驱动 CLI 与写策略"
+      ],
+      "use_cases": [
+        "让 agent 在沙箱内读取文件、安装包并调用 API",
+        "在策略生效前审核其新授予的主机与 API 方法访问",
+        "用 skills 让编码 agent 驱动 OpenShell CLI 并调试网关"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-30T21:59:41Z"
+    },
+    {
+      "rank": 2,
+      "owner": "debpalash",
+      "name": "VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "language": "Python",
+      "stars": "50,325",
+      "forks": "5,588",
+      "stars_today": "3,481 stars today",
+      "zh_description": "接收文本、语音样本与视频，在本地硬件上运行语音引擎（默认 VoiceStudio，由 k2-fsa/OmniVoice 驱动，可切换其他引擎），完成语音克隆、自定义语音设计、按时间轴配音、转录与听写，产出配音视频、故事与有声书、批量语音作业，支持 646 种语言；远程服务与用量分析为可选。",
+      "problem": "替代依赖云端闭源语音服务的克隆、配音与转录流程。",
+      "key_features": [
+        "克隆声音或自行设计语音",
+        "用定时语音为视频配音",
+        "浮动组件进行听写",
+        "生成故事、有声书与批量作业",
+        "本地 API 与 MCP 供 agent 连接"
+      ],
+      "use_cases": [
+        "为视频生成与画面时间对齐的配音音轨",
+        "克隆声音后将文本批量合成为有声书音频",
+        "用浮动听写组件把口述内容转成文字"
+      ],
+      "topics": [
+        "ai",
+        "audiobook",
+        "cuda",
+        "dubbing",
+        "elevenlabs-alternative",
+        "huggingface",
+        "local-first",
+        "mlx",
+        "omnivoice-studio",
+        "speech-to-text",
+        "tauri",
+        "text-to-speech",
+        "transcription",
+        "translate",
+        "tts",
+        "voice-ai",
+        "voice-cloning",
+        "voice-generation",
+        "voicestudio",
+        "workflow"
+      ],
+      "license": "AGPL-3.0",
+      "pushed_at": "2026-09-29T15:45:28Z"
+    },
+    {
+      "rank": 3,
+      "owner": "mvschwarz",
+      "name": "openrig",
+      "url": "https://github.com/mvschwarz/openrig",
+      "description": "Multi-agent harness that runs Claude Code and Codex together as one system",
+      "language": "TypeScript",
+      "stars": "2,974",
+      "forks": "206",
+      "stars_today": "622 stars today",
+      "zh_description": "接收 YAML 定义的 agent 团队（包含 Claude Code 与 Codex），由本地守护进程、CLI、终端 UI 与 MCP 服务在 tmux 中启动为一个系统；lead agent 可协调跨团队专家，返回结果与需人工处理的决策，团队工作与上下文保存在同一地址，状态存于 SQLite。",
+      "problem": "替代多开终端会话手工协调 Claude Code 与 Codex 的做法。",
+      "key_features": [
+        "用 YAML 定义 agent 团队，一条命令启动",
+        "本地守护进程 + CLI + TUI + MCP 服务",
+        "基于 tmux，SQLite 保存状态",
+        "TUI 含拓扑、表格、图视图与 Feed",
+        "原生 Claude Code、Codex 会话与 Pi 适配器"
+      ],
+      "use_cases": [
+        "从一个仓库和一项改动开始组建 agent 团队",
+        "通过 lead agent 协调跨团队专家并收取结果",
+        "用 rig_up、rig_ps、rig_send 等 MCP 工具管理自身拓扑"
+      ],
+      "topics": [
+        "agent-harness",
+        "agent-orchestration",
+        "agent-skills",
+        "ai-coding",
+        "claude-code",
+        "cli",
+        "codex-cli",
+        "multi-agent",
+        "multi-agent-systems",
+        "tmux",
+        "typescript"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-30T22:10:41Z"
+    },
+    {
+      "rank": 4,
+      "owner": "harry0703",
+      "name": "MoneyPrinterTurbo",
+      "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
+      "language": "Python",
+      "stars": "127,504",
+      "forks": "19,948",
+      "stars_today": "464 stars today",
+      "zh_description": "输入主题或关键词，由大模型生成多语言脚本，再经配音、素材匹配、字幕与配乐，用 FFmpeg 合成高清短视频；提供 AI Agent、WebUI、API、CLI 四种入口。",
+      "problem": "替代手工写脚本、逐条配音、找素材、加字幕再剪辑的分散流程。",
+      "key_features": [
+        "AI Agent、WebUI、API、CLI 四种使用入口",
+        "从主题自动完成脚本、配音、素材、字幕与剪辑",
+        "支持批量生成多条成片与任务历史记录",
+        "素材可上传本地图片视频，或取自 Pexels、Pixabay、Coverr"
+      ],
+      "use_cases": [
+        "输入一个主题批量生成多条竖屏短视频",
+        "用自定义脚本与本地素材合成带字幕视频",
+        "通过 API 或 CLI 接入自动化生成流程"
+      ],
+      "topics": [
+        "ai-video-generator",
+        "content-creation",
+        "ffmpeg",
+        "instagram-reels",
+        "llm",
+        "python",
+        "short-video",
+        "subtitles",
+        "text-to-speech",
+        "tiktok",
+        "video-automation",
+        "video-workflow",
+        "workflow-automation",
+        "youtube-shorts"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-30T12:59:35Z"
+    },
+    {
+      "rank": 5,
+      "owner": "ComposioHQ",
+      "name": "awesome-claude-skills",
+      "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
+      "language": "Python",
+      "stars": "76,103",
+      "forks": "8,879",
+      "stars_today": "118 stars today",
+      "zh_description": "收录 1000+ 个 Claude Skills 与插件的清单：skill 是含 SKILL.md 的文件夹，该文件带 name、description 的 YAML frontmatter 与 Markdown 指令，可选附 scripts、references、assets。",
+      "problem": "此前需在多个仓库和社区自行搜集 Claude Skill，缺少统一清单。",
+      "key_features": [
+        "收录 1000+ 生产可用的 Claude Skills 与插件",
+        "skill 结构为 SKILL.md 加可选 scripts、references、assets",
+        "渐进加载：会话开始仅载入名称与描述，约 100 tokens",
+        "区分 skill、MCP 服务器与 tool 三层的职责",
+        "支持 Claude Code、Cursor、Gemini CLI、Codex 等"
+      ],
+      "use_cases": [
+        "按文档处理、开发工具等分类查找现成 skill",
+        "依照模板与最佳实践编写自己的 SKILL.md"
+      ],
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "antigravity",
+        "automation",
+        "claude",
+        "claude-code",
+        "codex",
+        "composio",
+        "cursor",
+        "developer-tools",
+        "gemini-cli",
+        "mcp",
+        "openai-codex",
+        "rube",
+        "saas",
+        "skill",
+        "workflow-automation"
+      ],
+      "license": "",
+      "pushed_at": "2026-09-18T07:16:11Z"
+    },
+    {
+      "rank": 6,
+      "owner": "heygen-com",
+      "name": "hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "description": "Write HTML. Render video. Built for agents.",
+      "language": "TypeScript",
+      "stars": "54,675",
+      "forks": "4,970",
+      "stars_today": "352 stars today",
+      "zh_description": "把 HTML、CSS、媒体与可 seek 动画渲染为确定性 MP4：用 data 属性标注时间、时长与轨道，动画可用 GSAP、CSS、Lottie、Three.js、WAAPI，渲染器在无头 Chrome 逐帧 seek 后由 FFmpeg 编码。",
+      "problem": "替代用专有时间线格式手工搭视频、逐帧导出再拼 FFmpeg 命令的流程。",
+      "key_features": [
+        "视频即 HTML，data 属性标记 start、duration、track",
+        "无头 Chrome 逐帧 seek，FFmpeg 编码，同输入同输出",
+        "内置 21 个按需加载的 agent skills 与路由 skill",
+        "无构建步骤，index.html 可直接在浏览器预览"
+      ],
+      "use_cases": [
+        "用 HTML 写合成，浏览器即时预览后渲染 MP4",
+        "在 Docker 或 CI 中做确定性、可回归测试的渲染",
+        "由 AI coding agent 生成合成并调用 CLI 渲染"
+      ],
+      "topics": [
+        "ai",
+        "animation",
+        "ffmpeg",
+        "framework",
+        "gsap",
+        "html",
+        "mcp",
+        "puppeteer",
+        "rendering",
+        "typescript",
+        "video"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-30T22:11:05Z"
+    },
+    {
+      "rank": 7,
+      "owner": "firebase",
+      "name": "firebase-ios-sdk",
+      "url": "https://github.com/firebase/firebase-ios-sdk",
+      "description": "Firebase SDK for Apple App Development",
+      "language": "C++",
+      "stars": "6,751",
+      "forks": "1,798",
+      "stars_today": "4 stars today",
+      "zh_description": "面向 Apple 平台的 Firebase 开源 SDK 源码，包含除 FirebaseAnalytics 之外的全部 Firebase 库，覆盖认证、数据库、存储、消息推送、崩溃报告等组件，支持通过 CocoaPods 或 Swift Package Manager 集成，并预览 Firebase AI Logic 的 Gemini Foundation Models 适配器。",
+      "problem": "替代在 Apple 应用中分别接入账号、数据库、存储与推送等分散后端组件，改为统一 SDK 调用 Firebase 服务。",
+      "key_features": [
+        "包含除 FirebaseAnalytics 外全部 Apple 平台 Firebase 库",
+        "覆盖 Authentication、Database、Storage、Messaging 等组件",
+        "支持 CocoaPods 与 Swift Package Manager 分发",
+        "提供 AI Logic 的 Gemini Foundation Models 适配器预览",
+        "CocoaPods 新版本发布将于 2026 年 10 月后停止"
+      ],
+      "use_cases": [
+        "在 iOS 应用中接入 Firebase Authentication 处理用户登录",
+        "用 Firebase Messaging 与推送通知下发消息",
+        "通过崩溃报告与数据库组件接入线上数据"
+      ],
+      "topics": [
+        "ai",
+        "analytics",
+        "authentication",
+        "crash-reporting",
+        "database",
+        "database-as-a-service",
+        "firebase",
+        "firebase-auth",
+        "firebase-authentication",
+        "firebase-database",
+        "firebase-messaging",
+        "firebase-storage",
+        "gemini",
+        "ios-sdk",
+        "objective-c",
+        "push-notifications",
+        "storage-service"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-30T18:18:55Z"
+    },
+    {
+      "rank": 8,
+      "owner": "modelcontextprotocol",
+      "name": "servers",
+      "url": "https://github.com/modelcontextprotocol/servers",
+      "description": "Model Context Protocol Servers",
+      "language": "TypeScript",
+      "stars": "90,789",
+      "forks": "11,723",
+      "stars_today": "48 stars today",
+      "zh_description": "Model Context Protocol（MCP）参考实现服务器集合，同时索引社区构建的服务器与相关资源。每个服务器基于某个 MCP SDK 实现，用于演示 MCP 特性与 SDK 用法，使大语言模型能以受控方式访问工具和数据源；已发布服务器可在 MCP Registry 浏览。",
+      "problem": "为想编写 MCP 服务器的开发者提供可对照的实例，替代仅凭协议文档摸索 SDK 用法的过程。",
+      "key_features": [
+        "MCP 参考实现服务器集合，演示 MCP 特性与 SDK 用法",
+        "提供社区服务器与相关资源索引",
+        "服务器由 C#、Go、Java、Kotlin、PHP、Python 等 MCP SDK 实现",
+        "已发布服务器列表可浏览 MCP Registry",
+        "仓库明确标注为参考实现，非生产就绪方案"
+      ],
+      "use_cases": [
+        "对照参考服务器学习用指定 MCP SDK 编写服务器",
+        "让大语言模型通过 MCP 受控访问工具与数据源",
+        "在 MCP Registry 中查找已发布的 MCP 服务器"
+      ],
+      "topics": [],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-09-30T10:02:11Z"
+    },
+    {
+      "rank": 9,
+      "owner": "byoungd",
+      "name": "up",
+      "url": "https://github.com/byoungd/up",
+      "description": "An advanced guide which might benefit you a lot 🎉 . 韩先凯的人生进阶指南 人生进阶指南 离谱的人生 人生进阶 AI学习 AI指南 韩先凯的AI学习指南 英语学习指南/英语学习教程/英语学习/学英语",
+      "language": "JavaScript",
+      "stars": "66,363",
+      "forks": "6,635",
+      "stars_today": "714 stars today",
+      "zh_description": "《人生进阶指南》中文持续更新书稿，作者韩先凯（离谱），从英语学习出发，写到 AI 学习、真实项目、创业失败与身体恢复。英语部分按 CEFR 自测、认知、词汇、语法、听力、阅读、口语、写作及用 AI 学英语组织，并提供中英文 EPUB 与 PDF 下载及各类证据卡模板。",
+      "problem": "AI 让答案变得廉价，但缺少辨别证据、把建议变成真实作品并复盘的路径。",
+      "key_features": [
+        "提供中文与英文 EPUB、PDF 书稿下载",
+        "附读者实践回执与多种证据卡模板",
+        "按 CEFR 自测组织英语听说读写学习路径",
+        "区分研究结论、个人经验与待验证假设三类信息",
+        "正文采用 CC BY-NC 4.0 许可"
+      ],
+      "use_cases": [
+        "用英语能力诊断与各证据卡记录听说读写首版并复测",
+        "按发现问题到复盘迁移的循环完成一件真实的事",
+        "下载中文或英文 EPUB、PDF 离线阅读全书"
+      ],
+      "topics": [
+        "chinese",
+        "english-learning",
+        "tutorial"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-09-20T04:50:30Z"
+    },
+    {
+      "rank": 10,
+      "owner": "colbymchenry",
+      "name": "codegraph",
+      "url": "https://github.com/colbymchenry/codegraph",
+      "description": "Pre-indexed code knowledge graph, auto syncs on code changes, for Claude Code, Codex, Gemini, Cursor, OpenCode, AntiGravity, Kiro, CoPilot, and Hermes Agent — fewer tokens, fewer tool calls, 100% local",
+      "language": "C",
+      "stars": "72,569",
+      "forks": "4,662",
+      "stars_today": "159 stars today",
+      "zh_description": "CodeGraph 预先把代码库解析成本地 SQLite 知识图谱，记录符号、调用边、文件与依赖，并通过 MCP 服务器向 Claude Code、Cursor 等 AI 代理提供查询：一次调用返回入口点、相关符号、逐字源码、调用路径（含 grep 跟不上的动态分发跳转）与改动影响范围。解析由内置 tree-sitter 语法的 Rust 内核完成，覆盖 20 种语言。",
+      "problem": "替代 AI 代理用 grep、glob 和 Read 逐文件爬取、手工重建调用路径与依赖的流程",
+      "key_features": [
+        "Rust 内核内置 tree-sitter 语法，解析 20 种语言",
+        "FTS5 全文搜索，按名称查找代码",
+        "影响分析：追踪调用者、被调用者与影响半径",
+        "文件监控基于 FSEvents/inotify 原生事件防抖自动同步",
+        "识别 17 个框架的路由文件，关联 URL 与处理器"
+      ],
+      "use_cases": [
+        "回答“请求如何到达数据库”这类跨文件调用链问题",
+        "查询某符号的全部调用者与被调用者，评估改动影响半径",
+        "在 Swift/ObjC 桥接、React Native TurboModules 中追踪跨语言流程"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-09-30T22:10:16Z"
+    }
+  ]
+}
