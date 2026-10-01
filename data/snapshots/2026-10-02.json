@@ -1,0 +1,340 @@
+{
+  "collected_at": "2026-10-01T22:40:11.239120+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "NVIDIA",
+      "name": "OpenShell",
+      "url": "https://github.com/NVIDIA/OpenShell",
+      "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
+      "language": "Rust",
+      "stars": "13,975",
+      "forks": "1,622",
+      "stars_today": "2,503 stars today",
+      "zh_description": "通过策略声明每个 agent 可访问的文件、系统调用与网络；内核级沙箱在运行时执行策略，网络连接离开沙箱前经过策略检查，真实凭据仅注入发往批准端点的请求；策略变更先用形式化验证标出新增的高风险访问并等待人工审查。",
+      "problem": "agent 直接运行会不受限制地接触数据、密钥与网络，缺少可声明、可执行的访问边界。",
+      "key_features": [
+        "内核级沙箱限制文件访问与系统调用",
+        "每条网络连接出沙箱前经过策略检查",
+        "真实凭据仅注入批准端点的请求",
+        "形式化验证策略变更新增的访问",
+        "提供 skills 让编码 agent 驱动 OpenShell CLI"
+      ],
+      "use_cases": [
+        "让 agent 读文件、装包、调 API 而不接触真实密钥",
+        "在策略生效前审查新主机或新 API 方法的访问",
+        "借助 skills 编写沙箱策略并调试 gateway 与推理路由"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-01T22:33:45Z"
+    },
+    {
+      "rank": 2,
+      "owner": "firebase",
+      "name": "firebase-ios-sdk",
+      "url": "https://github.com/firebase/firebase-ios-sdk",
+      "description": "Firebase SDK for Apple App Development",
+      "language": "C++",
+      "stars": "6,850",
+      "forks": "1,806",
+      "stars_today": "112 stars today",
+      "zh_description": "仓库包含除 FirebaseAnalytics 之外所有 Apple 平台 Firebase 库的源码，覆盖认证、实时数据库、存储、消息推送、崩溃报告等模块，通过 CocoaPods 与 Swift Package Manager 分发；Firebase AI Logic 的 Gemini Foundation Models 框架适配器处于预览阶段。",
+      "problem": "认证、数据库、推送、崩溃报告等后端能力原本需在 Apple 应用中逐个自行接入。",
+      "key_features": [
+        "包含除 FirebaseAnalytics 外全部 Apple 平台库源码",
+        "通过 CocoaPods 与 Swift Package Manager 分发",
+        "涵盖 Firebase Auth、Database、Storage、Messaging",
+        "Gemini Foundation Models 适配器提供预览"
+      ],
+      "use_cases": [
+        "在 iOS 应用中接入 Firebase 认证与实时数据库",
+        "为 Apple 应用集成推送通知与崩溃报告",
+        "用 Gemini 模型框架适配器接入 AI Logic"
+      ],
+      "topics": [
+        "ai",
+        "analytics",
+        "authentication",
+        "crash-reporting",
+        "database",
+        "database-as-a-service",
+        "firebase",
+        "firebase-auth",
+        "firebase-authentication",
+        "firebase-database",
+        "firebase-messaging",
+        "firebase-storage",
+        "gemini",
+        "ios-sdk",
+        "objective-c",
+        "push-notifications",
+        "storage-service"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-01T21:40:25Z"
+    },
+    {
+      "rank": 3,
+      "owner": "mvschwarz",
+      "name": "openrig",
+      "url": "https://github.com/mvschwarz/openrig",
+      "description": "Build your own network of agents from Claude Code, Codex and Pi: persistent teams with roles, shared context and owned work.",
+      "language": "TypeScript",
+      "stars": "3,669",
+      "forks": "245",
+      "stars_today": "640 stars today",
+      "zh_description": "用 YAML 定义 agent 团队，一条命令启动。本地由 CLI、TUI、MCP server、Hono HTTP daemon、SQLite 与 tmux 组成：Claude Code 与 Codex 以原生会话运行，Pi 与 Oh My Pi 经 RPC runner 接入；lead agent 可跨团队协调 specialist 并汇总需人工处理的决策。",
+      "problem": "把散落在多个终端会话里的 AI 编码 agent 从一堆 session 变为有角色与共享上下文的持久团队。",
+      "key_features": [
+        "YAML 定义团队并一条命令启动",
+        "同一 rig 中并存 Claude Code 与 Codex",
+        "CLI、TUI、MCP 与 Hono daemon、SQLite、tmux",
+        "MCP 工具 rig_up、rig_ps、rig_send 等",
+        "Pi 与 Oh My Pi 通过 RPC runner 接入"
+      ],
+      "use_cases": [
+        "与 lead agent 对话并跨团队协调 specialist 产出结果",
+        "在 TUI 的拓扑、Feed、Terminals 视图中查看席位状态",
+        "agent 用 MCP 工具管理自身拓扑、发消息与跟踪工作"
+      ],
+      "topics": [
+        "agent-harness",
+        "agent-orchestration",
+        "agent-skills",
+        "ai-coding",
+        "claude-code",
+        "cli",
+        "codex-cli",
+        "multi-agent",
+        "multi-agent-systems",
+        "tmux",
+        "typescript"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-01T22:27:04Z"
+    },
+    {
+      "rank": 4,
+      "owner": "cursor",
+      "name": "plugins",
+      "url": "https://github.com/cursor/plugins",
+      "description": "Cursor plugin specification and official plugins",
+      "language": "TypeScript",
+      "stars": "9,312",
+      "forks": "882",
+      "stars_today": "157 stars today",
+      "zh_description": "仓库提供 Cursor 官方插件规范，以及面向开发者工具、框架与 SaaS 产品的官方插件；每个插件是仓库根目录下的独立目录，各自带 .cursor-plugin/plugin.json 清单文件。",
+      "problem": "替代逐个项目自行编写 Cursor 插件配置与清单文件的流程。",
+      "key_features": [
+        "插件以独立目录存放在仓库根目录",
+        "每个插件含 .cursor-plugin/plugin.json 清单",
+        "覆盖开发者工具、框架与 SaaS 产品"
+      ],
+      "use_cases": [
+        "按官方规范编写 Cursor 插件并放入独立目录",
+        "通过 plugin.json 清单声明插件信息"
+      ],
+      "topics": [],
+      "license": "",
+      "pushed_at": "2026-10-01T19:55:15Z"
+    },
+    {
+      "rank": 5,
+      "owner": "heygen-com",
+      "name": "hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "description": "Write HTML. Render video. Built for agents.",
+      "language": "TypeScript",
+      "stars": "55,302",
+      "forks": "5,016",
+      "stars_today": "624 stars today",
+      "zh_description": "把 HTML、CSS、媒体与可寻址动画定义为合成，用 data 属性标注时间与轨道，经 GSAP、Lottie、Three.js 等适配器驱动；渲染器在无头 Chrome 中逐帧跳转、由 FFmpeg 编码，输出确定性 MP4。",
+      "problem": "替代专有视频时间线格式与额外构建步骤，以及渲染结果不可复现的做法。",
+      "key_features": [
+        "HTML 加 data 属性定义时间与轨道",
+        "适配 GSAP、Lottie、Three.js、WAAPI 动画",
+        "无头 Chrome 逐帧跳转、FFmpeg 编码输出 MP4",
+        "内置 21 个按需加载的 agent skills"
+      ],
+      "use_cases": [
+        "用 HTML 编写含视频、音频与动画的合成并在浏览器预览",
+        "在 CI 中把 HTML 合成渲染为 MP4 做回归测试",
+        "打包不超过 100 MB 的 Codex 插件压缩包"
+      ],
+      "topics": [
+        "ai",
+        "animation",
+        "ffmpeg",
+        "framework",
+        "gsap",
+        "html",
+        "mcp",
+        "puppeteer",
+        "rendering",
+        "typescript",
+        "video"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-01T22:37:10Z"
+    },
+    {
+      "rank": 6,
+      "owner": "earendil-works",
+      "name": "pi",
+      "url": "https://github.com/earendil-works/pi",
+      "description": "AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI",
+      "language": "TypeScript",
+      "stars": "111,171",
+      "forks": "14,126",
+      "stars_today": "294 stars today",
+      "zh_description": "Pi agent harness 包含三部分：交互式编码代理 CLI（pi-coding-agent）、带工具调用与状态管理的代理运行时（pi-agent-core），以及统一多提供商 LLM API（pi-ai），覆盖 OpenAI、Anthropic、Google 等。",
+      "problem": "替代分别适配各家 LLM 提供商 API，并自行拼装代理循环与终端界面的方式。",
+      "key_features": [
+        "统一多提供商 LLM API：OpenAI、Anthropic、Google",
+        "代理运行时支持工具调用与状态管理",
+        "交互式编码代理 CLI",
+        "自我扩展的编码代理"
+      ],
+      "use_cases": [
+        "在终端运行编码代理 CLI 完成代码任务",
+        "用统一 API 在多个 LLM 提供商之间调用",
+        "基于代理运行时搭建带工具调用的代理"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-10-01T20:38:35Z"
+    },
+    {
+      "rank": 7,
+      "owner": "tile-ai",
+      "name": "tilelang",
+      "url": "https://github.com/tile-ai/tilelang",
+      "description": "Domain-specific language designed to streamline the development of high-performance GPU/CPU/Accelerators kernels",
+      "language": "Python",
+      "stars": "8,082",
+      "forks": "812",
+      "stars_today": "157 stars today",
+      "zh_description": "基于 TVM 编译基础设施的领域特定语言，用 Python 语法编写高性能 GPU/CPU/NPU 内核。接收 GEMM、FlashAttention 等 tile 程序定义，编译生成底层优化代码，覆盖 SM120、TCGEN05、AMD 与昇腾 950。",
+      "problem": "替代手写 CUDA 及底层汇编来调优 GEMM、注意力内核的流程",
+      "key_features": [
+        "Python 语法编写 tile 程序，编译栈基于 TVM",
+        "示例覆盖 FP8、反量化与分块缩放 GEMM",
+        "含 FlashAttention、Flash Decoding、块稀疏注意力示例",
+        "带 analyzer、layout 可视化、AutoDD、IKET 工具"
+      ],
+      "use_cases": [
+        "编写并编译 GEMM、分组 GEMM 矩阵乘内核",
+        "实现 FlashAttention、线性注意力等序列模型内核",
+        "为 SM120、TCGEN05、AMD、昇腾 950 生成专用内核"
+      ],
+      "topics": [],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-09-30T04:08:46Z"
+    },
+    {
+      "rank": 8,
+      "owner": "pablostanley",
+      "name": "yoinks",
+      "url": "https://github.com/pablostanley/yoinks",
+      "description": "yoink any video from your terminal. no shady ads.",
+      "language": "TypeScript",
+      "stars": "2,888",
+      "forks": "273",
+      "stars_today": "356 stars today",
+      "zh_description": "终端视频下载工具，接收 YouTube、X/Twitter、Instagram、Threads、TikTok 等 1800+ 站点 URL，由 yt-dlp 抓取、ffmpeg 合并或抽取音频，全屏 Ink 界面选分辨率或 mp3，文件存入 ~/Downloads。",
+      "problem": "替代网页下载站里弹窗、假下载按钮和跳转广告的取视频流程",
+      "key_features": [
+        "基于 yt-dlp，首次运行下载独立二进制",
+        "ffmpeg 合并高分辨率流并抽取 mp3",
+        "Ink 构建全屏终端界面，支持键盘与鼠标操作",
+        "auto/light/dark 主题，跟随终端配色"
+      ],
+      "use_cases": [
+        "粘贴 URL 并选择分辨率下载视频",
+        "从视频中抽取音频保存为 mp3",
+        "用鼠标点击格式列表与 yoink 按钮完成下载"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-07-17T06:40:05Z"
+    },
+    {
+      "rank": 9,
+      "owner": "HunxByts",
+      "name": "GhostTrack",
+      "url": "https://github.com/HunxByts/GhostTrack",
+      "description": "Useful tool to track location or mobile number",
+      "language": "Python",
+      "stars": "16,361",
+      "forks": "2,250",
+      "stars_today": "369 stars today",
+      "zh_description": "OSINT 信息收集工具，菜单提供 IP Tracker、Phone Tracker、Username Tracker。输入目标 IP、手机号或用户名，分别查询位置、号码信息或社交媒体账号信息。",
+      "problem": "替代在多个站点分别查询 IP、手机号与用户名信息的分散流程",
+      "key_features": [
+        "菜单含 IP Tracker、Phone Tracker、Username Tracker",
+        "IP Tracker 可与 seeker 工具配合获取目标 IP",
+        "Phone Tracker 查询目标手机号信息",
+        "Username Tracker 检索社交媒体用户名信息"
+      ],
+      "use_cases": [
+        "查询某手机号对应的信息",
+        "检索某用户名在各社交媒体的信息",
+        "对目标 IP 进行位置跟踪"
+      ],
+      "topics": [
+        "cybersecurity",
+        "fyp",
+        "hacking",
+        "hacking-tool",
+        "indonesia",
+        "information",
+        "information-gathering",
+        "ip-geolocation",
+        "linux",
+        "osint",
+        "osint-python",
+        "osint-tool",
+        "pentesting",
+        "phone-number",
+        "python",
+        "python-hacking",
+        "termux",
+        "termux-hacks",
+        "termux-tool"
+      ],
+      "license": "",
+      "pushed_at": "2024-01-11T15:36:46Z"
+    },
+    {
+      "rank": 10,
+      "owner": "pbakaus",
+      "name": "impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "description": "The design language that makes your AI harness better at design.",
+      "language": "JavaScript",
+      "stars": "73,629",
+      "forks": "4,436",
+      "stars_today": "602 stars today",
+      "zh_description": "面向 AI 编码代理的前端设计技能：以 /impeccable 调用 24 个命令（polish、audit、critique、animate 等），CLI 与浏览器扩展运行 61 条确定性检测规则；init 检查项目并写入 PRODUCT.md 记录产品事实，视觉系统另记入 DESIGN.md。",
+      "problem": "AI 生成前端反复套用 SaaS 模板，出现 Inter 字体、紫蓝渐变、嵌套卡片等雷同输出，缺少统一设计规则。",
+      "key_features": [
+        "24 个命令：polish、audit、critique、distill、animate 等",
+        "61 条确定性检测规则，CLI 与浏览器扩展免 LLM 运行",
+        "init 检查项目并把产品事实写入 PRODUCT.md",
+        "document 从现有项目代码生成根级 DESIGN.md",
+        "pin 把常用命令固化为 /audit 等独立快捷方式"
+      ],
+      "use_cases": [
+        "用 /impeccable audit 运行可访问性、性能与响应式检查",
+        "用 /impeccable critique 做层次、清晰度与情感共鸣的 UX 评审",
+        "用 /impeccable live 在浏览器中迭代元素的视觉变体"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-01T20:56:31Z"
+    }
+  ]
+}
