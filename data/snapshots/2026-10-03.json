@@ -1,0 +1,347 @@
+{
+  "collected_at": "2026-10-02T22:12:52.910713+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "Panniantong",
+      "name": "Agent-Reach",
+      "url": "https://github.com/Panniantong/Agent-Reach",
+      "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+      "language": "Python",
+      "stars": "88,524",
+      "forks": "7,792",
+      "stars_today": "683 stars today",
+      "zh_description": "一条 CLI 把网页、YouTube 字幕、RSS、GitHub、Twitter/X、Reddit、B站、小红书、雪球等平台接入 AI Agent。各平台采用首选加备选的多后端路由，无零配置路径的平台按引导配置 Cookie 或复用 Chrome 登录态，agent-reach doctor 输出每条通道的连通状态与修复方式。",
+      "problem": "替代逐平台自建抓取脚本与配置：付费 Twitter API、Reddit 匿名接口 403、B站风控拦截、小红书需登录。",
+      "key_features": [
+        "单条 CLI 命令接入十余个平台",
+        "agent-reach doctor 诊断通道连通性",
+        "每个平台首选加备选多后端路由",
+        "Twitter 仅接受 Cookie-Editor 手工导出 Cookie",
+        "B站搜索与详情用 bili-cli，无需登录"
+      ],
+      "use_cases": [
+        "提取 YouTube 字幕并让 Agent 概括视频内容",
+        "搜索 Reddit 帖子与评论排查同类问题",
+        "读取 V2EX 热门帖子、节点帖子与回复"
+      ],
+      "topics": [
+        "agent-infrastructure",
+        "ai-agent",
+        "ai-search",
+        "automation",
+        "bilibili",
+        "claude-code",
+        "cli",
+        "cursor",
+        "free-api",
+        "llm-tools",
+        "mcp",
+        "python",
+        "reddit-scraper",
+        "twitter-scraper",
+        "web-scraper",
+        "xiaohongshu",
+        "youtube-transcript"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-15T16:16:24Z"
+    },
+    {
+      "rank": 2,
+      "owner": "pbakaus",
+      "name": "impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "description": "The design language that makes your AI harness better at design.",
+      "language": "JavaScript",
+      "stars": "74,265",
+      "forks": "4,478",
+      "stars_today": "717 stars today",
+      "zh_description": "面向 AI 编码代理的设计指引，以一个 skill 加 24 个命令运行：init 检查项目并把受众、约束、语气等写入 PRODUCT.md，document 从现有代码生成 DESIGN.md，live 在浏览器中迭代元素视觉变体；61 条确定性检测规则由 CLI 与浏览器扩展执行，不需 LLM 和 API Key。",
+      "problem": "模型基于相同 SaaS 模板，无设计指引时反复出现 Inter 字体、紫蓝渐变、卡片嵌套等雷同样式。",
+      "key_features": [
+        "/impeccable init 写入 PRODUCT.md 产品事实",
+        "24 个命令含 audit、polish、critique、distill",
+        "61 条确定性检测规则，无需 LLM 与 API Key",
+        "/impeccable live 在浏览器中迭代视觉变体",
+        "/impeccable document 从现有代码生成 DESIGN.md"
+      ],
+      "use_cases": [
+        "对界面执行无障碍、性能与响应式技术检查",
+        "用 distill、harden 精简设计并处理文本溢出等边界情况",
+        "在浏览器内迭代单个元素的视觉变体"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-02T07:05:04Z"
+    },
+    {
+      "rank": 3,
+      "owner": "NVIDIA",
+      "name": "OpenShell",
+      "url": "https://github.com/NVIDIA/OpenShell",
+      "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
+      "language": "Rust",
+      "stars": "14,401",
+      "forks": "1,658",
+      "stars_today": "584 stars today",
+      "zh_description": "让 AI Agent 读文件、装包、调 API 的运行时。每个 Agent 在隔离沙箱中运行，内核控制可访问的文件与系统调用，每次网络连接出沙箱前经过策略检查，Agent 看不到真实凭证，凭证只注入发往已批准端点的请求；策略变更先用形式化验证标记新增访问。",
+      "problem": "让 Agent 读文件、装包、调 API 的同时，无法限制其对数据、密钥和网络的访问。",
+      "key_features": [
+        "内核级沙箱限制文件访问、系统调用与网络",
+        "形式化验证策略变更，标记新增主机或 API",
+        "Agent 不见真实凭证，仅注入批准端点请求",
+        "npx skills add NVIDIA/OpenShell 安装配套技能"
+      ],
+      "use_cases": [
+        "为每个 Agent 声明可访问文件、系统调用与联网策略",
+        "在策略生效前复核新增的凭据访问与 API 方法",
+        "让 Agent 调用外部 API 而不暴露真实凭证"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-02T22:10:17Z"
+    },
+    {
+      "rank": 4,
+      "owner": "heygen-com",
+      "name": "hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "description": "Write HTML. Render video. Built for agents.",
+      "language": "TypeScript",
+      "stars": "55,849",
+      "forks": "5,036",
+      "stars_today": "584 stars today",
+      "zh_description": "HyperFrames 接收 HTML、CSS、媒体文件与可寻址动画，用 data 属性定义各元素的起始时间、时长与轨道序号；渲染时在无头 Chrome 中逐帧 seek，再由 FFmpeg 编码为 MP4，同一输入产生相同帧与视频。可用 CLI 在本地或 Docker 渲染，也提供 21 个按需加载的 skills 给编码代理调用。",
+      "problem": "替代专有时间轴格式与手工剪辑合成流程，让同一输入可在 CI 中重复产出相同视频。",
+      "key_features": [
+        "composition 即 HTML，data 属性定义时间与轨道",
+        "动画适配器支持 GSAP、CSS、Lottie、Three.js、Anime.js、WAAPI",
+        "无头 Chrome 逐帧 seek，FFmpeg 编码输出",
+        "CLI 默认非交互，随附 21 个按需加载 skills",
+        "可在本地或 Docker 中渲染"
+      ],
+      "use_cases": [
+        "把含 video、audio 与 GSAP 时间轴的 HTML 渲染为 MP4",
+        "在浏览器中直接预览 index.html 组合并即时播放",
+        "在 CI 或回归测试中重复渲染同一 composition 校验帧"
+      ],
+      "topics": [
+        "ai",
+        "animation",
+        "ffmpeg",
+        "framework",
+        "gsap",
+        "html",
+        "mcp",
+        "puppeteer",
+        "rendering",
+        "typescript",
+        "video"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-02T22:11:53Z"
+    },
+    {
+      "rank": 5,
+      "owner": "google",
+      "name": "skills",
+      "url": "https://github.com/google/skills",
+      "description": "Agent Skills for Google products and technologies",
+      "language": "Python",
+      "stars": "20,717",
+      "forks": "1,720",
+      "stars_today": "78 stars today",
+      "zh_description": "google/skills 收集面向 Google 产品与技术的 Agent Skills，含 Google Cloud。技能按目录组织，覆盖云认证、Foundation Builder、入门指引、解决方案架构工作流、多代理安全、AlloyDB 混合搜索、GKE 与 AlloyDB 的企业搜索 RAG、Agent Platform 推理与评估等，并列出 ADK、Android、Flutter、Firestore、Google Maps 等外部技能仓库。",
+      "problem": "把 Google Cloud 上分散的产品文档与操作步骤整理为代理可加载的技能，替代自行拼装流程。",
+      "key_features": [
+        "含 Google Cloud 认证、Foundations Builder、入门技能",
+        "多产品技能提供 solution-architecture 工作流",
+        "AI/ML 技能覆盖 Agent Platform 推理与评估",
+        "链接 ADK、Android、Flutter、Firestore、Maps 技能库"
+      ],
+      "use_cases": [
+        "按技能完成 Google Cloud 认证与项目奠基配置",
+        "用 GKE 与 AlloyDB 技能搭建企业搜索 RAG 方案",
+        "按解决方案架构技能设计多代理安全与代理分析系统"
+      ],
+      "topics": [
+        "google",
+        "googlecloud",
+        "skills"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-02T16:53:41Z"
+    },
+    {
+      "rank": 6,
+      "owner": "getsentry",
+      "name": "sentry",
+      "url": "https://github.com/getsentry/sentry",
+      "description": "Developer-first error tracking and performance monitoring",
+      "language": "Python",
+      "stars": "45,013",
+      "forks": "4,888",
+      "stars_today": "12 stars today",
+      "zh_description": "Sentry 是面向开发者的调试平台，用于检测、追踪并修复代码问题。仓库描述定位为错误跟踪与性能监控（APM），README 表述为用户与日志提供线索、Sentry 提供答案。",
+      "problem": "替代仅靠用户反馈与日志来定位代码问题的分散排查方式。",
+      "key_features": [
+        "检测、追踪并修复代码问题",
+        "面向开发者的错误跟踪与性能监控",
+        "以用户反馈与日志为线索定位问题"
+      ],
+      "use_cases": [
+        "集中接收应用的错误与崩溃报告并查看",
+        "结合性能监控数据排查问题"
+      ],
+      "topics": [
+        "apm",
+        "crash-reporting",
+        "crash-reports",
+        "csp-report",
+        "devops",
+        "django",
+        "error-logging",
+        "error-monitoring",
+        "fair-source",
+        "hacktoberfest",
+        "monitor",
+        "monitoring",
+        "python",
+        "sentry",
+        "tag-production"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-10-02T22:11:24Z"
+    },
+    {
+      "rank": 7,
+      "owner": "colbymchenry",
+      "name": "codegraph",
+      "url": "https://github.com/colbymchenry/codegraph",
+      "description": "Pre-indexed code knowledge graph, auto syncs on code changes, for Claude Code, Codex, Gemini, Cursor, OpenCode, AntiGravity, Kiro, CoPilot, and Hermes Agent — fewer tokens, fewer tool calls, 100% local",
+      "language": "C",
+      "stars": "72,925",
+      "forks": "4,682",
+      "stars_today": "163 stars today",
+      "zh_description": "把代码库预建成知识图谱：Rust 内核用 tree-sitter 解析 20 种语言，抽取符号、调用边与依赖，写入本地 SQLite 并用 FTS5 全文搜索；MCP 的 explore 调用一次返回源码、调用路径与改动影响范围。",
+      "problem": "替代 agent 逐文件 grep、glob、Read 手动重建调用路径与依赖的探索方式。",
+      "key_features": [
+        "MCP explore 一次调用返回源码、调用流与影响范围",
+        "FTS5 全文搜索按名称检索整库代码",
+        "影响分析追踪调用者、被调用者与影响半径",
+        "文件监听用 FSEvents/inotify 去抖自动同步图谱",
+        "识别 17 个框架的路由文件并连接 URL 与处理器"
+      ],
+      "use_cases": [
+        "改动前查询某符号的调用者与被调用者，评估影响半径",
+        "用一次 explore 拿到入口点、相关符号与代码片段",
+        "补齐 Swift 与 ObjC、React Native TurboModules 等跨语言流程"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-10-02T21:58:28Z"
+    },
+    {
+      "rank": 8,
+      "owner": "cursor",
+      "name": "plugins",
+      "url": "https://github.com/cursor/plugins",
+      "description": "Cursor plugin specification and official plugins",
+      "language": "TypeScript",
+      "stars": "9,484",
+      "forks": "896",
+      "stars_today": "168 stars today",
+      "zh_description": "该项目主要用于：Official Cursor plugins for popular developer tools, frameworks, and SaaS products.",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "",
+      "pushed_at": "2026-10-02T15:53:26Z"
+    },
+    {
+      "rank": 9,
+      "owner": "mvschwarz",
+      "name": "openrig",
+      "url": "https://github.com/mvschwarz/openrig",
+      "description": "Build your own network of agents from Claude Code, Codex and Pi: persistent teams with roles, shared context and owned work.",
+      "language": "TypeScript",
+      "stars": "4,250",
+      "forks": "291",
+      "stars_today": "691 stars today",
+      "zh_description": "用 YAML 定义 agent 团队并一条命令启动。本地由 CLI、TUI、MCP server 与基于 tmux 的 daemon 组成，把 Claude Code、Codex 会话组织为带角色、共享上下文和归属工作的常驻团队。",
+      "problem": "把散落在多个终端会话里的 AI 编码 agent 整合为有角色和共享上下文的常驻团队。",
+      "key_features": [
+        "YAML 定义 agent 团队，一条命令启动",
+        "CLI 启动团队、查看状态、发消息、跟踪归属工作",
+        "TUI 含拓扑表视图、图视图与 seat 详情",
+        "MCP 提供 rig_up、rig_ps、rig_send 等管理拓扑工具",
+        "运行时支持 Claude Code、Codex 与 Pi、Oh My Pi RPC"
+      ],
+      "use_cases": [
+        "让 lead agent 协调跨团队专家 agent 并汇总结果与待决事项",
+        "在同一 rig 内同时运行 Claude Code 与 Codex 并统一管理",
+        "从仓库和一个改动开始，在固定地址保留团队工作与上下文"
+      ],
+      "topics": [
+        "agent-harness",
+        "agent-orchestration",
+        "agent-skills",
+        "ai-coding",
+        "claude-code",
+        "cli",
+        "codex-cli",
+        "multi-agent",
+        "multi-agent-systems",
+        "tmux",
+        "typescript"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-02T22:08:31Z"
+    },
+    {
+      "rank": 10,
+      "owner": "Effect-TS",
+      "name": "effect",
+      "url": "https://github.com/Effect-TS/effect",
+      "description": "Build production-ready applications in TypeScript",
+      "language": "TypeScript",
+      "stars": "16,520",
+      "forks": "800",
+      "stars_today": "76 stars today",
+      "zh_description": "Effect 是 TypeScript 库，用于构建健壮、可维护、类型安全且生产级应用。它处理大规模场景下的类型化错误、依赖注入、结构化并发、调度、追踪和统一 schema 验证。",
+      "problem": "替代手写代码与分散库来处理类型化错误、依赖注入、并发调度和 schema 验证。",
+      "key_features": [
+        "内置类型化错误处理机制",
+        "提供依赖注入支持",
+        "支持结构化并发与调度",
+        "实现统一 schema 验证与追踪"
+      ],
+      "use_cases": [
+        "用类型化错误和依赖注入构建 TypeScript 应用",
+        "通过结构化并发与调度编写高并发程序",
+        "使用统一 schema 验证数据并集成追踪"
+      ],
+      "topics": [
+        "cli",
+        "clustering",
+        "concurrency",
+        "dependency-injection",
+        "effect",
+        "error-handling",
+        "javascript",
+        "observability",
+        "opentelemetry",
+        "platform",
+        "schema",
+        "typescript",
+        "workflows"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-10-02T22:10:15Z"
+    }
+  ]
+}
