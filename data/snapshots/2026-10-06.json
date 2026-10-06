@@ -1,0 +1,330 @@
+{
+  "collected_at": "2026-10-06T00:02:20.940384+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "tester-army",
+      "name": "e2e",
+      "url": "https://github.com/tester-army/e2e",
+      "description": "Next generation e2e testing framework for web and mobile apps.",
+      "language": "TypeScript",
+      "stars": "4,753",
+      "forks": "196",
+      "stars_today": "1,398 stars today",
+      "zh_description": "面向 Web 与移动应用的端到端测试框架。用自然语言描述目标，agent 驱动应用执行操作；在同一条测试里用 locator 与断言校验结果。被后续断言验证的 agent 步骤会记录其动作，下次运行直接重放而不调用模型，直到应用发生变更。",
+      "problem": "替代按步骤手写点击与选择器脚本驱动的端到端测试流程。",
+      "key_features": [
+        "自然语言描述目标，由 agent 驱动应用",
+        "同一条测试内用 locator 与断言校验",
+        "agent 步骤被记录，下次运行重放",
+        "重放期间不发起模型调用",
+        "不含 agent 步骤的测试无需模型"
+      ],
+      "use_cases": [
+        "编写会员升级 Pro 的测试并断言状态文本",
+        "在应用变更前重放已记录的 agent 操作",
+        "为移动应用编写无模型调用的断言测试"
+      ],
+      "topics": [
+        "e2e",
+        "e2e-testing",
+        "end-to-end-testing",
+        "mobile",
+        "mobile-testing",
+        "playwright",
+        "web"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-05T21:55:17Z"
+    },
+    {
+      "rank": 2,
+      "owner": "earthtojake",
+      "name": "text-to-cad",
+      "url": "https://github.com/earthtojake/text-to-cad",
+      "description": "Give your agent CAD superpowers.",
+      "language": "Python",
+      "stars": "17,392",
+      "forks": "1,770",
+      "stars_today": "437 stars today",
+      "zh_description": "为 agent 提供本地 CAD 工作流：从自然语言或图片请求创建与编辑模型，以 STEP 为主输出并可导出 STL、3MF、GLB；同时执行可制造性检查、生成 PDF 工程图，并连接 3D 打印、钣金与 CNC 加工服务。",
+      "problem": "替代在 CAD 软件中手工建模并另行导出图纸与制造文件的流程。",
+      "key_features": [
+        "由文字或图片生成编辑 CAD，主输出 STEP",
+        "可导出 STL、3MF 与 GLB 文件",
+        "生成含视图、隐藏线与孔标注的 PDF 工程图",
+        "step.parts 检索螺丝、轴承、电机等现成零件",
+        "编写 URDF/SRDF/SDF 机器人描述与仿真世界"
+      ],
+      "use_cases": [
+        "从文字描述生成 STEP 零件并导出 STL 用于打印",
+        "为零件生成带尺寸和孔标注的 PDF 工程图",
+        "由 Python 源码生成 DXF 轮廓、垫片或切割排版"
+      ],
+      "topics": [
+        "agents",
+        "ai-agents",
+        "cad",
+        "mechanical-engineering",
+        "robotics",
+        "step",
+        "stl",
+        "stp",
+        "text-to-cad"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-10-05T21:22:33Z"
+    },
+    {
+      "rank": 3,
+      "owner": "pingdotgg",
+      "name": "t3code",
+      "url": "https://github.com/pingdotgg/t3code",
+      "description": "",
+      "language": "TypeScript",
+      "stars": "25,601",
+      "forks": "6,594",
+      "stars_today": "485 stars today",
+      "zh_description": "T3 Code 是代理 harness 控制界面，通过 iOS、Android、Web 和 Electron 桌面端控制本机已配置代理。它适配 Claude Code、Codex、Cursor、Grok Build、OpenCode、Google Antigravity 订阅。",
+      "problem": "替代在电脑前分别操作 Claude Code、Codex 等多个本地代理工具的流程",
+      "key_features": [
+        "iOS/Android 应用控制本机代理",
+        "Web 应用控制本机代理",
+        "Electron 桌面应用控制本机代理",
+        "适配 Claude Code、Codex、Cursor 等订阅"
+      ],
+      "use_cases": [
+        "通过 iOS 或 Android 应用控制电脑上的 Claude Code",
+        "在 Web 或 Electron 端操作 Codex、Cursor 等代理"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-10-06T00:01:53Z"
+    },
+    {
+      "rank": 4,
+      "owner": "boykopovar",
+      "name": "AnyPS5",
+      "url": "https://github.com/boykopovar/AnyPS5",
+      "description": "Tool for automatic PS5 executables porting to Linux and Windows",
+      "language": "C++",
+      "stars": "4,942",
+      "forks": "368",
+      "stars_today": "997 stars today",
+      "zh_description": "AnyPS5 接收 PS5 可执行文件，由 core/relinker 重链接器转换为目标系统的原生格式，并使用 core/libs/prx 中的系统 prx 库实现进行动态链接，产出可在 Linux 与 Windows 上运行的程序。不使用模拟器，也不启动独立运行时进程。",
+      "problem": "替代依赖模拟器或独立运行时进程来运行 PS5 程序的移植方式",
+      "key_features": [
+        "relinker 将可执行文件转为目标系统原生格式",
+        "提供 system prx 库实现用于动态链接",
+        "不依赖模拟器或独立运行时进程",
+        "支持 Linux 与 Windows 目标平台",
+        "维护已测试游戏兼容性列表"
+      ],
+      "use_cases": [
+        "将 PS5 可执行文件转换为 Linux 原生格式运行",
+        "在 Windows 上动态链接 prx 系统库运行移植程序",
+        "查阅兼容性列表确认已测试游戏与已知问题"
+      ],
+      "topics": [
+        "anyps5",
+        "dynamic-library",
+        "game-porting",
+        "ps5",
+        "ps5-tools",
+        "spir-v",
+        "vulkan"
+      ],
+      "license": "GPL-2.0",
+      "pushed_at": "2026-10-05T23:52:17Z"
+    },
+    {
+      "rank": 5,
+      "owner": "Panniantong",
+      "name": "Agent-Reach",
+      "url": "https://github.com/Panniantong/Agent-Reach",
+      "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+      "language": "Python",
+      "stars": "91,867",
+      "forks": "8,063",
+      "stars_today": "1,155 stars today",
+      "zh_description": "Agent Reach 是一个 CLI，接收 Agent 发出的读取或搜索请求，按各平台首选加备选的多后端路由抓取内容，输出网页正文、YouTube 字幕、推文、Reddit 帖子评论、B站视频详情与 RSS 条目，覆盖 Twitter/X、Reddit、GitHub、小红书、V2EX 等平台。",
+      "problem": "替代为各平台自建抓取脚本、申请付费 API、配置登录 Cookie 的手工流程",
+      "key_features": [
+        "CLI 支持 YouTube 字幕提取与视频搜索",
+        "每平台采用首选+备选多后端路由",
+        "agent-reach doctor 诊断平台连通性",
+        "MCP 接入免费全网语义搜索",
+        "OpenCLI 复用 Chrome 登录态读取小红书"
+      ],
+      "use_cases": [
+        "让 Agent 读取 YouTube 字幕并获取视频搜索",
+        "搜索 Twitter 推文与 Reddit 帖子评论",
+        "读取公开 GitHub 仓库与 RSS 源更新"
+      ],
+      "topics": [
+        "agent-infrastructure",
+        "ai-agent",
+        "ai-search",
+        "automation",
+        "bilibili",
+        "claude-code",
+        "cli",
+        "cursor",
+        "free-api",
+        "llm-tools",
+        "mcp",
+        "python",
+        "reddit-scraper",
+        "twitter-scraper",
+        "web-scraper",
+        "xiaohongshu",
+        "youtube-transcript"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-09-15T16:16:24Z"
+    },
+    {
+      "rank": 6,
+      "owner": "caddyserver",
+      "name": "caddy",
+      "url": "https://github.com/caddyserver/caddy",
+      "description": "Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS",
+      "language": "Go",
+      "stars": "77,097",
+      "forks": "5,073",
+      "stars_today": "515 stars today",
+      "zh_description": "Caddy 接收 Caddyfile 或原生 JSON 配置，也可经适配器转换 YAML、TOML、NGINX 配置，并通过 JSON API 在线修改配置。它以 HTTP/1.1、HTTP/2、HTTP/3 提供服务，默认自动 HTTPS：公共域名使用 Let's Encrypt 与 ZeroSSL 签发证书，内部名称与 IP 由本地 CA 管理。",
+      "problem": "替代手工申请续期 TLS 证书、以及分散在 CLI 参数、环境变量与配置文件中的服务配置",
+      "key_features": [
+        "Caddyfile 与原生 JSON 双配置方式",
+        "默认自动 HTTPS 并支持多签发机构回退",
+        "支持 HTTP/1.1、HTTP/2、HTTP/3",
+        "JSON API 在线动态修改配置",
+        "无外部依赖，可作运行 Go 应用的平台"
+      ],
+      "use_cases": [
+        "用 Caddyfile 配置 HTTPS 站点与反向代理",
+        "为内部名称和 IP 签发本地 CA 证书",
+        "把 NGINX 配置经适配器转换为 Caddy JSON 配置"
+      ],
+      "topics": [
+        "acme",
+        "automatic-https",
+        "caddy",
+        "caddyfile",
+        "go",
+        "golang",
+        "http",
+        "http-server",
+        "http3",
+        "https",
+        "privacy",
+        "reverse-proxy",
+        "security",
+        "tls",
+        "web-server"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-05T22:54:40Z"
+    },
+    {
+      "rank": 7,
+      "owner": "cloudflare",
+      "name": "cloudflare-os",
+      "url": "https://github.com/cloudflare/cloudflare-os",
+      "description": "Agent workspace built on Cloudflare Workers for creating documents, building apps, and running agents with your company’s context and systems.",
+      "language": "TypeScript",
+      "stars": "10,999",
+      "forks": "1,309",
+      "stars_today": "101 stars today",
+      "zh_description": "基于 Cloudflare Workers 的 AI 环境：agent 聊天界面预载公司知识，可让 agent 生成沙箱内的 gadget（个人小应用），Gatekeepers 安全框架对 agent 与应用施加访问管控。gadget 前后端经 Cap'n Web RPC 通信，暴露 agent 可调用的 API；agent 以 Code Mode 写并执行代码完成任务。",
+      "problem": "替代为每个外部服务手写 MCP server，以及把公司知识和应用逻辑塞进通用聊天机器人的做法。",
+      "key_features": [
+        "Gatekeepers 能力式安全层，类似增强版 MCP server",
+        "Gatekeeper 处理 OAuth 授权、限定访问范围并记录操作",
+        "有副作用的操作交由人工审批",
+        "每个 gadget 在独立沙箱中运行单人私有实例",
+        "agent 为 Code Mode，写代码并立即执行"
+      ],
+      "use_cases": [
+        "用 agent 生成幻灯片等个人小应用，并按需让 agent 改其代码",
+        "为该应用连接外部服务，在授权与审批下执行有副作用的操作",
+        "把 Cloudflare OS 改造成自己公司的 OS"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-05T23:52:14Z"
+    },
+    {
+      "rank": 8,
+      "owner": "Stremio",
+      "name": "stremio-web",
+      "url": "https://github.com/Stremio/stremio-web",
+      "description": "Stremio - Freedom to Stream",
+      "language": "JavaScript",
+      "stars": "14,287",
+      "forks": "1,629",
+      "stars_today": "111 stars today",
+      "zh_description": "Stremio 官方 Web 界面，React 渲染状态，stremio-core（Rust 编译为 WebAssembly，运行于 Web Worker）计算状态，播放由 stremio-video 选择实现。接收 Stremio 账号与 addons 提供的目录，输出电影、剧集、频道浏览及字幕、Chromecast 投屏与 PWA 安装。",
+      "problem": "整合影视目录、观看记录、字幕与投屏，替代在不同客户端间切换的分散流程。",
+      "key_features": [
+        "由 addons 提供电影、剧集与频道目录",
+        "通过 Stremio 账号跨设备同步库与继续观看",
+        "支持 Chromecast 投屏",
+        "字幕来自 addon 或本地并支持自定义样式",
+        "可安装为独立 PWA，含键盘优先播放器"
+      ],
+      "use_cases": [
+        "通过 addons 浏览并播放电影、剧集与频道",
+        "用 Stremio 账号在多设备同步库与继续观看",
+        "通过 Chromecast 投屏到电视，加载或自定义字幕"
+      ],
+      "topics": [
+        "hacktoberfest",
+        "stremio"
+      ],
+      "license": "GPL-2.0",
+      "pushed_at": "2026-10-05T16:54:24Z"
+    },
+    {
+      "rank": 9,
+      "owner": "M-Abozaid",
+      "name": "esp32-c3-adblock",
+      "url": "https://github.com/M-Abozaid/esp32-c3-adblock",
+      "description": "Pi-hole-class DNS ad-blocker on a $2 ESP32-C3 (no PSRAM): 537k domains as 40-bit FNV-1a hashes in flash, binary-searched. UDP DNS sinkhole + web dashboard. https://youtube.com/shorts/RaxszOUMi8E?feature=share",
+      "language": "C++",
+      "stars": "1,330",
+      "forks": "120",
+      "stars_today": "196 stars today",
+      "zh_description": "在无 PSRAM 的 ESP32-C3 上运行的 Pi-hole 式 DNS 广告拦截器：域名以排序后的 40 位 FNV-1a 哈希存于 flash，查询时二分查找。命中返回 0.0.0.0，未命中转发上游解析器并回传应答。141k 域名占 0.67MB flash，约 50KB RAM，匹配约 10ms。",
+      "problem": "替代把域名字符串全部载入 RAM、因而必须配 PSRAM 的 ESP32 DNS sinkhole 方案。",
+      "key_features": [
+        "域名存为 40 位 FNV-1a 哈希，排序写入 flash",
+        "二分查找 flash 哈希表，约 10ms 完成匹配",
+        "命中应答 0.0.0.0，未命中转发上游解析器",
+        "含 UDP DNS sinkhole 与 Web 管理面板",
+        "537k 域名时 40 位哈希碰撞约 1 个"
+      ],
+      "use_cases": [
+        "在 ESP32-C3 上做 DNS sinkhole，拦截广告与追踪域名",
+        "把 14 万级域名列表压入 flash，在无 PSRAM 的芯片上运行",
+        "在 ESP32-S3 等更大 flash 芯片上容纳约 270 万域名"
+      ],
+      "topics": [
+        "adblocker",
+        "arduino",
+        "dns",
+        "dns-sinkhole",
+        "esp32",
+        "esp32-c3",
+        "iot",
+        "pi-hole",
+        "platformio"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-10-04T09:40:52Z"
+    }
+  ]
+}
