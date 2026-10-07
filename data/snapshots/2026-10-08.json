@@ -1,0 +1,297 @@
+{
+  "collected_at": "2026-10-07T23:04:11.566982+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "morluto",
+      "name": "rea",
+      "url": "https://github.com/morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "language": "TypeScript",
+      "stars": "14,736",
+      "forks": "1,542",
+      "stars_today": "4,666 stars today",
+      "zh_description": "REA 提供 CLI 与 MCP 服务器，接收终端命令或 agent 请求，经目标绑定会话路由和 deep-provider 注册表确定性选择 Hopper、Ghidra、IDA 等 provider，对原生程序、浏览器 CDP、Android 静态包、固件、进程内存做分析，输出证据与注解，分析在本地主机运行。",
+      "problem": "替代在 Hopper、Ghidra、IDA 之间手工切换、并为每个问题重新搭建分析环境与上下文的流程。",
+      "key_features": [
+        "CLI 与 MCP 服务器共用同一工作流与证据契约",
+        "deep-provider 注册表确定性选择 provider",
+        "Ghidra provider 提供清单、函数分析与注解",
+        "IDA MCP provider 连接 GUI 或自有 headless 数据库",
+        "Binwalk/Unblob 固件适配器与 JADX 无头适配"
+      ],
+      "use_cases": [
+        "让 agent 检查应用实际行为而不是猜测其功能",
+        "在终端运行同一套逆向能力并保留会话内证据账本",
+        "在同一编码会话里理解某功能并自行实现"
+      ],
+      "topics": [
+        "agent-skills",
+        "ai-agent-tools",
+        "ai-agents",
+        "binary-analysis",
+        "cli",
+        "coding-agents",
+        "cordis",
+        "ctf",
+        "decompiler",
+        "disassembler",
+        "dsh",
+        "dsh-plugin",
+        "ghidra",
+        "hopper",
+        "mcp",
+        "mcp-server",
+        "model-context-protocol",
+        "reverse-engineering",
+        "reverse-engineering-tools",
+        "static-analysis"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-10-07T22:59:56Z"
+    },
+    {
+      "rank": 2,
+      "owner": "boykopovar",
+      "name": "AnyPS5",
+      "url": "https://github.com/boykopovar/AnyPS5",
+      "description": "Tool for automatic PS5 executables porting to Linux and Windows",
+      "language": "C++",
+      "stars": "10,359",
+      "forks": "786",
+      "stars_today": "2,725 stars today",
+      "zh_description": "AnyPS5 接收 PS5 可执行文件，用 core/relinker 重链接器将其转换为目标系统原生格式，并配合适用于动态链接的 system prx 库实现，产出可在 Linux 与 Windows 运行的程序，不使用模拟器或独立运行时进程。",
+      "problem": "不采用模拟器或独立运行时进程，而是把可执行文件转成目标系统原生格式。",
+      "key_features": [
+        "core/relinker 重链接器转换可执行文件格式",
+        "core/libs/prx 提供可动态链接的 system prx 库实现",
+        "不使用模拟器，也不启动独立运行时进程",
+        "兼容性列表记录已测试游戏与已知问题"
+      ],
+      "use_cases": [
+        "把 PS5 可执行文件移植为 Linux 原生程序",
+        "把 PS5 可执行文件移植为 Windows 原生程序",
+        "查阅兼容性列表确认已测试游戏与已知问题"
+      ],
+      "topics": [
+        "anyps5",
+        "dynamic-library",
+        "game-porting",
+        "ps5",
+        "ps5-tools",
+        "spir-v",
+        "vulkan"
+      ],
+      "license": "GPL-2.0",
+      "pushed_at": "2026-10-07T22:02:35Z"
+    },
+    {
+      "rank": 3,
+      "owner": "ayghri",
+      "name": "i-have-adhd",
+      "url": "https://github.com/ayghri/i-have-adhd",
+      "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+      "language": "Python",
+      "stars": "55,068",
+      "forks": "3,158",
+      "stars_today": "620 stars today",
+      "zh_description": "i-have-adhd 是一个 Claude 技能，用于约束编码 agent 的输出方式，使其给出 ADHD 友好的回复，避免把答案埋在冗长内容里；README 声明使用它不需要 ADHD 诊断。",
+      "problem": "针对编码 agent 默认把结论埋在冗长输出中的行为。",
+      "key_features": [
+        "以 Claude 技能形式提供",
+        "输出为 ADHD 友好格式",
+        "README 称无需 ADHD 诊断"
+      ],
+      "use_cases": [
+        "让编码 agent 以 ADHD 友好格式给出回答",
+        "作为 Claude Code 技能或插件接入使用"
+      ],
+      "topics": [
+        "adhd",
+        "claude-",
+        "claude-code-plugin",
+        "claude-skills",
+        "developer-tools",
+        "productivity"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-10-06T23:23:46Z"
+    },
+    {
+      "rank": 4,
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "language": "JavaScript",
+      "stars": "102,766",
+      "forks": "10,766",
+      "stars_today": "693 stars today",
+      "zh_description": "为 AI 编码代理打包 25 个工程技能，每个技能是一份 SKILL.md 工作流，含步骤、验证门槛与反合理化表格，按 DEFINE、PLAN、BUILD、VERIFY、REVIEW、SHIP 六阶段组织，由 /spec、/plan、/build、/test、/review、/ship 命令入口触发。",
+      "problem": "AI 编码代理默认走最短路径，跳过规格说明、测试与安全审查",
+      "key_features": [
+        "25 个技能：24 个生命周期技能加 using-agent-skills 元技能",
+        "命令入口 /spec /plan /build /test /review /ship",
+        "每个技能含步骤、验证门槛与反合理化表格",
+        "验证要求以测试、构建输出、运行时数据为证据",
+        "SKILL.md 为入口，引用文件按需加载"
+      ],
+      "use_cases": [
+        "用 spec-driven-development 在写代码前产出 PRD",
+        "用 planning-and-task-breakdown 把规格拆成带验收标准的任务",
+        "用 constraint-driven-development 生成 CONSTRAINTS.md 质量门槛"
+      ],
+      "topics": [
+        "agent-skills",
+        "antigravity",
+        "claude-code",
+        "codex",
+        "cursor",
+        "skills"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-10-03T18:21:11Z"
+    },
+    {
+      "rank": 5,
+      "owner": "EpicGames",
+      "name": "raddebugger",
+      "url": "https://github.com/EpicGames/raddebugger",
+      "description": "A native, user-mode, multi-process, graphical debugger.",
+      "language": "C",
+      "stars": "7,844",
+      "forks": "381",
+      "stars_today": "82 stars today",
+      "zh_description": "读取本机 Windows x64 可执行文件与 PDB 调试信息，通过图形界面进行用户态、多进程调试。源码按层组织，层对应 1-3 字符前缀的 C 风格命名空间，层间依赖组成有向无环图；另规划 RAD Debug Info（RDI）格式与 RAD Linker。",
+      "problem": "目前仅支持本机 Windows x64 与 PDB 调试，尚不支持原生 Linux 调试和 DWARF 调试信息。",
+      "key_features": [
+        "原生用户态、多进程图形调试器",
+        "仅支持本机 Windows x64 与 PDB 调试",
+        "src 下按层划分，对应 C 风格命名空间前缀",
+        "层间依赖为有向无环图",
+        "规划 RAD Debug Info(RDI) 与 RAD Linker"
+      ],
+      "use_cases": [
+        "在本机 Windows x64 上调试带 PDB 的多进程程序",
+        "将部分 src 层作为独立库嵌入其他代码库",
+        "构建后从 build 文件夹获取调试器使用说明"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-10-07T20:56:17Z"
+    },
+    {
+      "rank": 6,
+      "owner": "manaflow-ai",
+      "name": "cmux",
+      "url": "https://github.com/manaflow-ai/cmux",
+      "description": "Open source Ghostty-based macOS terminal with vertical tabs and notifications for AI coding agents. Built for multitasking, organization, and programmability.",
+      "language": "Swift",
+      "stars": "27,824",
+      "forks": "2,460",
+      "stars_today": "96 stars today",
+      "zh_description": "基于 libghostty 渲染的原生 macOS 终端，用 Swift/AppKit 构建，读取已有的 ~/.config/ghostty/config 主题字体配色。侧边栏标签显示 git 分支、关联 PR 状态与编号、工作目录、监听端口和最新通知文本，支持水平与垂直分屏，并接收 OSC 9/99/777 通知序列。",
+      "problem": "并行跑多个编码代理时，macOS 原生通知文案固定、标签过多，难以分辨哪个代理在等待",
+      "key_features": [
+        "代理等待时面板显示蓝环、标签亮起",
+        "通知面板汇总待处理通知，Cmd+Shift+U 跳到最近未读",
+        "内嵌浏览器，脚本化 API 移植自 agent-browser",
+        "cmux ssh 为远程机器创建工作区，浏览器面板走远程网络",
+        "cmux claude-teams 一条命令运行 Claude Code 队友模式"
+      ],
+      "use_cases": [
+        "cmux ssh user@remote 创建远程工作区并执行初始命令",
+        "让 Claude Code 通过浏览器面板快照、点击并操作本地 dev server",
+        "在 cmux.json 定义项目自定义命令并从命令面板启动"
+      ],
+      "topics": [
+        "amp",
+        "claude-code",
+        "cli",
+        "codex",
+        "coding-agents",
+        "gemini",
+        "ghostty",
+        "macos",
+        "multiplexer",
+        "multitasking",
+        "opencode",
+        "organization",
+        "parallel-agents",
+        "programmability",
+        "terminal",
+        "terminal-multiplexer",
+        "tmux",
+        "workspace-manager"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-10-07T23:04:08Z"
+    },
+    {
+      "rank": 7,
+      "owner": "cloudflare",
+      "name": "security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "stars": "26,008",
+      "forks": "1,564",
+      "stars_today": "617 stars today",
+      "zh_description": "面向编码代理的安全审计技能，在目标代码库中由“security audit this codebase”“find security vulnerabilities in ./src”等请求触发，编排隔离代理依次执行侦察、按覆盖率搜索、候选漏洞验证、结构化输出、独立记录核验与目标无关报告。直接审计或渗透请求使用完整审计模式，安全提问等使用 guidance 模式。",
+      "problem": "替代人工逐文件排查漏洞、缺少独立核验与机器可读记录的手工安全审计流程。",
+      "key_features": [
+        "编排隔离代理执行侦察与覆盖率驱动的漏洞搜索",
+        "候选漏洞经验证后生成结构化输出",
+        "独立记录核验并产出目标无关报告",
+        "按请求区分完整审计模式与 guidance 模式",
+        "默认输出到 ~/security-audit-skill/<repo>/run-<N>"
+      ],
+      "use_cases": [
+        "在 ./src 中查找安全漏洞并生成结构化报告",
+        "对代码库执行安全审计并指定输出到 ~/audits/my-project",
+        "以 guidance 模式回答聚焦的安全问题"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-09-14T19:29:02Z"
+    },
+    {
+      "rank": 8,
+      "owner": "tester-army",
+      "name": "e2e",
+      "url": "https://github.com/tester-army/e2e",
+      "description": "Next generation e2e testing framework for web and mobile apps.",
+      "language": "TypeScript",
+      "stars": "7,384",
+      "forks": "333",
+      "stars_today": "1,391 stars today",
+      "zh_description": "面向 Web 与移动应用的端到端测试框架。测试中用自然语言描述目标，由 agent.act 驱动应用达成，再以 agent.assert 或 screen.getByRole 等定位器与断言在同一条测试中核验结果。被后续断言验证的 agent 步骤会记录动作，下次运行直接回放、不调用模型，直到应用发生变化。",
+      "problem": "替代手写分步 UI 操作脚本、再人工核对结果的端到端测试流程。",
+      "key_features": [
+        "agent.act 用自然语言驱动应用达成目标",
+        "同一测试内使用定位器与断言核验结果",
+        "已验证的 agent 步骤记录并在下次运行回放",
+        "无 agent 步骤的测试不调用模型",
+        "支持自带订阅、API key 或本地模型"
+      ],
+      "use_cases": [
+        "让 agent 把工作区升级到 Pro 方案并断言发票预览按比例计费",
+        "用 screen.getByRole('status') 断言状态文本为 Pro",
+        "回放已记录的 agent 步骤，减少模型调用"
+      ],
+      "topics": [
+        "e2e",
+        "e2e-testing",
+        "end-to-end-testing",
+        "mobile",
+        "mobile-testing",
+        "playwright",
+        "web"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-07T22:22:47Z"
+    }
+  ]
+}
