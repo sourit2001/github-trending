@@ -1,0 +1,200 @@
+{
+  "collected_at": "2026-10-08T23:19:52.822602+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "boykopovar",
+      "name": "AnyPS5",
+      "url": "https://github.com/boykopovar/AnyPS5",
+      "description": "Tool for automatic PS5 executables porting to Linux and Windows",
+      "language": "C++",
+      "stars": "15,456",
+      "forks": "1,219",
+      "stars_today": "4,640 stars today",
+      "zh_description": "AnyPS5 将 PS5 可执行文件移植到 Linux 和 Windows。relinker 把可执行文件转为目标系统原生格式；core/libs/prx 提供适合动态链接的系统 prx 库实现，不使用模拟器或独立运行时进程。",
+      "problem": "替代手动重定位 PS5 可执行文件并适配系统库的移植流程。",
+      "key_features": [
+        "relinker 转可执行文件为目标原生格式",
+        "core/libs/prx 提供系统 prx 库实现",
+        "动态链接，无模拟器或独立运行时进程"
+      ],
+      "use_cases": [
+        "将 PS5 游戏可执行文件移植到 Linux",
+        "将 PS5 游戏可执行文件移植到 Windows"
+      ],
+      "topics": [
+        "anyps5",
+        "dynamic-library",
+        "game-porting",
+        "ps5",
+        "ps5-tools",
+        "spir-v",
+        "vulkan"
+      ],
+      "license": "GPL-2.0",
+      "pushed_at": "2026-10-08T22:46:53Z"
+    },
+    {
+      "rank": 2,
+      "owner": "morluto",
+      "name": "rea",
+      "url": "https://github.com/morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "language": "TypeScript",
+      "stars": "25,482",
+      "forks": "2,848",
+      "stars_today": "7,744 stars today",
+      "zh_description": "REA 借助 agents 做逆向工程，从应用行为到原生二进制。Topics 涉及 CLI、AI agents、Claude Code、Codex、MCP、Ghidra、Hopper、反编译器与静态分析。",
+      "problem": "替代手动使用反汇编器、反编译器逐层分析应用与二进制。",
+      "key_features": [
+        "用 agents 逆向应用行为与原生二进制",
+        "提供命令行 CLI 接口",
+        "涉及 MCP、Ghidra、Hopper"
+      ],
+      "use_cases": [
+        "对应用行为做逆向分析并定位关键逻辑",
+        "对原生二进制做静态分析与反汇编"
+      ],
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "binary-analysis",
+        "claude-code",
+        "cli",
+        "codex",
+        "cordis",
+        "ctf",
+        "decompiler",
+        "developer-tools",
+        "disassembler",
+        "dsh",
+        "dsh-plugin",
+        "ghidra",
+        "hopper",
+        "llm",
+        "mcp",
+        "model-context-protocol",
+        "reverse-engineering",
+        "static-analysis"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-10-08T23:19:02Z"
+    },
+    {
+      "rank": 3,
+      "owner": "EpicGames",
+      "name": "raddebugger",
+      "url": "https://github.com/EpicGames/raddebugger",
+      "description": "A native, user-mode, multi-process, graphical debugger.",
+      "language": "C",
+      "stars": "8,095",
+      "forks": "391",
+      "stars_today": "283 stars today",
+      "zh_description": "RAD Debugger 是原生、用户态、多进程图形调试器。当前仅支持本机 Windows x64 与 PDB；计划支持原生 Linux 调试和 DWARF。另含 RAD Debug Info（RDI）格式与 RAD Linker。",
+      "problem": "当前仅支持 Windows x64 与 PDB，Linux/DWARF 调试需其他工具。",
+      "key_features": [
+        "原生用户态多进程图形调试",
+        "支持本机 Windows x64 与 PDB",
+        "含 RAD Debug Info（RDI）格式",
+        "含 RAD Linker",
+        "计划支持 Linux 与 DWARF"
+      ],
+      "use_cases": [
+        "在 Windows x64 上调试本机多进程程序",
+        "使用 PDB 定位本机程序问题"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-10-07T20:56:17Z"
+    },
+    {
+      "rank": 4,
+      "owner": "anthropics",
+      "name": "knowledge-work-plugins",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+      "language": "Python",
+      "stars": "27,499",
+      "forks": "3,192",
+      "stars_today": "309 stars today",
+      "zh_description": "面向 Claude Cowork 的知识工作插件集合，也兼容 Claude Code。每个插件按岗位打包技能、连接器、斜杠命令与子代理，用来自定义工具、术语和处理流程，让 Claude 按团队方式完成专业工作。",
+      "problem": "替代每个岗位各自配置提示词和工具的零散做法，把技能、连接器与命令集中到插件中。",
+      "key_features": [
+        "每个插件打包技能、连接器、斜杠命令与子代理",
+        "同时兼容 Claude Cowork 和 Claude Code",
+        "按岗位职能组织插件",
+        "可替换为自有工具、术语和流程"
+      ],
+      "use_cases": [
+        "为特定岗位安装插件，让 Claude 按该职能方式工作",
+        "用公司自有工具与术语定制插件",
+        "通过斜杠命令触发预定义的工作流程"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-08T15:35:19Z"
+    },
+    {
+      "rank": 5,
+      "owner": "storytold",
+      "name": "artcraft",
+      "url": "https://github.com/storytold/artcraft",
+      "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+      "language": "Rust",
+      "stars": "7,775",
+      "forks": "1,068",
+      "stars_today": "2,510 stars today",
+      "zh_description": "面向艺术家、设计师和电影制作人的交互式 AI 图像与视频创作 IDE。可在 2D 中合成、在 3D 中布置场景，并自选模型；先搭好构图、角色与机位再生成，支持图像转场景、图像转 3D 网格等操作。",
+      "problem": "替代只靠提示词反复试错的生成流程，把构图、角色一致性和机位控制交给可视化工具。",
+      "key_features": [
+        "2D 合成：图层、抠背景和绘图工具",
+        "3D 图像合成：叠加背景、前景与道具",
+        "Image to Location：固定环境规划多个镜头",
+        "Image to 3D Mesh：将图像转为可旋转摆放的 3D 物体",
+        "可自选适配的图像与视频模型"
+      ],
+      "use_cases": [
+        "在同一虚拟场景中规划多个镜头",
+        "用图像生成可摆放旋转的 3D 对象",
+        "在 3D 中分层背景、前景和道具构建有纵深的画面"
+      ],
+      "topics": [
+        "3d-graphics",
+        "ai",
+        "aivideo",
+        "filmmaking",
+        "imagegeneration"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-10-07T00:56:15Z"
+    },
+    {
+      "rank": 6,
+      "owner": "liquidslr",
+      "name": "system-design-notes",
+      "url": "https://github.com/liquidslr/system-design-notes",
+      "description": "Notes of the book System Desgin Interview - An Insider's Guide",
+      "language": "Unknown",
+      "stars": "24,571",
+      "forks": "4,597",
+      "stars_today": "398 stars today",
+      "zh_description": "对 Alex Xu《System Design Interview - An Insider's Guide》一书的章节笔记仓库，按章节整理成独立目录，涵盖从零扩展到百万用户、粗略估算、系统设计框架，以及限流器、一致性哈希、键值存储、分布式唯一 ID 生成器和 URL 短链等设计题目。",
+      "problem": "替代在书中逐章翻阅、自行摘录要点的做法，把各章设计题整理为按章组织的笔记目录。",
+      "key_features": [
+        "按章节划分独立笔记目录",
+        "覆盖限流器、一致性哈希等设计题",
+        "包含粗略估算与系统设计框架章节",
+        "注明为个人笔记，与书及作者无关"
+      ],
+      "use_cases": [
+        "按章查阅某道系统设计题的笔记",
+        "顺着目录从扩展、估算到具体设计题依次阅读"
+      ],
+      "topics": [],
+      "license": "",
+      "pushed_at": "2026-08-12T22:22:21Z"
+    }
+  ]
+}
