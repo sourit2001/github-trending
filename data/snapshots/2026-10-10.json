@@ -1,0 +1,271 @@
+{
+  "collected_at": "2026-10-09T22:37:04.224456+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "morluto",
+      "name": "rea",
+      "url": "https://github.com/morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "language": "TypeScript",
+      "stars": "44,131",
+      "forks": "6,919",
+      "stars_today": "15,335 stars today",
+      "zh_description": "以 agent 方式做逆向工程，范围从应用行为到原生二进制。通过 MCP 接入 Ghidra、Hopper 等反汇编与反编译工具，并可作为 Claude Code、Codex 的 agent skills 调用。",
+      "problem": "替代在 Ghidra、Hopper 等工具间手工切换并汇总分析结果的流程。",
+      "key_features": [
+        "以 agent 驱动逆向，覆盖到原生二进制",
+        "通过 MCP 连接 Ghidra、Hopper 等工具",
+        "可作为 Claude Code、Codex 的 agent skills"
+      ],
+      "use_cases": [
+        "对原生二进制做反汇编与反编译，梳理关键逻辑",
+        "在 CTF 与静态分析场景定位可疑代码路径"
+      ],
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "binary-analysis",
+        "claude-code",
+        "cli",
+        "codex",
+        "cordis",
+        "ctf",
+        "decompiler",
+        "developer-tools",
+        "disassembler",
+        "dsh",
+        "dsh-plugin",
+        "ghidra",
+        "hopper",
+        "llm",
+        "mcp",
+        "model-context-protocol",
+        "reverse-engineering",
+        "static-analysis"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-10-09T22:36:36Z"
+    },
+    {
+      "rank": 2,
+      "owner": "boykopovar",
+      "name": "AnyPS5",
+      "url": "https://github.com/boykopovar/AnyPS5",
+      "description": "Tool for automatic PS5 executables porting to Linux and Windows",
+      "language": "C++",
+      "stars": "21,943",
+      "forks": "1,790",
+      "stars_today": "5,925 stars today",
+      "zh_description": "把 PS5 可执行文件自动移植到 Linux 和 Windows。core/relinker 将可执行文件转换为目标系统原生格式，并提供 system prx 库实现供动态链接，不使用模拟器或独立运行时进程。",
+      "problem": "PS5 可执行文件缺少在 PC 上原生运行、无需模拟器的移植手段。",
+      "key_features": [
+        "relinker 转换为目标系统原生格式",
+        "提供 system prx 库实现供动态链接",
+        "不使用模拟器或独立运行时进程"
+      ],
+      "use_cases": [
+        "将 PS5 可执行文件转为 Linux/Windows 原生格式",
+        "为移植后的可执行文件提供 prx 动态链接支持"
+      ],
+      "topics": [
+        "anyps5",
+        "dynamic-library",
+        "game-porting",
+        "ps5",
+        "ps5-tools",
+        "spir-v",
+        "vulkan"
+      ],
+      "license": "GPL-2.0",
+      "pushed_at": "2026-10-09T22:37:00Z"
+    },
+    {
+      "rank": 3,
+      "owner": "alibaba",
+      "name": "open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "language": "Go",
+      "stars": "45,145",
+      "forks": "3,262",
+      "stars_today": "323 stars today",
+      "zh_description": "读取 Git diff，把变更文件交给可配置的 LLM agent 生成行级结构化评论；agent 可读取完整文件、检索代码库、参考其他变更文件。ocr scan 用于审查整个文件。",
+      "problem": "通用 agent 评审覆盖面不全、评论位置漂移、质量随提示词波动。",
+      "key_features": [
+        "确定性流程负责选文件、分组与规则匹配",
+        "agent 可读完整文件、检索代码库并参考其他变更",
+        "内置 NPE、线程安全、XSS、SQL 注入规则集",
+        "兼容 OpenAI 与 Anthropic 模型端点"
+      ],
+      "use_cases": [
+        "对 feature 分支相对 main 的变更执行 ocr review",
+        "用 ocr scan 审查无有效 diff 的整个文件或目录"
+      ],
+      "topics": [
+        "agent",
+        "agent-skills",
+        "code-review",
+        "code-review-assistant",
+        "harness",
+        "repository-level-context"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-08T11:52:10Z"
+    },
+    {
+      "rank": 4,
+      "owner": "anthropics",
+      "name": "knowledge-work-plugins",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+      "language": "Python",
+      "stars": "28,206",
+      "forks": "3,244",
+      "stars_today": "714 stars today",
+      "zh_description": "面向知识工作者的 Claude Cowork 插件集合，也兼容 Claude Code。每个插件按岗位打包 skills、连接器、斜杠命令和子代理，为该职能给出默认工作方式；可替换成公司自有的工具、术语和流程，让 Claude 按团队约定完成工作。",
+      "problem": "替代每次对话手工向 Claude 说明工作方式、可用工具、关键流程和暴露哪些斜杠命令的做法。",
+      "key_features": [
+        "为特定职能打包 skills、连接器、斜杠命令与子代理",
+        "提供该岗位开箱可用的默认工作方式",
+        "支持按公司工具、术语和流程自定义插件",
+        "兼容 Claude Cowork 与 Claude Code"
+      ],
+      "use_cases": [
+        "为某个岗位启用插件，让 Claude 按既定流程与工具完成工作",
+        "把团队自有工具、术语和流程写进插件以统一产出",
+        "通过斜杠命令触发插件中定义的工作流"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-09T21:48:47Z"
+    },
+    {
+      "rank": 5,
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "language": "JavaScript",
+      "stars": "103,939",
+      "forks": "10,868",
+      "stars_today": "523 stars today",
+      "zh_description": "为 AI 编码代理提供 25 个工程技能：24 个生命周期技能加 using-agent-skills 元技能，覆盖 DEFINE、PLAN、BUILD、VERIFY、REVIEW、SHIP 六个阶段，入口命令为 /spec、/plan、/build、/test、/review、/ship。每个技能是一份 SKILL.md 工作流，含步骤、验证关卡与反合理化表格。",
+      "problem": "替代编码代理默认走最短路径、跳过规格、测试与安全评审的做法。",
+      "key_features": [
+        "含 24 个生命周期技能与 using-agent-skills 元技能",
+        "每个技能含步骤、验证关卡与反理性化表格",
+        "以测试通过、构建输出、运行时数据作为证据要求",
+        "SKILL.md 为入口，支撑引用按需加载以减少 token",
+        "嵌入 Hyrum 定律、Beyonce 规则、测试金字塔等 Google 实践"
+      ],
+      "use_cases": [
+        "需求不清晰时用 interview-me 逐题访谈澄清真实目标",
+        "先用 /spec 写 PRD 再用 /plan 拆成可验证任务",
+        "用 /test、/review、/ship 走完验证关卡到发布"
+      ],
+      "topics": [
+        "agent-skills",
+        "antigravity",
+        "claude-code",
+        "codex",
+        "cursor",
+        "skills"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-10-03T18:21:11Z"
+    },
+    {
+      "rank": 6,
+      "owner": "storytold",
+      "name": "artcraft",
+      "url": "https://github.com/storytold/artcraft",
+      "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+      "language": "Rust",
+      "stars": "11,271",
+      "forks": "1,695",
+      "stars_today": "3,723 stars today",
+      "zh_description": "ArtCraft 是交互式 AI 图像与视频创作 IDE。可在 2D 中合成图层、做背景去除与绘图，在 3D 中叠放背景、前景与道具构建带纵深的构图，并自选生成模型；还支持把图像转成可定位旋转的 3D 网格，先搭好场景再生成。",
+      "problem": "替代仅靠提示词生成图像、无法控制构图、角色身份与机位的流程。",
+      "key_features": [
+        "3D 合成：叠放背景、前景与道具构建纵深",
+        "2D 合成：图像图层、背景去除与绘图工具",
+        "Image to Location 在同一场景规划多镜头",
+        "图像转 3D 网格并可定位、旋转、取景",
+        "可自选适合当前工作的生成模型"
+      ],
+      "use_cases": [
+        "把虚拟角色放入一致环境并在同一房间规划多镜头",
+        "用图层与 3D 道具搭出有纵深的海报或分镜构图",
+        "把单张图像转为 3D 物体，调整位置与机位后再生成"
+      ],
+      "topics": [
+        "3d-graphics",
+        "ai",
+        "aivideo",
+        "filmmaking",
+        "imagegeneration"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-10-09T17:03:51Z"
+    },
+    {
+      "rank": 7,
+      "owner": "Robbyant",
+      "name": "lingbot-map",
+      "url": "https://github.com/Robbyant/lingbot-map",
+      "description": "[ECCV 2026 Best Paper Award Candidate] LingBot-Map: Geometric Context Transformer for Streaming 3D Reconstruction",
+      "language": "Python",
+      "stars": "17,669",
+      "forks": "1,949",
+      "stars_today": "109 stars today",
+      "zh_description": "LingBot-Map 接收视频输入（室内漫游、户外行车、LingBot-World 生成片段），用几何上下文 Transformer 做流式三维重建。经 demo_render/batch_demo.py 以窗口化模式推理：按关键帧间隔缓存 KV，非关键帧仍输出逐帧预测，窗口间重叠关键帧；由 ONNX 生成并缓存天空掩码，最终输出相机轨迹、点云与离线渲染视频。",
+      "problem": "长视频超过约 320 帧的 RoPE 训练范围后无法直接重建，需滑窗推理与关键帧缓存来维持跨窗口位姿稳定。",
+      "key_features": [
+        "窗口化推理，window_size 计 KV 缓存槽位",
+        "keyframe_interval 只缓存关键帧，非关键帧照常输出预测",
+        "overlap_keyframes 让相邻窗口共享上下文",
+        "ONNX 天空掩码持久化与并排可视化",
+        "Offline Rendering Pipeline 支持帧标签与相机可视化"
+      ],
+      "use_cases": [
+        "重建约 25000 帧、13 分钟的室内漫游视频",
+        "处理车载行驶视频，输出跟随相机渲染与鸟瞰揭示",
+        "重建 LingBot-World 世界模型生成的视频片段"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-06T09:23:51Z"
+    },
+    {
+      "rank": 8,
+      "owner": "twostraws",
+      "name": "SwiftUI-Agent-Skill",
+      "url": "https://github.com/twostraws/SwiftUI-Agent-Skill",
+      "description": "SwiftUI agent skill for Claude Code, Codex, and other AI tools.",
+      "language": "Unknown",
+      "stars": "5,389",
+      "forks": "195",
+      "stars_today": "88 stars today",
+      "zh_description": "这是一个面向 AI 编码助手的 SwiftUI 智能体技能，采用 Agent Skills 格式，可被 Claude Code、Codex、Gemini、Cursor 使用。内容基于已有 AGENTS.md 规则，针对 LLM 常犯错误提供 API 用法、设计、性能与无障碍指导，覆盖导航、布局、动画、状态管理、VoiceOver 与废弃 API。",
+      "problem": "替代零散的提示词与手工维护的 AGENTS.md，约束 LLM 写出 VoiceOver 不可见的按钮、废弃 API 和引发性能问题的代码。",
+      "key_features": [
+        "Agent Skills 格式，兼容 Claude Code、Codex、Cursor",
+        "覆盖导航、布局、动画与状态管理",
+        "VoiceOver 无障碍与废弃 API 专项指导",
+        "基于已有的 AGENTS.md 文件构建",
+        "同系列含 SwiftData、并发、测试技能"
+      ],
+      "use_cases": [
+        "让编码助手生成 VoiceOver 可访问的 SwiftUI 视图代码",
+        "排查并替换 SwiftUI 项目中 LLM 写出的废弃 API",
+        "为 Cursor 或 Codex 配置 SwiftUI 专用技能规则"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-10-07T13:39:28Z"
+    }
+  ]
+}
