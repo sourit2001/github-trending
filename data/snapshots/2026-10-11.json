@@ -1,0 +1,376 @@
+{
+  "collected_at": "2026-10-10T21:42:32.803703+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "morluto",
+      "name": "rea",
+      "url": "https://github.com/morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "language": "TypeScript",
+      "stars": "70,002",
+      "forks": "14,702",
+      "stars_today": "25,784 stars today",
+      "zh_description": "REA 用 agents 做逆向工程，范围从应用行为延伸到原生二进制。通过 MCP 接入 LLM，面向 Ghidra、Hopper 等反汇编与反编译工具，提供 CLI，可与 Claude Code、Codex 等 agent 配合。",
+      "problem": "替代人工在反汇编器中逐层排查应用行为与二进制实现的流程。",
+      "key_features": [
+        "agents 覆盖应用行为到原生二进制",
+        "以 MCP 协议连接 LLM 与逆向工具",
+        "面向 Ghidra、Hopper 反汇编与反编译"
+      ],
+      "use_cases": [
+        "从应用行为向下分析到原生二进制实现",
+        "在 Claude Code、Codex 中调用 agent 反编译"
+      ],
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "binary-analysis",
+        "claude-code",
+        "cli",
+        "codex",
+        "cordis",
+        "ctf",
+        "decompiler",
+        "developer-tools",
+        "disassembler",
+        "dsh",
+        "dsh-plugin",
+        "ghidra",
+        "hopper",
+        "llm",
+        "mcp",
+        "model-context-protocol",
+        "reverse-engineering",
+        "static-analysis"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-10-10T21:34:31Z"
+    },
+    {
+      "rank": 2,
+      "owner": "boykopovar",
+      "name": "AnyPS5",
+      "url": "https://github.com/boykopovar/AnyPS5",
+      "description": "Tool for automatic PS5 executables porting to Linux and Windows",
+      "language": "C++",
+      "stars": "26,403",
+      "forks": "2,210",
+      "stars_today": "5,831 stars today",
+      "zh_description": "AnyPS5 接收 PS5 可执行文件，由 core/relinker 将其转换为 Linux 或 Windows 的原生格式，并从 core/libs/prx 提供系统 prx 库实现用于动态链接，不使用模拟器或独立运行时进程。",
+      "problem": "替代用模拟器或独立运行时进程运行 PS5 可执行文件的方式。",
+      "key_features": [
+        "core/relinker 转为目标系统原生格式",
+        "core/libs/prx 提供系统 prx 库实现用于动态链接",
+        "不含模拟器，无独立运行时进程"
+      ],
+      "use_cases": [
+        "把 PS5 可执行文件移植到 Linux 运行",
+        "查阅 COMPATIBILITY.md 确认已测试游戏与已知问题"
+      ],
+      "topics": [
+        "anyps5",
+        "dynamic-library",
+        "game-porting",
+        "ps5",
+        "ps5-tools",
+        "spir-v",
+        "vulkan"
+      ],
+      "license": "GPL-2.0",
+      "pushed_at": "2026-10-10T20:26:41Z"
+    },
+    {
+      "rank": 3,
+      "owner": "storytold",
+      "name": "artcraft",
+      "url": "https://github.com/storytold/artcraft",
+      "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+      "language": "Rust",
+      "stars": "14,163",
+      "forks": "2,223",
+      "stars_today": "3,217 stars today",
+      "zh_description": "ArtCraft 是交互式 AI 图像与视频创作 IDE：先在 2D 合成、在 3D 搭景，再选择模型生成，用可视化工具控制构图、角色身份与机位。",
+      "problem": "替代只靠文本提示反复试错、难以控制构图与机位的生成流程。",
+      "key_features": [
+        "2D 图像合成：图层、背景移除与绘图",
+        "3D 图像合成：分层背景、前景与道具",
+        "Image to Location：一致环境中放置角色、规划多镜头",
+        "Image to 3D Mesh：图像转为可定位的 3D 物体"
+      ],
+      "use_cases": [
+        "在同一房间场景中规划多个镜头",
+        "把图像转为可定位旋转的 3D 物体"
+      ],
+      "topics": [
+        "3d-graphics",
+        "ai",
+        "aivideo",
+        "filmmaking",
+        "imagegeneration"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-10T19:03:53Z"
+    },
+    {
+      "rank": 4,
+      "owner": "flutter",
+      "name": "flutter",
+      "url": "https://github.com/flutter/flutter",
+      "description": "Flutter makes it easy and fast to build beautiful apps for mobile and beyond",
+      "language": "Dart",
+      "stars": "179,465",
+      "forks": "33,581",
+      "stars_today": "164 stars today",
+      "zh_description": "Google 的 SDK，用同一份 Dart 代码库构建移动、Web 与桌面界面。分层架构控制屏幕上每个像素，内置 Cupertino 与 Material 组件，渲染由 Skia、Impeller 硬件加速 2D 图形库承担；Dart 可编译为 ARM 机器码、JavaScript 与 WebAssembly。",
+      "problem": "同一产品在 iOS、Android、Web 与桌面需分别维护多套 UI 代码。",
+      "key_features": [
+        "有状态热重载，改代码即时看结果并保留状态",
+        "分层架构与 Skia、Impeller 硬件加速渲染",
+        "内置 Cupertino 和 Material 组件集",
+        "支持 FFI 调用 Android、iOS、macOS、Linux 原生代码",
+        "提供 VS Code 与 IntelliJ/Android Studio 插件"
+      ],
+      "use_cases": [
+        "用一份 Dart 代码同时产出 iOS 与 Android 应用",
+        "编译为 JavaScript 或 WebAssembly 在浏览器运行",
+        "为 Intel x64 与 ARM 桌面设备输出原生程序"
+      ],
+      "topics": [
+        "android",
+        "app-framework",
+        "cross-platform",
+        "dart",
+        "dart-platform",
+        "desktop",
+        "flutter",
+        "flutter-package",
+        "fuchsia",
+        "ios",
+        "linux-desktop",
+        "macos",
+        "material-design",
+        "mobile",
+        "mobile-development",
+        "skia",
+        "web",
+        "web-framework",
+        "windows"
+      ],
+      "license": "BSD-3-Clause",
+      "pushed_at": "2026-10-10T16:12:15Z"
+    },
+    {
+      "rank": 5,
+      "owner": "tensorflow",
+      "name": "tensorflow",
+      "url": "https://github.com/tensorflow/tensorflow",
+      "description": "An Open Source Machine Learning Framework for Everyone",
+      "language": "C++",
+      "stars": "200,702",
+      "forks": "78,951",
+      "stars_today": "24 stars today",
+      "zh_description": "端到端开源机器学习平台，包含工具、库与社区资源生态，供研究者推进机器学习与神经网络研究，也供开发者构建并部署 ML 应用。提供稳定的 Python 与 C++ API，以及其他语言的非向后兼容保证 API。",
+      "problem": "从机器学习研究到应用部署缺少统一平台，需自行整合零散工具与库。",
+      "key_features": [
+        "端到端开源机器学习平台",
+        "提供稳定的 Python 与 C++ API",
+        "其他语言 API 不保证向后兼容",
+        "配套工具、库与社区资源生态"
+      ],
+      "use_cases": [
+        "构建并部署由机器学习驱动的应用",
+        "开展神经网络与机器学习研究"
+      ],
+      "topics": [
+        "deep-learning",
+        "deep-neural-networks",
+        "distributed",
+        "machine-learning",
+        "ml",
+        "neural-network",
+        "python",
+        "tensorflow"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-10T21:35:45Z"
+    },
+    {
+      "rank": 6,
+      "owner": "hugohe3",
+      "name": "ppt-master",
+      "url": "https://github.com/hugohe3/ppt-master",
+      "description": "AI turns documents or topics into real, native PowerPoint decks—with native shapes, transitions and animations, data-backed charts and tables on demand, audio narration from speaker notes, and support for your own .pptx templates. · by Hugo He",
+      "language": "Python",
+      "stars": "59,350",
+      "forks": "4,675",
+      "stars_today": "515 stars today",
+      "zh_description": "输入文档或主题，由 AI 生成原生 PowerPoint 演示文稿：使用原生形状、转场与动画，按需生成带数据的图表和表格，可由演讲者备注生成音频旁白，并支持套用自有的 .pptx 模板。",
+      "problem": "替代手工在 PowerPoint 中逐页排版、绘制图表、套模板和录制旁白的流程。",
+      "key_features": [
+        "从文档或主题生成 .pptx 演示文稿",
+        "生成原生形状、转场与动画",
+        "按需生成带数据的图表和表格",
+        "由演讲者备注生成音频旁白",
+        "支持套用自有的 .pptx 模板"
+      ],
+      "use_cases": [
+        "把已有文档转换成含图表和表格的 PowerPoint 演示文稿",
+        "套用自有 .pptx 模板生成版式统一的幻灯片",
+        "依据演讲者备注生成音频旁白并放入演示文稿"
+      ],
+      "topics": [
+        "ai-agent",
+        "aippt",
+        "office",
+        "powerpoint",
+        "powerpoint-generation",
+        "ppt",
+        "pptx",
+        "presentation",
+        "slide",
+        "slides"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-10-08T07:45:46Z"
+    },
+    {
+      "rank": 7,
+      "owner": "pytorch",
+      "name": "pytorch",
+      "url": "https://github.com/pytorch/pytorch",
+      "description": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
+      "language": "Python",
+      "stars": "104,120",
+      "forks": "31,943",
+      "stars_today": "81 stars today",
+      "zh_description": "PyTorch 是 Python 包，提供类似 NumPy 且支持 GPU 加速的 Tensor 计算，以及基于磁带式 autograd 的深度神经网络。组件含 torch、torch.autograd、torch.nn、跨进程共享 Tensor 内存的 torch.multiprocessing，以及提供 DataLoader 的 torch.utils，可复用 NumPy、SciPy、Cython 扩展。",
+      "problem": "取代 NumPy 以使用 GPU 算力；相较 TensorFlow、Theano、Caffe、CNTK 等静态图框架，改变网络行为无须从零重建。",
+      "key_features": [
+        "torch：类 NumPy 的 Tensor 库，支持 GPU",
+        "torch.autograd：磁带式反向模式自动微分",
+        "torch.nn：与 autograd 集成的神经网络库",
+        "torch.multiprocessing：跨进程共享 Tensor 内存",
+        "torch.utils：提供 DataLoader 等工具函数"
+      ],
+      "use_cases": [
+        "在 CPU 或 GPU 上执行切片、索引、线性代数等张量运算",
+        "动态改变网络行为并即时求微分",
+        "为数据加载与 Hogwild 训练做多进程 Tensor 共享"
+      ],
+      "topics": [
+        "autograd",
+        "deep-learning",
+        "gpu",
+        "machine-learning",
+        "neural-network",
+        "numpy",
+        "python",
+        "tensor"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-10-10T21:42:31Z"
+    },
+    {
+      "rank": 8,
+      "owner": "huggingface",
+      "name": "transformers",
+      "url": "https://github.com/huggingface/transformers",
+      "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
+      "language": "Python",
+      "stars": "167,202",
+      "forks": "34,797",
+      "stars_today": "94 stars today",
+      "zh_description": "Transformers 是文本、视觉、音频、视频与多模态模型的模型定义框架，覆盖推理与训练。它提供统一 API 调用预训练模型，用户只需掌握三个类；包含上千种模型架构与百万级预训练 checkpoint，同一模型可在 PyTorch、JAX、TF2.0 之间迁移，三行代码即可训练。",
+      "problem": "替代从零训练模型的做法，改为共享已训练的预训练模型与 checkpoint，减少计算时间与生产成本。",
+      "key_features": [
+        "统一 API，仅三个类即可用全部预训练模型",
+        "覆盖文本、视觉、音频、视频、多模态任务",
+        "上千种模型架构与百万级预训练 checkpoint",
+        "同一模型可在 PyTorch、JAX、TF2.0 间迁移",
+        "每种架构附带复现原作者结果的示例"
+      ],
+      "use_cases": [
+        "用统一 API 加载预训练模型执行推理",
+        "三行代码训练模型并在不同框架间迁移",
+        "脱离库单独使用模型文件做快速实验"
+      ],
+      "topics": [
+        "audio",
+        "deep-learning",
+        "deepseek",
+        "gemma",
+        "glm",
+        "hacktoberfest",
+        "llm",
+        "machine-learning",
+        "model-hub",
+        "natural-language-processing",
+        "nlp",
+        "pretrained-models",
+        "python",
+        "pytorch",
+        "pytorch-transformers",
+        "qwen",
+        "speech-recognition",
+        "transformer",
+        "vlm"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-10T17:50:34Z"
+    },
+    {
+      "rank": 9,
+      "owner": "anthropics",
+      "name": "knowledge-work-plugins",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+      "language": "Python",
+      "stars": "28,757",
+      "forks": "3,273",
+      "stars_today": "626 stars today",
+      "zh_description": "Knowledge Work Plugins 为 Claude Cowork（兼容 Claude Code）提供插件，把 Claude 变成对应岗位、团队与公司的专家。每个插件打包某一职能所需的 skills、connectors、slash commands 与 sub-agents，并可用公司自己的工具、术语与流程替换定制。",
+      "problem": "替代每次向 Claude 重复说明工作方式、工具与数据来源的零散做法，统一团队流程与结果。",
+      "key_features": [
+        "为 Claude Cowork 提供岗位专家插件，兼容 Claude Code",
+        "每个插件打包 skills、connectors、slash commands 与 sub-agents",
+        "可按公司工具、术语与流程定制插件"
+      ],
+      "use_cases": [
+        "为某一职能打包技能、连接器与斜杠命令",
+        "按公司术语与流程定制 Claude 的工作方式"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-10T07:38:13Z"
+    },
+    {
+      "rank": 10,
+      "owner": "multica-ai",
+      "name": "andrej-karpathy-skills",
+      "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+      "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+      "language": "Unknown",
+      "stars": "218,184",
+      "forks": "21,978",
+      "stars_today": "279 stars today",
+      "zh_description": "仓库提供一个 CLAUDE.md 文件，放入 Claude Code 项目后用于约束其行为。文件内容取自 Andrej Karpathy 对 LLM 编码陷阱的观察，针对的是 LLM 写代码时的常见失误。README 同时提供英文与简体中文两个版本。",
+      "problem": "LLM 编码时存在 Karpathy 指出的陷阱，此前缺少一份可直接使用的统一约束文件。",
+      "key_features": [
+        "单个 CLAUDE.md 文件",
+        "用于改善 Claude Code 行为",
+        "内容源自 Andrej Karpathy 对 LLM 编码陷阱的观察",
+        "README 提供英文与简体中文版本"
+      ],
+      "use_cases": [
+        "将 CLAUDE.md 加入 Claude Code 项目，使其遵循文件中的编码约束",
+        "参照 Karpathy 对 LLM 编码陷阱的观察，检查自己使用 Claude Code 的方式"
+      ],
+      "topics": [],
+      "license": "",
+      "pushed_at": "2026-04-20T10:05:04Z"
+    }
+  ]
+}
