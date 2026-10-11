@@ -1,0 +1,203 @@
+{
+  "collected_at": "2026-10-11T21:56:54.420798+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "morluto",
+      "name": "rea",
+      "url": "https://github.com/morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "language": "TypeScript",
+      "stars": "100,877",
+      "forks": "22,175",
+      "stars_today": "25,585 stars today",
+      "zh_description": "REA 是基于 agent 的逆向工程工具，覆盖从应用行为到原生二进制的分析。以 CLI 形式运行，通过 MCP（Model Context Protocol）供 Claude Code、Codex 等代理调用，并提供 agent-skills，可对接 Ghidra、Hopper 等反汇编器与反编译器，面向 CTF 与静态分析。",
+      "problem": "替代在反汇编器、反编译器和命令行工具之间手工切换、人工拼接分析流程的方式。",
+      "key_features": [
+        "以 CLI 方式执行逆向分析任务",
+        "通过 MCP 接入 Claude Code、Codex 等代理",
+        "提供 agent-skills 形式的分析技能",
+        "覆盖二进制分析与静态分析",
+        "对接 Ghidra、Hopper 反汇编与反编译器"
+      ],
+      "use_cases": [
+        "在 CTF 中分析题目提供的原生二进制",
+        "对可执行文件做静态分析与反编译",
+        "由代理按技能编排从应用行为到二进制的分析"
+      ],
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "binary-analysis",
+        "claude-code",
+        "cli",
+        "codex",
+        "cordis",
+        "ctf",
+        "decompiler",
+        "developer-tools",
+        "disassembler",
+        "dsh",
+        "dsh-plugin",
+        "ghidra",
+        "hopper",
+        "llm",
+        "mcp",
+        "model-context-protocol",
+        "reverse-engineering",
+        "static-analysis"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-10-11T21:50:13Z"
+    },
+    {
+      "rank": 2,
+      "owner": "boykopovar",
+      "name": "AnyPS5",
+      "url": "https://github.com/boykopovar/AnyPS5",
+      "description": "Tool for automatic PS5 executables porting to Linux and Windows",
+      "language": "C++",
+      "stars": "29,786",
+      "forks": "2,559",
+      "stars_today": "3,977 stars today",
+      "zh_description": "AnyPS5 把 PS5 可执行文件自动移植到 Linux 和 Windows。核心组件 relinker 将可执行文件转换为目标系统的原生格式，并在 core/libs/prx 中实现可供动态链接的系统 prx 库。移植后不依赖模拟器，也不启动独立运行时进程。",
+      "problem": "替代用模拟器或独立运行时进程来运行 PS5 可执行文件的方式。",
+      "key_features": [
+        "relinker 将可执行文件转为目标系统原生格式",
+        "实现适合动态链接的系统 prx 库",
+        "不使用模拟器，不启动独立运行时进程",
+        "提供已测试游戏的兼容性列表与已知问题"
+      ],
+      "use_cases": [
+        "把 PS5 可执行文件移植到 Linux 或 Windows 上运行",
+        "查阅兼容性列表确认某款游戏的已知问题",
+        "通过动态链接方式调用系统 prx 库实现"
+      ],
+      "topics": [
+        "anyps5",
+        "dynamic-library",
+        "game-porting",
+        "ps5",
+        "ps5-tools",
+        "spir-v",
+        "vulkan"
+      ],
+      "license": "GPL-2.0",
+      "pushed_at": "2026-10-11T21:56:46Z"
+    },
+    {
+      "rank": 3,
+      "owner": "storytold",
+      "name": "artcraft",
+      "url": "https://github.com/storytold/artcraft",
+      "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+      "language": "Rust",
+      "stars": "17,545",
+      "forks": "2,868",
+      "stars_today": "2,956 stars today",
+      "zh_description": "ArtCraft 是用于交互式 AI 图像与视频创作的 IDE。可在 2D 中合成画面、在 3D 中搭建场景，并自行选择生成模型；先用可视化工具搭好场景再生成。功能包括 Image to Location、2D/3D 图像合成和 Image to 3D Mesh。",
+      "problem": "替代只靠文本提示反复试探、难以控制构图、人物身份与机位的生成方式。",
+      "key_features": [
+        "Image to Location 在同一环境布置虚拟演员并规划多镜头",
+        "3D Image Compositing 在 3D 中叠放背景、前景与道具",
+        "2D Image Compositing 支持图层、抠图与绘图工具",
+        "Image to 3D Mesh 把图像转为可摆放旋转的 3D 物体",
+        "可自行选择适合的生成模型"
+      ],
+      "use_cases": [
+        "在同一房间场景中规划并生成多个镜头画面",
+        "用带深度的 3D 背景与前景完成图像合成",
+        "把单张图像转成可调整位置与视角的 3D 网格对象"
+      ],
+      "topics": [
+        "3d-graphics",
+        "ai",
+        "aivideo",
+        "filmmaking",
+        "imagegeneration"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-11T13:47:59Z"
+    },
+    {
+      "rank": 4,
+      "owner": "bilawalsidhu",
+      "name": "gods-eye-view",
+      "url": "https://github.com/bilawalsidhu/gods-eye-view",
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "language": "JavaScript",
+      "stars": "51,493",
+      "forks": "10,347",
+      "stars_today": "872 stars today",
+      "zh_description": "在浏览器中运行的 3D 地球（Cesium）空间情报工具，把航班应答机、AISStream 船舶信标、轨道根数、地震仪与公共摄像头信号叠到同一颗逼真地球上，可通过 OpenAI 语音与 AI HUD 获取摘要，各数据源为独立模块，可在本地查看并扩展源码。",
+      "problem": "替代在航班、船舶、卫星、地震、摄像头等分散公开数据源之间来回切换查看的流程。",
+      "key_features": [
+        "基于 Cesium ion 加载 Google Photorealistic 3D 地形与影像",
+        "接入 AISStream 展示全球船舶实时位置",
+        "通过 OpenAI API 提供语音与 AI HUD 摘要",
+        "每类数据层为独立模块，可自行增删数据源",
+        "交通流按真实道路与聚合位置数据模拟"
+      ],
+      "use_cases": [
+        "在 3D 地球上定位并查看单架飞机或单艘船舶",
+        "叠加轨道根数、地震仪与摄像头图层观察全球态势",
+        "用语音 HUD 读出当前视图的 AI 摘要"
+      ],
+      "topics": [
+        "3d-globe",
+        "cesium",
+        "flight-tracking",
+        "geospatial",
+        "geospatial-intelligence",
+        "gis",
+        "osint",
+        "photogrammetry",
+        "satellite-tracking",
+        "spatial-intelligence",
+        "webgl",
+        "worldview"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-10-10T03:59:46Z"
+    },
+    {
+      "rank": 5,
+      "owner": "pytorch",
+      "name": "pytorch",
+      "url": "https://github.com/pytorch/pytorch",
+      "description": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
+      "language": "Python",
+      "stars": "104,438",
+      "forks": "32,087",
+      "stars_today": "314 stars today",
+      "zh_description": "Python 包，接收张量运算与神经网络定义，在 CPU 或 GPU 上执行；通过 tape-based autograd 做反向模式自动微分，输出可动态改变结构的深度神经网络训练与推理结果，并复用 NumPy、SciPy、Cython 等包扩展。",
+      "problem": "替代不使用 GPU 的 NumPy 计算，以及静态图框架中网络结构固定、改动需重建的限制。",
+      "key_features": [
+        "torch：类 NumPy 张量库，支持强 GPU 加速",
+        "torch.autograd：基于磁带的自动微分库",
+        "torch.nn：与 autograd 深度集成的神经网络库",
+        "torch.multiprocessing：跨进程共享张量内存",
+        "torch.utils：提供 DataLoader 等工具函数"
+      ],
+      "use_cases": [
+        "用 GPU 加速张量切片、索引、线性代数与归约运算",
+        "在运行时任意改变网络行为并即时求导",
+        "用 DataLoader 与多进程加载数据做训练"
+      ],
+      "topics": [
+        "autograd",
+        "deep-learning",
+        "gpu",
+        "machine-learning",
+        "neural-network",
+        "numpy",
+        "python",
+        "tensor"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-10-11T21:56:54Z"
+    }
+  ]
+}
