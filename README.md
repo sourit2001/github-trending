@@ -8,7 +8,7 @@
 2. 在 GitHub 仓库的 `Settings -> Secrets and variables -> Actions` 中新增 secret：
    - `FEISHU_WEBHOOK_URL`: 飞书机器人 Webhook URL
    - `FEISHU_SECRET`: 可选，如果机器人开启了签名校验，则填写飞书给出的签名密钥
-   - `DEEPSEEK_API_KEY`: 可选，DeepSeek API Key；配置后用于生成更准确的中文简介和适用场景
+   - `ANTHROPIC_API_KEY`: 可选，Anthropic 官方 API Key；配置后用于生成更准确的中文简介和适用场景
 3. 手动运行 `Daily GitHub Trending` workflow，或等待每天自动运行。
 
 默认配置：
@@ -38,9 +38,9 @@ PYTHONPATH=src python -m github_trending_feishu
 
 - `FEISHU_WEBHOOK_URL`: 飞书机器人 Webhook URL
 - `FEISHU_SECRET`: 可选，飞书机器人签名密钥
-- `DEEPSEEK_API_KEY`: 可选，配置后使用 DeepSeek 官方 API 生成更准确的中文简介和适用场景
-- `DEEPSEEK_MODEL`: 可选，DeepSeek 模型，默认 `deepseek-v4-flash`
-- `DEEPSEEK_TIMEOUT`: 可选，DeepSeek 请求超时时间，默认 45 秒
+- `ANTHROPIC_API_KEY`: 可选，配置后使用 Claude 官方 API 生成更准确的中文简介和适用场景
+- `ANTHROPIC_MODEL`: 可选，Claude 模型，默认 `claude-haiku-5-5`
+- `ANTHROPIC_TIMEOUT`: 可选，Claude 请求超时时间，默认 45 秒
 - `GITHUB_TOKEN`: 可选，用于提高 GitHub README 和仓库元数据 API 的请求额度；GitHub Actions 会自动使用当前工作流令牌
 - `TRENDING_LANGUAGE`: GitHub Trending 语言，例如 `python`、`typescript`、`go`
 - `TRENDING_SINCE`: `daily`、`weekly` 或 `monthly`
@@ -49,7 +49,7 @@ PYTHONPATH=src python -m github_trending_feishu
 - `SNAPSHOT_DIR`: JSON 快照目录，默认 `data/snapshots`
 - `REPORT_TIMEZONE`: 报告文件名使用的日期时区，默认 `Asia/Shanghai`
 
-如果不配置 `DEEPSEEK_API_KEY`，程序会使用本地规则生成中文内容；如果 DeepSeek 调用失败，也会自动回退到本地规则，避免影响飞书推送。
+如果不配置 `ANTHROPIC_API_KEY`，程序会使用本地规则生成中文内容；如果 Claude 调用失败，也会自动回退到本地规则，避免影响飞书推送。
 
 生成解读时，程序会读取公开仓库的 README、Topics、License 和最近更新时间。程序优先保留 README 中描述产品能力、输入输出、工作流程、兼容性、领域和限制的段落，并跳过安装、配置、贡献与许可证等噪声。每个仓库包括：
 
@@ -58,7 +58,7 @@ PYTHONPATH=src python -m github_trending_feishu
 - 主要功能
 - 使用场景
 
-README 只作为当次分析输入，不会完整写入每日 JSON 快照。DeepSeek 返回缺字段时会自动重试；仍不可用时，程序从 README 的具体事实生成兜底内容，不使用泛化的“提升效率”等模板话术。README 获取失败时，才会根据 Trending 页面的一行描述生成简化版内容。
+README 只作为当次分析输入，不会完整写入每日 JSON 快照。Claude 返回缺字段时会自动重试；仍不可用时，程序从 README 的具体事实生成兜底内容，不使用泛化的“提升效率”等模板话术。README 获取失败时，才会根据 Trending 页面的一行描述生成简化版内容。
 
 ## 同步到 Obsidian
 
@@ -72,3 +72,5 @@ GitHub Actions 运行在 GitHub 的服务器上，不能直接写入你 Mac 本�
 注意当前 workflow 是先生成报告并发送飞书，然后才执行自动提交。看到飞书消息时，GitHub 上的报告提交可能还在后续步骤中，Mac mini 如果立即拉取可能会拉不到当天文件。建议拉取程序延迟 1-2 分钟，或按固定间隔轮询 GitHub 仓库更新。
 
 workflow 默认在 `18:12 UTC` 运行，也就是北京时间第二天 `02:12`。报告文件名默认按 `Asia/Shanghai` 生成，例如北京时间 7 月 28 日运行会写入 `data/reports/2026-07-28.md`。
+
+Claude 使用 Anthropic 官方 Messages API（`https://api.anthropic.com/v1/messages`），默认模型为 `claude-haiku-5-5`。将 Anthropic Console 创建的 API Key 保存为 GitHub Actions secret `ANTHROPIC_API_KEY`，不要写入代码或提交到仓库。模型与超时可分别通过环境变量 `ANTHROPIC_MODEL`、`ANTHROPIC_TIMEOUT` 调整。

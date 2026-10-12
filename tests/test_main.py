@@ -1,17 +1,19 @@
 from __future__ import annotations
 
+import json
 import unittest
 from datetime import datetime, timezone
-from unittest.mock import patch
+from unittest.mock import MagicMock, patch
 
 from github_trending_feishu.__main__ import (
     TrendingRepo,
-    build_deepseek_prompt,
+    build_claude_prompt,
     build_report,
     enrich_repo,
-    enrich_repos_with_deepseek,
+    enrich_repos_with_claude,
     prepare_readme_for_summary,
     repo_to_snapshot,
+    request_claude_summaries,
 )
 
 
@@ -92,7 +94,7 @@ class EnrichmentTests(unittest.TestCase):
             topics=["developer-tools"],
             license="MIT",
         )
-        prompt = build_deepseek_prompt([repo])
+        prompt = build_claude_prompt([repo])
 
         self.assertIn("local search index", prompt)
         self.assertIn("key_features", prompt)
@@ -147,9 +149,9 @@ class EnrichmentTests(unittest.TestCase):
         self.assertTrue(any("数据库" in feature for feature in repo.key_features))
         self.assertTrue(repo.use_cases)
 
-    @patch.dict("os.environ", {"DEEPSEEK_API_KEY": "test-key"})
-    @patch("github_trending_feishu.__main__.request_deepseek_summaries")
-    def test_deepseek_fields_are_applied(self, request_summaries: object) -> None:
+    @patch.dict("os.environ", {"ANTHROPIC_API_KEY": "test-key"})
+    @patch("github_trending_feishu.__main__.request_claude_summaries")
+    def test_claude_fields_are_applied(self, request_summaries: object) -> None:
         request_summaries.return_value = {  # type: ignore[attr-defined]
             "example/tool": {
                 "zh_description": "一个具体工具。",
@@ -160,18 +162,18 @@ class EnrichmentTests(unittest.TestCase):
         }
         repo = sample_repo()
 
-        enrich_repos_with_deepseek([repo])
+        enrich_repos_with_claude([repo])
 
         self.assertEqual(repo.problem, "解决具体问题。")
         self.assertEqual(repo.key_features, ["能力一", "能力二"])
         self.assertEqual(repo.use_cases, ["场景一", "场景二"])
 
-    @patch.dict("os.environ", {"DEEPSEEK_API_KEY": "test-key"})
-    @patch("github_trending_feishu.__main__.request_deepseek_summaries", side_effect=TimeoutError("read timed out"))
-    def test_deepseek_timeout_falls_back_without_raising(self, request_summaries: object) -> None:
+    @patch.dict("os.environ", {"ANTHROPIC_API_KEY": "test-key"})
+    @patch("github_trending_feishu.__main__.request_claude_summaries", side_effect=TimeoutError("read timed out"))
+    def test_claude_timeout_falls_back_without_raising(self, request_summaries: object) -> None:
         repo = sample_repo()
 
-        enrich_repos_with_deepseek([repo])
+        enrich_repos_with_claude([repo])
         enriched = enrich_repo(repo)
 
         self.assertIs(enriched, repo)
@@ -182,6 +184,52 @@ class EnrichmentTests(unittest.TestCase):
         snapshot = repo_to_snapshot(sample_repo(readme_excerpt="large README"))
 
         self.assertNotIn("readme_excerpt", snapshot)
+
+
+class ClaudeApiTests(unittest.TestCase):
+    @patch.dict("os.environ", {"ANTHROPIC_TIMEOUT": "45"})
+    @patch("github_trending_feishu.__main__.urlopen")
+    def test_messages_request_and_text_block_parsing(self, urlopen_mock: MagicMock) -> None:
+        summary = {"full_name": "example/tool", "zh_description": "具体工具",
+                   "problem": "具体问题", "key_features": ["能力一", "能力二"],
+                   "use_cases": ["场景一"]}
+        payload = {"stop_reason": "end_turn", "content": [
+            {"type": "thinking", "thinking": "ignored"},
+            {"type": "text", "text": json.dumps({"repos": [summary]})}]}
+        urlopen_mock.return_value.__enter__.return_value.read.return_value = json.dumps(payload).encode()
+        result = request_claude_summaries([sample_repo()], api_key="test-key", model="claude-haiku-5-5")
+        request = urlopen_mock.call_args.args[0]
+        body = json.loads(request.data)
+        self.assertEqual(request.full_url, "https://api.anthropic.com/v1/messages")
+        self.assertEqual(request.get_header("X-api-key"), "test-key")
+        self.assertEqual(request.get_header("Anthropic-version"), "2023-06-01")
+        self.assertEqual(body["model"], "claude-haiku-5-5")
+        self.assertTrue(body["system"])
+        self.assertEqual(body["messages"][0]["role"], "user")
+        self.assertNotIn("temperature", body)
+        self.assertNotIn("response_format", body)
+        self.assertEqual(urlopen_mock.call_args.kwargs["timeout"], 45)
+        self.assertEqual(result["example/tool"]["key_features"], ["能力一", "能力二"])
+
+    @patch("github_trending_feishu.__main__.urlopen")
+    def test_unusable_responses_raise_for_fallback(self, urlopen_mock: MagicMock) -> None:
+        for payload in (
+            {"stop_reason": "max_tokens", "content": [{"type": "text", "text": "{}"}]},
+            {"stop_reason": "refusal", "content": []},
+            {"stop_reason": "end_turn", "content": []},
+            {"stop_reason": "end_turn", "content": [{"type": "text", "text": "invalid"}]},
+            {"stop_reason": "end_turn", "content": [{"type": "text", "text": "null"}]},
+        ):
+            with self.subTest(payload=payload):
+                urlopen_mock.return_value.__enter__.return_value.read.return_value = json.dumps(payload).encode()
+                with self.assertRaises(RuntimeError):
+                    request_claude_summaries([sample_repo()], api_key="test-key", model="claude-haiku-5-5")
+
+    @patch.dict("os.environ", {"ANTHROPIC_API_KEY": ""})
+    @patch("github_trending_feishu.__main__.request_claude_summaries")
+    def test_no_key_skips_api(self, request_mock: MagicMock) -> None:
+        enrich_repos_with_claude([sample_repo()])
+        request_mock.assert_not_called()
 
 
 class RenderingTests(unittest.TestCase):

@@ -24,8 +24,8 @@ from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 GITHUB_TRENDING_URL = "https://github.com/trending"
 GITHUB_API_URL = "https://api.github.com"
-DEEPSEEK_CHAT_COMPLETIONS_URL = "https://api.deepseek.com/chat/completions"
-DEFAULT_DEEPSEEK_MODEL = "deepseek-v4-flash"
+ANTHROPIC_MESSAGES_URL = "https://api.anthropic.com/v1/messages"
+DEFAULT_ANTHROPIC_MODEL = "claude-haiku-5-5"
 DEFAULT_USER_AGENT = (
     "Mozilla/5.0 (compatible; github-trending-feishu/0.1; "
     "+https://github.com/)"
@@ -203,7 +203,7 @@ def fetch_trending(language: str = "", since: str = "daily") -> list[TrendingRep
 
 def enrich_repos(repos: list[TrendingRepo]) -> list[TrendingRepo]:
     enrich_repos_with_github(repos)
-    enrich_repos_with_deepseek(repos)
+    enrich_repos_with_claude(repos)
     return [enrich_repo(repo) for repo in repos]
 
 
@@ -358,34 +358,34 @@ def truncate_readme_text(text: str, limit: int) -> str:
     return truncated or text[:limit].rstrip()
 
 
-def enrich_repos_with_deepseek(repos: list[TrendingRepo]) -> None:
-    api_key = os.getenv("DEEPSEEK_API_KEY", "").strip()
+def enrich_repos_with_claude(repos: list[TrendingRepo]) -> None:
+    api_key = os.getenv("ANTHROPIC_API_KEY", "").strip()
     if not api_key or not repos:
         return
-    model = os.getenv("DEEPSEEK_MODEL", DEFAULT_DEEPSEEK_MODEL).strip() or DEFAULT_DEEPSEEK_MODEL
+    model = os.getenv("ANTHROPIC_MODEL", DEFAULT_ANTHROPIC_MODEL).strip() or DEFAULT_ANTHROPIC_MODEL
 
     summaries: dict[str, dict[str, Any]] = {}
     # Smaller batches reduce omissions and malformed JSON when a daily list is long.
     for start in range(0, len(repos), 3):
         batch = repos[start : start + 3]
         try:
-            summaries.update(request_deepseek_summaries(batch, api_key=api_key, model=model))
+            summaries.update(request_claude_summaries(batch, api_key=api_key, model=model))
         except (RuntimeError, TimeoutError, socket.timeout) as exc:
-            print(f"DeepSeek summary failed for batch, fallback to local rules: {exc}", file=sys.stderr)
+            print(f"Claude summary failed for batch, fallback to local rules: {exc}", file=sys.stderr)
 
     # Retry only repositories whose result is missing or too thin.
-    missing = [repo for repo in repos if not is_usable_deepseek_summary(summaries.get(repo.full_name))]
+    missing = [repo for repo in repos if not is_usable_claude_summary(summaries.get(repo.full_name))]
     for repo in missing:
         try:
-            retry = request_deepseek_summaries([repo], api_key=api_key, model=model)
-            if is_usable_deepseek_summary(retry.get(repo.full_name)):
+            retry = request_claude_summaries([repo], api_key=api_key, model=model)
+            if is_usable_claude_summary(retry.get(repo.full_name)):
                 summaries[repo.full_name] = retry[repo.full_name]
         except (RuntimeError, TimeoutError, socket.timeout) as exc:
-            print(f"DeepSeek retry failed for {repo.full_name}, using local facts: {exc}", file=sys.stderr)
+            print(f"Claude retry failed for {repo.full_name}, using local facts: {exc}", file=sys.stderr)
 
     for repo in repos:
         summary = summaries.get(repo.full_name)
-        if not is_usable_deepseek_summary(summary):
+        if not is_usable_claude_summary(summary):
             continue
         zh_description = normalize_text(summary.get("zh_description", ""))
         if zh_description:
@@ -399,7 +399,7 @@ def enrich_repos_with_deepseek(repos: list[TrendingRepo]) -> None:
                 repo.use_cases = [normalize_text(str(item)) for item in use_cases if normalize_text(str(item))][:3]
 
 
-def is_usable_deepseek_summary(summary: dict[str, Any] | None) -> bool:
+def is_usable_claude_summary(summary: dict[str, Any] | None) -> bool:
     description = normalize_text(str(summary.get("zh_description", ""))) if summary else ""
     generic_markers = ("面向 AI Agent 和自动化工作流", "提升效率", "方便开发", "智能助手集成")
     problem = normalize_text(str(summary.get("problem", ""))) if summary else ""
@@ -415,51 +415,48 @@ def is_usable_deepseek_summary(summary: dict[str, Any] | None) -> bool:
     )
 
 
-def request_deepseek_summaries(
+def request_claude_summaries(
     repos: list[TrendingRepo],
     *,
     api_key: str,
     model: str,
-) -> dict[str, dict[str, str]]:
+) -> dict[str, dict[str, Any]]:
     body = json.dumps(
         {
             "model": model,
+            "system": (
+                "你是面向中文技术读者的 GitHub Trending README 摘要助手。"
+                "你的任务是压缩 README 中的事实，而不是评价项目或补全通用建议。"
+                "只根据提供的仓库描述、Topics 和 README 摘录生成内容，没有证据就少写。"
+                "保留 README 中具体的产品名、组件、输入输出、工作流程和功能边界。"
+                "禁止宣传话术以及“提升效率、降低成本、方便开发、适合技术调研”等空话。"
+                "输出必须是合法 JSON，不要 Markdown，不要额外解释。"
+            ),
             "messages": [
                 {
-                    "role": "system",
-                    "content": (
-                        "你是面向中文技术读者的 GitHub Trending README 摘要助手。"
-                        "你的任务是压缩 README 中的事实，而不是评价项目或补全通用建议。"
-                        "只根据提供的仓库描述、Topics 和 README 摘录生成内容，没有证据就少写。"
-                        "保留 README 中具体的产品名、组件、输入输出、工作流程和功能边界。"
-                        "禁止宣传话术以及“提升效率、降低成本、方便开发、适合技术调研”等空话。"
-                        "输出必须是合法 JSON，不要 Markdown，不要额外解释。"
-                    ),
-                },
-                {
                     "role": "user",
-                    "content": build_deepseek_prompt(repos),
+                    "content": build_claude_prompt(repos),
                 },
             ],
-            "temperature": 0.2,
             "max_tokens": 6000,
-            "response_format": {"type": "json_object"},
+            "thinking": {"type": "disabled"},
         },
         ensure_ascii=False,
     ).encode("utf-8")
 
     headers = {
-        "Authorization": f"Bearer {api_key}",
+        "x-api-key": api_key,
+        "anthropic-version": "2023-06-01",
         "Content-Type": "application/json",
     }
 
     request = Request(
-        DEEPSEEK_CHAT_COMPLETIONS_URL,
+        ANTHROPIC_MESSAGES_URL,
         data=body,
         headers=headers,
         method="POST",
     )
-    timeout = int(os.getenv("DEEPSEEK_TIMEOUT", "45"))
+    timeout = int(os.getenv("ANTHROPIC_TIMEOUT", "45"))
 
     try:
         with urlopen(request, timeout=timeout) as response:
@@ -471,20 +468,32 @@ def request_deepseek_summaries(
         raise RuntimeError(str(exc)) from exc
 
     try:
-        content = payload["choices"][0]["message"]["content"]
-    except (KeyError, IndexError, TypeError) as exc:
-        raise RuntimeError(f"Unexpected response: {payload}") from exc
+        if payload.get("stop_reason") != "end_turn":
+            raise RuntimeError(f"Claude response did not complete: {payload.get('stop_reason')}")
+        blocks = payload["content"]
+        if not isinstance(blocks, list):
+            raise TypeError("content must be a list")
+        content = "".join(block["text"] for block in blocks if block.get("type") == "text")
+        if not content.strip():
+            raise RuntimeError("Claude response contains no text")
+    except (KeyError, TypeError, AttributeError) as exc:
+        raise RuntimeError("Unexpected Claude response structure") from exc
 
     try:
         parsed = json.loads(extract_json_object(content))
     except json.JSONDecodeError as exc:
         raise RuntimeError(f"Invalid JSON content: {content}") from exc
 
-    items = parsed.get("repos", parsed if isinstance(parsed, list) else [])
+    if isinstance(parsed, dict):
+        items = parsed.get("repos", [])
+    elif isinstance(parsed, list):
+        items = parsed
+    else:
+        raise RuntimeError(f"Unexpected summary shape: {parsed}")
     if not isinstance(items, list):
         raise RuntimeError(f"Unexpected summary shape: {parsed}")
 
-    summaries: dict[str, dict[str, str]] = {}
+    summaries: dict[str, dict[str, Any]] = {}
     for item in items:
         if not isinstance(item, dict):
             continue
@@ -499,7 +508,7 @@ def request_deepseek_summaries(
     return summaries
 
 
-def build_deepseek_prompt(repos: list[TrendingRepo]) -> str:
+def build_claude_prompt(repos: list[TrendingRepo]) -> str:
     repo_payload = [
         {
             "full_name": repo.full_name,
