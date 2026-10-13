@@ -1,0 +1,239 @@
+{
+  "collected_at": "2026-10-13T22:43:37.027317+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "morluto",
+      "name": "rea",
+      "url": "https://github.com/morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "language": "TypeScript",
+      "stars": "205,098",
+      "forks": "49,932",
+      "stars_today": "54,706 stars today",
+      "zh_description": "接收二进制文件或应用行为作为输入，由智能体调用逆向工具进行分析，输出静态分析、反编译和逆向结论。项目通过 MCP 与 Ghidra、Hopper 等工具集成，使代理能在统一流程中完成逆向任务。",
+      "problem": "替代了人工在多个反编译器与分析工具之间手动切换、记录结果的分散流程。",
+      "key_features": [
+        "基于 MCP 协议连接智能体与逆向工具",
+        "支持 Ghidra 与 Hopper 等反编译后端",
+        "提供二进制静态分析能力",
+        "覆盖从应用行为到原生二进制的分析"
+      ],
+      "use_cases": [
+        "让智能体对二进制文件进行静态分析",
+        "调用 Ghidra 或 Hopper 反编译目标程序",
+        "辅助 CTF 中的逆向题目分析"
+      ],
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "binary-analysis",
+        "claude-code",
+        "cli",
+        "codex",
+        "cordis",
+        "ctf",
+        "decompiler",
+        "developer-tools",
+        "dsh",
+        "dsh-plugin",
+        "ghidra",
+        "hopper",
+        "llm",
+        "mcp",
+        "model-context-protocol",
+        "rea",
+        "reverse-engineering",
+        "static-analysis"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-10-13T22:43:04Z"
+    },
+    {
+      "rank": 2,
+      "owner": "bilawalsidhu",
+      "name": "gods-eye-view",
+      "url": "https://github.com/bilawalsidhu/gods-eye-view",
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "language": "JavaScript",
+      "stars": "55,265",
+      "forks": "10,810",
+      "stars_today": "1,961 stars today",
+      "zh_description": "在浏览器中基于 Cesium 的三维地球上汇聚航班应答机、船舶信标、轨道数据、地震监测和公开摄像头等公开数据。用户可在全球视图与单个飞机、船舶或街道之间切换，数据在本地浏览器中运行。",
+      "problem": "替代了分别打开多个实时数据网站、难以在同一空间视图中关联公开信号的做法。",
+      "key_features": [
+        "基于 Cesium 的三维地球可视化",
+        "接入实时航班与船舶位置数据",
+        "支持卫星轨道与地震数据图层",
+        "可接入公开 CCTV 摄像头位置"
+      ],
+      "use_cases": [
+        "在三维地球上实时追踪航班与船舶",
+        "查看卫星轨道与航天发射轨迹估算",
+        "在同一地图中浏览公开摄像头位置"
+      ],
+      "topics": [
+        "3d-globe",
+        "cesium",
+        "flight-tracking",
+        "geospatial",
+        "geospatial-intelligence",
+        "gis",
+        "osint",
+        "photogrammetry",
+        "satellite-tracking",
+        "spatial-intelligence",
+        "webgl",
+        "worldview"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-10-13T22:39:28Z"
+    },
+    {
+      "rank": 3,
+      "owner": "debpalash",
+      "name": "VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "language": "Python",
+      "stars": "63,049",
+      "forks": "7,019",
+      "stars_today": "2,277 stars today",
+      "zh_description": "接收文本、音频或视频作为输入，通过本地语音模型完成声音克隆、声音设计、视频配音、听写、转写和有声书生成，输出语音文件或字幕文本。支持 646 种语言，支持本地运行，远程服务为可选项。",
+      "problem": "替代了依赖云端 ElevenLabs 等付费语音服务、需要在多个工具间分别完成配音与转写的流程。",
+      "key_features": [
+        "本地声音克隆与声音设计",
+        "视频配音并生成定时语音",
+        "浮窗式听写与语音转写",
+        "提供本地 API 与 MCP 接口"
+      ],
+      "use_cases": [
+        "将视频内容配音为另一语言语音",
+        "克隆指定声音生成朗读音频",
+        "把录音或视频转写为文字"
+      ],
+      "topics": [
+        "ai",
+        "audiobook",
+        "cuda",
+        "dubbing",
+        "elevenlabs-alternative",
+        "huggingface",
+        "local-first",
+        "mlx",
+        "omnivoice-studio",
+        "speech-to-text",
+        "tauri",
+        "text-to-speech",
+        "transcription",
+        "translate",
+        "tts",
+        "voice-ai",
+        "voice-cloning",
+        "voice-generation",
+        "voicestudio",
+        "workflow"
+      ],
+      "license": "AGPL-3.0",
+      "pushed_at": "2026-10-13T22:28:34Z"
+    },
+    {
+      "rank": 4,
+      "owner": "vercel-labs",
+      "name": "skills",
+      "url": "https://github.com/vercel-labs/skills",
+      "description": "The open agent skills tool - npx skills",
+      "language": "TypeScript",
+      "stars": "34,445",
+      "forks": "2,950",
+      "stars_today": "187 stars today",
+      "zh_description": "面向开放 Agent Skills 生态的命令行工具。输入是 GitHub 仓库或 skill 路径，可列出、添加、更新、初始化和删除 SKILL.md 形式的技能，并将其安装到 OpenCode、Claude Code、Codex、Cursor 等多种编码代理中。",
+      "problem": "替代手动把 SKILL.md 复制到各编码代理目录并分别维护的做法。",
+      "key_features": [
+        "通过 npx skills add 从仓库或 GitHub 路径安装技能",
+        "支持 list、find、update、init、remove 等子命令管理技能",
+        "可按全局或项目范围更新与删除已安装技能",
+        "SKILL.md 通过 YAML frontmatter 声明 name 与 description",
+        "metadata.internal 可将技能隐藏于常规发现流程"
+      ],
+      "use_cases": [
+        "从 GitHub 仓库列出并安装指定 agent skill 到编码代理",
+        "批量更新全局或项目级已安装的技能",
+        "在当前目录或子目录中创建符合格式的 SKILL.md 模板"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-10-09T17:54:47Z"
+    },
+    {
+      "rank": 5,
+      "owner": "storytold",
+      "name": "artcraft",
+      "url": "https://github.com/storytold/artcraft",
+      "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+      "language": "Rust",
+      "stars": "25,479",
+      "forks": "4,006",
+      "stars_today": "4,078 stars today",
+      "zh_description": "面向艺术家与影视创作者的交互式 AI 图像和视频创作 IDE。用户可在 2D 画布中合成图层、在 3D 场景中摆放人物与道具、导入图片生成三维网格，并在此基础上选择模型生成图像或视频，以便控制构图、角色与镜头。",
+      "problem": "针对仅靠文本提示难以精确控制构图、角色一致性和镜头位置的问题，改用可视化场景搭建后再生成。",
+      "key_features": [
+        "2D 图像合成，支持图层、背景移除和绘图工具",
+        "3D 图像合成，可在三维空间分层放置背景与前景",
+        "Image to 3D Mesh，将图片转换为可定位旋转的三维对象",
+        "Image to Location，在一致环境中规划同一场景的多个镜头"
+      ],
+      "use_cases": [
+        "在 3D 场景中摆放虚拟角色并规划同一空间内的多个镜头",
+        "将图片拆分为图层并进行 2D 合成后再生成图像",
+        "把图片转换为三维对象并调整角度后用于画面构图"
+      ],
+      "topics": [
+        "3d-graphics",
+        "ai",
+        "aivideo",
+        "filmmaking",
+        "imagegeneration"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-11T13:47:59Z"
+    },
+    {
+      "rank": 6,
+      "owner": "xtool-org",
+      "name": "xtool",
+      "url": "https://github.com/xtool-org/xtool",
+      "description": "Cross-platform Xcode replacement. Build and deploy iOS apps with SwiftPM on Linux, Windows, macOS.",
+      "language": "Swift",
+      "stars": "9,247",
+      "forks": "392",
+      "stars_today": "1,182 stars today",
+      "zh_description": "跨平台的 Xcode 替代工具，在 Linux、WSL 和 macOS 上使用 SwiftPM 构建 iOS 应用。输入为 SwiftPM 包，经构建生成 iOS app，再完成签名并安装到设备；同时提供与 Apple Developer Services 交互的命令与 XKit 库接口。",
+      "problem": "替代必须依赖 macOS 与 Xcode 才能构建、签名和安装 iOS 应用的流程，使非 macOS 环境也能完成相关操作。",
+      "key_features": [
+        "将 SwiftPM 包构建为 iOS 应用",
+        "对 iOS app 进行签名并安装到设备",
+        "通过 xtool ds 与 Apple Developer Services 交互",
+        "提供 devices、install、launch、uninstall 设备管理命令",
+        "XKit 库可供其他应用直接调用相关能力"
+      ],
+      "use_cases": [
+        "在 Linux 或 Windows 下构建 SwiftPM iOS 项目并安装到设备",
+        "列出已连接设备并启动或卸载指定应用",
+        "在自研应用中通过 XKit 调用 Apple Developer Services"
+      ],
+      "topics": [
+        "ios",
+        "linux",
+        "swift",
+        "swift-package-manager",
+        "windows",
+        "xcode"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-10-13T22:41:37Z"
+    }
+  ]
+}
