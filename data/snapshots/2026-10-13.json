@@ -1,0 +1,183 @@
+{
+  "collected_at": "2026-10-13T00:38:09.272928+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "morluto",
+      "name": "rea",
+      "url": "https://github.com/morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "language": "TypeScript",
+      "stars": "156,743",
+      "forks": "36,176",
+      "stars_today": "45,327 stars today",
+      "zh_description": "接收待分析的应用行为、原生二进制文件或相关逆向工程目标，通过智能体（agent）驱动静态分析与反编译工具，对目标进行逆向分析。",
+      "problem": "替代人工在多个逆向工具之间来回切换、手动串联反汇编与反编译步骤的工作方式。",
+      "key_features": [
+        "由智能体驱动逆向工程流程",
+        "覆盖从应用行为到原生二进制的分析",
+        "支持 MCP 模型上下文协议接入",
+        "集成 Ghidra、Hopper 等分析工具"
+      ],
+      "use_cases": [
+        "对原生二进制文件进行静态分析与反编译",
+        "结合智能体自动梳理应用行为与底层实现的对应关系",
+        "辅助 CTF 题目中的二进制逆向分析"
+      ],
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "binary-analysis",
+        "claude-code",
+        "cli",
+        "codex",
+        "cordis",
+        "ctf",
+        "decompiler",
+        "developer-tools",
+        "disassembler",
+        "dsh",
+        "dsh-plugin",
+        "ghidra",
+        "hopper",
+        "llm",
+        "mcp",
+        "model-context-protocol",
+        "reverse-engineering",
+        "static-analysis"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-10-13T00:37:29Z"
+    },
+    {
+      "rank": 2,
+      "owner": "bilawalsidhu",
+      "name": "gods-eye-view",
+      "url": "https://github.com/bilawalsidhu/gods-eye-view",
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "language": "JavaScript",
+      "stars": "53,658",
+      "forks": "10,607",
+      "stars_today": "1,895 stars today",
+      "zh_description": "在浏览器中将航班应答机、船舶信标、卫星轨道数据、地震仪及公开摄像头等公开信号，叠加到基于 Cesium 的三维写实地球上进行可视化。",
+      "problem": "分别查看航班、船舶、卫星、地震和摄像头等分散的公开数据源，难以在同一空间中对照。",
+      "key_features": [
+        "在三维地球上叠加多类公开实时数据层",
+        "支持从全球视图下钻到单个航班或船舶",
+        "基于 Cesium 与 WebGL 渲染三维场景",
+        "各数据图层为独立模块，可扩展"
+      ],
+      "use_cases": [
+        "在同一地球界面中追踪航班与船舶的实时位置",
+        "查看卫星轨道与火箭发射轨迹的粗略估计",
+        "在三维地图上浏览公开摄像头的位置与视角"
+      ],
+      "topics": [
+        "3d-globe",
+        "cesium",
+        "flight-tracking",
+        "geospatial",
+        "geospatial-intelligence",
+        "gis",
+        "osint",
+        "photogrammetry",
+        "satellite-tracking",
+        "spatial-intelligence",
+        "webgl",
+        "worldview"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-10-12T14:15:33Z"
+    },
+    {
+      "rank": 3,
+      "owner": "storytold",
+      "name": "artcraft",
+      "url": "https://github.com/storytold/artcraft",
+      "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+      "language": "Rust",
+      "stars": "22,005",
+      "forks": "3,555",
+      "stars_today": "4,095 stars today",
+      "zh_description": "接收用户在二维画布与三维场景中的素材、布局与角色设定，通过可视化合成与图像转三维等工具组织画面，再调用 AI 模型生成图像和视频。",
+      "problem": "替代仅靠文本提示词生成图像与视频、难以精确控制构图、角色与镜头位置的工作方式。",
+      "key_features": [
+        "二维图层合成与背景移除",
+        "三维场景中分层布置背景与道具",
+        "将图像转换为可定位的三维网格",
+        "在同一环境中规划多个镜头"
+      ],
+      "use_cases": [
+        "在三维场景中摆放虚拟角色并规划多镜头画面",
+        "将图像转为三维物体后调整位置、旋转与取景",
+        "通过图层合成构建带有景深的图像作品"
+      ],
+      "topics": [
+        "3d-graphics",
+        "ai",
+        "aivideo",
+        "filmmaking",
+        "imagegeneration"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-11T13:47:59Z"
+    },
+    {
+      "rank": 4,
+      "owner": "microsoft",
+      "name": "BitNet",
+      "url": "https://github.com/microsoft/BitNet",
+      "description": "Official inference framework for 1-bit LLMs",
+      "language": "C++",
+      "stars": "40,906",
+      "forks": "3,807",
+      "stars_today": "97 stars today",
+      "zh_description": "bitnet.cpp 是 1-bit 大模型（如 BitNet b1.58）的官方推理框架，输入 1.58-bit 模型，通过优化内核在 CPU 与 GPU 上执行快速、无损的推理，输出文本生成结果。",
+      "problem": "1-bit 大模型在通用推理框架上缺少专用高效内核，难以在本地 CPU 上运行大参数模型。",
+      "key_features": [
+        "提供针对 1.58-bit 模型的优化内核",
+        "支持 x86（AVX2）与 ARM（NEON）CPU 推理",
+        "支持 GPU 推理，NPU 支持列为后续计划",
+        "支持 I2_S 量化格式的模型转换与推理"
+      ],
+      "use_cases": [
+        "在单台 CPU 设备上运行 100B 级 BitNet b1.58 模型",
+        "在本地设备上对 1-bit 嵌入模型执行 prefill 推理",
+        "使用 VibeASR.cpp 等基于 I2_S 量化的实时语音识别引擎"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-07-27T05:52:06Z"
+    },
+    {
+      "rank": 5,
+      "owner": "Alishahryar1",
+      "name": "free-claude-code",
+      "url": "https://github.com/Alishahryar1/free-claude-code",
+      "description": "Use Claude Code, Codex, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
+      "language": "Python",
+      "stars": "59,106",
+      "forks": "9,312",
+      "stars_today": "626 stars today",
+      "zh_description": "通过终端、应用、IDE、手机或浏览器调用 Claude Code、Codex 等编码工具，并将其请求路由到用户配置的多个模型提供商。用户在管理界面中配置提供商 API 密钥与模型，支持多密钥和备用模型列表。",
+      "problem": "Claude Code 等工具默认绑定 Anthropic 账号，用户无法直接接入其他模型提供商或切换自定义 API 端点。",
+      "key_features": [
+        "支持 Claude Code、Codex、VSCode 等多种客户端接入",
+        "管理界面可配置多个提供商及 OpenAI OAuth 登录",
+        "支持自定义 API 端点，可自动发现或手动填写模型 ID",
+        "提供有序备用模型列表，失败请求自动切换",
+        "支持多个 API 密钥并校验其有效性"
+      ],
+      "use_cases": [
+        "在 Claude Code 中切换为其他提供商的模型进行编码",
+        "通过自定义 API 端点为多种编码客户端统一配置模型",
+        "在请求失败时按备用模型列表自动重试"
+      ],
+      "topics": [],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-10-12T17:09:53Z"
+    }
+  ]
+}
