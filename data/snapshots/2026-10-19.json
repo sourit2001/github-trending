@@ -1,0 +1,300 @@
+{
+  "collected_at": "2026-10-18T20:41:00.986878+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "anthropics",
+      "name": "claude-plugins-official",
+      "url": "https://github.com/anthropics/claude-plugins-official",
+      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+      "language": "Python",
+      "stars": "42,573",
+      "forks": "4,525",
+      "stars_today": "1,187 stars today",
+      "zh_description": "该项目主要用于：A curated directory of high-quality plugins for Claude Code.",
+      "problem": "",
+      "key_features": [
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [],
+      "topics": [
+        "claude-code",
+        "mcp",
+        "skills"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-18T17:04:56Z"
+    },
+    {
+      "rank": 2,
+      "owner": "cursor",
+      "name": "plugins",
+      "url": "https://github.com/cursor/plugins",
+      "description": "Cursor plugin specification and official plugins",
+      "language": "TypeScript",
+      "stars": "12,688",
+      "forks": "1,247",
+      "stars_today": "351 stars today",
+      "zh_description": "该项目主要用于：Official Cursor plugins for popular developer tools, frameworks, and SaaS products.",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "",
+      "pushed_at": "2026-10-18T20:18:13Z"
+    },
+    {
+      "rank": 3,
+      "owner": "ruvnet",
+      "name": "ruflo",
+      "url": "https://github.com/ruvnet/ruflo",
+      "description": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+      "language": "TypeScript",
+      "stars": "76,438",
+      "forks": "9,034",
+      "stars_today": "502 stars today",
+      "zh_description": "该项目主要用于：<div align=\"center\">",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "agentic-ai",
+        "agentic-framework",
+        "agentic-workflow",
+        "agents",
+        "ai-agents",
+        "ai-assistant",
+        "ai-skills",
+        "autonomous-agents",
+        "claude",
+        "codex",
+        "dsh-plugin",
+        "harness",
+        "mcp-server",
+        "multi-agent",
+        "multi-agent-systems",
+        "npm",
+        "skills",
+        "swarm",
+        "swarm-intelligence",
+        "typescript"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-10-18T11:13:04Z"
+    },
+    {
+      "rank": 4,
+      "owner": "akitaonrails",
+      "name": "ai-memory",
+      "url": "https://github.com/akitaonrails/ai-memory",
+      "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+      "language": "Rust",
+      "stars": "10,398",
+      "forks": "746",
+      "stars_today": "513 stars today",
+      "zh_description": "为AI编程CLI提供长期记忆的Rust服务，接收各harness的会话观察并经去敏后汇入共享记忆。会话结束时将观察整理为项目wiki的markdown页面，下次会话通过FTS5、实体与图邻居检索、可选向量混合排序生成简短简报注入上下文，并支持跨Agent的显式交接。",
+      "problem": "不同编程Agent的记忆各自局限于单机和单一工具，切换工具或交给队友后上下文丢失，需要重复解释架构与失败尝试。",
+      "key_features": [
+        "通过生命周期钩子采集并去敏Agent会话观察",
+        "会话结束时将观察编译为项目wiki的markdown页面",
+        "FTS5、实体匹配与图邻居RRF混合检索",
+        "可选向量RRF与会话观察证据流排序",
+        "带类型与唯一认领的跨Agent交接协议"
+      ],
+      "use_cases": [
+        "在Claude Code中断任务后，用Codex在同一目录继续并带上架构背景",
+        "把多台机器上的编程会话记忆集中到自部署服务器供团队检索",
+        "为新会话生成有上限的项目简报并注入上下文"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-10-18T17:56:17Z"
+    },
+    {
+      "rank": 5,
+      "owner": "stablyai",
+      "name": "orca",
+      "url": "https://github.com/stablyai/orca",
+      "description": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
+      "language": "TypeScript",
+      "stars": "96,449",
+      "forks": "6,167",
+      "stars_today": "1,146 stars today",
+      "zh_description": "用于并行管理多个编程Agent的桌面与移动端IDE，可在各自独立的git worktree中同时运行Codex、Claude Code、OpenCode、Pi等，并统一追踪进度。支持终端分屏、设计模式下发送UI元素的HTML/CSS与截图、在应用内浏览GitHub与Linear，以及通过SSH在远程机器运行Agent。",
+      "problem": "同时运行多个编码Agent时需要手动开多个终端、切换分支并分别跟踪结果，难以比较与合并输出。",
+      "key_features": [
+        "每个Agent在独立git worktree中并行运行并可对比结果",
+        "设计模式下发送UI元素的HTML、CSS与裁剪截图",
+        "应用内浏览GitHub PR、Issue与Linear项目看板",
+        "SSH远程运行Agent，支持自动重连与端口转发",
+        "移动端查看Agent状态并发送后续指令"
+      ],
+      "use_cases": [
+        "将同一提示词分发给五个Agent并比较各自在独立worktree中的结果",
+        "在远程高性能机器上运行Agent并保留文件编辑与终端功能",
+        "在应用内直接打开任务对应的PR或Issue并创建worktree评审"
+      ],
+      "topics": [
+        "ade",
+        "agent-ide",
+        "ai-agents",
+        "automation",
+        "bot",
+        "claude-code",
+        "codex",
+        "ghostty",
+        "grok-bot",
+        "hermes-agent",
+        "mobile-app",
+        "muse",
+        "openclaw",
+        "opencode",
+        "orchestration",
+        "pi",
+        "runtime",
+        "terminal",
+        "worktrees",
+        "yc-backed"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-10-18T20:39:19Z"
+    },
+    {
+      "rank": 6,
+      "owner": "HKUDS",
+      "name": "CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "language": "Python",
+      "stars": "54,521",
+      "forks": "4,939",
+      "stars_today": "582 stars today",
+      "zh_description": "将专业软件的源代码转换为供AI Agent调用的命令行工具。流程包含分析代码、设计CLI结构、生成Python包和测试，并直接调用真实软件后端（如Blender、LibreOffice、FFmpeg）生成项目文件，支持交互式REPL与子命令两种模式，并自动生成SKILL.md。",
+      "problem": "AI Agent难以可靠使用专业软件，UI自动化易因界面变化失效，而简化重写又缺失大量功能。",
+      "key_features": [
+        "以真实软件后端渲染，生成ODF、MLT XML、SVG等项目文件",
+        "每个CLI同时支持无参数进入REPL与子命令调用",
+        "输出结构化JSON便于Agent解析",
+        "自动生成包含命令与示例的SKILL.md",
+        "统一的cli_anything.*包命名空间并可pip安装"
+      ],
+      "use_cases": [
+        "让Agent通过生成的CLI调用Blender、GIMP或Shotcut完成批量编辑",
+        "将LibreOffice等办公软件的操作封装为可脚本化的命令行流程",
+        "通过CLI-Hub安装社区维护的各类软件命令行工具"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-09-22T02:01:29Z"
+    },
+    {
+      "rank": 7,
+      "owner": "android",
+      "name": "skills",
+      "url": "https://github.com/android/skills",
+      "description": "",
+      "language": "Kotlin",
+      "stars": "8,716",
+      "forks": "567",
+      "stars_today": "381 stars today",
+      "zh_description": "这是 Android 开发相关的 AI 指令仓库，以 SKILL.md 形式提供特定任务的技术规范，用于为 LLM 补充 Android 领域的最佳实践。可通过 Android CLI 将单个或全部技能安装到项目或各代理目录，并可按需更新。Skills 遵循开放的 agent skills 标准，并可作为 Claude Code、Codex 等代理的插件安装。",
+      "problem": "针对 LLM 在 Android 特定工作流上表现不佳的场景，提供可直接加载的领域指令，替代分散查阅官方文档的做法。",
+      "key_features": [
+        "SKILL.md 格式的模块化技能文件",
+        "通过 Android CLI 按名称安装单个技能",
+        "支持 --all 批量安装并区分代理目录",
+        "支持按技能名称或全部进行更新",
+        "以插件形式接入 Claude Code 与 Codex"
+      ],
+      "use_cases": [
+        "让代理按照 R8 分析器等指令处理 Android 构建优化任务",
+        "为 Wear OS Compose 等特定界面开发场景提供规范指导",
+        "将 Android 最佳实践注入 Claude Code 或 Codex 的编码会话"
+      ],
+      "topics": [
+        "skills"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-16T10:07:27Z"
+    },
+    {
+      "rank": 8,
+      "owner": "mlabonne",
+      "name": "llm-course",
+      "url": "https://github.com/mlabonne/llm-course",
+      "description": "Course to get into Large Language Models (LLMs) with roadmaps and Colab notebooks.",
+      "language": "Unknown",
+      "stars": "83,964",
+      "forks": "9,779",
+      "stars_today": "81 stars today",
+      "zh_description": "该项目主要用于：<div align=\"center\">",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "course",
+        "large-language-models",
+        "llm",
+        "machine-learning",
+        "roadmap"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-02-05T13:09:26Z"
+    },
+    {
+      "rank": 9,
+      "owner": "Kruk2",
+      "name": "jasna",
+      "url": "https://github.com/Kruk2/jasna",
+      "description": "Video restoration tool",
+      "language": "Python",
+      "stars": "2,353",
+      "forks": "183",
+      "stars_today": "115 stars today",
+      "zh_description": "该项目主要用于：> The only places to get a genuine License code for the supporter models are [Buy Me a Coffee](https://buymeacoffee.com/kruk2), [Unifans](https://app.unifans.io/c/kruk2), and for China the seller in the [Chinese README](",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "AGPL-3.0",
+      "pushed_at": "2026-10-18T11:43:28Z"
+    },
+    {
+      "rank": 10,
+      "owner": "Comfy-Org",
+      "name": "ComfyUI",
+      "url": "https://github.com/Comfy-Org/ComfyUI",
+      "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
+      "language": "Python",
+      "stars": "138,521",
+      "forks": "16,495",
+      "stars_today": "155 stars today",
+      "zh_description": "ComfyUI 是基于节点图的扩散模型 GUI、API 与后端，用户通过可视化节点组织图像、视频、音频、3D 与文本工作流，并在本地执行推理，结果可导出为 JSON 工作流或通过本地 API 调用。",
+      "problem": "替代手工拼接多个模型脚本与分散 GUI，用同一节点图管理多种生成模型的加载、条件输入与推理流程。",
+      "key_features": [
+        "基于节点的可视化图形界面，无需编写代码即可构建工作流",
+        "可复用子图、工作流模板与本地 API，便于集成到应用中",
+        "异步排队与部分图重执行，并支持 VRAM/RAM 智能管理与模型卸载",
+        "支持 Stable Diffusion、SDXL、Flux、Wan、LTX-Video 等多类原生模型",
+        "内置 inpainting、outpainting、模型合并、超分与帧插值等工具"
+      ],
+      "use_cases": [
+        "在本地用节点图完成文生图、图像编辑与图像修复任务",
+        "用 Wan、LTX-Video 等模型生成视频并进行帧插值处理",
+        "通过本地 API 将已保存的 JSON 工作流接入自有应用"
+      ],
+      "topics": [
+        "ai",
+        "comfy",
+        "comfyui",
+        "python",
+        "pytorch",
+        "stable-diffusion"
+      ],
+      "license": "GPL-3.0",
+      "pushed_at": "2026-10-18T20:38:11Z"
+    }
+  ]
+}
