@@ -1,0 +1,312 @@
+{
+  "collected_at": "2026-10-21T21:41:23.949841+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "cloudflare",
+      "name": "security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "stars": "36,037",
+      "forks": "2,257",
+      "stars_today": "1,997 stars today",
+      "zh_description": "面向 coding agent 的安全审计 skill，接收代码库或指定目录，通过侦察、覆盖式排查、候选漏洞验证、结构化输出和独立记录核验完成多阶段审计，生成与目标无关的报告。",
+      "problem": "README 未明确说明替代的具体流程，仅说明它是 Cloudflare 漏洞发现系统的单仓库起点。",
+      "key_features": [
+        "侦察、覆盖式排查、候选漏洞验证的多阶段审计流程",
+        "隔离 agent 分别执行各阶段任务",
+        "结构化、机器可读的审计结果输出",
+        "独立记录核验与与目标无关的报告生成"
+      ],
+      "use_cases": [
+        "对指定代码库执行完整安全审计并输出报告",
+        "在 ./src 等目录中查找安全漏洞",
+        "对代码进行安全审查并将结果写入指定目录"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-09-14T19:29:02Z"
+    },
+    {
+      "rank": 2,
+      "owner": "stablyai",
+      "name": "orca",
+      "url": "https://github.com/stablyai/orca",
+      "description": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
+      "language": "TypeScript",
+      "stars": "101,115",
+      "forks": "6,395",
+      "stars_today": "1,543 stars today",
+      "zh_description": "面向多 agent 协作的桌面与移动端 IDE，可并行运行 Codex、Claude Code、OpenCode、Pi 等编码 agent，每个 agent 在独立 git worktree 中工作，并在一处跟踪进度、查看 diff 与终端。",
+      "problem": "README 未直接说明替代的流程；其描述的核心是把多个 agent 分散在不同 worktree 和终端中运行，统一到一个界面管理。",
+      "key_features": [
+        "多 agent 并行运行，每个任务使用独立 git worktree",
+        "基于 WebGL 渲染的终端分屏，滚动内容可跨重启保留",
+        "在 Chromium 窗口中点选元素，发送 HTML、CSS 与截图到 agent",
+        "内置 GitHub 与 Linear 的 PR、issue 浏览与 worktree 创建",
+        "通过 SSH 在远程机器运行 agent，支持自动重连与端口转发"
+      ],
+      "use_cases": [
+        "将同一提示分发给五个 agent 并比较结果后合并",
+        "在手机上查看 agent 状态并发送后续指令",
+        "在远程机器上运行 agent 并保留完整编辑与 git 操作"
+      ],
+      "topics": [
+        "ade",
+        "agent-ide",
+        "ai-agents",
+        "automation",
+        "bot",
+        "claude-code",
+        "codex",
+        "ghostty",
+        "grok-bot",
+        "hermes-agent",
+        "mobile-app",
+        "muse",
+        "openclaw",
+        "opencode",
+        "orchestration",
+        "pi",
+        "runtime",
+        "terminal",
+        "worktrees",
+        "yc-backed"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-10-21T21:39:06Z"
+    },
+    {
+      "rank": 3,
+      "owner": "headroomlabs-ai",
+      "name": "headroom",
+      "url": "https://github.com/headroomlabs-ai/headroom",
+      "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
+      "language": "Python",
+      "stars": "77,199",
+      "forks": "5,989",
+      "stars_today": "477 stars today",
+      "zh_description": "在本地压缩 AI agent 发给 LLM 的工具输出、日志、文件、RAG 片段和对话历史，JSON、代码与文本分别由 SmartCrusher、CodeCompressor 和 Kompress-v2-base 处理，原文存于本地并可通过 headroom_retrieve 取回。",
+      "problem": "README 指出的问题是 agent 将大量工具输出、日志和文件原样放入提示词，消耗过多 token；Headroom 在本地压缩这些内容后再发送。",
+      "key_features": [
+        "ContentRouter 按内容类型选择 JSON、代码或文本压缩器",
+        "CacheAligner 标记会破坏提供商 KV 缓存前缀的易变内容",
+        "CCR 本地保存原文，模型可调用 headroom_retrieve 取回",
+        "输出侧通过 verbosity steering 与 effort routing 减少回复 token",
+        "headroom learn --verbosity 从历史会话学习回复简洁度"
+      ],
+      "use_cases": [
+        "压缩 Claude Code、Cursor、Codex 等 agent 的工具输出后再发给 LLM",
+        "通过代理在 Anthropic 或 OpenAI 兼容接口前压缩请求",
+        "在 RAG 检索结果进入提示词前进行压缩"
+      ],
+      "topics": [
+        "agent",
+        "ai",
+        "anthropic",
+        "claude-code",
+        "compression",
+        "context-engineering",
+        "context-window",
+        "cursor",
+        "fastapi",
+        "langchain",
+        "llm",
+        "mcp",
+        "openai",
+        "prompt-engineering",
+        "proxy",
+        "python",
+        "rag",
+        "token-optimization",
+        "tokens",
+        "typescript"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-21T20:02:55Z"
+    },
+    {
+      "rank": 4,
+      "owner": "Comfy-Org",
+      "name": "ComfyUI",
+      "url": "https://github.com/Comfy-Org/ComfyUI",
+      "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
+      "language": "Python",
+      "stars": "141,446",
+      "forks": "16,721",
+      "stars_today": "914 stars today",
+      "zh_description": "以节点图为界面的扩散模型工具，接收文本、图像、视频、音频、3D 等工作流配置，经本地异步队列调度执行，输出生成或编辑后的图像、视频、音频等结果，并可通过本地 API 接入应用。",
+      "problem": "用代码串联多种扩散模型的加载、采样与后处理流程，并手动管理显存与模型切换。",
+      "key_features": [
+        "可视化节点图搭建并复用图像、视频、音频、3D 与文本工作流",
+        "工作流支持保存与加载为 JSON，可复用子图与模板",
+        "异步队列执行，支持部分图重执行与显存、内存智能管理",
+        "支持量化模型，并可加载 checkpoint、VAE、LoRA、ControlNet 等组件",
+        "内置局部重绘、扩图、蒙版合成、模型合并、超分与插帧等工具"
+      ],
+      "use_cases": [
+        "通过节点图组合 Stable Diffusion、Flux 等模型完成文生图与图像编辑",
+        "加载 Wan、LTX-Video 等模型执行文生视频或图生视频工作流",
+        "将已搭建好的工作流通过本地 API 集成到其他应用中调用"
+      ],
+      "topics": [
+        "ai",
+        "comfy",
+        "comfyui",
+        "python",
+        "pytorch",
+        "stable-diffusion"
+      ],
+      "license": "GPL-3.0",
+      "pushed_at": "2026-10-21T20:50:35Z"
+    },
+    {
+      "rank": 5,
+      "owner": "twentyhq",
+      "name": "twenty",
+      "url": "https://github.com/twentyhq/twenty",
+      "description": "The open alternative to Salesforce, designed for AI.",
+      "language": "TypeScript",
+      "stars": "59,090",
+      "forks": "9,657",
+      "stars_today": "105 stars today",
+      "zh_description": "开源 CRM 系统，面向需要定制客户管理能力的技术团队。README 说明它提供构建自定义 CRM 的基础模块，可随业务变化调整，并像其他技术栈一样进行构建、发布和版本管理。摘录中未展开具体模块细节。",
+      "problem": "替代 Salesforce 等封闭商业 CRM，并解决其定制和版本管理受限的问题。",
+      "key_features": [
+        "提供构建自定义 CRM 的基础模块",
+        "支持随业务变化调整数据模型和流程",
+        "可像其他代码栈一样构建、发布和版本化"
+      ],
+      "use_cases": [
+        "搭建符合企业复杂业务需求的自定义 CRM",
+        "在内部技术栈中维护和迭代客户管理系统"
+      ],
+      "topics": [
+        "crm",
+        "crm-system",
+        "customer",
+        "good-first-issue",
+        "graphql",
+        "hacktoberfest",
+        "javascript",
+        "marketing",
+        "monorepo",
+        "nestjs",
+        "open-source",
+        "postgresql",
+        "react",
+        "reactjs",
+        "sales",
+        "typescript",
+        "web"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-10-21T20:45:04Z"
+    },
+    {
+      "rank": 6,
+      "owner": "shiyu-coder",
+      "name": "Kronos",
+      "url": "https://github.com/shiyu-coder/Kronos",
+      "description": "Kronos: A Foundation Model for the Language of Financial Markets",
+      "language": "Python",
+      "stars": "42,771",
+      "forks": "7,065",
+      "stars_today": "570 stars today",
+      "zh_description": "面向金融 K 线（OHLCV）序列的开源基础模型，先用专用分词器将多维行情量化为层级离散 token，再用自回归 Transformer 进行预训练与预测。",
+      "problem": "通用时间序列模型难以处理金融数据的高噪声特性，需要针对 K 线数据单独设计分词与预训练流程。",
+      "key_features": [
+        "分词器将连续 OHLCV 数据量化为层级离散 token",
+        "基于 decoder-only Transformer 的自回归预训练架构",
+        "支持带或不带成交量与成交额数据的预测",
+        "提供基于 Qlib 的 A 股数据微调与简单回测流程"
+      ],
+      "use_cases": [
+        "对金融 K 线序列进行未来走势预测并与真实数据对比绘图",
+        "使用自有行情数据微调模型并执行简单策略回测"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-04-13T12:38:49Z"
+    },
+    {
+      "rank": 7,
+      "owner": "akitaonrails",
+      "name": "ai-memory",
+      "url": "https://github.com/akitaonrails/ai-memory",
+      "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+      "language": "Rust",
+      "stars": "12,261",
+      "forks": "869",
+      "stars_today": "303 stars today",
+      "zh_description": "接收编码智能体的会话观察记录，经脱敏后通过生命周期钩子捕获，会话结束时由 LLM 或规则整理为项目 wiki 页面。下次会话（可在不同智能体或机器上）获取有界简报，并通过 FTS5、实体图、可选向量的 RRF 融合检索历史记忆，同时支持跨智能体的 handoff 交接。",
+      "problem": "编码智能体的记忆通常只保存在单机、单一智能体内，切换工具或交给同事时上下文丢失，需要重新解释架构和未完成事项。",
+      "key_features": [
+        "支持 20 余种智能体（Claude Code、Codex、Cursor、Gemini CLI 等）共享同一记忆",
+        "handoff 为有类型的协议，每条交接有明确所有者且只能被认领一次",
+        "ai-memory run 可为新智能体提供临时本地投影的原生会话历史",
+        "FTS5、实体与图邻居 RRF、可选向量检索融合排序",
+        "可选的服务端管理控制台，支持用户管理与个人 MCP API 密钥"
+      ],
+      "use_cases": [
+        "在 Claude Code 中途退出后，用 Codex 在同一目录续接任务并保留失败尝试记录",
+        "将项目记忆部署在自有服务器上，在多台机器间共享同一项目的知识与未解决问题",
+        "通过 MCP 为团队的多个智能体共享按项目划分的知识库，同时保留个人交接内容"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-10-21T19:47:05Z"
+    },
+    {
+      "rank": 8,
+      "owner": "Graphify-Labs",
+      "name": "graphify",
+      "url": "https://github.com/Graphify-Labs/graphify",
+      "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+      "language": "Python",
+      "stars": "131,511",
+      "forks": "12,626",
+      "stars_today": "1,434 stars today",
+      "zh_description": "接收代码仓库及其文档、SQL 模式、配置文件、PDF、图片和视频，通过 tree-sitter AST 进行本地确定性解析生成代码图谱，文档类内容则由助手模型或配置的 API 做语义抽取，最终输出可查询的知识图谱，供智能体代替全文 grep 查询。",
+      "problem": "智能体在大型项目中只能依赖逐文件 grep 或向量检索定位信息，缺少结构化的代码关系与依据，且向量存储难以解释关系来源。",
+      "key_features": [
+        "tree-sitter AST 本地确定性解析代码，不调用 LLM，代码不离开本机",
+        "可处理 PDF、图片、视频等文档类内容并做语义抽取",
+        "图谱中每条边均附带解释说明，不依赖向量存储",
+        "提供 /graphify 技能，支持 Claude Code、Cursor、Codex、Gemini CLI 等助手"
+      ],
+      "use_cases": [
+        "用知识图谱代替 grep 查询某个函数或模块在项目中的调用关系",
+        "将代码、设计文档与 SQL 模式统一建图，让智能体回答跨文件的架构问题",
+        "在不上传源码的前提下，为本地仓库生成可查询的代码结构图谱"
+      ],
+      "topics": [
+        "ai-agents",
+        "antigravity",
+        "ast",
+        "claude-code",
+        "code-analysis",
+        "code-search",
+        "codex",
+        "cursor",
+        "developer-tools",
+        "gemini",
+        "graphify",
+        "graphrag",
+        "knowledge-graph",
+        "leiden",
+        "llm",
+        "mcp",
+        "openclaw",
+        "rag",
+        "skills",
+        "tree-sitter"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-21T15:23:36Z"
+    }
+  ]
+}
