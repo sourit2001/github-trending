@@ -1,0 +1,197 @@
+{
+  "collected_at": "2026-10-22T21:34:13.890652+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "php",
+      "name": "php-src",
+      "url": "https://github.com/php/php-src",
+      "description": "The PHP Interpreter",
+      "language": "C",
+      "stars": "41,101",
+      "forks": "8,304",
+      "stars_today": "423 stars today",
+      "zh_description": "该项目主要用于：<div align=\"center\"> <a href=\"https://www.php.net\">",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "BSD-3-Clause",
+      "pushed_at": "2026-10-22T19:28:54Z"
+    },
+    {
+      "rank": 2,
+      "owner": "anthropics",
+      "name": "knowledge-work-plugins",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+      "language": "Python",
+      "stars": "31,520",
+      "forks": "3,529",
+      "stars_today": "303 stars today",
+      "zh_description": "这是面向知识工作者的开源插件集合，用于为 Claude Cowork 和 Claude Code 提供特定岗位的专业能力。每个插件打包技能、连接器（connectors）、斜杠命令和子代理（sub-agents），并可按企业的工具、术语和流程进行自定义配置。",
+      "problem": "README 指出，默认 Claude 缺少具体岗位的做事方式、工具数据来源和关键流程配置，团队需要自行定制。",
+      "key_features": [
+        "按岗位打包技能、连接器、斜杠命令和子代理",
+        "兼容 Claude Cowork 与 Claude Code",
+        "可自定义工具、数据来源、术语和流程",
+        "可暴露团队专用斜杠命令"
+      ],
+      "use_cases": [
+        "为特定岗位配置 Claude 的工作方式与工具接入",
+        "按公司流程定制插件，使 Claude 适配团队术语与工作规范",
+        "通过斜杠命令把常用的岗位工作流程封装给团队成员使用"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-22T07:39:25Z"
+    },
+    {
+      "rank": 3,
+      "owner": "cloudflare",
+      "name": "security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "stars": "39,301",
+      "forks": "2,447",
+      "stars_today": "2,979 stars today",
+      "zh_description": "该项目主要用于：A coding-agent skill that turns your agent into a security auditor.",
+      "problem": "把编程代理放进本地终端和代码目录，避免只能在独立聊天页面中处理代码任务。",
+      "key_features": [
+        "在本地终端中运行编程代理"
+      ],
+      "use_cases": [
+        "在本地代码库中通过终端处理编程任务",
+        "把终端中的代码工作交给 AI 代理执行"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-09-14T19:29:02Z"
+    },
+    {
+      "rank": 4,
+      "owner": "Graphify-Labs",
+      "name": "graphify",
+      "url": "https://github.com/Graphify-Labs/graphify",
+      "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+      "language": "Python",
+      "stars": "132,838",
+      "forks": "12,713",
+      "stars_today": "1,407 stars today",
+      "zh_description": "将代码库及其文档、SQL schema、配置文件和 PDF 解析为可查询的知识图谱。代码通过 tree-sitter AST 在本地确定性解析，文档、PDF、图片和视频则借助助手模型或配置的 API 做语义解析，图中每条边都带有说明，不使用向量库。",
+      "problem": "用逐个文件 grep 检索项目内容，无法跨代码、文档与配置直接建立关系，且代码解析需要依赖 LLM 或上传代码。",
+      "key_features": [
+        "tree-sitter AST 本地确定性解析代码",
+        "文档、PDF、图片、视频的语义解析",
+        "图中每条边附带关系说明",
+        "以 /graphify skill 形式接入 Claude Code 等助手",
+        "不依赖向量存储的知识图谱查询"
+      ],
+      "use_cases": [
+        "在知识图谱中查询代码与文档之间的关联，替代 grep 检索",
+        "将代码库、SQL schema 与配置文件统一建模为可查询图谱",
+        "在 AI 编程助手中调用 /graphify 获取项目结构上下文"
+      ],
+      "topics": [
+        "ai-agents",
+        "antigravity",
+        "ast",
+        "claude-code",
+        "code-analysis",
+        "code-search",
+        "codex",
+        "cursor",
+        "developer-tools",
+        "gemini",
+        "graphify",
+        "graphrag",
+        "knowledge-graph",
+        "leiden",
+        "llm",
+        "mcp",
+        "openclaw",
+        "rag",
+        "skills",
+        "tree-sitter"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-22T16:19:38Z"
+    },
+    {
+      "rank": 5,
+      "owner": "fastapi",
+      "name": "fastapi",
+      "url": "https://github.com/fastapi/fastapi",
+      "description": "FastAPI framework, high performance, easy to learn, fast to code, ready for production",
+      "language": "Python",
+      "stars": "103,674",
+      "forks": "10,084",
+      "stars_today": "96 stars today",
+      "zh_description": "基于 Python 类型提示构建 Web API 的框架，接收函数参数声明的类型，经 Pydantic 完成请求数据校验与转换，并自动生成 OpenAPI 文档及 Swagger UI、ReDoc 交互页面。底层基于 Starlette，可通过 uvicorn 运行。",
+      "problem": "手写参数解析、数据校验与 API 文档同步维护，容易出现接口定义与文档不一致或类型错误。",
+      "key_features": [
+        "根据 Python 类型提示自动校验请求数据",
+        "Pydantic 模型支持嵌套 JSON 校验",
+        "自动生成 OpenAPI 规范与交互式文档",
+        "内置 Swagger UI 与 ReDoc 页面",
+        "基于 Starlette 的异步 Web 服务"
+      ],
+      "use_cases": [
+        "用 Python 类型声明定义 GET、PUT 等 HTTP 接口",
+        "让请求体和路径参数自动完成校验并返回错误信息",
+        "直接从接口定义生成可在浏览器中调试的 API 文档"
+      ],
+      "topics": [
+        "api",
+        "async",
+        "asyncio",
+        "fastapi",
+        "framework",
+        "json",
+        "json-schema",
+        "openapi",
+        "openapi3",
+        "pydantic",
+        "python",
+        "python-types",
+        "python3",
+        "redoc",
+        "rest",
+        "starlette",
+        "swagger",
+        "swagger-ui",
+        "uvicorn",
+        "web"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-10-22T19:13:04Z"
+    },
+    {
+      "rank": 6,
+      "owner": "Meloong-Git",
+      "name": "PCL",
+      "url": "https://github.com/Meloong-Git/PCL",
+      "description": "Minecraft 启动器 Plain Craft Launcher（PCL）。",
+      "language": "Visual Basic .NET",
+      "stars": "8,664",
+      "forks": "1,197",
+      "stars_today": "115 stars today",
+      "zh_description": "该项目主要用于：[ ](https://github.com/Meloong-Git/PCL/) [ ](https://github.com/Meloong-Git/PCL/issues) [ ](https://space.bilibili.com/11343203/dynamic) [ ](https://meloong.com/afd/a/LTCat)",
+      "problem": "",
+      "key_features": [
+        "Minecraft 联动"
+      ],
+      "use_cases": [],
+      "topics": [
+        "launcher",
+        "minecraft",
+        "minecraft-launcher"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-10-20T07:01:33Z"
+    }
+  ]
+}
