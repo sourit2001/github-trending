@@ -1,0 +1,237 @@
+{
+  "collected_at": "2026-10-24T20:47:37.536042+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "cloudflare",
+      "name": "security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "stars": "44,184",
+      "forks": "2,750",
+      "stars_today": "2,271 stars today",
+      "zh_description": "该项目主要用于：A coding-agent skill that turns your agent into a security auditor.",
+      "problem": "把编程代理放进本地终端和代码目录，避免只能在独立聊天页面中处理代码任务。",
+      "key_features": [
+        "在本地终端中运行编程代理"
+      ],
+      "use_cases": [
+        "在本地代码库中通过终端处理编程任务",
+        "把终端中的代码工作交给 AI 代理执行"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-09-14T19:29:02Z"
+    },
+    {
+      "rank": 2,
+      "owner": "NVIDIA",
+      "name": "OpenShell",
+      "url": "https://github.com/NVIDIA/OpenShell",
+      "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
+      "language": "Rust",
+      "stars": "19,392",
+      "forks": "1,927",
+      "stars_today": "893 stars today",
+      "zh_description": "OpenShell 为自主 AI Agent 提供隔离运行时。用户在策略中声明每个 Agent 可访问的文件、网络和凭证，运行时在每次文件访问、系统调用和网络连接时执行检查，并对策略变更做形式化验证。",
+      "problem": "Agent 需要读文件、装包、调用 API 和使用凭证，但直接授予这些权限会暴露数据与密钥。OpenShell 用策略限定每个 Agent 的访问范围。",
+      "key_features": [
+        "在隔离沙箱中运行每个 Agent",
+        "内核级控制文件访问与系统调用",
+        "网络连接经策略检查后才能发出",
+        "Agent 不直接接触真实凭证",
+        "策略变更前用形式化验证标记风险"
+      ],
+      "use_cases": [
+        "为多个 AI Agent 分别设定文件与网络访问策略",
+        "让 Agent 调用指定端点时由运行时注入凭证",
+        "在策略变更生效前拦截新增的高风险访问"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-24T02:12:45Z"
+    },
+    {
+      "rank": 3,
+      "owner": "aws",
+      "name": "agent-toolkit-for-aws",
+      "url": "https://github.com/aws/agent-toolkit-for-aws",
+      "description": "Official, AWS-supported MCP servers, skills, and plugins to help AI agents build on AWS",
+      "language": "Python",
+      "stars": "3,086",
+      "forks": "395",
+      "stars_today": "11 stars today",
+      "zh_description": "面向 AI 编程代理的 AWS 官方工具包，以插件形式打包 AWS MCP Server 配置与 agent skills。输入是代理在 Claude Code、Codex、Cursor、Kiro 等工具中的 AWS 开发任务，输出是服务选择、部署、数据分析等场景下的工具调用与操作指引。",
+      "problem": "替代了 AI 代理各自零散接入 AWS 工具与知识、缺少统一权限约束和操作审计的做法。",
+      "key_features": [
+        "插件打包 AWS MCP Server 配置与 agent skills",
+        "aws-core 插件覆盖 CDK/CloudFormation、无服务器与容器等服务",
+        "aws-agents 插件支持基于 Bedrock 与 AgentCore 构建智能体",
+        "aws-data-analytics 插件覆盖 S3 Tables、Glue、Athena 数据工作流",
+        "IAM 条件键区分代理操作与人工操作，并记录 CloudTrail 审计日志"
+      ],
+      "use_cases": [
+        "让编程代理通过 MCP Server 调用 AWS 服务并完成部署配置",
+        "用只读策略限制代理经 MCP 执行的操作范围",
+        "借助 aws-data-analytics 插件搭建 S3 Tables 与 Athena 的数据湖查询流程"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-23T15:00:22Z"
+    },
+    {
+      "rank": 4,
+      "owner": "Nutlope",
+      "name": "hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "language": "CSS",
+      "stars": "31,991",
+      "forks": "1,644",
+      "stars_today": "570 stars today",
+      "zh_description": "Hallmark 是面向 Claude Code、Codex、Cursor 和 OpenCode 的设计技能，从 48 种材质主题中选出三个，按访客要完成的操作组织页面，并在真实浏览器中检查页面是否带有机器生成痕迹，最后由全新上下文的审阅者给出结论。",
+      "problem": "替代靠模型直接生成页面后人工逐项排查 AI 常见设计套路的做法，例如标题上方的 eyebrow、宽字距大写标签等。",
+      "key_features": [
+        "从 48 种材质主题中选择三个主题",
+        "按访客要完成的操作组织页面结构",
+        "在真实浏览器中检查机器生成痕迹",
+        "分 Floor、Reflex、Finish 三层门禁",
+        "由全新上下文的审阅者做最终审查"
+      ],
+      "use_cases": [
+        "让 Claude Code 或 Cursor 生成页面时避开常见 AI 设计套路",
+        "对已有页面做设计审计，检查空框架、缺失首屏内容等问题",
+        "检查表单提交后是否真的发送数据，而只显示感谢文案"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-10-22T17:20:32Z"
+    },
+    {
+      "rank": 5,
+      "owner": "pbakaus",
+      "name": "impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "description": "The design language that makes your AI harness better at design.",
+      "language": "Rust",
+      "stars": "86,269",
+      "forks": "5,151",
+      "stars_today": "733 stars today",
+      "zh_description": "为 AI 编码助手提供前端设计指导的技能包，包含 24 个命令和 62 条确定性检测规则。它把 PRODUCT.md 作为产品事实来源，通过 CLI 和浏览器扩展运行检测，无需大模型或 API 密钥，用于发现 AI 生成前端的常见设计问题。",
+      "problem": "AI 生成的前端常出现统一字体、紫蓝渐变、嵌套卡片等固定套路，需要人工逐项排查。",
+      "key_features": [
+        "24 个 /impeccable 子命令覆盖审查、打磨和调整",
+        "62 条确定性检测规则，无需 LLM 与 API 密钥",
+        "PRODUCT.md 记录受众、目的和约束等产品事实",
+        "CLI 与浏览器扩展可运行检测规则",
+        "支持 Claude、Codex、Copilot 等多种工具的技能安装"
+      ],
+      "use_cases": [
+        "用 /impeccable audit 检查页面的无障碍、性能和响应式问题",
+        "用 CLI 对前端项目运行确定性检测规则并输出结果"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-24T06:29:27Z"
+    },
+    {
+      "rank": 6,
+      "owner": "pollen-robotics",
+      "name": "microduck",
+      "url": "https://github.com/pollen-robotics/microduck",
+      "description": "A Tiny biped duck robot 🦆",
+      "language": "Rust",
+      "stars": "10,890",
+      "forks": "1,398",
+      "stars_today": "381 stars today",
+      "zh_description": "A Tiny biped duck robot 🦆",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-24T09:37:44Z"
+    },
+    {
+      "rank": 7,
+      "owner": "google-gemini",
+      "name": "gemini-cli",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
+      "language": "TypeScript",
+      "stars": "107,937",
+      "forks": "14,804",
+      "stars_today": "38 stars today",
+      "zh_description": "该项目主要用于：> [!NOTE] > > Unpaid tier and Google One users: Gemini CLI was replaced by Antigravity > CLI on June 18th, 2026.",
+      "problem": "",
+      "key_features": [
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [],
+      "topics": [
+        "ai",
+        "ai-agents",
+        "cli",
+        "gemini",
+        "gemini-api",
+        "mcp-client",
+        "mcp-server"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-24T01:15:52Z"
+    },
+    {
+      "rank": 8,
+      "owner": "jbiaojerry",
+      "name": "ebook-treasure-chest",
+      "url": "https://github.com/jbiaojerry/ebook-treasure-chest",
+      "description": "欢迎来到电子书下载宝库，一个汇聚了各类电子书下载链接的地方。无论你是喜欢阅读经典文学、经管励志、终身学习、职场创业、技术手册还是其他类型的书籍，这里都能满足你的需求。 该库涵盖了帆书app(原樊登读书)、微信读书、京东读书、喜马拉雅等读书app的大部分电子书。",
+      "language": "Python",
+      "stars": "22,536",
+      "forks": "3,184",
+      "stars_today": "220 stars today",
+      "zh_description": "知识文档或规范类项目，提供系统化资料、标准说明或实践指南。",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "",
+      "pushed_at": "2026-01-13T00:59:23Z"
+    },
+    {
+      "rank": 9,
+      "owner": "makecindy",
+      "name": "cindy",
+      "url": "https://github.com/makecindy/cindy",
+      "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+      "language": "TypeScript",
+      "stars": "4,014",
+      "forks": "577",
+      "stars_today": "471 stars today",
+      "zh_description": "该项目主要用于：<p align=\"center\"> <a href=\"https://cindy.app\"> </a> </p>",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "agent",
+        "ai-agent",
+        "ai-assistant",
+        "android",
+        "claude-code",
+        "codex",
+        "electron",
+        "ios",
+        "llm",
+        "macos",
+        "react-native",
+        "typescript",
+        "windows"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-24T20:47:09Z"
+    }
+  ]
+}
