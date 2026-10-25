@@ -1,0 +1,270 @@
+{
+  "collected_at": "2026-10-25T20:49:11.716663+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "makecindy",
+      "name": "cindy",
+      "url": "https://github.com/makecindy/cindy",
+      "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+      "language": "TypeScript",
+      "stars": "4,756",
+      "forks": "654",
+      "stars_today": "677 stars today",
+      "zh_description": "该项目主要用于：<p align=\"center\"> <a href=\"https://cindy.app\"> </a> </p>",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "agent",
+        "ai-agent",
+        "ai-assistant",
+        "android",
+        "claude-code",
+        "codex",
+        "electron",
+        "ios",
+        "llm",
+        "macos",
+        "react-native",
+        "typescript",
+        "windows"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-25T20:26:51Z"
+    },
+    {
+      "rank": 2,
+      "owner": "Nutlope",
+      "name": "hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "language": "CSS",
+      "stars": "33,529",
+      "forks": "1,747",
+      "stars_today": "1,359 stars today",
+      "zh_description": "为 Claude Code、Codex、Cursor、OpenCode 提供设计技能，从 48 种设计材质中为页面选取三个主题，围绕访客目标组织页面结构。生成后在真实浏览器中按预设规则检查，识别如标签眉题、渐变标题等典型 AI 生成痕迹。",
+      "problem": "用于替代依赖通用模板生成前端页面时反复出现的同质化设计痕迹，并把检查落实到浏览器渲染结果上。",
+      "key_features": [
+        "从 48 种设计材质目录中选取三个主题",
+        "围绕访客的核心操作组织页面结构",
+        "在真实浏览器中检查 AI 生成痕迹的规则集",
+        "分为 Floor、Reflex、Finish 三级检查门禁"
+      ],
+      "use_cases": [
+        "让 AI 编码代理在构建网页时避免典型模板化设计",
+        "对已有页面运行设计审查并给出可执行的修改依据",
+        "通过 hallmark 的 redesign 与 audit 命令按名称调用特定流程"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-10-22T17:20:32Z"
+    },
+    {
+      "rank": 3,
+      "owner": "pbakaus",
+      "name": "impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "description": "The design language that makes your AI harness better at design.",
+      "language": "Rust",
+      "stars": "87,526",
+      "forks": "5,230",
+      "stars_today": "1,113 stars today",
+      "zh_description": "为 AI 编码代理提供前端设计指导，通过 npx impeccable install 安装，由 /impeccable init 将产品信息写入 PRODUCT.md。提供 24 个设计命令与 62 条确定性检测规则，CLI 与浏览器扩展可在无需 LLM 的情况下检查 AI 生成前端的设计问题。",
+      "problem": "替代在多个项目中手工重复提供设计约束的做法，并用确定性规则检查 AI 生成界面中的固定问题，如默认字体、紫蓝渐变和卡片嵌套。",
+      "key_features": [
+        "/impeccable init 生成 PRODUCT.md 记录产品上下文",
+        "24 个命令覆盖评审、精修、动效、配色与排版",
+        "62 条确定性检测规则，无需 LLM 与 API Key",
+        "CLI 与浏览器扩展可直接运行检测规则"
+      ],
+      "use_cases": [
+        "在项目根目录初始化 PRODUCT.md 并供后续设计命令读取",
+        "用 /impeccable audit 或 polish 对前端页面做无障碍与响应式检查",
+        "用 CLI 对现有前端代码运行确定性设计检测"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-25T18:04:24Z"
+    },
+    {
+      "rank": 4,
+      "owner": "pollen-robotics",
+      "name": "microduck",
+      "url": "https://github.com/pollen-robotics/microduck",
+      "description": "A Tiny biped duck robot 🦆",
+      "language": "Rust",
+      "stars": "11,552",
+      "forks": "1,474",
+      "stars_today": "657 stars today",
+      "zh_description": "A Tiny biped duck robot 🦆",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-25T13:23:00Z"
+    },
+    {
+      "rank": 5,
+      "owner": "TauricResearch",
+      "name": "TradingAgents",
+      "url": "https://github.com/TauricResearch/TradingAgents",
+      "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+      "language": "Python",
+      "stars": "114,420",
+      "forks": "22,121",
+      "stars_today": "636 stars today",
+      "zh_description": "AI 应用或智能体相关项目，用来构建对话、自动执行任务或接入大语言模型能力。",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "agent",
+        "finance",
+        "llm",
+        "multiagent",
+        "trading"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-16T21:38:46Z"
+    },
+    {
+      "rank": 6,
+      "owner": "Renhuai123",
+      "name": "ziwei-doushu",
+      "url": "https://github.com/Renhuai123/ziwei-doushu",
+      "description": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+      "language": "TypeScript",
+      "stars": "7,513",
+      "forks": "1,540",
+      "stars_today": "255 stars today",
+      "zh_description": "该项目主要用于：<div align=\"center\">",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "bazi",
+        "chinese-astrology",
+        "divination",
+        "fortune-telling",
+        "nextjs",
+        "open-source",
+        "purple-star-astrology",
+        "typescript",
+        "zi-wei-dou-shu",
+        "ziwei-doushu"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-10-24T02:34:09Z"
+    },
+    {
+      "rank": 7,
+      "owner": "JetBrains",
+      "name": "thinkrail",
+      "url": "https://github.com/JetBrains/thinkrail",
+      "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+      "language": "TypeScript",
+      "stars": "1,446",
+      "forks": "97",
+      "stars_today": "52 stars today",
+      "zh_description": "ThinkRail 是围绕 pi 编码代理构建的桌面 IDE，把代理会话放入独立的 git worktree 工作区，并通过持续更新的 living specs 与可复用 skills 保存项目知识，使代理在后续会话中延续上下文。",
+      "problem": "替代在终端中直接运行编码代理时，会话互相干扰、项目知识无法跨会话保留的手工流程。",
+      "key_features": [
+        "基于 pi 编码代理构建交互界面",
+        "每个任务隔离在独立 git worktree 工作区中",
+        "通过 living specs 保存项目知识并持续更新",
+        "提供可复用的 skills 供代理调用",
+        "计划加入扩展支持以便按需生成工具"
+      ],
+      "use_cases": [
+        "在独立 git worktree 中让代理完成一次代码修改并查看变更",
+        "将项目规范写入 living specs 供后续代理会话读取",
+        "复用已有 skills 让代理按固定流程处理同类任务"
+      ],
+      "topics": [
+        "agent",
+        "agent-skills",
+        "agentic-ai",
+        "agentic-workflow",
+        "ai-coding",
+        "ai-tools",
+        "pi-agent",
+        "pi-agent-extension",
+        "spec-driven",
+        "spec-driven-coding",
+        "spec-driven-development",
+        "vibe-coding",
+        "vibecoding"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-25T16:07:27Z"
+    },
+    {
+      "rank": 8,
+      "owner": "cloudflare",
+      "name": "security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "stars": "46,615",
+      "forks": "2,894",
+      "stars_today": "2,874 stars today",
+      "zh_description": "这是一个面向编码代理的安全审计 skill。输入是待审计的代码库或指定目录，流程包括侦察、覆盖导向的漏洞狩猎、候选漏洞验证、结构化输出、独立记录核验和与目标无关的报告生成，最终产出可机读的审计结果。",
+      "problem": "替代人工逐步进行代码安全审计与漏洞复核的过程，将多阶段审计交给隔离的代理协作完成。",
+      "key_features": [
+        "多阶段审计流程：侦察、漏洞狩猎、候选验证、结构化输出",
+        "由隔离代理分阶段协作执行审计任务",
+        "独立核验审计记录，确保发现结果可靠",
+        "生成与目标无关的审计报告",
+        "支持完整审计模式与安全问题咨询模式"
+      ],
+      "use_cases": [
+        "对指定代码库或 ./src 目录执行安全审计并查找漏洞",
+        "将审计报告输出到指定目录用于留存",
+        "针对具体漏洞进行聚焦分析与安全审查"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-09-14T19:29:02Z"
+    },
+    {
+      "rank": 9,
+      "owner": "AgriciDaniel",
+      "name": "claude-seo",
+      "url": "https://github.com/AgriciDaniel/claude-seo",
+      "description": "Universal SEO skill for Claude Code. 26 sub-skills + 19 sub-agents covering technical SEO, E-E-A-T, schema, GEO/AEO, agent readiness (Lighthouse Agentic Browsing, WebMCP, llms.txt), backlinks, local SEO, e-commerce, international SEO, Google APIs, and PDF/Excel reporting. 9 optional extensions for live SEO data.",
+      "language": "Python",
+      "stars": "20,690",
+      "forks": "2,938",
+      "stars_today": "179 stars today",
+      "zh_description": "面向 Claude Code 的开源 SEO 插件。输入网站地址后，调用 26 个子技能和 19 个子代理，执行技术 SEO、E-E-A-T、结构化数据、GEO/AEO、Agent 就绪度、反向链接、本地 SEO 等检查，并输出行动计划，可导出 PDF 或 Excel 报告。",
+      "problem": "用于替代人工逐项检查网站 SEO 问题的流程，将多类审计工作集中到一次 Claude Code 对话中完成。",
+      "key_features": [
+        "覆盖抓取、索引、站点地图、robots.txt、重定向与 Core Web Vitals 等技术 SEO 检查",
+        "检测并生成 Schema.org 结构化数据标记",
+        "评估 E-E-A-T、薄内容页面与主题覆盖度",
+        "检查 llms.txt、WebMCP 与 Lighthouse Agentic Browsing 等 Agent 就绪度项目",
+        "支持 PDF 与 Excel 格式的 SEO 报告导出"
+      ],
+      "use_cases": [
+        "对指定网站运行完整 SEO 审计并按优先级生成行动计划",
+        "检测页面结构化数据错误并生成可用的 Schema.org 标记",
+        "检查网站对 AI 搜索引擎的可见性与 llms.txt 配置"
+      ],
+      "topics": [
+        "ai",
+        "ai-seo",
+        "claude-code",
+        "claude-code-skill",
+        "marketing-automation",
+        "open-source",
+        "seo"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-10-22T16:47:40Z"
+    }
+  ]
+}
