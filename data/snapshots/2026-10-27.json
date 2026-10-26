@@ -1,0 +1,350 @@
+{
+  "collected_at": "2026-10-26T22:38:57.394359+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "Nutlope",
+      "name": "hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "language": "CSS",
+      "stars": "36,124",
+      "forks": "1,886",
+      "stars_today": "2,235 stars today",
+      "zh_description": "为 Claude Code、Codex、Cursor、OpenCode 提供的设计技能，内置 48 套主题材料库。接收页面需求，选取三套主题构建页面，并在真实浏览器中按机器生成痕迹规则检查结果。Floor、Reflex、Finish 三级门禁分别控制硬性底线、默认倾向和细节打磨。",
+      "problem": "针对 AI 生成页面常见的模板化设计痕迹，如标题上方的 eyebrow、字母间距大写标签、页尾邮件订阅等，替代手工逐项排查与模板式设计。",
+      "key_features": [
+        "从 48 套主题材料库中选取三套主题",
+        "在真实浏览器中检查机器生成痕迹",
+        "Floor 门禁禁止对比度、焦点、减少动效等底线问题",
+        "Reflex 门禁可由构建理由在记录中覆盖",
+        "由新上下文的审阅者给出最终判断"
+      ],
+      "use_cases": [
+        "为落地页生成避开模板化痕迹的设计方案",
+        "对已有页面进行设计审计并按门禁逐项检查",
+        "在 Claude Code 或 Cursor 中按名称重新设计指定页面"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-10-22T17:20:32Z"
+    },
+    {
+      "rank": 2,
+      "owner": "TauricResearch",
+      "name": "TradingAgents",
+      "url": "https://github.com/TauricResearch/TradingAgents",
+      "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+      "language": "Python",
+      "stars": "115,987",
+      "forks": "22,263",
+      "stars_today": "1,376 stars today",
+      "zh_description": "AI 应用或智能体相关项目，用来构建对话、自动执行任务或接入大语言模型能力。",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "agent",
+        "finance",
+        "llm",
+        "multiagent",
+        "trading"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-16T21:38:46Z"
+    },
+    {
+      "rank": 3,
+      "owner": "JetBrains",
+      "name": "thinkrail",
+      "url": "https://github.com/JetBrains/thinkrail",
+      "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+      "language": "TypeScript",
+      "stars": "2,824",
+      "forks": "150",
+      "stars_today": "1,156 stars today",
+      "zh_description": "基于 pi 编码智能体的 TypeScript 代理式 IDE，将工作隔离到独立的 git worktree 工作区中。通过持久的 living specs 和可复用 skills 保存项目知识，智能体据此理解项目。计划加入扩展支持，使其可按用户工作方式自行创建工具。",
+      "problem": "在统一 IDE 中隔离多个 AI 编码任务的改动，并让智能体长期保留项目规格与上下文，替代分散的聊天会话和手工维护的项目说明。",
+      "key_features": [
+        "基于 pi 编码智能体构建界面",
+        "每个任务隔离在独立 git worktree 工作区",
+        "通过 living specs 保存项目规格",
+        "通过可复用 skills 沉淀项目知识",
+        "计划支持扩展以创建自定义工具"
+      ],
+      "use_cases": [
+        "在独立 worktree 工作区中让 pi 完成一次代码修改",
+        "查看 pi 会话产生的改动并限定在对应工作区内",
+        "维护项目 living specs 供智能体后续会话读取"
+      ],
+      "topics": [
+        "agent",
+        "agent-skills",
+        "agentic-ai",
+        "agentic-workflow",
+        "ai-coding",
+        "ai-tools",
+        "pi-agent",
+        "pi-agent-extension",
+        "spec-driven",
+        "spec-driven-coding",
+        "spec-driven-development",
+        "vibe-coding",
+        "vibecoding"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-26T22:27:59Z"
+    },
+    {
+      "rank": 4,
+      "owner": "makecindy",
+      "name": "cindy",
+      "url": "https://github.com/makecindy/cindy",
+      "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+      "language": "TypeScript",
+      "stars": "6,369",
+      "forks": "782",
+      "stars_today": "1,268 stars today",
+      "zh_description": "该项目主要用于：<p align=\"center\"> <a href=\"https://cindy.app\"> </a> </p>",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "agent",
+        "ai-agent",
+        "ai-assistant",
+        "android",
+        "claude-code",
+        "codex",
+        "electron",
+        "ios",
+        "llm",
+        "macos",
+        "react-native",
+        "typescript",
+        "windows"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-26T17:17:47Z"
+    },
+    {
+      "rank": 5,
+      "owner": "pbakaus",
+      "name": "impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "description": "The design language that makes your AI harness better at design.",
+      "language": "Rust",
+      "stars": "89,098",
+      "forks": "5,307",
+      "stars_today": "1,551 stars today",
+      "zh_description": "为 AI 编码 Agent 提供前端设计技能、24 个设计命令和确定性检测规则，读取项目的产品上下文并将其写入 PRODUCT.md，用于审查、修改和检测 AI 生成界面的设计问题。",
+      "problem": "AI 生成的前端界面常出现相同的设计缺陷，且缺少统一的设计规范与可复用的检测手段。",
+      "key_features": [
+        "单一 /impeccable 技能加 24 个设计命令",
+        "/impeccable init 生成 PRODUCT.md 记录产品上下文",
+        "62 条确定性检测规则，可在无 LLM 环境下运行",
+        "CLI 与浏览器扩展执行检测，不需要 API Key"
+      ],
+      "use_cases": [
+        "用 /impeccable audit 检查前端界面的设计与可访问性问题",
+        "用 /impeccable document 从已有代码生成根目录 DESIGN.md",
+        "用 CLI 对前端项目运行确定性设计检测"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-26T20:19:43Z"
+    },
+    {
+      "rank": 6,
+      "owner": "NVIDIA",
+      "name": "SkillSpector",
+      "url": "https://github.com/NVIDIA/SkillSpector",
+      "description": "Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, security risks, prompt injection, data exfiltration, and supply-chain risks in Claude Code, Codex, and MCP skills before you install them.",
+      "language": "Python",
+      "stars": "22,126",
+      "forks": "1,932",
+      "stars_today": "203 stars today",
+      "zh_description": "接收本地目录、单个 SKILL.md、Git 仓库、URL 或 zip 包形式的 Agent Skill，经过 71 条漏洞模式的静态分析，可选 LLM 语义评估和 OSV.dev 漏洞查询，输出 0-100 风险评分及终端、JSON、Markdown、SARIF 报告。",
+      "problem": "安装 Claude Code、Codex 等 Agent Skill 前缺少对提示注入、数据外泄和供应链风险的系统检查手段。",
+      "key_features": [
+        "支持本地目录、单文件、Git、URL 和 zip 输入",
+        "71 条漏洞模式覆盖 17 类风险",
+        "静态分析与可选 LLM 语义评估两阶段执行",
+        "SC4 实时查询 OSV.dev 并支持离线回退",
+        "支持 baseline 与指纹方式抑制已知误报"
+      ],
+      "use_cases": [
+        "安装第三方 Agent Skill 前扫描目录或 SKILL.md 文件",
+        "在 CI 中用 SARIF 格式输出扫描结果",
+        "对比两次 MCP Registry 快照的新增与删除项"
+      ],
+      "topics": [
+        "agent-security",
+        "agent-skills",
+        "agentic-ai",
+        "ai-security",
+        "claude-code",
+        "mcp",
+        "prompt-injection",
+        "security-scanner",
+        "security-tools",
+        "security-workflow",
+        "supply-chain-security"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-23T09:40:29Z"
+    },
+    {
+      "rank": 7,
+      "owner": "pollen-robotics",
+      "name": "microduck",
+      "url": "https://github.com/pollen-robotics/microduck",
+      "description": "A Tiny biped duck robot 🦆",
+      "language": "Rust",
+      "stars": "12,368",
+      "forks": "1,544",
+      "stars_today": "844 stars today",
+      "zh_description": "这是一台约25厘米、800克的双足小鸭机器人的运行端代码，部署在Rockchip RK3566上。系统包含50Hz控制循环，驱动15个舵机执行由神经网络策略生成的动作，并负责无线电、摄像头以及机器人软件的固件更新。训练策略则在另一仓库microduck_rl中完成。",
+      "problem": "替代在机器人上分散部署的多个独立控制与升级程序，将运行时控制与安全更新集中在同一套代码中。",
+      "key_features": [
+        "50Hz控制循环驱动15个舵机",
+        "运行神经网络强化学习策略",
+        "加载microduck_rl导出的ONNX模型",
+        "管理无线电与摄像头等外设守护进程",
+        "支持机器人软件的安全在线更新"
+      ],
+      "use_cases": [
+        "在RK3566上运行训练好的ONNX步态策略驱动15个舵机",
+        "通过更新机制将新版软件部署到机器人并避免变砖",
+        "结合摄像头与无线电守护进程实现机器人的远程交互"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-26T11:29:24Z"
+    },
+    {
+      "rank": 8,
+      "owner": "nightly-labs",
+      "name": "openbot",
+      "url": "https://github.com/nightly-labs/openbot",
+      "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
+      "language": "TypeScript",
+      "stars": "1,426",
+      "forks": "181",
+      "stars_today": "312 stars today",
+      "zh_description": "这是一个本地优先的桌面 AI 工作区，为每个智能体分配独立工作区和会话，接入 Codex App Server、Claude Code、Grok CLI 等本地编码智能体，并通过 ACP 协议接入 OpenCode、Gemini、Cursor CLI 和 Cline CLI。应用提供本地任务队列、文件传输、内嵌浏览器控制以及智能体之间的消息通信。当前为开发预览版，智能体默认以完全文件和命令权限运行。",
+      "problem": "在同一台机器上分别运行多个 AI 编码工具并手动传递文件和上下文，难以统一管理会话、任务与权限。",
+      "key_features": [
+        "为每个智能体分配独立工作区和对话",
+        "本地任务队列与文件传输",
+        "通过 ACP 接入 OpenCode、Gemini、Cursor CLI 等",
+        "内嵌浏览器可由智能体控制",
+        "智能体之间可直接消息通信"
+      ],
+      "use_cases": [
+        "让多个编码智能体在各自工作区内并行处理任务",
+        "在智能体之间传递文件并协作完成同一项目",
+        "把可复用的工作流保存为本地 Skill 并供其他智能体调用"
+      ],
+      "topics": [
+        "ai-agents",
+        "bun",
+        "codex",
+        "electron",
+        "local-first",
+        "macos",
+        "solidjs",
+        "typescript"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-10-26T22:11:47Z"
+    },
+    {
+      "rank": 9,
+      "owner": "Panniantong",
+      "name": "Agent-Reach",
+      "url": "https://github.com/Panniantong/Agent-Reach",
+      "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+      "language": "Python",
+      "stars": "103,477",
+      "forks": "9,179",
+      "stars_today": "723 stars today",
+      "zh_description": "这是一个面向 AI Agent 的命令行工具，统一封装 B站、YouTube、GitHub、V2EX、小红书、Reddit、Twitter 等平台的读取与搜索能力。输入平台链接或搜索词，输出字幕、视频信息、帖子与评论等结构化内容，平台工具的安装与测试由工具自动完成。",
+      "problem": "Agent 直接访问需登录平台、视频字幕和中文平台内容时存在能力缺口，需要手动分别安装各平台工具。",
+      "key_features": [
+        "统一的 agent-reach 命令行入口",
+        "B站、YouTube 字幕与视频信息读取",
+        "GitHub 仓库、issue 与 PR 读取",
+        "V2EX 帖子与回复读取",
+        "按链接自动选择渠道进行阅读"
+      ],
+      "use_cases": [
+        "读取 B站或 YouTube 视频的字幕与信息",
+        "搜索小红书、Reddit 等平台的帖子和评论",
+        "抓取 GitHub issue、PR 或 V2EX 帖子内容供 Agent 分析"
+      ],
+      "topics": [
+        "agent-infrastructure",
+        "ai-agent",
+        "ai-search",
+        "automation",
+        "bilibili",
+        "claude-code",
+        "cli",
+        "cursor",
+        "free-api",
+        "llm-tools",
+        "mcp",
+        "python",
+        "reddit-scraper",
+        "twitter-scraper",
+        "web-scraper",
+        "xiaohongshu",
+        "youtube-transcript"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-10-25T04:37:26Z"
+    },
+    {
+      "rank": 10,
+      "owner": "gitroomhq",
+      "name": "postiz-app",
+      "url": "https://github.com/gitroomhq/postiz-app",
+      "description": "📨 The ultimate agentic social media scheduling tool 🤖",
+      "language": "TypeScript",
+      "stars": "38,395",
+      "forks": "7,449",
+      "stars_today": "146 stars today",
+      "zh_description": "接收用户在平台中创建的社交媒体内容，支持定时发布到多个社交平台，并可通过 Public API、Node.js SDK、n8n 节点或 Make.com 集成接入自动化流程，同时提供内容分析功能。",
+      "problem": "替代手动逐个平台登录发布、分散使用多个社媒管理工具的流程。",
+      "key_features": [
+        "支持向多个社交平台定时发布内容",
+        "提供 Public API 供外部系统调用",
+        "提供 Node.js SDK 与 n8n 自定义节点",
+        "支持 Make.com 集成进行自动化编排",
+        "支持对内容进行分析"
+      ],
+      "use_cases": [
+        "按计划时间批量发布社交媒体帖子",
+        "通过 n8n 或 Make.com 将内容发布接入自动化工作流",
+        "借助 Public API 从外部系统提交待发布内容"
+      ],
+      "topics": [
+        "nextjs",
+        "open-source",
+        "open-source-social-media-scheduling-tool",
+        "oss",
+        "postiz-cloud",
+        "postiz-hosted",
+        "redis",
+        "scheduling-tool",
+        "social-media-scheduling-tool",
+        "typescript"
+      ],
+      "license": "AGPL-3.0",
+      "pushed_at": "2026-10-24T18:27:21Z"
+    }
+  ]
+}
