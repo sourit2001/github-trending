@@ -1,0 +1,265 @@
+{
+  "collected_at": "2026-10-27T22:12:08.395425+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "Nutlope",
+      "name": "hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "language": "CSS",
+      "stars": "38,853",
+      "forks": "2,023",
+      "stars_today": "2,859 stars today",
+      "zh_description": "面向 Claude Code、Codex、Cursor 和 OpenCode 的设计技能，接收页面设计任务，选取三套主题并围绕访客目标构建页面，在真实浏览器中按规则检查常见的 AI 生成痕迹，最后由独立上下文的审阅者给出结论。",
+      "problem": "用于替代人工逐条检查 AI 生成页面是否带有模板化痕迹的流程，涵盖重复的眉标题、空框架页面、无效表单反馈等问题。",
+      "key_features": [
+        "从五十套设计素材目录中选取三套主题",
+        "在真实浏览器中检查页面",
+        "分为 Floor、Reflex、Finish 三级规则",
+        "Floor 级规则包括对比度、焦点和减少动效",
+        "由独立上下文的审阅者给出最终结论"
+      ],
+      "use_cases": [
+        "检查 AI 生成的落地页是否存在模板化视觉痕迹",
+        "按访客目标重新组织页面结构并生成设计方案",
+        "在交付前对页面进行浏览器内的设计检查"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-10-27T15:05:53Z"
+    },
+    {
+      "rank": 2,
+      "owner": "nightly-labs",
+      "name": "openbot",
+      "url": "https://github.com/nightly-labs/openbot",
+      "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
+      "language": "TypeScript",
+      "stars": "2,352",
+      "forks": "244",
+      "stars_today": "794 stars today",
+      "zh_description": "本地优先的桌面工作区，用于运行持久化的 AI 协作者。通过本地 Codex App Server、Claude Code 及 ACP 接入多种 CLI 智能体，为每个智能体分配独立工作区和会话，并提供本地任务队列、文件传输、内嵌浏览器和智能体间消息。",
+      "problem": "用于替代在多个终端、CLI 工具和独立对话之间手动切换、分别管理任务与文件的做法，将多个智能体集中在一个桌面应用中协作。",
+      "key_features": [
+        "通过 ACP 接入 Gemini、Cursor CLI 与 Cline CLI",
+        "每个智能体拥有独立工作区与会话",
+        "提供本地任务队列与文件传输",
+        "内嵌浏览器可由智能体控制",
+        "支持智能体间消息协作"
+      ],
+      "use_cases": [
+        "在一个桌面应用中同时运行多个编码智能体并分配任务",
+        "将本地文件在不同智能体工作区之间传递",
+        "把可复用工作流保存为本地技能供其他智能体安装"
+      ],
+      "topics": [
+        "ai-agents",
+        "bun",
+        "codex",
+        "electron",
+        "local-first",
+        "macos",
+        "solidjs",
+        "typescript"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-10-27T22:11:53Z"
+    },
+    {
+      "rank": 3,
+      "owner": "pbakaus",
+      "name": "impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "description": "The design language that makes your AI harness better at design.",
+      "language": "Rust",
+      "stars": "90,408",
+      "forks": "5,371",
+      "stars_today": "1,458 stars today",
+      "zh_description": "为 AI 编码智能体提供的设计指南技能，包含一个 impeccable 技能和 24 个命令。通过 /impeccable init 将产品背景写入 PRODUCT.md，并用 62 条确定性检测规则扫描前端代码中的 AI 生成设计痕迹，CLI 与浏览器扩展可在无 LLM 的情况下运行这些规则。",
+      "problem": "用于替代人工逐条审查 AI 生成前端设计是否存在通用模板痕迹的做法，并将产品受众、目的等事实与视觉风格分开记录，避免上下文混杂。",
+      "key_features": [
+        "/impeccable init 写入 PRODUCT.md 记录产品事实",
+        "24 个设计命令如 audit、polish、critique",
+        "62 条确定性检测规则",
+        "CLI 与浏览器扩展可离线运行检测规则",
+        "支持 Codex、Devin 等多种智能体安装"
+      ],
+      "use_cases": [
+        "审查前端页面的可访问性、性能与响应式问题",
+        "运行检测规则查找 AI 生成界面的常见设计痕迹",
+        "在项目中生成 DESIGN.md 记录现有设计系统"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-27T16:28:34Z"
+    },
+    {
+      "rank": 4,
+      "owner": "makecindy",
+      "name": "cindy",
+      "url": "https://github.com/makecindy/cindy",
+      "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+      "language": "TypeScript",
+      "stars": "7,415",
+      "forks": "882",
+      "stars_today": "1,446 stars today",
+      "zh_description": "该项目主要用于：<p align=\"center\"> <a href=\"https://cindy.app\"> </a> </p>",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "agent",
+        "ai-agent",
+        "ai-assistant",
+        "android",
+        "claude-code",
+        "codex",
+        "electron",
+        "ios",
+        "llm",
+        "macos",
+        "react-native",
+        "typescript",
+        "windows"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-27T22:08:33Z"
+    },
+    {
+      "rank": 5,
+      "owner": "gitroomhq",
+      "name": "postiz-app",
+      "url": "https://github.com/gitroomhq/postiz-app",
+      "description": "📨 The ultimate agentic social media scheduling tool 🤖",
+      "language": "TypeScript",
+      "stars": "39,274",
+      "forks": "7,503",
+      "stars_today": "953 stars today",
+      "zh_description": "接收内容草稿与发布计划，按时间表将帖子发布到多个社交媒体平台，并提供数据分析。可用 Postiz Cloud 托管，也可自部署开源版本，同时提供 Public API、NodeJS SDK、n8n 节点与 Make.com 集成。",
+      "problem": "替代分别登录各平台手动发帖及分散的排期工具",
+      "key_features": [
+        "多社交平台定时发布内容",
+        "提供 Public API 与 NodeJS SDK",
+        "支持 n8n 自定义节点与 Make.com 集成",
+        "可接入 ChatGPT、Claude 等 AI Agent 辅助创作"
+      ],
+      "use_cases": [
+        "为多个社交账号统一安排定时发布",
+        "通过 n8n 或 Make.com 自动化发布流程"
+      ],
+      "topics": [
+        "nextjs",
+        "open-source",
+        "open-source-social-media-scheduling-tool",
+        "oss",
+        "postiz-cloud",
+        "postiz-hosted",
+        "redis",
+        "scheduling-tool",
+        "social-media-scheduling-tool",
+        "typescript"
+      ],
+      "license": "AGPL-3.0",
+      "pushed_at": "2026-10-24T18:27:21Z"
+    },
+    {
+      "rank": 6,
+      "owner": "HKUDS",
+      "name": "DeepTutor",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
+      "language": "Python",
+      "stars": "45,734",
+      "forks": "5,739",
+      "stars_today": "1,587 stars today",
+      "zh_description": "接收课程资料、知识库、问题与学习任务，通过多种模式（问答、测验、研究、可视化、解题、视频学习等）共享同一运行时与会话上下文，生成辅导内容、练习与学习记录。支持 LlamaIndex、LightRAG、GraphRAG 等多种 RAG 引擎与 MCP 工具扩展。",
+      "problem": "将辅导、解题、测验、研究等分散在多个工具中的学习流程整合进同一工作区",
+      "key_features": [
+        "Chat、测验、研究、可视化等模式共享运行时",
+        "支持 LlamaIndex、LightRAG、GraphRAG 等 RAG 引擎",
+        "支持 YouTube、Bilibili 视频的转写搜索与时间戳辅导",
+        "提供 MCP 服务器、CLI 应用与 Agent-Skills 格式技能扩展"
+      ],
+      "use_cases": [
+        "基于上传的知识库进行问答与课后测验",
+        "导入 YouTube 或 Bilibili 视频并按时间戳搜索辅导"
+      ],
+      "topics": [
+        "ai-agents",
+        "ai-tutor",
+        "clawbot",
+        "cli-tool",
+        "deepresearch",
+        "interactive-learning",
+        "learning",
+        "multi-agent-systems",
+        "rag"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-27T18:37:55Z"
+    },
+    {
+      "rank": 7,
+      "owner": "JetBrains",
+      "name": "thinkrail",
+      "url": "https://github.com/JetBrains/thinkrail",
+      "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+      "language": "TypeScript",
+      "stars": "3,903",
+      "forks": "208",
+      "stars_today": "1,211 stars today",
+      "zh_description": "ThinkRail 是围绕 pi 编码代理构建的 Agentic IDE，接收用户的编码请求，在隔离的 git worktree 工作区中执行代码修改，并借助持久化的 living specs 与可复用 skills 保存项目知识，最终输出可查看的代码变更。",
+      "problem": "替代了在通用编辑器与独立编码代理之间手动切换、并自行管理多任务代码修改的分散流程。",
+      "key_features": [
+        "基于 pi 编码代理的图形化交互界面",
+        "每个任务隔离在独立 git-worktree 工作区中",
+        "通过 living specs 持久化项目知识",
+        "支持可复用的 agent skills",
+        "计划支持 extension 机制以扩展工具能力"
+      ],
+      "use_cases": [
+        "在隔离的 git worktree 中让代理修改代码并查看变更",
+        "将项目规格保存为 living specs 供代理后续引用",
+        "复用已有 skills 完成重复性的编码任务"
+      ],
+      "topics": [
+        "agent",
+        "agent-skills",
+        "agentic-ai",
+        "agentic-workflow",
+        "ai-coding",
+        "ai-tools",
+        "pi-agent",
+        "pi-agent-extension",
+        "spec-driven",
+        "spec-driven-coding",
+        "spec-driven-development",
+        "vibe-coding",
+        "vibecoding"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-27T22:12:09Z"
+    },
+    {
+      "rank": 8,
+      "owner": "togg53192-cmd",
+      "name": "jailbreaks",
+      "url": "https://github.com/togg53192-cmd/jailbreaks",
+      "description": "LIST OF ALL MY JAILBREAKS",
+      "language": "Unknown",
+      "stars": "5,416",
+      "forks": "813",
+      "stars_today": "890 stars today",
+      "zh_description": "该项目主要用于：<div align=\"center\">",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "",
+      "pushed_at": "2026-10-25T15:21:20Z"
+    }
+  ]
+}
