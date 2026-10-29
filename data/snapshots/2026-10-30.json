@@ -1,0 +1,204 @@
+{
+  "collected_at": "2026-10-29T22:44:08.332386+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "HKUDS",
+      "name": "DeepTutor",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
+      "language": "Python",
+      "stars": "49,911",
+      "forks": "6,142",
+      "stars_today": "1,926 stars today",
+      "zh_description": "该项目主要用于：<div align=\"center\">",
+      "problem": "替代必须把数据交给第三方托管的服务，让应用和数据运行在自己的环境中。",
+      "key_features": [
+        "支持自行部署和掌控数据"
+      ],
+      "use_cases": [],
+      "topics": [
+        "ai-agents",
+        "ai-tutor",
+        "clawbot",
+        "cli-tool",
+        "deepresearch",
+        "interactive-learning",
+        "learning",
+        "multi-agent-systems",
+        "rag"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-29T16:40:07Z"
+    },
+    {
+      "rank": 2,
+      "owner": "pbakaus",
+      "name": "impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+      "language": "Rust",
+      "stars": "95,194",
+      "forks": "5,608",
+      "stars_today": "2,881 stars today",
+      "zh_description": "面向编码代理的设计词汇表。接收项目中的页面或组件，通过 polish、bolder、critique、audit 等命令调整样式或审查设计，并用 62 条确定性规则检测常见的 AI 生成界面问题，输出评分与按 P0 至 P3 排序的修复建议。",
+      "problem": "用模糊提示让代理调整界面时结果不可控，且 AI 生成的界面常出现相似的默认样式。",
+      "key_features": [
+        "24 个设计命令，如 bolder、quieter、critique、audit、polish",
+        "62 条确定性规则检测 AI 生成界面的常见问题，无需 LLM 或 API key",
+        "init 命令生成 PRODUCT.md，document 命令生成 DESIGN.md 记录视觉系统",
+        "audit 按 P0 至 P3 对可访问性、性能、主题和响应式问题排序",
+        "支持 Claude Code、Cursor、Codex CLI、Copilot 等多种编码代理"
+      ],
+      "use_cases": [
+        "对已有页面或组件运行 critique 获取评分与优先修复项",
+        "用 audit 检查界面的可访问性、性能和响应式问题",
+        "用 bolder 或 quieter 命令针对指定区域调整视觉强度"
+      ],
+      "topics": [
+        "agent-skills",
+        "ai",
+        "anti-slop",
+        "design",
+        "slop"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-29T18:41:45Z"
+    },
+    {
+      "rank": 3,
+      "owner": "JetBrains",
+      "name": "thinkrail",
+      "url": "https://github.com/JetBrains/thinkrail",
+      "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+      "language": "TypeScript",
+      "stars": "5,961",
+      "forks": "321",
+      "stars_today": "1,116 stars today",
+      "zh_description": "ThinkRail 是基于 pi 编码代理构建的智能 IDE，将代理会话放入独立的 git worktree 工作区中执行修改，并通过持续更新的 living specs 与可复用 skills 保存项目知识，代理的每次改动都可在对应工作区内查看。",
+      "problem": "代理式编码常缺少持久项目上下文，且多个任务的修改容易互相干扰，需要在同一仓库中隔离并追踪。",
+      "key_features": [
+        "基于 pi 编码代理的专用交互界面",
+        "每个任务使用独立 git worktree 工作区",
+        "通过 living specs 保存项目规范",
+        "通过可复用 skills 为代理提供能力",
+        "计划中的完整扩展支持"
+      ],
+      "use_cases": [
+        "在隔离的 git worktree 中让代理完成代码修改",
+        "查看 pi 会话及其对应的文件改动",
+        "把项目规范沉淀为 living specs 供后续会话使用"
+      ],
+      "topics": [
+        "agent",
+        "agent-skills",
+        "agentic-ai",
+        "agentic-workflow",
+        "ai-coding",
+        "ai-tools",
+        "pi-agent",
+        "pi-agent-extension",
+        "spec-driven",
+        "spec-driven-coding",
+        "spec-driven-development",
+        "vibe-coding",
+        "vibecoding"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-29T22:08:45Z"
+    },
+    {
+      "rank": 4,
+      "owner": "nightly-labs",
+      "name": "openbot",
+      "url": "https://github.com/nightly-labs/openbot",
+      "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
+      "language": "TypeScript",
+      "stars": "3,833",
+      "forks": "357",
+      "stars_today": "705 stars today",
+      "zh_description": "本地优先的桌面 AI 工作台，为每个 AI 队友提供独立工作区与对话。接收用户任务，通过 ACP 等协议调度 Codex、Claude、Grok 等本地代理执行，支持任务队列、文件传输、内嵌浏览器和代理间消息。",
+      "problem": "替代在多个 AI 编程代理之间手工切换、分散管理任务与文件的流程。",
+      "key_features": [
+        "为每个代理提供独立工作区与对话",
+        "通过 ACP 接入 Codex、Claude Code、Grok CLI 等",
+        "本地任务队列与文件传输",
+        "内嵌浏览器控制",
+        "代理间消息协作"
+      ],
+      "use_cases": [
+        "在独立工作区中让不同代理并行处理编码任务",
+        "把可复用工作流保存为本地技能并供其他代理安装",
+        "让代理通过内嵌浏览器完成网页操作"
+      ],
+      "topics": [
+        "ai-agents",
+        "bun",
+        "codex",
+        "electron",
+        "local-first",
+        "macos",
+        "solidjs",
+        "typescript"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-10-29T22:40:20Z"
+    },
+    {
+      "rank": 5,
+      "owner": "CopilotKit",
+      "name": "OpenBot",
+      "url": "https://github.com/CopilotKit/OpenBot",
+      "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+      "language": "TypeScript",
+      "stars": "8,081",
+      "forks": "1,044",
+      "stars_today": "240 stars today",
+      "zh_description": "可自托管的 AI 同事平台，每个同事拥有独立容器，含浏览器、文件与工具。动作在执行前由策略网关裁决，执行后写入审计记录。可接入任意 AG-UI 代理，支持 MCP 与组件化界面输出。",
+      "problem": "替代无法自主掌控、缺乏执行前审批与操作留痕的通用 AI 助手。",
+      "key_features": [
+        "每人分配独立容器与浏览器配置",
+        "网关执行前用 CEL 策略判定动作",
+        "所有动作写入审计记录，密钥不入日志",
+        "人工可接管浏览器控制并交还",
+        "任意 AG-UI 端点可作为 Bot 接入"
+      ],
+      "use_cases": [
+        "在隔离容器中让 AI 同事自动操作网页并保留审计轨迹",
+        "用 CEL 规则限制某个 Bot 的 shell 命令或文件访问",
+        "遇到登录或 2FA 时请求人工接管后再交还 Bot 继续执行"
+      ],
+      "topics": [
+        "ag-ui",
+        "agent-governance",
+        "ai-agents",
+        "browser-automation",
+        "copilotkit",
+        "generative-ui",
+        "mcp"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-10-29T20:07:51Z"
+    },
+    {
+      "rank": 6,
+      "owner": "togg53192-cmd",
+      "name": "jailbreaks",
+      "url": "https://github.com/togg53192-cmd/jailbreaks",
+      "description": "LIST OF ALL MY JAILBREAKS",
+      "language": "Unknown",
+      "stars": "8,889",
+      "forks": "1,223",
+      "stars_today": "1,610 stars today",
+      "zh_description": "该项目主要用于：<div align=\"center\">",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "",
+      "pushed_at": "2026-10-28T12:31:33Z"
+    }
+  ]
+}
