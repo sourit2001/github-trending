@@ -1,0 +1,300 @@
+{
+  "collected_at": "2026-11-04T23:39:10.967799+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "NVIDIA",
+      "name": "auto-ontology",
+      "url": "https://github.com/NVIDIA/auto-ontology",
+      "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
+      "language": "Python",
+      "stars": "4,873",
+      "forks": "390",
+      "stars_today": "2,053 stars today",
+      "zh_description": "该项目主要用于：Agents can retrieve documents and query databases, but reliability gates agentic analytics: a revenue metric answered faster is worth nothing if the number is wrong.",
+      "problem": "把编程代理放进本地终端和代码目录，避免只能在独立聊天页面中处理代码任务。",
+      "key_features": [
+        "在本地终端中运行编程代理",
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [
+        "在本地代码库中通过终端处理编程任务",
+        "把终端中的代码工作交给 AI 代理执行"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-11-04T19:31:19Z"
+    },
+    {
+      "rank": 2,
+      "owner": "max-sixty",
+      "name": "worktrunk",
+      "url": "https://github.com/max-sixty/worktrunk",
+      "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
+      "language": "Rust",
+      "stars": "11,006",
+      "forks": "411",
+      "stars_today": "524 stars today",
+      "zh_description": "该项目主要用于：<h1> &nbsp;&nbsp;Worktrunk</h1>",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "agents",
+        "claude-code",
+        "codex",
+        "developer-tools",
+        "git",
+        "worktrees"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-11-04T14:07:58Z"
+    },
+    {
+      "rank": 3,
+      "owner": "vercel-labs",
+      "name": "agent-desktop",
+      "url": "https://github.com/vercel-labs/agent-desktop",
+      "description": "Computer use CLI for AI agents",
+      "language": "Rust",
+      "stars": "14,989",
+      "forks": "1,033",
+      "stars_today": "2,463 stars today",
+      "zh_description": "该项目主要用于：Computer use for AI agents: see and operate desktop apps on macOS, Windows, and Linux through the OS accessibility tree.",
+      "problem": "",
+      "key_features": [
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [],
+      "topics": [
+        "accessibility",
+        "accessibility-api",
+        "ai-agents",
+        "automation",
+        "cli",
+        "computer-use",
+        "computer-use-agent",
+        "computer-use-agents",
+        "desktop-automation",
+        "macos",
+        "mcp",
+        "rust"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-11-04T19:44:11Z"
+    },
+    {
+      "rank": 4,
+      "owner": "github",
+      "name": "spec-kit",
+      "url": "https://github.com/github/spec-kit",
+      "description": "💫 Toolkit to help you get started with SDD or any other process!",
+      "language": "Python",
+      "stars": "147,274",
+      "forks": "13,213",
+      "stars_today": "810 stars today",
+      "zh_description": "该项目主要用于：<div align=\"center\">",
+      "problem": "把编程代理放进本地终端和代码目录，避免只能在独立聊天页面中处理代码任务。",
+      "key_features": [
+        "在本地终端中运行编程代理",
+        "支持自行部署和掌控数据",
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [
+        "在本地代码库中通过终端处理编程任务",
+        "把终端中的代码工作交给 AI 代理执行"
+      ],
+      "topics": [
+        "ai",
+        "copilot",
+        "development",
+        "engineering",
+        "prd",
+        "spec",
+        "spec-driven"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-11-04T22:34:18Z"
+    },
+    {
+      "rank": 5,
+      "owner": "The-PR-Agent",
+      "name": "pr-agent",
+      "url": "https://github.com/The-PR-Agent/pr-agent",
+      "description": "🚀 PR Agent: The Original Open-Source PR Reviewer. This project is not the Qodo free tier.",
+      "language": "Python",
+      "stars": "14,731",
+      "forks": "2,092",
+      "stars_today": "279 stars today",
+      "zh_description": "AI 应用或智能体相关项目，用来构建对话、自动执行任务或接入大语言模型能力。",
+      "problem": "替代必须把数据交给第三方托管的服务，让应用和数据运行在自己的环境中。",
+      "key_features": [
+        "支持自行部署和掌控数据"
+      ],
+      "use_cases": [],
+      "topics": [
+        "ai",
+        "anthropic",
+        "code-review",
+        "coding-assistant",
+        "devtools",
+        "ollama",
+        "openai",
+        "pull-request",
+        "pull-requests"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-11-04T23:10:48Z"
+    },
+    {
+      "rank": 6,
+      "owner": "harry0703",
+      "name": "MoneyPrinterTurbo",
+      "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
+      "language": "Python",
+      "stars": "138,916",
+      "forks": "22,168",
+      "stars_today": "615 stars today",
+      "zh_description": "该项目主要用于：<div align=\"center\">",
+      "problem": "把选题、文案、配音、字幕和画面合成串成自动流程，减少手工制作短视频的重复工作。",
+      "key_features": [
+        "支持使用 API Key 调用",
+        "根据主题或关键词生成短视频",
+        "自动串联视频制作工作流",
+        "支持文字转语音配音"
+      ],
+      "use_cases": [
+        "批量制作 YouTube Shorts、TikTok 和 Reels",
+        "生成产品介绍、资讯或营销短视频"
+      ],
+      "topics": [
+        "ai-video-generator",
+        "content-creation",
+        "ffmpeg",
+        "instagram-reels",
+        "llm",
+        "python",
+        "short-video",
+        "subtitles",
+        "text-to-speech",
+        "tiktok",
+        "video-automation",
+        "video-workflow",
+        "workflow-automation",
+        "youtube-shorts"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-11-04T02:11:21Z"
+    },
+    {
+      "rank": 7,
+      "owner": "garrytan",
+      "name": "gstack",
+      "url": "https://github.com/garrytan/gstack",
+      "description": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
+      "language": "TypeScript",
+      "stars": "139,308",
+      "forks": "20,629",
+      "stars_today": "285 stars today",
+      "zh_description": "该项目主要用于：gstack turns Claude Code (and other coding agents) into a virtual engineering team: a CEO who rethinks the product, an eng manager who locks architecture, a designer who catches AI slop, a reviewer who finds production b",
+      "problem": "把编程代理放进本地终端和代码目录，避免只能在独立聊天页面中处理代码任务。",
+      "key_features": [
+        "在本地终端中运行编程代理"
+      ],
+      "use_cases": [
+        "在本地代码库中通过终端处理编程任务",
+        "把终端中的代码工作交给 AI 代理执行"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-11-04T23:38:57Z"
+    },
+    {
+      "rank": 8,
+      "owner": "FareedKhan-dev",
+      "name": "kimi-k3-in-c",
+      "url": "https://github.com/FareedKhan-dev/kimi-k3-in-c",
+      "description": "A 2.78-trillion-parameter Kimi K3 running inference on a single CPU in 8.24 GB of RAM. Portable C99: no BLAS, no framework, no GPU.",
+      "language": "C",
+      "stars": "10,270",
+      "forks": "1,626",
+      "stars_today": "351 stars today",
+      "zh_description": "该项目主要用于：<div align=\"center\">",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "avx2",
+        "c99",
+        "cpu-inference",
+        "deep-learning",
+        "from-scratch",
+        "inference-engine",
+        "kimi-k3",
+        "linear-attention",
+        "llm",
+        "llm-inference",
+        "machine-learning",
+        "memory-efficient",
+        "mixture-of-experts",
+        "moe",
+        "mxfp4",
+        "quantization",
+        "simd",
+        "systems-programming",
+        "transformer",
+        "zero-dependencies"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-10-02T04:51:44Z"
+    },
+    {
+      "rank": 9,
+      "owner": "JiaFeiMiao-K-Cat",
+      "name": "DiscImageStudio",
+      "url": "https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio",
+      "description": "",
+      "language": "C#",
+      "stars": "6,557",
+      "forks": "233",
+      "stars_today": "1,792 stars today",
+      "zh_description": "该项目主要用于：<div align=\"center\">",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "GPL-3.0",
+      "pushed_at": "2026-11-04T17:25:45Z"
+    },
+    {
+      "rank": 10,
+      "owner": "Thysrael",
+      "name": "Horizon",
+      "url": "https://github.com/Thysrael/Horizon",
+      "description": "📡 Your own AI-powered news radar. Generates daily briefings in English & Chinese. | 用 AI 构建你专属的新闻雷达",
+      "language": "Python",
+      "stars": "12,466",
+      "forks": "1,817",
+      "stars_today": "121 stars today",
+      "zh_description": "该项目主要用于：<div align=\"center\"> <h1>🌅 Horizon</h1>",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "aggregator",
+        "feishu-bot",
+        "llm",
+        "mcp",
+        "news",
+        "openclaw",
+        "python",
+        "webhook"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-11-03T17:20:32Z"
+    }
+  ]
+}
