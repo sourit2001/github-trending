@@ -1,0 +1,256 @@
+{
+  "collected_at": "2026-11-07T21:48:24.002445+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "vercel-labs",
+      "name": "agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "description": "Browser automation CLI for AI agents",
+      "language": "Rust",
+      "stars": "46,753",
+      "forks": "3,202",
+      "stars_today": "180 stars today",
+      "zh_description": "该项目主要用于：Browser automation for AI agents: open pages, read them as an accessibility tree, and act on elements from the shell.",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-11-07T21:28:10Z"
+    },
+    {
+      "rank": 2,
+      "owner": "cloudflare",
+      "name": "security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "stars": "65,548",
+      "forks": "4,260",
+      "stars_today": "2,088 stars today",
+      "zh_description": "该项目主要用于：A coding-agent skill that turns your agent into a security auditor.",
+      "problem": "把编程代理放进本地终端和代码目录，避免只能在独立聊天页面中处理代码任务。",
+      "key_features": [
+        "在本地终端中运行编程代理"
+      ],
+      "use_cases": [
+        "在本地代码库中通过终端处理编程任务",
+        "把终端中的代码工作交给 AI 代理执行"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-09-14T19:29:02Z"
+    },
+    {
+      "rank": 3,
+      "owner": "google",
+      "name": "skills",
+      "url": "https://github.com/google/skills",
+      "description": "Agent Skills for Google products and technologies",
+      "language": "Python",
+      "stars": "23,328",
+      "forks": "1,950",
+      "stars_today": "449 stars today",
+      "zh_description": "该项目主要用于：[ ](https://skills.sh/google/skills)",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "google",
+        "googlecloud",
+        "skills"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-11-07T14:41:39Z"
+    },
+    {
+      "rank": 4,
+      "owner": "anthropics",
+      "name": "skills",
+      "url": "https://github.com/anthropics/skills",
+      "description": "Public repository for Agent Skills",
+      "language": "Python",
+      "stars": "188,698",
+      "forks": "22,242",
+      "stars_today": "386 stars today",
+      "zh_description": "该项目主要用于：> Note: This repository contains Anthropic's implementation of skills for Claude.",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "agent-skills"
+      ],
+      "license": "",
+      "pushed_at": "2026-11-06T22:32:32Z"
+    },
+    {
+      "rank": 5,
+      "owner": "meta",
+      "name": "astryx",
+      "url": "https://github.com/meta/astryx",
+      "description": "An open source design system that's fully customizable and agent ready",
+      "language": "TypeScript",
+      "stars": "14,405",
+      "forks": "1,179",
+      "stars_today": "185 stars today",
+      "zh_description": "该项目主要用于：<div align=\"center\">",
+      "problem": "",
+      "key_features": [
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-11-07T21:35:28Z"
+    },
+    {
+      "rank": 6,
+      "owner": "prometheus",
+      "name": "prometheus",
+      "url": "https://github.com/prometheus/prometheus",
+      "description": "The Prometheus monitoring system and time series database.",
+      "language": "Go",
+      "stars": "67,421",
+      "forks": "11,000",
+      "stars_today": "325 stars today",
+      "zh_description": "该项目主要用于：<h1 align=\"center\" style=\"border-bottom: none\"> <a href=\"https://prometheus.io\" target=\"blank\"> </a><br>Prometheus </h1>",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "alerting",
+        "graphing",
+        "hacktoberfest",
+        "metrics",
+        "monitoring",
+        "prometheus",
+        "time-series"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-11-07T11:31:25Z"
+    },
+    {
+      "rank": 7,
+      "owner": "sherlock-project",
+      "name": "sherlock",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "description": "Hunt down social media accounts by username across social networks",
+      "language": "Python",
+      "stars": "100,304",
+      "forks": "11,854",
+      "stars_today": "1,819 stars today",
+      "zh_description": "该项目主要用于：<p align=\"center\"> <br> <a href=\"https://sherlockproject.xyz/\" target=\"blank\"> </a> <br> <span>Hunt down social media accounts by username across <a href=\"https://sherlockproject.xyz/sites\">400+ social networks</a></span",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [
+        "扫描应用中的已知漏洞和配置风险",
+        "在上线前执行自动化安全检查"
+      ],
+      "topics": [
+        "cli",
+        "cti",
+        "cybersecurity",
+        "forensics",
+        "hacktoberfest",
+        "information-gathering",
+        "infosec",
+        "linux",
+        "osint",
+        "pentesting",
+        "python",
+        "python3",
+        "reconnaissance",
+        "redteam",
+        "sherlock",
+        "tools"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-11-07T05:13:07Z"
+    },
+    {
+      "rank": 8,
+      "owner": "astral-sh",
+      "name": "ruff",
+      "url": "https://github.com/astral-sh/ruff",
+      "description": "An extremely fast Python linter and code formatter, written in Rust.",
+      "language": "Rust",
+      "stars": "50,950",
+      "forks": "2,628",
+      "stars_today": "350 stars today",
+      "zh_description": "该项目主要用于：[ ](https://github.com/astral-sh/ruff) [ ](https://pypi.python.org/pypi/ruff) [ ](https://github.com/astral-sh/ruff/blob/main/LICENSE) [ ](https://pypi.python.org/pypi/ruff) [ ](https://github.com/astral-sh/ruff/actions)",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "linter",
+        "pep8",
+        "python",
+        "python3",
+        "ruff",
+        "rust",
+        "rustpython",
+        "static-analysis",
+        "static-code-analysis",
+        "style-guide",
+        "styleguide"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-11-07T20:47:39Z"
+    },
+    {
+      "rank": 9,
+      "owner": "tailwindlabs",
+      "name": "tailwindcss",
+      "url": "https://github.com/tailwindlabs/tailwindcss",
+      "description": "A utility-first CSS framework for rapid UI development.",
+      "language": "TypeScript",
+      "stars": "98,417",
+      "forks": "7,102",
+      "stars_today": "181 stars today",
+      "zh_description": "该项目主要用于：<p align=\"center\"> <a href=\"https://tailwindcss.com\" target=\"blank\">",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "css",
+        "css-framework",
+        "functional-css",
+        "postcss",
+        "responsive",
+        "tailwindcss",
+        "utility-classes"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-11-06T14:50:08Z"
+    },
+    {
+      "rank": 10,
+      "owner": "ranxianglei",
+      "name": "billion-context",
+      "url": "https://github.com/ranxianglei/billion-context",
+      "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
+      "language": "TypeScript",
+      "stars": "4,569",
+      "forks": "365",
+      "stars_today": "185 stars today",
+      "zh_description": "该项目主要用于：<p align=\"center\"><a href=\"./README.md\">English</a> | <a href=\"./README.zh-CN.md\">中文</a></p>",
+      "problem": "把编程代理放进本地终端和代码目录，避免只能在独立聊天页面中处理代码任务。",
+      "key_features": [
+        "在本地终端中运行编程代理",
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [
+        "在本地代码库中通过终端处理编程任务",
+        "把终端中的代码工作交给 AI 代理执行"
+      ],
+      "topics": [
+        "dsh-plugin"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-11-07T19:34:27Z"
+    }
+  ]
+}
