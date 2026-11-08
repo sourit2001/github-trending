@@ -1,0 +1,203 @@
+{
+  "collected_at": "2026-11-08T22:02:36.438424+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "sherlock-project",
+      "name": "sherlock",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "description": "Hunt down social media accounts by username across social networks",
+      "language": "Python",
+      "stars": "103,225",
+      "forks": "12,104",
+      "stars_today": "2,372 stars today",
+      "zh_description": "该项目主要用于：<p align=\"center\"> <br> <a href=\"https://sherlockproject.xyz/\" target=\"blank\"> </a> <br> <span>Hunt down social media accounts by username across <a href=\"https://sherlockproject.xyz/sites\">400+ social networks</a></span",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [
+        "扫描应用中的已知漏洞和配置风险",
+        "在上线前执行自动化安全检查"
+      ],
+      "topics": [
+        "cli",
+        "cti",
+        "cybersecurity",
+        "forensics",
+        "hacktoberfest",
+        "information-gathering",
+        "infosec",
+        "linux",
+        "osint",
+        "pentesting",
+        "python",
+        "python3",
+        "reconnaissance",
+        "redteam",
+        "sherlock",
+        "tools"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-11-08T05:13:22Z"
+    },
+    {
+      "rank": 2,
+      "owner": "dsx-ai-factory",
+      "name": "nvke",
+      "url": "https://github.com/dsx-ai-factory/nvke",
+      "description": "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.",
+      "language": "Go",
+      "stars": "812",
+      "forks": "110",
+      "stars_today": "345 stars today",
+      "zh_description": "该项目主要用于：[ ](LICENSE) [ ](go.work)",
+      "problem": "",
+      "key_features": [
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [],
+      "topics": [
+        "bare-metal",
+        "cluster-api",
+        "gpu",
+        "kubernetes",
+        "nvidia"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-11-07T02:09:56Z"
+    },
+    {
+      "rank": 3,
+      "owner": "anthropics",
+      "name": "claude-quickstarts",
+      "url": "https://github.com/anthropics/claude-quickstarts",
+      "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+      "language": "Python",
+      "stars": "19,364",
+      "forks": "3,278",
+      "stars_today": "28 stars today",
+      "zh_description": "该项目主要用于：Claude Quickstarts is a collection of projects designed to help developers quickly get started with building applications using the Claude API.",
+      "problem": "把编程代理放进本地终端和代码目录，避免只能在独立聊天页面中处理代码任务。",
+      "key_features": [
+        "在本地终端中运行编程代理",
+        "支持使用 API Key 调用",
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [
+        "在本地代码库中通过终端处理编程任务",
+        "把终端中的代码工作交给 AI 代理执行"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-11-06T19:37:57Z"
+    },
+    {
+      "rank": 4,
+      "owner": "vercel-labs",
+      "name": "agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "description": "Browser automation CLI for AI agents",
+      "language": "Rust",
+      "stars": "47,519",
+      "forks": "3,255",
+      "stars_today": "812 stars today",
+      "zh_description": "该项目主要用于：Browser automation for AI agents: open pages, read them as an accessibility tree, and act on elements from the shell.",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-11-08T10:03:53Z"
+    },
+    {
+      "rank": 5,
+      "owner": "meta",
+      "name": "astryx",
+      "url": "https://github.com/meta/astryx",
+      "description": "An open source design system that's fully customizable and agent ready",
+      "language": "TypeScript",
+      "stars": "16,453",
+      "forks": "1,303",
+      "stars_today": "863 stars today",
+      "zh_description": "该项目主要用于：<div align=\"center\">",
+      "problem": "",
+      "key_features": [
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-11-08T22:02:12Z"
+    },
+    {
+      "rank": 6,
+      "owner": "anthropics",
+      "name": "skills",
+      "url": "https://github.com/anthropics/skills",
+      "description": "Public repository for Agent Skills",
+      "language": "Python",
+      "stars": "189,532",
+      "forks": "22,338",
+      "stars_today": "793 stars today",
+      "zh_description": "该项目主要用于：> Note: This repository contains Anthropic's implementation of skills for Claude.",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "agent-skills"
+      ],
+      "license": "",
+      "pushed_at": "2026-11-06T22:32:32Z"
+    },
+    {
+      "rank": 7,
+      "owner": "google-deepmind",
+      "name": "mujoco",
+      "url": "https://github.com/google-deepmind/mujoco",
+      "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+      "language": "C++",
+      "stars": "16,353",
+      "forks": "1,950",
+      "stars_today": "26 stars today",
+      "zh_description": "该项目主要用于：<h1> <a href=\"https://mujoco.org\"> </a> </h1>",
+      "problem": "",
+      "key_features": [
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [],
+      "topics": [
+        "mujoco",
+        "physics",
+        "robotics"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-11-07T17:07:40Z"
+    },
+    {
+      "rank": 8,
+      "owner": "ranxianglei",
+      "name": "billion-context",
+      "url": "https://github.com/ranxianglei/billion-context",
+      "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
+      "language": "TypeScript",
+      "stars": "5,075",
+      "forks": "403",
+      "stars_today": "460 stars today",
+      "zh_description": "该项目主要用于：<p align=\"center\"><a href=\"./README.md\">English</a> | <a href=\"./README.zh-CN.md\">中文</a></p>",
+      "problem": "把编程代理放进本地终端和代码目录，避免只能在独立聊天页面中处理代码任务。",
+      "key_features": [
+        "在本地终端中运行编程代理"
+      ],
+      "use_cases": [
+        "在本地代码库中通过终端处理编程任务",
+        "把终端中的代码工作交给 AI 代理执行"
+      ],
+      "topics": [
+        "dsh-plugin"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-11-08T19:18:19Z"
+    }
+  ]
+}
