@@ -1,0 +1,253 @@
+{
+  "collected_at": "2026-11-10T23:18:28.142692+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "meta",
+      "name": "astryx",
+      "url": "https://github.com/meta/astryx",
+      "description": "An open source design system that's fully customizable and agent ready",
+      "language": "TypeScript",
+      "stars": "22,668",
+      "forks": "1,809",
+      "stars_today": "3,111 stars today",
+      "zh_description": "该项目主要用于：<div align=\"center\">",
+      "problem": "",
+      "key_features": [
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-11-10T23:16:02Z"
+    },
+    {
+      "rank": 2,
+      "owner": "anthropics",
+      "name": "skills",
+      "url": "https://github.com/anthropics/skills",
+      "description": "Public repository for Agent Skills",
+      "language": "Python",
+      "stars": "192,266",
+      "forks": "22,637",
+      "stars_today": "1,676 stars today",
+      "zh_description": "该项目主要用于：> Note: This repository contains Anthropic's implementation of skills for Claude.",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "agent-skills"
+      ],
+      "license": "",
+      "pushed_at": "2026-11-06T22:32:32Z"
+    },
+    {
+      "rank": 3,
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "language": "JavaScript",
+      "stars": "115,120",
+      "forks": "12,094",
+      "stars_today": "465 stars today",
+      "zh_description": "该项目主要用于：Production-grade engineering skills for AI coding agents.",
+      "problem": "把编程代理放进本地终端和代码目录，避免只能在独立聊天页面中处理代码任务。",
+      "key_features": [
+        "在本地终端中运行编程代理",
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [
+        "在本地代码库中通过终端处理编程任务",
+        "把终端中的代码工作交给 AI 代理执行"
+      ],
+      "topics": [
+        "agent-skills",
+        "antigravity",
+        "claude-code",
+        "codex",
+        "cursor",
+        "skills"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-11-01T19:24:49Z"
+    },
+    {
+      "rank": 4,
+      "owner": "anthropics",
+      "name": "claude-quickstarts",
+      "url": "https://github.com/anthropics/claude-quickstarts",
+      "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+      "language": "Python",
+      "stars": "20,468",
+      "forks": "3,468",
+      "stars_today": "530 stars today",
+      "zh_description": "该项目主要用于：Claude Quickstarts is a collection of projects designed to help developers quickly get started with building applications using the Claude API.",
+      "problem": "把编程代理放进本地终端和代码目录，避免只能在独立聊天页面中处理代码任务。",
+      "key_features": [
+        "在本地终端中运行编程代理",
+        "支持使用 API Key 调用",
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [
+        "在本地代码库中通过终端处理编程任务",
+        "把终端中的代码工作交给 AI 代理执行"
+      ],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-11-06T19:37:57Z"
+    },
+    {
+      "rank": 5,
+      "owner": "google-deepmind",
+      "name": "mujoco",
+      "url": "https://github.com/google-deepmind/mujoco",
+      "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+      "language": "C++",
+      "stars": "17,328",
+      "forks": "2,146",
+      "stars_today": "453 stars today",
+      "zh_description": "该项目主要用于：<h1> <a href=\"https://mujoco.org\"> </a> </h1>",
+      "problem": "",
+      "key_features": [
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [],
+      "topics": [
+        "mujoco",
+        "physics",
+        "robotics"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-11-10T20:50:33Z"
+    },
+    {
+      "rank": 6,
+      "owner": "we-promise",
+      "name": "sure",
+      "url": "https://github.com/we-promise/sure",
+      "description": "The personal finance app for everyone (by everyone)",
+      "language": "Ruby",
+      "stars": "11,887",
+      "forks": "886",
+      "stars_today": "184 stars today",
+      "zh_description": "该项目主要用于：[ ](https://deepwiki.com/we-promise/sure) [ ](https://oss.skylight.io/app/applications/s6PEZSKwcklL) [ ](https://app.dosu.dev/a72bdcfd-15f5-4edc-bd85-ea0daa6c3adc/ask) [ ](https://github.com/we-promise/sure/actions/workf",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "AGPL-3.0",
+      "pushed_at": "2026-11-10T22:54:25Z"
+    },
+    {
+      "rank": 7,
+      "owner": "homeassistant-ai",
+      "name": "ha-mcp",
+      "url": "https://github.com/homeassistant-ai/ha-mcp",
+      "description": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+      "language": "Python",
+      "stars": "6,607",
+      "forks": "428",
+      "stars_today": "792 stars today",
+      "zh_description": "该项目主要用于：> Breaking change (v7.3.0): haconfigsetyaml has been moved to [beta](docs/beta.md).",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "ai",
+        "claude",
+        "hacs",
+        "home-assistant",
+        "home-automation",
+        "llm",
+        "mcp",
+        "model-context-protocol"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-11-10T22:59:21Z"
+    },
+    {
+      "rank": 8,
+      "owner": "vercel-labs",
+      "name": "agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "description": "Browser automation CLI for AI agents",
+      "language": "Rust",
+      "stars": "49,164",
+      "forks": "3,446",
+      "stars_today": "775 stars today",
+      "zh_description": "该项目主要用于：Browser automation for AI agents: open pages, read them as an accessibility tree, and act on elements from the shell.",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-11-10T23:13:33Z"
+    },
+    {
+      "rank": 9,
+      "owner": "sherlock-project",
+      "name": "sherlock",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "description": "Hunt down social media accounts by username across social networks",
+      "language": "Python",
+      "stars": "108,890",
+      "forks": "12,653",
+      "stars_today": "2,387 stars today",
+      "zh_description": "该项目主要用于：<p align=\"center\"> <br> <a href=\"https://sherlockproject.xyz/\" target=\"blank\"> </a> <br> <span>Hunt down social media accounts by username across <a href=\"https://sherlockproject.xyz/sites\">400+ social networks</a></span",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [
+        "扫描应用中的已知漏洞和配置风险",
+        "在上线前执行自动化安全检查"
+      ],
+      "topics": [
+        "cli",
+        "cti",
+        "cybersecurity",
+        "forensics",
+        "hacktoberfest",
+        "information-gathering",
+        "infosec",
+        "linux",
+        "osint",
+        "pentesting",
+        "python",
+        "python3",
+        "reconnaissance",
+        "redteam",
+        "sherlock",
+        "tools"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-11-10T05:13:55Z"
+    },
+    {
+      "rank": 10,
+      "owner": "ranxianglei",
+      "name": "billion-context",
+      "url": "https://github.com/ranxianglei/billion-context",
+      "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
+      "language": "TypeScript",
+      "stars": "6,277",
+      "forks": "527",
+      "stars_today": "374 stars today",
+      "zh_description": "该项目主要用于：<p align=\"center\"><a href=\"./README.md\">English</a> | <a href=\"./README.zh-CN.md\">中文</a> | <a href=\"./README.ja.md\">日本語</a></p>",
+      "problem": "把编程代理放进本地终端和代码目录，避免只能在独立聊天页面中处理代码任务。",
+      "key_features": [
+        "在本地终端中运行编程代理"
+      ],
+      "use_cases": [
+        "在本地代码库中通过终端处理编程任务",
+        "把终端中的代码工作交给 AI 代理执行"
+      ],
+      "topics": [
+        "dsh-plugin"
+      ],
+      "license": "NOASSERTION",
+      "pushed_at": "2026-11-10T23:17:05Z"
+    }
+  ]
+}
