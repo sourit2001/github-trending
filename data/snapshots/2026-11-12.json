@@ -1,0 +1,243 @@
+{
+  "collected_at": "2026-11-12T00:41:05.203113+00:00",
+  "language": "",
+  "since": "daily",
+  "repos": [
+    {
+      "rank": 1,
+      "owner": "meta",
+      "name": "astryx",
+      "url": "https://github.com/meta/astryx",
+      "description": "An open source design system that's fully customizable and agent ready",
+      "language": "TypeScript",
+      "stars": "24,966",
+      "forks": "1,951",
+      "stars_today": "2,776 stars today",
+      "zh_description": "该项目主要用于：<div align=\"center\">",
+      "problem": "",
+      "key_features": [
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [],
+      "topics": [],
+      "license": "MIT",
+      "pushed_at": "2026-11-12T00:37:48Z"
+    },
+    {
+      "rank": 2,
+      "owner": "ZhuLinsen",
+      "name": "daily_stock_analysis",
+      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+      "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+      "language": "Python",
+      "stars": "70,229",
+      "forks": "56,839",
+      "stars_today": "278 stars today",
+      "zh_description": "该项目主要用于：<div align=\"center\">",
+      "problem": "",
+      "key_features": [
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [],
+      "topics": [
+        "a-stock",
+        "ai-agent",
+        "aigc",
+        "llm",
+        "quant",
+        "quantitative-finance",
+        "quantitative-trading"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-11-10T11:51:09Z"
+    },
+    {
+      "rank": 3,
+      "owner": "GoogleChrome",
+      "name": "modern-web-guidance-src",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+      "description": "",
+      "language": "TypeScript",
+      "stars": "1,745",
+      "forks": "142",
+      "stars_today": "159 stars today",
+      "zh_description": "该项目主要用于：This repo is the source repository for [GoogleChrome/modern-web-guidance](https://github.com/GoogleChrome/modern-web-guidance) and includes the code and documentation for authoring, calibrating, and evaluating its conten",
+      "problem": "把编程代理放进本地终端和代码目录，避免只能在独立聊天页面中处理代码任务。",
+      "key_features": [
+        "在本地终端中运行编程代理",
+        "支持使用 API Key 调用",
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [
+        "在本地代码库中通过终端处理编程任务",
+        "把终端中的代码工作交给 AI 代理执行"
+      ],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-11-11T23:48:18Z"
+    },
+    {
+      "rank": 4,
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "language": "JavaScript",
+      "stars": "115,943",
+      "forks": "12,164",
+      "stars_today": "787 stars today",
+      "zh_description": "该项目主要用于：Production-grade engineering skills for AI coding agents.",
+      "problem": "把编程代理放进本地终端和代码目录，避免只能在独立聊天页面中处理代码任务。",
+      "key_features": [
+        "在本地终端中运行编程代理",
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [
+        "在本地代码库中通过终端处理编程任务",
+        "把终端中的代码工作交给 AI 代理执行"
+      ],
+      "topics": [
+        "agent-skills",
+        "antigravity",
+        "claude-code",
+        "codex",
+        "cursor",
+        "skills"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-11-01T19:24:49Z"
+    },
+    {
+      "rank": 5,
+      "owner": "vercel-labs",
+      "name": "agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "description": "Browser automation CLI for AI agents",
+      "language": "Rust",
+      "stars": "49,864",
+      "forks": "3,489",
+      "stars_today": "708 stars today",
+      "zh_description": "该项目主要用于：Browser automation for AI agents: open pages, read them as an accessibility tree, and act on elements from the shell.",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-11-11T22:13:48Z"
+    },
+    {
+      "rank": 6,
+      "owner": "we-promise",
+      "name": "sure",
+      "url": "https://github.com/we-promise/sure",
+      "description": "The personal finance app for everyone (by everyone)",
+      "language": "Ruby",
+      "stars": "12,952",
+      "forks": "958",
+      "stars_today": "1,078 stars today",
+      "zh_description": "该项目主要用于：[ ](https://deepwiki.com/we-promise/sure) [ ](https://oss.skylight.io/app/applications/s6PEZSKwcklL) [ ](https://app.dosu.dev/a72bdcfd-15f5-4edc-bd85-ea0daa6c3adc/ask) [ ](https://github.com/we-promise/sure/actions/workf",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [],
+      "license": "AGPL-3.0",
+      "pushed_at": "2026-11-11T22:32:40Z"
+    },
+    {
+      "rank": 7,
+      "owner": "homeassistant-ai",
+      "name": "ha-mcp",
+      "url": "https://github.com/homeassistant-ai/ha-mcp",
+      "description": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+      "language": "Python",
+      "stars": "7,363",
+      "forks": "455",
+      "stars_today": "645 stars today",
+      "zh_description": "该项目主要用于：> Breaking change (v7.3.0): haconfigsetyaml has been moved to [beta](docs/beta.md).",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "ai",
+        "claude",
+        "hacs",
+        "home-assistant",
+        "home-automation",
+        "llm",
+        "mcp",
+        "model-context-protocol"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-11-12T00:35:57Z"
+    },
+    {
+      "rank": 8,
+      "owner": "openai",
+      "name": "codex-security",
+      "url": "https://github.com/openai/codex-security",
+      "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
+      "language": "TypeScript",
+      "stars": "11,717",
+      "forks": "937",
+      "stars_today": "52 stars today",
+      "zh_description": "该项目主要用于：Codex Security helps you find, investigate, and fix vulnerabilities in your code.",
+      "problem": "把编程代理放进本地终端和代码目录，避免只能在独立聊天页面中处理代码任务。",
+      "key_features": [
+        "在本地终端中运行编程代理",
+        "提供 API 或 SDK 接入能力"
+      ],
+      "use_cases": [
+        "在本地代码库中通过终端处理编程任务",
+        "把终端中的代码工作交给 AI 代理执行"
+      ],
+      "topics": [
+        "ai-security",
+        "application-security",
+        "cli",
+        "code-scanning",
+        "codex",
+        "codex-security",
+        "cybersecurity",
+        "devsecops",
+        "nodejs",
+        "npm",
+        "openai",
+        "sdk",
+        "security",
+        "typescript",
+        "vulnerability-scanning"
+      ],
+      "license": "Apache-2.0",
+      "pushed_at": "2026-11-12T00:39:55Z"
+    },
+    {
+      "rank": 9,
+      "owner": "TheAlgorithms",
+      "name": "Java",
+      "url": "https://github.com/TheAlgorithms/Java",
+      "description": "All Algorithms implemented in Java",
+      "language": "Java",
+      "stars": "67,013",
+      "forks": "21,506",
+      "stars_today": "51 stars today",
+      "zh_description": "该项目主要用于：[ ](https://github.com/TheAlgorithms/Java/actions/workflows/build.yml) [ ](https://codecov.io/gh/TheAlgorithms/Java) [ ](https://discord.gg/c7MnfGFGa6) [ ](https://gitpod.io/#https://github.com/TheAlgorithms/Java)",
+      "problem": "",
+      "key_features": [],
+      "use_cases": [],
+      "topics": [
+        "algorithm",
+        "algorithm-challenges",
+        "algorithms",
+        "algorithms-datastructures",
+        "data-structures",
+        "hacktoberfest",
+        "java",
+        "search",
+        "sort",
+        "sorting-algorithms"
+      ],
+      "license": "MIT",
+      "pushed_at": "2026-11-11T21:56:41Z"
+    }
+  ]
+}
